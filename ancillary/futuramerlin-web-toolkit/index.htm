@@ -43,7 +43,7 @@
         </ul>
     </li>
     <li>If you have a version of the Futuramerlin Web Toolkit prior to version 2 installed, remove it.</li>
-    <li>Run the following command:<br /><pre><code></code></pre></li>
+    <li>Run the following command:<br /><pre><code>futuramerlinWebToolkitPreInstallPath=$(pwd); futuramerlinWebToolkitInstallationUUID=$(python2 -c 'import uuid; print str(uuid.uuid4())'); cd ~; mkdir "$futuramerlinWebToolkitInstallationUUID"; cd "$futuramerlinWebToolkitInstallationUUID"; git clone https://github.com/ethus3h/futuramerlin-web-toolkit.git; cp -f ./futuramerlin-web-toolkit/futuramerlin-web-toolkit-build ~/.futuramerlin-web-toolkit-build; chmod +x ~/.futuramerlin-web-toolkit-build; cp -f ./futuramerlin-web-toolkit/futuramerlin-web-toolkit-aliases ~/.futuramerlin-web-toolkit-aliases; chmod +x ~/.futuramerlin-web-toolkit-aliases; echo $(date +%Y-%m-%d-%H-%M-%S-%N)-$(xxd -pu &lt;&lt;&lt; "$(date +%z)") >> ~/.futuramerlin-web-toolkit.cfg; echo "$futuramerlinWebToolkitInstallationUUID" >> ~/.futuramerlin-web-toolkit.cfg; echo "#"'!'"/bin/bash" >> ~/.bash_profile; echo ". ~/.futuramerlin-web-toolkit-aliases" >> ~/.bash_profile; echo "#"'!'"/bin/bash" >> ~/.bashrc; echo ". ~/.bash_profile" >> ~/.bashrc; chmod +x ~/.bash_profile; chmod +x ~/.bashrc; cd ..; rm -r ./"$futuramerlinWebToolkitInstallationUUID"; cd "$futuramerlinWebToolkitPreInstallPath"</code></pre></li>
     <li>Log out and log in again, to update your shell aliases.</li>
 </ol>
 
