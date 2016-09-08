@@ -29,7 +29,7 @@
     <li>Ensure your system has the correct dependencies:
         <ul>
             <li>Only tested and supported using GNU/Linux operating systems. It may be possible to run Warcdealer using other UNIX-like operating systems, but that is not currently supported.</li>
-            <li>Requires a connection to the World Wide Web able to access the <a href="https://archive.org/">Internet Archive</a>, and <a href="https://github.com/">GitHub</a> for installation and updates.</li>
+            <li>Requires a connection to the World Wide Web able to access <a href="https://github.com/">GitHub</a>.</li>
             <li>Git</li>
             <li>Perl</li>
             <li>cpan</li>
@@ -41,8 +41,15 @@
             <li>autoprefixer: to install, run: <code>sudo npm install --global postcss-cli autoprefixer</code></li>
             <li>Python 2, runnable as <code>python2</code> (for installing and updating)</li>
         </ul>
+        Needed for the optional local CSS installation:
+        <ul>
+            <li><code>sudo</code> privileges on your computer</li>
+            <li>A writeable root partition</li>
+        </ul>
     </li>
     <li>If you have a version of the Futuramerlin Web Toolkit prior to version 2 installed, remove it.</li>
+    <li>Substitute the name of your Web site in place of "<code>webSiteName</code>" in the following command, and run the resulting command (note that output beginning with "<code>mv: cannot stat</code>" can be safely ignored):<br /><pre><code>mv ~/.warcdealer.cfg ~/.warcdealer.bak; echo "webSiteName" > ~/.warcdealer.cfg</code></pre></li>
+    <li>If you want to enable the local CSS installation option (copies the Web site's theme CSS so the site can be more accurately previewed locally), run the following command:<br /><pre><code>echo "enableLocalInstallation" >> ~/.warcdealer.cfg; set +H</code></pre><br />Otherwise, run the following command:<br /><pre><code>echo "disableLocalInstallation" >> ~/.warcdealer.cfg; set +H</code></pre></li>
     <li>Run the following command:<br /><pre><code>futuramerlinWebToolkitPreInstallPath=$(pwd); futuramerlinWebToolkitInstallationUUID=$(python2 -c 'import uuid; print str(uuid.uuid4())'); cd ~; mkdir "$futuramerlinWebToolkitInstallationUUID"; cd "$futuramerlinWebToolkitInstallationUUID"; git clone https://github.com/ethus3h/futuramerlin-web-toolkit.git; cp -f ./futuramerlin-web-toolkit/futuramerlin-web-toolkit-build ~/.futuramerlin-web-toolkit-build; chmod +x ~/.futuramerlin-web-toolkit-build; cp -f ./futuramerlin-web-toolkit/futuramerlin-web-toolkit-aliases ~/.futuramerlin-web-toolkit-aliases; chmod +x ~/.futuramerlin-web-toolkit-aliases; echo $(date +%Y-%m-%d-%H-%M-%S-%N)-$(xxd -pu &lt;&lt;&lt; "$(date +%z)") >> ~/.futuramerlin-web-toolkit.cfg; echo "$futuramerlinWebToolkitInstallationUUID" >> ~/.futuramerlin-web-toolkit.cfg; echo "#"'!'"/bin/bash" >> ~/.bash_profile; echo ". ~/.futuramerlin-web-toolkit-aliases" >> ~/.bash_profile; echo "#"'!'"/bin/bash" >> ~/.bashrc; echo ". ~/.bash_profile" >> ~/.bashrc; chmod +x ~/.bash_profile; chmod +x ~/.bashrc; cd ..; rm -r ./"$futuramerlinWebToolkitInstallationUUID"; cd "$futuramerlinWebToolkitPreInstallPath"</code></pre></li>
     <li>Log out and log in again, to update your shell aliases.</li>
 </ol>
@@ -50,12 +57,8 @@
 <h2>Configuration file format</h2>
 <p>The configuration file is located at <code>~/.futuramerlin-web-toolkit.cfg</code>. It contains configuration values separated by a line feed (0x0A), as follows:</p>
 <ul>
-    <li>Name of user as which Warcdealer should run</li>
-    <li>Amount of free space in gigabytes below which WARC files should be uploaded and crawls should be paused</li>
-    <li>Delay in seconds between disk space checks</li>
-    <li>Internet Archive target collection identifier</li>
-    <li>"<code>disableArchiveIndex</code>" to disable the archive search tool, or "<code>enableArchiveIndex</code>" to enable it (any other value will be treated as "<code>enableArchiveIndex</code>")</li>
-    <li>"<code>disableWARCBundling</code>" to upload each file as a separate item, or "<code>enableWARCBundling</code>" to enable it (any other value will be treated as "<code>enableWARCBundling</code>")</li>
+    <li>Name for the Web site</li>
+    <li>"<code>disableLocalInstallation</code>" to disable installing the CSS file for local browsing, or "<code>enableLocalInstallation</code>" to enable it (any other value will be treated as "<code>disableLocalInstallation</code>")</li>
     <li>Installation time</li>
     <li>Installation UUID</li>
 </ul>
