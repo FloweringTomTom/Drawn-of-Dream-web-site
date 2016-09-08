@@ -15,7 +15,62 @@
     <li>Visual appearance matching the <a href="/ancillary/wreathe">Wreathe</a> operating system</li>
     <li>A WordPress theme to allow WordPress-driven blogs to visually match the static site</li>
 </ul>
-<p>It is available <a href="https://github.com/ethus3h/ember/tree/master/ember-satellite-projects/futuramerlin-web-toolkit">at GitHub</a>.</p>
+<p>Its source code is available <a href="https://github.com/ethus3h/ember/tree/master/ember-satellite-projects/futuramerlin-web-toolkit">at GitHub</a>.</p>
+
+<h2>Command syntax</h2>
+<p><span class="hatnote-emphasis-warning">Before running the Futuramerlin Web Toolkit, <code>cd</code> to the directory that contains the contents of your Web site. Note that those should be the only files present in that directory.</span></p>
+<figure class="center-figure app-syntax">
+    <code>build</code>
+</figure>
+
+<h2>Installation</h2>
+
+<ol>
+    <li>Ensure your system has the correct dependencies:
+        <ul>
+            <li>Only tested and supported using GNU/Linux operating systems. It may be possible to run Warcdealer using other UNIX-like operating systems, but that is not currently supported.</li>
+            <li>Requires a connection to the World Wide Web able to access the <a href="https://archive.org/">Internet Archive</a>, and <a href="https://github.com/">GitHub</a> for installation and updates.</li>
+            <li>Git</li>
+            <li>Perl</li>
+            <li>cpan</li>
+            <li>Node.js</li>
+            <li><a href="https://www.npmjs.com/package/html-minifier">html-minifier</a></li>
+            <li><a href="https://github.com/htacg/tidy-html5">html5-tidy</a></li>
+            <li><a href="https://www.npmjs.com/package/minifier">minifier</a></li>
+            <li>hypertoc: to install, run: <code>sudo cpan -f -i HTML::GenToc</code></li>
+            <li>autoprefixer: to install, run: <code>sudo npm install --global postcss-cli autoprefixer</code></li>
+            <li>Python 2, runnable as <code>python2</code> (for installing and updating)</li>
+        </ul>
+    </li>
+    <li>If you have a version of the Futuramerlin Web Toolkit prior to version 2 installed, remove it.</li>
+    <li>Run the following command:<br /><pre><code></code></pre></li>
+    <li>Log out and log in again, to update your shell aliases.</li>
+</ol>
+
+<h2>Updating</h2>
+<ol>
+    <li>Check for changes to the requirements.</li>
+    <li>Check the Warcdealer version. If the major version has changed, or <a href="release-notes.htm">the release notes</a> specify that it should be reinstalled since the version you have installed, (the part before the first "." in the version number), follow the current installation instructions instead (unless you know you don't need to, <span class="foreign-text">e. g.</span> if the release notes specify that the configuration file format is compatible with the major version you have installed).</li>
+    <li>As the user you chose in step 2 of the installation process, run the following command:<br /><pre><code>warcdealerPreInstallPath=$(pwd); warcdealerTemporaryUUID=$(python2 -c 'import uuid; print str(uuid.uuid4())'); cd ~; mkdir "$warcdealerTemporaryUUID"; cd "$warcdealerTemporaryUUID"; git clone https://github.com/ethus3h/ember.git; cp -f ./ember/ember-satellite-projects/warcdealer/warcdealer ~/.warcdealer; chmod +x ~/.warcdealer; cp -f ./ember/ember-satellite-projects/warcdealer/warcdealer-ia-upload ~/.warcdealer-ia-upload; chmod +x ~/.warcdealer-ia-upload; cp -f ./ember/ember-satellite-projects/warcdealer/warcdealer-ia-upload-split ~/.warcdealer-ia-upload-split; chmod +x ~/.warcdealer-ia-upload-split; cp -f ./ember/ember-satellite-projects/warcdealer/viewer.patch ~/.warcdealer-viewer.patch; cd ..; rm -r ./"$warcdealerTemporaryUUID"; cd "$warcdealerPreInstallPath"</code></pre></li>
+</ol>
+
+<h2>Release notes</h2>
+<p>See <a href="release-notes.htm">the dedicated page</a>.</p>
+
+<h2>Configuration file format</h2>
+<p><span class="hatnote-emphasis-warning">Be careful when manually editing the configuration file. Specifically, do <b>NOT</b> use the "<code>disableWARCBundling</code>" option unless you know what you are doing.</span></p>
+<p>The configuration file is located at <code>~/.warcdealer.cfg</code>. It contains configuration values separated by a line feed (0x0A), as follows:</p>
+<ul>
+    <li>Name of user as which Warcdealer should run</li>
+    <li>Amount of free space in gigabytes below which WARC files should be uploaded and crawls should be paused</li>
+    <li>Delay in seconds between disk space checks</li>
+    <li>Internet Archive target collection identifier</li>
+    <li>"<code>disableArchiveIndex</code>" to disable the archive search tool, or "<code>enableArchiveIndex</code>" to enable it (any other value will be treated as "<code>enableArchiveIndex</code>")</li>
+    <li>"<code>disableWARCBundling</code>" to upload each file as a separate item, or "<code>enableWARCBundling</code>" to enable it (any other value will be treated as "<code>enableWARCBundling</code>")</li>
+    <li>Installation time</li>
+    <li>Installation UUID</li>
+</ul>
+<p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
 <!--
 How to set up Web site: cd to your content directory, and run the bash command:
@@ -24,9 +79,4 @@ oldpwd=$(pwd); mkdir ~/Uuid; cd ~/uuid; git clone; mv ./blah ~/.blah; cd ..; rm 
 
 #Script Usage: build
 
-#Requires html-minifier: https://www.npmjs.com/package/html-minifier
-#Requires html5-tidy: https://github.com/htacg/tidy-html5
-#Requires minifier: https://www.npmjs.com/package/minifier
-#Requires hypertoc: sudo cpan -f -i HTML::GenToc
-#Requires autoprefixer: sudo npm install --global postcss-cli autoprefixer
 -->
