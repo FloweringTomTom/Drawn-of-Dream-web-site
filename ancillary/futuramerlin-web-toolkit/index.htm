@@ -17,7 +17,12 @@
 </ul>
 <p>It is available <a href="https://github.com/ethus3h/ember/tree/master/ember-satellite-projects/futuramerlin-web-toolkit">at GitHub</a>.</p>
 
-<!-- #Usage: build
+<!--
+How to set up Web site: cd to your content directory, and run the bash command:
+
+echo "#!/bin/bash\ngit clone toolkit; mv ./futuramerlin-web-toolkit ./.futuramerlin-web-toolkit; mkdir futuramerlin-web-toolkit-content; mv ./* ./futuramerlin-web-toolkit-content/; mv ./.futuramerlin-web-toolkit/* .; rm -r ./.futuramerlin-web-toolkit; ./build; mv ./.futuramerlin-web-toolkit-content"
+
+#Script Usage: build
 
 #Requires html-minifier: https://www.npmjs.com/package/html-minifier
 #Requires html5-tidy: https://github.com/htacg/tidy-html5
