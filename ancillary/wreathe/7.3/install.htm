@@ -13,11 +13,27 @@
     <li>Intel Core 2 CPU or compatible, with at least two cores</li>
     <li>At least 64GB available disk space</li>
     <li>Compatible GPU (Intel recommended)<li>
-    <li>Colour display, LCD (1280x1024 or 1024x768) recommended</li>
-    <li>At least 3GB RAM</li>
+    <li>Color LCD display</li>
+    <li>At least 8GB RAM</li>
     <li>Compatible keyboard (any standard IBM-compatible should work, such as the IBM SpaceSaver II)</li>
     <li>Compatible pointing tool (TrackPoint, mouse, etc.)</li>
 </ul>
 <p>It is probably possible to install Wreathe 7.3 on computers that do not meet the recommended system requirements, but that is not supported.</p>
-<h2>Installation</h2>
-<p>Wreathe 7r2: Elegy is distributed as a disk image; to install it, write the image to your computer's hard drive or SSD (for example, using <code>dd</code>). Note that installing it will overwrite other operating systems or data stored in the target storage medium. The default username is <code>kyan</code>, the default password is <code>elen-esar</code>.</p>
+
+<h2>Development Version Installation (not supported; for development and/or testing)</h2>
+<p>During development, Wreathe 7.3: Elegiac is distributed as a Portage overlay, and requires a working Gentoo GNU/Linux installation. To install it, first add the overlay to the system by running:<br />
+<pre><code>layman -o https://raw.githubusercontent.com/ethus3h/wreathe-overlay/master/wreathe-overlay.xml -f -a wreathe-overlay -p 100</code></pre><br />
+Then, emerge the base package by running:<br />
+<pre><code>layman -s wreathe-overlay; emerge wreathe-base</code></pre></p>
+
+<h2>Updating the development version</h2>
+<p>To update an installation of the development version, there are two techniques: First, you can update any changed live ebuilds on your system:<br />
+<pre><code>smart-live-rebuild</code></pre><br />
+Alternatively, if you prefer, you can update only the Wreathe-specific components, by running:<br />
+<pre><code>layman -s wreathe-overlay; emerge wreathe-base wreathe-backgrounds wreathe-media-resources wreathe-office-resources wreathe-typefaces-redist wreathe-typeface-family compiz-extra-snowflake-textures</code></pre><br />
+To update just the main package (this may break things), run:<br />
+<pre><code>layman -s wreathe-overlay; emerge wreathe-base</code></pre></p>
+
+<h2>Development instructions</h2>
+<p>To save changes to the overlay (assuming you have cloned a fork locally to work on), run the following command in the git directory:<br />
+<pre><code>repoman manifest; git add *; git commit -am "Overlay update"; git push -u origin master</code></pre></p>
