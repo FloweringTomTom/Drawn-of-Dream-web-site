@@ -37,4 +37,4 @@ To update just the main package (this may break things), run:<br />
 <h2>Development instructions</h2>
 <p>To save changes to the overlay (assuming you have cloned a fork locally to work on), run the following command in the git directory:<br />
 <pre><code>repoman manifest; git add *; git commit -am "Overlay update"; git push -u origin master</code></pre></p>
-<p>Note that repoman won't add extra files to ebuilds automatically; use ebuild foo.ebuild manifest to create the manifest (then repoman should work automatically afterwards).</p>
+<p>Note that repoman won't add extra files to ebuilds automatically; use ebuild foo.ebuild manifest to create the manifest (then repoman should work automatically afterwards, unless more files are added/renamed).</p>
