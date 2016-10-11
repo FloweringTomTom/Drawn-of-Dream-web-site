@@ -131,12 +131,18 @@
 <h6>C Void:lang.run(Routine$routine,List$params)</h6>
 <dl>
     <dt>Return value</dt><dd>(none)</dd>
-    <dt>Exceptions thrown</dt><dd>!routineSyntaxError</dd>
+    <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
     <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
 </dl>
 <h6>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h6>
 <dl>
     <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $type</dd>
     <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
-    <dt>Notes</dt><dd>Determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
+    <dt>Notes</dt><dd>If $return="return", determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
+</dl>
+<h6>C (Void|$trait.type):lang.set(Any$trait,Any$value,(|String$return))</h6>
+<dl>
+    <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $trait.type</dd>
+    <dt>Exceptions thrown</dt><dd>!targetTypeMismatch</dd>
+    <dt>Notes</dt><dd>If $return="return", determinism depends on $value.</dd>
 </dl>
