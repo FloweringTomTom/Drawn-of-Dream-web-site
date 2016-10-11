@@ -45,6 +45,15 @@
 <h2>Data formats</h2>
 
 <h3>Ember Language</h3>
-<p>Objective: Develop a machine-readable language that can be source-to-source translated into both C and JavaScript.</p>
+<p>Objective: Develop a machine-readable language that can be source-to-source translated into other languages. C and JavaScript translators should be the current development priorities.</p>
 <p>Ember Language programs may optionally declare a non-default language profile to use: Basic, which restricts the program to a core subset of the language, and Dangerous, which includes language features which are probably a bad idea to use, but may be needed in some cases.</p>
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
+<h4>Specification</h4>
+<h5>Basic syntax</h5>
+<p>Ember Language source files are ASCII text files, packed into easily-readable lines.
+<h6>Packing format</h6> Logical lines are terminated with 0x3B0A (semicolon + line feed), while continued lines are terminated with 0x5C0A (backslash + line feed). Logical lines continued from the previous line should be indented. Indentation is four spaces.</p>
+<pre><code>simpleLine = expression "3B0A"
+lineStart =
+line = simpleLine | compoundLine
+<h5>Functions</h5>
+<h6>
