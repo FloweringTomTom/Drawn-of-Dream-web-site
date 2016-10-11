@@ -50,8 +50,52 @@
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
-<p>Ember Language source files can be in two formats: packed and un-packed; both are ASCII text files.
-<h6>Packing format</h6>Logical lines are terminated with 0x3B0A (semicolon + line feed), while continued lines are terminated with 0x5C0A (backslash + line feed). Logical lines continued from the previous line should be indented. Indentation is four spaces.</p>
+<p>Ember Language source files can be in two formats: packed and un-packed; both are ASCII text files.</p>
+<h6>Packing format</h6>
+<p>The packing format is a set of reversible transformations that can be applied to an un-packed file, and can be implemented as follows:
+<ul>
+    <li>Append 0x23212F62696E2F456D6265724C616E67756167655061636B65640A to the output.</li>
+    <li>Delete the first line of the input</li>
+    <li>Set Boolean isContinuation to false.</li>
+    <li>For each line of the input (incl. the 0x0A byte at the end):
+        <ul>
+            <li>If isContinuation is false:
+                <ul>
+                    <li>If the input line is 80 bytes or longer:
+                        <ul>
+                            <li>Append the first 78 bytes of the input line to the output, and remove them from the input line.</li>
+                            <li>Append 0x205C0A to the output.</li>
+                            <li>Set isContinuation to true.</li>
+                        </ul>
+                    </li>
+                    <li>Otherwise, append the input line to the output.</li>
+                </ul>
+            </li>
+            <li>If isContinuation is true:
+                <ul>
+                    <li>If the input line is 76 bytes or longer:
+                        <ul>
+                            <li>Append 0x20202020 to the output.</li>
+                            <li>Append the first 74 bytes of the input line to the output, and remove them from the input line.</li>
+                            <li>Append 0x205C0A to the output.</li>
+                            <li>Set isContinuation to true.</li>
+                        </ul>
+                    </li>
+                    <li>Otherwise:
+                        <ul>
+                            <li>Append 0x20202020 to the output.</li>
+                            <li>Append the input line to the output.</li>
+                            <li>Append 0x3B0A to the output.</li>
+                            <li>Set isContinuation to false.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>For each occurrence of the regex /;\n(79*\ \\\n)+/</li>
+</ul>
+ logical lines are terminated with 0x3B0A (semicolon + line feed), while continued lines are terminated with 0x205C0A (backslash + line feed). Logical lines continued from the previous line should be indented. Indentation is four spaces. Line length incl. terminator < 80.</p>
 <pre><code>codeCharacter = ""
 packLine = 79 * { codeCharacter }
 simpleLine = { packLine }, "0A"
