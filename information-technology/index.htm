@@ -46,7 +46,7 @@
 
 <h3>Ember Language</h3>
 <p>Objective: Develop a machine-readable language that can be source-to-source translated into other languages. C and JavaScript translators should be the current development priorities.</p>
-<p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Default"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Default profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
+<p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
@@ -61,19 +61,19 @@
 
 <h5>Classes</h5>
 <p>Classes have CamelCase names beginning with an uppercase letter.</p>
-    <h6>Class</h6>
+    <h6>C Class</h6>
     <dl>
-        <dt>Traits</dt><dd>Class$type</dd>
-        <dt>Routines</dt><dd>this.$type:new() { lang.new(this) }</dd>
+        <dt>Traits</dt><dd>C Class$type</dd>
+        <dt>Routines</dt><dd>C this.$type:new() { lang.new(this) }</dd>
     </dl>
 
-    <h6>Routine</h6>
+    <h6>C Routine</h6>
     <dl>
         <dt>Traits</dt><dd>(none)</dd>
-        <dt>Routines</dt><dd>Any:run(FuzzyList$params) { lang.run(this,List$params) }</dd>
+        <dt>Routines</dt><dd>C Any:run(FuzzyList$params) { lang.run(this,List$params) }</dd>
     </dl>
 
-    <h6>List</h6>
+    <h6>C List</h6>
     <dl>
         <dt>Traits</dt><dd>
             <ul>
@@ -81,7 +81,7 @@
                 <li>C Natural$last: last valid index</li>
                 <li>C Natural$count: number of entries</li>
                 <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
-                <li>(Null|Natural)$indexLimit: maximum index the list may use; defaults to Null (meaning unlimited)</li>
+                <li>S (Null|Natural)$indexLimit: maximum index the list may use; defaults to Null (meaning unlimited)</li>
             </ul></dd>
         <dt>Routines</dt><dd>
             <ul>
@@ -93,19 +93,19 @@
             </ul></dd>
     </dl>
 
-    <h6>FuzzyList (inherits from List)</h6>
+    <h6>C FuzzyList (inherits from List)</h6>
     <p>When a FuzzyList is used in a list, its contents are appended to the list, and it is deconstructed. When a FuzzyList is used in the declaration of the parameters of a Routine, its first elements, starting from 0, are set to the values of the parameters passed to the Routine from its position onwards (so, for example, if the parameters declared are Natural$a,Natural$b,FuzzyList({ lang.set(lang.trait(this.entryLimit),2) })$c,Natural$d,Natural$e and it gets called with 2,3,4,5,6,7,8, then that's an error because there's no place to put 6 (the 5th parameter) (but if the entryLimit weren't set, a=2,b=3,c=(4,5,6),d=7,e=8), and if it gets called with 2,3,4,5,6,7, a=2,b=3,c=(4,5),d=6,e=7).</p>
 
-    <h6>Resource</h6>
+    <h6>C Resource</h6>
     <dl>
-        <dt>Return value</dt><dd>Returns a List of available Resources.</dd>
-        <dt>Exceptions thrown</dt><dd>Returns a List of available Resources.</dd>
+        <dt>Traits</dt><dd></dd>
+        <dt>Routines</dt><dd></dd>
     </dl>
 
 <h5>Routines</h5>
 <p>Routines have camelCase names beginning with a lowercase letter.</p>
-<h6>nd!system.listResources</h6>
+<h6>C nd!system.listResources</h6>
 <dl>
     <dt>Return value</dt><dd>Returns a List of available Resources.</dd>
-    <dt>Exceptions thrown</dt><dd>Returns a List of available Resources.</dd>
+    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
 </dl>
