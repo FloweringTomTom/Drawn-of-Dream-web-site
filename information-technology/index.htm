@@ -99,7 +99,7 @@
                 <li>B Void:add(String$value|List$value) { this.insert(this.last()+1) }</li>
                 <li>B Void:set(Natural$index,(String$value|List$value)) { lang.set(this.record($index),$value) }</li>
                 <li>B Any:get(Natural$index) { lang.get(this.record($index)) }</li>
-                <li>C Trait:record(Natural$index) { lang.getListEntry(this,$index) }</li>
+                <li>C Reference:record(Natural$index) { lang.getListEntry(this,$index) }</li>
                 <li>B Void:insert(Natural$index,(String$value|List$value)): insert $value at $index, moving the current $index and following items ahead by $value.count() if it's a list, and by 1 if it's a string</li>
             </ul></dd>
     </dl>
@@ -122,11 +122,11 @@
 
 <h5>System object: Routines</h5>
 <p>Routines have camelCase names beginning with a lowercase letter, and have parameters; they also sometimes have an object specification to allow for overloading (specified like <code>routine:$object { ... }</code>).</p>
-<h6>C Void:lang.new(Type$type)</h6>
+<h6>C $type:lang.new(Type$type)</h6>
 <dl>
-    <dt>Return value</dt><dd>(none)</dd>
+    <dt>Return value</dt><dd>A new object of the type passed to it</dd>
     <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-    <dt>Notes</dt><dd>Determinism depends on the object's constructor, if any.</dd>
+    <dt>Notes</dt><dd>Determinism depends on the type's constructor, if any.</dd>
 </dl>
 <h6>C Void:lang.run(Routine$routine,List$params)</h6>
 <dl>
@@ -140,9 +140,21 @@
     <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
     <dt>Notes</dt><dd>If $return="return", determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
 </dl>
-<h6>C (Void|$trait.type):lang.set(Any$trait,Any$value,(|String$return))</h6>
+<h6>C (Void|$trait.type):lang.set(Reference$trait,Any$value,(|String$return))</h6>
 <dl>
     <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $trait.type</dd>
     <dt>Exceptions thrown</dt><dd>!targetTypeMismatch</dd>
     <dt>Notes</dt><dd>If $return="return", determinism depends on $value.</dd>
+</dl>
+<h6>C $trait.type:lang.get(Reference$trait)</h6>
+<dl>
+    <dt>Return value</dt><dd>An object of type $trait.type</dd>
+    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+    <dt>Notes</dt><dd>Determinism depends on $trait.</dd>
+</dl>
+<h6>C Reference:lang.trait(Any$object)</h6>
+<dl>
+    <dt>Return value</dt><dd>A reference to the object passed to it</dd>
+    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+    <dt>Notes</dt><dd>(none)</dd>
 </dl>
