@@ -1,6 +1,6 @@
-<h1 class="title">Information Technology Environment — Ember</h1>
+<h1 type="title">Information Technology Environment — Ember</h1>
 
-<p class="breadcrumbs">Page location:
+<p type="breadcrumbs">Page location:
     <span><a href="/components.htm">Core project components</a></span>
 </p>
 
@@ -28,7 +28,7 @@
     <li>Code must be readable and documented.</li>
     <li>Code must not cause or have failing tests.</li>
     <li>Code should include thorough automatic test coverage.</li>
-    <li>Code must address a deviation from the current specification (bug, missing feature, <span class="foreign-text">etc.</span>), and may not contain other code.</li>
+    <li>Code must address a deviation from the current specification (bug, missing feature, <span type="foreign-text">etc.</span>), and may not contain other code.</li>
 </ul>
 <h3>How issues should be prioritised</h3>
 <p>Ordered from highest priority to lowest priority</p>
@@ -59,18 +59,29 @@
 </dl>
 </p>
 
-<h5>Classes</h5>
-<p>Classes have CamelCase names beginning with an uppercase letter.</p>
-    <h6>C Class</h6>
+<h5>Operators</h5>
+
+<dl>
+    <dt>C Boolean:=</dt><dd>comparison: if left is exactly equal to right, evaluates to true, otherwise false: lang.compare($left,$right)</dd>
+    <dt>C Void:&lt;-</dt><dd>assignment: lang.set(lang.trait($left),$right)</dd>
+</dl>
+
+<h5>Types</h5>
+<p>Types have CamelCase names beginning with an uppercase letter.</p>
+    <h6>C Type</h6>
     <dl>
-        <dt>Traits</dt><dd>C Class$type</dd>
+        <dt>Traits</dt><dd>C Type$type</dd>
         <dt>Routines</dt><dd>C this.$type:new() { lang.new(this) }</dd>
     </dl>
 
     <h6>C Routine</h6>
     <dl>
-        <dt>Traits</dt><dd>(none)</dd>
-        <dt>Routines</dt><dd>C Any:run(FuzzyList$params) { lang.run(this,List$params) }</dd>
+        <dt>Traits</dt><dd>
+            <ul>
+                <li>C String$code</li>
+                <li>C (Null|Routine)$onExit</li>
+            </ul></dd>
+        <dt>Routines</dt><dd>C Any:run(FuzzyList$params) { lang.run(this,lang.cast($params,List,"return")) }</dd>
     </dl>
 
     <h6>C List</h6>
@@ -102,10 +113,30 @@
         <dt>Routines</dt><dd></dd>
     </dl>
 
-<h5>Routines</h5>
-<p>Routines have camelCase names beginning with a lowercase letter.</p>
-<h6>C nd!system.listResources</h6>
+<h5>System object: Traits</h5>
+<p>Traits have camelCase names beginning with a lowercase letter.</p>
 <dl>
-    <dt>Return value</dt><dd>Returns a List of available Resources.</dd>
+    <dt>C nd!List:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
+    <dt>C nd!String:system.implementation</dt><dd>Description of the language backend.</dd>
+</dl>
+
+<h5>System object: Routines</h5>
+<p>Routines have camelCase names beginning with a lowercase letter, and have parameters; they also sometimes have an object specification to allow for overloading (specified like <code>routine:$object { ... }</code>).</p>
+<h6>C Void:lang.new(Type$type)</h6>
+<dl>
+    <dt>Return value</dt><dd>(none)</dd>
     <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+    <dt>Notes</dt><dd>Determinism depends on the object's constructor, if any.</dd>
+</dl>
+<h6>C Void:lang.run(Routine$routine,List$params)</h6>
+<dl>
+    <dt>Return value</dt><dd>(none)</dd>
+    <dt>Exceptions thrown</dt><dd>!routineSyntaxError</dd>
+    <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
+</dl>
+<h6>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h6>
+<dl>
+    <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $type</dd>
+    <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
+    <dt>Notes</dt><dd>Determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
 </dl>
