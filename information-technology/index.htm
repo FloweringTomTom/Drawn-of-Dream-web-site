@@ -46,62 +46,66 @@
 
 <h3>Ember Language</h3>
 <p>Objective: Develop a machine-readable language that can be source-to-source translated into other languages. C and JavaScript translators should be the current development priorities.</p>
-<p>Ember Language programs may optionally declare a non-default language profile to use: Basic, which restricts the program to a core subset of the language, and Dangerous, which includes language features which are probably a bad idea to use, but may be needed in some cases.</p>
+<p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Default"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Default profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
-<p>Ember Language source files can be in two formats: packed and un-packed; both are ASCII text files.</p>
-<h6>Packing format</h6>
-<p>The packing format is a set of reversible transformations that can be applied to an un-packed file, and can be implemented as follows:
-<ul>
-    <li>Append 0x23212F62696E2F456D6265724C616E67756167655061636B65640A to the output.</li>
-    <li>Delete the first line of the input</li>
-    <li>Set Boolean isContinuation to false.</li>
-    <li>For each line of the input (incl. the 0x0A byte at the end):
-        <ul>
-            <li>If isContinuation is false:
-                <ul>
-                    <li>If the input line is 80 bytes or longer:
-                        <ul>
-                            <li>Append the first 78 bytes of the input line to the output, and remove them from the input line.</li>
-                            <li>Append 0x205C0A to the output.</li>
-                            <li>Set isContinuation to true.</li>
-                        </ul>
-                    </li>
-                    <li>Otherwise, append the input line to the output.</li>
-                </ul>
-            </li>
-            <li>If isContinuation is true:
-                <ul>
-                    <li>If the input line is 76 bytes or longer:
-                        <ul>
-                            <li>Append 0x20202020 to the output.</li>
-                            <li>Append the first 74 bytes of the input line to the output, and remove them from the input line.</li>
-                            <li>Append 0x205C0A to the output.</li>
-                            <li>Set isContinuation to true.</li>
-                        </ul>
-                    </li>
-                    <li>Otherwise:
-                        <ul>
-                            <li>Append 0x20202020 to the output.</li>
-                            <li>Append the input line to the output.</li>
-                            <li>Append 0x3B0A to the output.</li>
-                            <li>Set isContinuation to false.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>For each occurrence of the regex /;\n(79*\ \\\n)+/</li>
-</ul>
- logical lines are terminated with 0x3B0A (semicolon + line feed), while continued lines are terminated with 0x205C0A (backslash + line feed). Logical lines continued from the previous line should be indented. Indentation is four spaces. Line length incl. terminator < 80.</p>
-<pre><code>codeCharacter = ""
-packLine = 79 * { codeCharacter }
-simpleLine = { packLine }, "0A"
-lineStart = packLine, "3B0A"
-compoundLine = lineStart, [ { lineContinuation } ], lineEnd
-line = simpleLine | compoundLine
-file = "23212F62696E2F456D6265724C616E67756167655061636B65640A", { line }</code></pre>
-<h5>Functions</h5>
-<h6>
+<p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.)</p>
+<p>All objects are addressed through a hierarchy:
+<dl>
+    <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
+    <dt>system</dt><dd>Objects and Routines related to the Ember environment</dd>
+    <dt>math</dt><dd>Objects and Routines related to mathematics</dd>
+</dl>
+</p>
+
+<h5>Classes</h5>
+<p>Classes have CamelCase names beginning with an uppercase letter.</p>
+    <h6>Class</h6>
+    <dl>
+        <dt>Traits</dt><dd>Class$type</dd>
+        <dt>Routines</dt><dd>this.$type:new() { lang.new(this) }</dd>
+    </dl>
+
+    <h6>Routine</h6>
+    <dl>
+        <dt>Traits</dt><dd>(none)</dd>
+        <dt>Routines</dt><dd>Any:run(FuzzyList$params) { lang.run(this,List$params) }</dd>
+    </dl>
+
+    <h6>List</h6>
+    <dl>
+        <dt>Traits</dt><dd>
+            <ul>
+                <li>type restrictions</li>
+                <li>C Natural$last: last valid index</li>
+                <li>C Natural$count: number of entries</li>
+                <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
+                <li>(Null|Natural)$indexLimit: maximum index the list may use; defaults to Null (meaning unlimited)</li>
+            </ul></dd>
+        <dt>Routines</dt><dd>
+            <ul>
+                <li>B Void:add(String$value|List$value) { this.insert(this.last()+1) }</li>
+                <li>B Void:set(Natural$index,(String$value|List$value)) { lang.set(this.record($index),$value) }</li>
+                <li>B Any:get(Natural$index) { lang.get(this.record($index)) }</li>
+                <li>C Trait:record(Natural$index) { lang.getListEntry(this,$index) }</li>
+                <li>B Void:insert(Natural$index,(String$value|List$value)): insert $value at $index, moving the current $index and following items ahead by $value.count() if it's a list, and by 1 if it's a string</li>
+            </ul></dd>
+    </dl>
+
+    <h6>FuzzyList (inherits from List)</h6>
+    <p>When a FuzzyList is used in a list, its contents are appended to the list, and it is deconstructed. When a FuzzyList is used in the declaration of the parameters of a Routine, its first elements, starting from 0, are set to the values of the parameters passed to the Routine from its position onwards (so, for example, if the parameters declared are Natural$a,Natural$b,FuzzyList({ lang.set(lang.trait(this.entryLimit),2) })$c,Natural$d,Natural$e and it gets called with 2,3,4,5,6,7,8, then that's an error because there's no place to put 6 (the 5th parameter) (but if the entryLimit weren't set, a=2,b=3,c=(4,5,6),d=7,e=8), and if it gets called with 2,3,4,5,6,7, a=2,b=3,c=(4,5),d=6,e=7).</p>
+
+    <h6>Resource</h6>
+    <dl>
+        <dt>Return value</dt><dd>Returns a List of available Resources.</dd>
+        <dt>Exceptions thrown</dt><dd>Returns a List of available Resources.</dd>
+    </dl>
+
+<h5>Routines</h5>
+<p>Routines have camelCase names beginning with a lowercase letter.</p>
+<h6>nd!system.listResources</h6>
+<dl>
+    <dt>Return value</dt><dd>Returns a List of available Resources.</dd>
+    <dt>Exceptions thrown</dt><dd>Returns a List of available Resources.</dd>
+</dl>
