@@ -50,10 +50,14 @@
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
-<p>Ember Language source files are ASCII text files, packed into easily-readable lines.
-<h6>Packing format</h6> Logical lines are terminated with 0x3B0A (semicolon + line feed), while continued lines are terminated with 0x5C0A (backslash + line feed). Logical lines continued from the previous line should be indented. Indentation is four spaces.</p>
-<pre><code>simpleLine = expression "3B0A"
-lineStart =
+<p>Ember Language source files can be in two formats: packed and un-packed; both are ASCII text files.
+<h6>Packing format</h6>Logical lines are terminated with 0x3B0A (semicolon + line feed), while continued lines are terminated with 0x5C0A (backslash + line feed). Logical lines continued from the previous line should be indented. Indentation is four spaces.</p>
+<pre><code>codeCharacter = ""
+packLine = 79 * { codeCharacter }
+simpleLine = { packLine }, "0A"
+lineStart = packLine, "3B0A"
+compoundLine = lineStart, [ { lineContinuation } ], lineEnd
 line = simpleLine | compoundLine
+file = "23212F62696E2F456D6265724C616E67756167655061636B65640A", { line }</code></pre>
 <h5>Functions</h5>
 <h6>
