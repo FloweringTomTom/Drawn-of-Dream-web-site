@@ -51,6 +51,7 @@
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
 <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.)</p>
+cs! = Changeable routine Signature (subtypes don't need to use this routine's signature when specifying it)
 <p>All objects are addressed through a hierarchy:
 <dl>
     <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
@@ -73,7 +74,7 @@
     <h6>C Type</h6>
     <dl>
         <dt>Traits</dt><dd>C Type$type</dd>
-        <dt>Routines</dt><dd>C this.$type:new() { lang.new(this) }</dd>
+        <dt>Routines</dt><dd>C cs!this.$type:new() { lang.new(this) }</dd>
     </dl>
 
     <h6>C Routine</h6>
@@ -93,7 +94,7 @@
     <dl>
         <dt>Traits</dt><dd>
             <ul>
-                <li>type restrictions</li>
+                <li>S List{set this.$allowedTypes=}</li>
                 <li>C Natural$last: last valid index</li>
                 <li>C Natural$count: number of entries</li>
                 <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
@@ -121,7 +122,7 @@
 <h5>System object: Traits</h5>
 <p>Traits have camelCase names beginning with a lowercase letter.</p>
 <dl>
-    <dt>C nd!List:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
+    <dt>C nd!List{lang.set(this.$)}:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
     <dt>C nd!String:system.implementation</dt><dd>Description of the language backend.</dd>
 </dl>
 
