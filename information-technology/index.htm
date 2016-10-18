@@ -94,7 +94,7 @@ cs! = Changeable routine Signature (subtypes don't need to use this routine's si
     <dl>
         <dt>Traits</dt><dd>
             <ul>
-                <li>S List{set this.$allowedTypes=lang.new(List).add(Type)}$allowedTypes</li>
+                <li>S List{set this.$allowedTypes=lang.new(List).add(Type)}$allowedTypes: List of allowed types that can be put in this list</li>
                 <li>C Natural$last: last valid index</li>
                 <li>C Natural$count: number of entries</li>
                 <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
