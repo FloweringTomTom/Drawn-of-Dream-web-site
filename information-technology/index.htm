@@ -126,7 +126,7 @@
 </dl>
 
 <h5>System object: Routines</h5>
-<p>Routines have camelCase names beginning with a lowercase letter, and have parameters; they also sometimes have an object specification to allow for overloading (specified like <code>routine:$object { ... }</code>).</p>
+<p>Routines have camelCase names beginning with a lowercase letter, and have parameters; they also sometimes have an object specification to allow for overloading (specified like <code>routine:$object { ... }</code>; to call that routine, pass it that object again; note that in most situations $object would be a Type; using routine overloading with other types of objects is only permitted in the Dangerous language profile).</p>
 <h6>C $type:lang.new(Type$type)</h6>
 <dl>
     <dt>Return value</dt><dd>A new object of the type passed to it</dd>
