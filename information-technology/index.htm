@@ -51,7 +51,7 @@
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
 <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.)</p>
-cs! = Changeable routine Signature (subtypes don't need to use this routine's signature when specifying it)
+cs! = Changeable routine Signature (subtypes don't need to use this routine's signature when overriding it.)
 <p>All objects are addressed through a hierarchy:
 <dl>
     <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
@@ -74,7 +74,7 @@ cs! = Changeable routine Signature (subtypes don't need to use this routine's si
     <h6>C Type</h6>
     <dl>
         <dt>Traits</dt><dd>C Type$type</dd>
-        <dt>Routines</dt><dd>C cs!this.$type:new() { lang.new(this) }</dd>
+        <dt>Routines</dt><dd>C cs!this.$type:new(FuzzyList$params) { lang.new(this) }</dd>
     </dl>
 
     <h6>C Routine</h6>
