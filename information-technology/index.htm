@@ -51,7 +51,12 @@
 <h4>Specification</h4>
 <h5>Basic syntax</h5>
 <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.)</p>
-cs! = Changeable routine Signature (subtypes don't need to use this routine's signature when overriding it.)
+<p>Routines with some dangerous properties must be labeled accordingly, as follows:
+    <dl>
+        <dt>cs!</dt><dd><span class="important-letter">C</span>hangeable routine <span class="important-letter">s</span>ignature (subtypes don't need to use this routine's signature when overriding it.)</dd>
+        <dt>nd!</dt><dd><span class="important-letter">N</span>on-<span class="important-letter">d</span>eterministic</dd>
+    </dl>
+</p>
 <p>All objects are addressed through a hierarchy:
 <dl>
     <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
