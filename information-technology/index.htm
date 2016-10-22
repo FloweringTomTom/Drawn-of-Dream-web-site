@@ -49,14 +49,26 @@
 <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
-<h5>Basic syntax</h5>
+<h5>Standard syntax (Ember Language source files, .em)</h5>
 <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.)</p>
+<h5>Ember Language source files, restricted to the Core profile, .emc</h5>
+<h5>Ember Language source files, restricted to the Basic profile, .emb</h5>
+<h5>Ember Language source files, allowing dangerous code, .emd</h5>
+<h5>Ember Language intermediate code, .emi)</h5>
+<p>This is similar to standard syntax, but where shorthand notations are all expanded into the equivalent Dc sequences.</p>
+<h5>Ember Language sequence files, .ems</h5>
+<p>A comma-separated list of Dc numbers.</p>
+<h5>Ember Language Dc documents, .emd</h5>
+<p>Documents stored using a format similar to the DCE file format.</p>
+<h5>Ember Record Documents, .emr</h5>
+<p>This is a special format that can only represent a subset of Ember Documents, used for records storage in the Ember cloud.</p>
 <p>Routines with some dangerous properties must be labeled accordingly, as follows:
     <dl>
         <dt>cs!</dt><dd><span class="important-letter">C</span>hangeable routine <span class="important-letter">s</span>ignature (subtypes don't need to use this routine's signature when overriding it.)</dd>
         <dt>nd!</dt><dd><span class="important-letter">N</span>on-<span class="important-letter">d</span>eterministic</dd>
     </dl>
 </p>
+<h5>
 <p>All objects are addressed through a hierarchy:
 <dl>
     <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
