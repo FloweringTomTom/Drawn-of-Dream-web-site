@@ -30,3 +30,6 @@ Update Web site and upload (requires futuramerlin-web-toolkit to be installed):<
 Update overlay and Web site and upload (requires repoman and futuramerlin-web-toolkit to be installed):<br />
 <pre><code>cd ember || exit 1; cd ember/ember-web-site || exit 1; ~/.futuramerlin-web-toolkit-build; cd ../.. || exit 1; cd ember-satellite-projects/wreathe-overlay || exit 1; repoman manifest; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre>
 </p>
+
+<p>If you have a fork of a git repository and want to have a new clean branch that's up to date with the original repository you forked it from, run something like this:<br />
+<pre><code>git clone https://github.com/yourName/repositoryName.git; cd compiz; git clone https://github.com/yourName/repositoryName.git; git remote add upstream https://github.com/ownerName/repositoryName.git; git pull upstream master; git fetch upstream master; git reset --hard upstream/master; git push</code></pre></p>
