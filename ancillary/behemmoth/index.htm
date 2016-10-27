@@ -7,7 +7,7 @@
 <h2>Overview</h2>
 <p>A bullet-hell computer game with support for multiple players over the Web. It is a fork of Fabiano, and consequently is licensed under the AGPL3 rather than the SEFR.</p>
 
-<p><span class="hatnote-emphasis-warning">The client is not yet confirmed to work without non-libre dependencies.</span></p>
+<p><span class="hatnote-emphasis-warning">The client is not yet confirmed to work without non-libre dependencies (it so far has only been tested with Adobe Flash and the freshplayerplugin wrapper). Resolving this issue is a high priority, and is currently being blocked by <a href="https://github.com/lightspark/lightspark/issues/275">a problem preventing getting Lightspark compiled</a>.</span></p>
 
 <h2>Documentation</h2>
 
@@ -44,7 +44,7 @@
 <pre><code>sudo mkdir -p /Wreathe/Apps/BeHeMMOth; cp -r ./* /Wreathe/Apps/BeHeMMOth/; sudo cp ./behemmoth_client ./behemmoth_server /usr/bin/</code></pre></p>
 
 <h3>Troubleshooting</h3>
-<p>If the client gives a "Error loading language" error, it was probably unable to connect to the server. Make sure the server is accessible to the client. If the client just gives a black screen, the language file (e.g. <code>en.txt</code>) probably has an incorrect syntax (it must be in the form <code>[["key1", "value", "languageAbbreviation"], ["key2", "value", "languageAbbreviation"]]</code>; incorrect whitespace (e.g. newlines) or use of commas will probably cause problems).</p>
+<p>If the client gives a "Error loading language" error, it was probably unable to connect to the server. Make sure the server is accessible to the client. If the client just gives a black screen, the language file (e.g. <code>en.txt</code>) probably has an incorrect syntax (it must be a UTF-8 file in the form <code>[["key1", "value", "languageAbbreviation"], ["key2", "value", "languageAbbreviation"]]</code> with a byte order mark at the beginning; incorrect whitespace (e.g. newlines) or use of commas will probably cause problems).</p>
 
 <h3>Development</h3>
 <p>To learn about contributing to this project, visit <a href="../develop.htm">the development page</a>.</p>
