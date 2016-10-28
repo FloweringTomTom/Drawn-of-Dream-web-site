@@ -40,8 +40,7 @@
 <h4>Compilation</h4>
 <p><code>cd</code> into the source code directory, and run <code>make</code>.</p>
 <h4>Installation</h4>
-<p>Run the following bash command:<br /><br />
-<pre><code>sudo mkdir -p /Wreathe/Apps/BeHeMMOth; cp -r ./* /Wreathe/Apps/BeHeMMOth/; sudo cp ./behemmoth_client ./behemmoth_server /usr/bin/</code></pre></p>
+<p>Run <code>sudo make install</code>.</p>
 
 <h3>Troubleshooting</h3>
 <p>If the client gives a "Error loading language" error, it was probably unable to connect to the server. Make sure the server is accessible to the client. If the client just gives a black screen, the language file (e.g. <code>en.txt</code>) probably has an incorrect syntax (it must be a UTF-8 file in the form <code>[["key1", "value", "languageAbbreviation"], ["key2", "value", "languageAbbreviation"]]</code> with a byte order mark at the beginning; incorrect whitespace (e.g. newlines) or use of commas will probably cause problems). If the client says "Loading..." on a grey background on a black screen, make sure it has been added to the Adobe Flash trust list ("Global Settings" in the context menu). If when you try to enter a realm or the Nexus it takes a long time, just give it a minute; it may say "Socket-Server Security Error: Error #2048" and "Connection failed! Retrying...": this is <a href="http://futuramerlin.com/issue-tracker/view.php?id=528">a known issue</a> but doesn't seem to adversely affect use of the software.</p>
