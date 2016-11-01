@@ -35,3 +35,5 @@ Update overlay and Web site and upload (requires repoman and futuramerlin-web-to
 <pre><code>git clone https://github.com/yourName/repositoryName.git; cd repositoryName; git checkout -b nameForNewBranch shaSumOfLastUpstreamCommitYouHave; git remote add upstream https://github.com/ownerName/repositoryName.git; git pull upstream master; git fetch upstream master; git reset --hard upstream/master; git push</code></pre></p>
 
 <p>A handy (but not necessarily reliable) way to work on tracking down non-source files: <code>grep -r . * | grep -xE "^Binary file .+ matches$" | grep -xvE "^Binary file .+\.(png|jpg|gif|mp3|ico|ttf|wmap) matches$" | less</code> (png, jpg, gif, mp3, etc. being binary file extensions to not list; more can be added in the same manner, and those can be removed).</p>
+
+<p>To update a live ebuild without a network connection: <code>EVCS_OFFLINE="yes" emerge foo</code></p>
