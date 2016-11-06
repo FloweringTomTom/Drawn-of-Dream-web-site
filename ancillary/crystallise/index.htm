@@ -36,15 +36,10 @@
     <li>hashdeep</li>
     <li>(A recent version of bash)</li>
 </ul>
+
 <h4>Setup</h4>
-<p>Create a file named <code>.crystallise.conf</code> in your home directory, containing:</p>
-<ul>
-    <li>a <span class="important-word">title</span>: This should be a hexadecimal UUID; to get one, visit <a href="https://duckduckgo.com/html/?q=uuid">this Web page</a> (you want the thing at the top of the page that looks like "2F16D21E-F312-11E5-B5A1-A52D57EF8172").</li>
-    <li>a <span class="important-word">collection identifier</span>: This must be a collection at the <a href="https://archive.org/">Internet Archive</a> to which you have write access; if you don't know what to put here, put "opensource".</li>
-    <li>a <span class="important-word">passphrase</span>: This must be a valid GPG passphrase.</li>
-    <li>the path of a <span class="important-word">directory to contain temporary files</span>: This directory should exist, be writeable, and have enough free space for three times the amount of information being crystallised at any one time.</li>
-</ul>
-<p>Each of these items should be on a separate line. They should not contain newlines.</p>
+<p>Edit the file <code>crystallise.conf</code>; see the "configuration file format" section for documentation of this.</p>
+
 <p>Finally, run <code>sudo make install</code>.</p>
 <h3>Future plans</h3>
 <ul>
@@ -53,6 +48,16 @@
     <li>Verify that the coal5 file can correctly be expanded to the original files before (or while?) uploading, and before deleting input files.</li>
     <li>Add folder support to quickliquid.</li>
 </ul>
+
+<h2>Configuration file format</h2>
+<p>The configuration file is located in your system configuration directory (probably <code>/usr/local/etc</code> or <code>/etc</code>), and is named <code>crystallise.conf</code>. It is a comma-separated list containing configuration values separated by a line feed (0x0A), as follows:</p>
+<ul>
+    <li>Installation UUID</li>
+    <li>Internet Archive collection identifier (write access to the collection is required)</li>
+    <li>Passphrase (must be a valid GPG passphrase)</li>
+    <li>Directory for working data (should be writeable and have sufficient free space to hold approximately three times the amount of data being crystallised at any one time)</li>
+</ul>
+<p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
 <h3>Development</h3>
 <p>To learn about contributing to this project, visit <a href="../develop.htm">the development page</a>.</p>
