@@ -27,7 +27,16 @@ Then, emerge the base package by running:<br />
 <pre><code>layman -s wreathe-overlay; emerge wreathe-base</code></pre></p>
 
 <h2>Updating the development version</h2>
-<p>To update an installation of the development version, there are two techniques: First, you can update any changed live ebuilds on your system:<br />
+<h3>Full system updates</h3>
+<p>To update an installation of the development version:
+    <ul>
+        <li>Update the package databases: <code>layman -S; eix-sync</code></li>
+        <li>Update any live ebuilds: <code>smart-live-rebuild</code></li>
+        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --newuse --changed-use @world</code></li>
+    </ul>
+</p>
+<h3>Wreathe components updates</h3>
+<p>To update the Wreathe components of an installation of the development version, there are two techniques: First, you can update any changed live ebuilds on your system (including any non-Wreathe live ebuilds):<br />
 <pre><code>smart-live-rebuild</code></pre><br />
 Alternatively, if you prefer, you can update only the Wreathe-specific components, by running:<br />
 <pre><code>layman -s wreathe-overlay; emerge wreathe-base wreathe-backgrounds wreathe-media-resources wreathe-office-resources wreathe-typefaces-redist wreathe-typeface-family compiz-extra-snowflake-textures</code></pre><br />
