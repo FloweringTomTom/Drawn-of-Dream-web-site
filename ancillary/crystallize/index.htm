@@ -22,9 +22,6 @@
 <p>For Wreathe 7.3 and similar operating systems (e.g. Gentoo GNU/Linux), an ebuild (<code>app-misc/crystallize</code>) is available in the <a href="/ancillary/wreathe">Wreathe</a> overlay.</p>
 <p>For other operating systems, use the following installation instructions.</p>
 
-<h4>Download</h4>
-<p>To download Crystallize, run:</p>
-<pre><code>git clone https://github.com/ethus3h/crystallize.git</code></pre>
 <h4>Requirements</h4>
 <ul>
     <li>UNIX-like operating system (Wreathe 7.3, Ubuntu, and Mac OS X 10.11 are currently supported.)</li>
@@ -36,6 +33,13 @@
     <li>hashdeep</li>
     <li>(A recent version of bash)</li>
 </ul>
+
+<h4>Download</h4>
+<p>To download Crystallize, run:</p>
+<pre><code>git clone https://github.com/ethus3h/crystallize.git</code></pre>
+
+<h4>Copy scripts</h4>
+<p>To install the downloaded scripts, run <code>cd crystallize/scripts; chmod +x ./*; sudo mkdir -p /usr/local/bin; sudo cp ./* /usr/local/bin/; sudo mkdir -p /usr/local/etc; sudo cp ../support/crystallize.conf /usr/local/etc/</code> (this should work with macOS and most GNU/Linux systems).</p>
 
 <h4>Setup</h4>
 <p>Edit the configuration file; see <a href="#Configuration_file_format">the "Configuration file format" section</a> for documentation of this.</p>
