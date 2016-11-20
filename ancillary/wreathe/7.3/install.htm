@@ -32,7 +32,7 @@ Then, emerge the base package by running:<br />
     <ul>
         <li>Update the package databases: <code>layman -S; eix-sync</code></li>
         <li>Update any live ebuilds: <code>smart-live-rebuild</code></li>
-        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --newuse --update --changed-use @world</code></li>
+        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --newuse --update --changed-use --verbose-conflicts @world</code></li>
     </ul>
 </p>
 <h3>Wreathe components updates</h3>
