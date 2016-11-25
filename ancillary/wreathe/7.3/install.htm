@@ -36,13 +36,14 @@ Then, emerge the base package by running:<br />
     </ul>
 </p>
 <h3>Wreathe components updates</h3>
-<p>To update the Wreathe components of an installation of the development version, there are two techniques: First, you can update any changed live ebuilds on your system (including any non-Wreathe live ebuilds):<br />
+<p>To update the Wreathe components of an installation of the development version, there are two techniques (note that any of these instructions will probably need you to be running as root): First, you can update any changed live ebuilds on your system (including any non-Wreathe live ebuilds):<br />
 <pre><code>smart-live-rebuild</code></pre><br />
 Alternatively, if you prefer, you can update only the Wreathe-specific components, by running:<br />
 <pre><code>layman -s wreathe-overlay; emerge wreathe-base wreathe-backgrounds wreathe-media-resources wreathe-office-resources wreathe-typefaces-redist wreathe-typeface-family compiz-extra-snowflake-textures</code></pre><br />
 To update just the main package (this may break things), run:<br />
-<pre><code>layman -s wreathe-overlay; emerge wreathe-base</code></pre></p>
-
+<pre><code>layman -s wreathe-overlay; emerge wreathe-base</code></pre><br />
+To check for and list potentially broken packages (e.g. due to disk corruption), run:<br />
+<pre><code>qcheck $(qcheck -PB)</code></pre></p>
 <h2>Development instructions</h2>
 <p>To save changes to the overlay (assuming you have cloned a fork locally to work on), run the following command in the git directory:<br />
 <pre><code>repoman manifest; git add *; git commit -am "Overlay update"; git push -u origin master</code></pre></p>
