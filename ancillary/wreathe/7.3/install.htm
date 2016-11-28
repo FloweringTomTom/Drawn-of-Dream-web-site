@@ -45,8 +45,17 @@ To update just the main package (this may break things), run:<br />
 To check for and list potentially broken packages (e.g. due to disk corruption), run:<br />
 <pre><code>qcheck $(qcheck -PB)</code></pre></p>
 <h2>Overlays</h2>
-<p>The following standard overlays are used by Wreathe: andy booboo brother-overlay elementary imaging jorgicio laurentb mva sabayon ulm</p>
-<p>The following nonstandard overlays are used by Wreathe:
+<p>(These are notes for Wreathe development. It should not be necessary in general to do this manually.)</p>
+<p>The following standard overlays are used by Wreathe (run <code>layman -a overlay-name</code> to add them): andy booboo brother-overlay elementary imaging jorgicio laurentb mva sabayon ulm</p>
+<p>The following nonstandard overlays are used by Wreathe in addition to the Wreathe overlay; to add them run layman in the form <code>layman -o https://example.org/foo.xml -f -a overlay-name</code>:
+    <dl>
+        <dt>erosa-overlay</dt><dd>https://bitbucket.org/erosa/overlays/raw/tip/overlays.xml</dd>
+        <dt>jscinoz</dt><dd>https://github.com/jscinoz/jscinoz-overlay/raw/master/overlay.xml</dd>
+        <dt>sirjaren</dt><dd>https://github.com/sirjaren/gentoo-overlay/raw/master/sirjaren.xml</dd>
+        <dt>stintel</dt><dd>http://www.linux-ipv6.be/layman.xml</dd>
+        <dt>trinity</dt><dd>https://github.com/Fat-Zer/trinity/raw/master/Documentation/trinity.overlay</dd>
+    </dl>
+</p>
 <h2>Development instructions</h2>
 <p>To save changes to the overlay (assuming you have cloned a fork locally to work on), run the following command in the git directory:<br />
 <pre><code>repoman manifest; git add *; git commit -am "Overlay update"; git push -u origin master</code></pre></p>
