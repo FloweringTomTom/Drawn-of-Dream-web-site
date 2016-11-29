@@ -81,11 +81,20 @@
 
 <h5>Operators</h5>
 
+<h6>One-argument</h6>
+
+<dl>
+    <dt>C Void:print</dt><dd>print: lang.print($right)</dd>
+</dl>
+
+<h6>Two-argument</h6>
+
 <dl>
     <dt>C Boolean:=</dt><dd>comparison: if left is exactly equal to right, evaluates to true, otherwise false: lang.compare($left,$right)</dd>
     <dt>C Boolean:|</dt><dd>exclusive or: lang.xor($left,$right)</dd>
     <dt>C Boolean:||</dt><dd>inclusive or: lang.ior($left,$right)</dd>
     <dt>C Void:&lt;-</dt><dd>assignment: lang.set(lang.trait($left),$right)</dd>
+    <dt>C Any:otherwise</dt><dd>simple exception handling: lang.otherwise($left,$right)</dd>
 </dl>
 
 <h5>Types</h5>
@@ -155,7 +164,6 @@
 </dl>
 <h6>C Void:lang.run(Routine$routine,List$params)</h6>
 <dl>
-    <dt>Return value</dt><dd>(none)</dd>
     <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
     <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
 </dl>
@@ -205,5 +213,16 @@
 <dl>
     <dt>Return value</dt><dd>lang.and($left.compare($right),$right.compare($left))</dd>
     <dt>Exceptions thrown</dt><dd>(inherit from $left.compare and $right.compare)</dd>
+    <dt>Notes</dt><dd>(none)</dd>
+</dl>
+<h6>S Any:lang.otherwise(Routine$left,Routine$right)</h6>
+<dl>
+    <dt>Return value</dt><dd>try { return $left }; except { return $right }</dd>
+    <dt>Exceptions thrown</dt><dd>(inherit from $left and $right)</dd>
+    <dt>Notes</dt><dd>(none)</dd>
+</dl>
+<h6>C Void:lang.print($string)</h6>
+<dl>
+    <dt>Exceptions thrown</dt><dd>!noStringOutputResourceAvailable</dd>
     <dt>Notes</dt><dd>(none)</dd>
 </dl>
