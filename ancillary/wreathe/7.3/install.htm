@@ -32,7 +32,7 @@ Then, emerge the base package by running:<br />
     <ul>
         <li>Update wreathe-base and the package databases: <!-- emerge wreathe-base first to avoid smart-live-rebuild clobbering the newly updated overlays --><code>emerge wreathe-base; layman -S; eix-sync</code></li>
         <li>Update any live ebuilds: <code>smart-live-rebuild</code></li>
-        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --newuse --update --verbose --verbose-conflicts @world</code></li>
+        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --newuse --update --verbose --verbose-conflicts @world; emerge @preserved-rebuild</code></li>
     </ul>
 </p>
 <h3>Wreathe components updates</h3>
