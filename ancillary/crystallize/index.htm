@@ -23,32 +23,36 @@
 <p>In addition, it also provides <a href="internal-scripts.htm">several scripts that it uses internally</a>.</p>
 
 <h3>Installation</h3>
-<p>For Wreathe 7.3 and similar operating systems (e.g. Gentoo GNU/Linux), an ebuild (<code>app-misc/crystallize</code>) is available in the <a href="/ancillary/wreathe">Wreathe</a> overlay.</p>
+<p>For Wreathe 7.3, an ebuild (<code>app-misc/crystallize</code>) is available in the <a href="/ancillary/wreathe">Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
 <p>For other operating systems, use the following installation instructions.</p>
 
-<h4>Requirements</h4>
+<h4>Instructions for installation without ebuild</h4>
+
+<h5>Requirements</h5>
+<p><span class="hatnote-emphasis-warning"><a href="/ancillary/wreathe">Wreathe</a> 7.3 is required for full support. The simple invocations of the 'crystallize' and 'decrystallize' commands (with filenames as the only arguments) are also supported on Ubuntu GNU/Linux and macOS 10.12 in the interest of promoting the preservation of knowledge (although Ember strongly advises not using non-libre software such as those operating systems), and will probably work on many other UNIX-like operating systems; these instructions only cover that basic support.</span></p>
+
 <ul>
-    <li>UNIX-like operating system (Wreathe 7.3, Ubuntu, and Mac OS X 10.11 are currently supported for the basic functionality.)</li>
-    <li>An account at the non-profit <a href="https://archive.org/">Internet Archive</a>.</li>
-    <li>ia (<a href="https://pypi.python.org/pypi/internetarchive">https://pypi.python.org/pypi/internetarchive</a>) 1.0.2 or later (must be configured by running <code>ia configure</code> since installing 1.0.2 or later before Crystallize can be used) (it is recommended to apply <a href="https://github.com/ethus3h/wreathe/tree/master/etc/portage/patches/dev-python/internetarchive">the Wreathe patches</a> to internetarchive for using with crystallize).</li>
+    <li>An account at the non-profit <a href="https://archive.org/">Internet Archive</a></li>
+    <li>ia (<a href="https://pypi.python.org/pypi/internetarchive">https://pypi.python.org/pypi/internetarchive</a>) 1.0.2 or later built with <a href="https://github.com/ethus3h/wreathe/tree/master/etc/portage/patches/dev-python/internetarchive">the Wreathe patches</a> (ia must be configured by running <code>ia configure</code> since installing 1.0.2 or later before Crystallize can be used)</li>
     <li>a root login or administrator/sudo privileges for your local computer, both for installation and use of all tools except quickliquid and dequicklify.</li>
     <li>wget 1.14 or later</li>
     <li>git</li>
     <li>hashdeep</li>
-    <li>(A recent version of bash)</li>
+    <li>A recent version of bash (unless using macOS)</li>
 </ul>
 
-<h4>Download</h4>
+<h5>Download</h5>
 <p>To download Crystallize, run:</p>
 <pre><code>git clone https://github.com/ethus3h/crystallize.git</code></pre>
 
-<h4>Copy scripts</h4>
-<p>To install the downloaded scripts, run <code>cd crystallize; make; sudo make install</code> (this should work with macOS and most GNU/Linux systems).</p>
+<h5>Copy scripts</h5>
+<p>To install the downloaded scripts, run <code>cd crystallize; make; sudo make install</code>.</p>
 
-<h4>Setup</h4>
+<h5>Setup</h5>
 <p>Edit the configuration file; see <a href="#Configuration_file_format">the "Configuration file format" section</a> for documentation of this.</p>
 
 <p>Finally, run <code>sudo make install</code>.</p>
+
 <h3>Future plans</h3>
 <ul>
     <li>Move config.txt to something less generic.</li>
