@@ -11,4 +11,10 @@
 
 <p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.3</p>
 
-<pre><code>emerge -avuDN @world --autounmask=n --with-bdeps=y --backtrack=300 --verbose-conflicts</code></pre></p>
+<p>To update an installation of the development version:
+    <ul>
+        <li>Update wreathe-base and the package databases: <!-- emerge wreathe-base first to avoid smart-live-rebuild clobbering the newly updated overlays --><code>emerge wreathe-base wreathe-overlays-redist; layman -S; eix-sync</code></li>
+        <li>Update any live ebuilds: <code>smart-live-rebuild</code></li>
+        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --newuse --update --verbose --verbose-conflicts @world; emerge @preserved-rebuild</code></li>
+    </ul>
+</p>
