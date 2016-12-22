@@ -31,11 +31,9 @@ Update overlay and Web site and upload (requires repoman and futuramerlin-web-to
 <pre><code>cd ember || exit 1; cd ember/ember-web-site || exit 1; ~/.futuramerlin-web-toolkit-build; cd ../.. || exit 1; cd ember-satellite-projects/wreathe-overlay || exit 1; repoman manifest; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre>
 </p>
 
-<p>If you have a fork of a git repository and want to have a new clean branch that's up to date with the original repository you forked it from, run something like this, substituting in the correct values for the camelCase text:<br />
-<pre><code>git clone https://github.com/yourName/repositoryName.git; cd repositoryName; git checkout -b nameForNewBranch shaSumOfLastUpstreamCommitYouHave; git remote add upstream https://github.com/ownerName/repositoryName.git; git pull upstream master; git fetch upstream master; git reset --hard upstream/master; git push --set-upstream origin nameForNewBranch</code></pre></p>
-
 <h2>Relevant how-to articles</h2>
 <ul>
+    <li><a href="get-clean-git-branch.htm">How to get a clean, up-to-date with master branch in a forked git repository</a></li>
     <li><a href="/ancillary/wreathe/documentation/experimental/find-non-source-files.htm">Finding non-source files (e.g. in a git repository)</a></li>
     <li><a href="/ancillary/wreathe/documentation/experimental/installing-offline.htm">Installing or updating a live package without an Internet connection</a></li>
 </ul>
