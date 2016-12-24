@@ -1,0 +1,39 @@
+<h1 class="title">Development documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/">Home</a></span>
+    <span><a href="/ancillary/ready-to-use.htm">Other projects</a></span>
+    <span><a href="/ancillary/work-in-progress.htm">Work-in-progress ancillary projects</a></span>
+</p>
+
+<p>An <a href="issue-tracker">issue tracker is available</a>.</p>
+
+<p>To download all of Ember and the projects it maintains:<br />
+
+Unless you are working on Wreathe or BeHeMMOth, you probably don't need the Wreathe resource repositories or BeHeMMOth. If you do want them, run both of the following commands; otherwise, just run the second.<br />
+
+<pre><code>declare -a emberWreatheResourceProjects=("wreathe-backgrounds" "wreathe-media-resources" "wreathe-office-resources" "wreathe-typeface-family" "wreathe-typefaces-redist" "compiz-extra-snowflake-textures" "BeHeMMOth" "MailKit-meta");</code></pre><br />
+
+<pre><code>declare -a emberProjects=("ember" "ember-information-technology-environment" "ember-library" "ember-web-site"); declare -a emberSatelliteProjects=("BeHeMMOth" "crystallize" "futuramerlin-web-toolkit" "warcdealer" "wreathe" "wreathe-overlay" "wreathe-overlays-redist" "${emberWreatheResourceProjects[@]}"); set -e; mkdir Ember\ Library; cd Ember\ Library || exit 1; mkdir Ember; cd Ember || exit 1; for i in "${emberProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ..; mkdir Ember\ satellite\ projects; cd Ember\ satellite\ projects || exit 1; for i in "${emberSatelliteProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ../.. || exit 1; echo "Finished downloading Ember."</code></pre><br />
+
+To synchronise your changes to the resulting development environment (assuming you aren't using Wreathe 7.3; Wreathe 7.3 users can run <code>egup</code>, or <code>egup-web</code> to also build the Web site, or <code>eogup</code> if there isn't a Web connection available or GitHub is unavailable) if you have remote commit privileges (if not, use a fork of the repository you want to work on):<br />
+
+Upload only:<br />
+<pre><code>cd ember || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre><br />
+
+Update overlay and upload (requires repoman to be installed):<br />
+<pre><code>cd ember || exit 1; cd ember-satellite-projects/wreathe-overlay || exit 1; repoman manifest; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre><br />
+
+Update Web site and upload (requires futuramerlin-web-toolkit to be installed):<br />
+<pre><code>cd ember || exit 1; cd ember/ember-web-site || exit 1; ~/.futuramerlin-web-toolkit-build; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre><br />
+
+Update overlay and Web site and upload (requires repoman and futuramerlin-web-toolkit to be installed):<br />
+<pre><code>cd ember || exit 1; cd ember/ember-web-site || exit 1; ~/.futuramerlin-web-toolkit-build; cd ../.. || exit 1; cd ember-satellite-projects/wreathe-overlay || exit 1; repoman manifest; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre>
+</p>
+
+<h2>Relevant how-to articles</h2>
+<ul>
+    <li><a href="get-clean-git-branch.htm">How to get a clean, up-to-date with master branch in a forked git repository</a></li>
+    <li><a href="/ancillary/wreathe/documentation/experimental/find-non-source-files.htm">Finding non-source files (e.g. in a git repository)</a></li>
+    <li><a href="/ancillary/wreathe/documentation/experimental/installing-offline.htm">Installing or updating a live package without an Internet connection</a></li>
+</ul>
