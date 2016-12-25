@@ -51,23 +51,14 @@
 <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
-<h5>Standard syntax (Ember Language source files, .em)</h5>
+<h5>Standard syntax (Ember Language source files, terminal: .em/.emc/.emb/.emd; document: .ed/.edc/.edb/.edd; Web: .ew/.ewc/.ewb/.ewd)</h5>
 <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.) File must end with 0x0A.</p>
-<p>Lines beginning with "#" are comments. Lines beginning with "@" are structured metadata:<br />
-<dl>
-    <dt>@Overview</dt><dd>Description of the document.</dd>
-    <dt>@Routine</dt><dd>Description of the routine.</dd>
-    <dt>@Test</dt><dd>The following code is a test for the previous routine.</dd>
-    <dt>@EndTest</dt><dd>Marks the end of a @Test</dd>.
-</dl></p>
-<h5>Ember Language source files, restricted to the Core profile, .emc</h5>
-<h5>Ember Language source files, restricted to the Basic profile, .emb</h5>
-<h5>Ember Language source files, allowing dangerous code, .emd</h5>
-<h5>Ember Language intermediate code, .emi)</h5>
+<p>Text after a "#" on a line are comments.</p>
+<h5>Ember Language intermediate code, .emi</h5>
 <p>This is similar to standard syntax, but where shorthand notations are all expanded into the equivalent Dc sequences.</p>
 <h5>Ember Language sequence files, .ems</h5>
 <p>A comma-separated list of Dc numbers.</p>
-<h5>Ember Language Dc documents, .emd</h5>
+<h5>Ember Language Dc documents, .edc</h5>
 <p>Documents stored using a format similar to the DCE file format.</p>
 <h5>Ember Record Documents, .emr</h5>
 <p>This is a special format that can only represent a subset of Ember Documents, used for records storage in the Ember cloud.</p>
