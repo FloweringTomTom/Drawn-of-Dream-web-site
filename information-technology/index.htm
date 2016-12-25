@@ -47,7 +47,7 @@
 <h2>Data formats</h2>
 
 <h3>Ember Language</h3>
-<p>Objective: Develop a machine-readable language that can be source-to-source translated into other languages. C and JavaScript translators should be the current development priorities.</p>
+<p>Objective: Develop a machine-readable language that can be source-to-source translated into other languages. A NQP translator should be the current development priority, followed by Qt and JavaScript translators.</p>
 <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
 <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
 <h4>Specification</h4>
