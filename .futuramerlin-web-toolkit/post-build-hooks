@@ -1,2 +1,9 @@
 #!/bin/bash
 set -e
+(
+    cd static/content
+    rm *
+    #FIXME todo
+    #mysql-export.sh mantis
+    #mysql-export.sh wordpress
+)
