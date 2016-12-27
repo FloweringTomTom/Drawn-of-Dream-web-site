@@ -2,8 +2,7 @@
 set -e
 (
     cd static/content
-    rm *
     #FIXME todo
-    #mysql-export.sh mantis
-    #mysql-export.sh wordpress
+    #mysql-export.sh --stdout --host=server55.web-hosting.com --apache-user=foo --apache-password=bar --phpmyadmin-user=baz --phpmyadmin-password=qux --database=mntwhatever > issue-tracker.sql.gz
+    #mysql-export.sh --stdout --host=server55.web-hosting.com --apache-user=foo --apache-password=bar --phpmyadmin-user=baz --phpmyadmin-password=qux --database=mntwhatever > news.sql.gz
 )
