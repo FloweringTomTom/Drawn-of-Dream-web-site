@@ -17,4 +17,7 @@ fi
 set +e
 rm -r ../../built/static/content
 set -e
+echo "Making first copy..."
 cp -rv static/content ../../built/static/
+echo "Making second copy..."
+cp -rv static/content ../../static/
