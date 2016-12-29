@@ -6,10 +6,10 @@ if [ ! -f static/content/futuramerlin.com/favicon.ico ]; then
         cd static/content
         set +e
         rm -r ./*
-        set -e
         #FIXME: this will break for bugs over 1000 and files over 100
-        wget --adjust-extension -p -e robots="off" http://futuramerlin.com/issue-tracker/view_all_bug_page.php http://futuramerlin.com/issue-tracker/changelog_page.php http://futuramerlin.com/issue-tracker/roadmap_page.php http://futuramerlin.com/issue-tracker/summary_page.php http://futuramerlin.com/issue-tracker/view.php?id={-1..1000} http://futuramerlin.com/issue-tracker/file_download.php?file_id={-1..100}\&type=bug
-        wget --adjust-extension -p -e robots="off" --mirror --no-parent http://futuramerlin.com/news/
+        wget --adjust-extension -p -e robots="off" http://futuramerlin.com/issue-tracker/view_all_bug_page.php http://futuramerlin.com/issue-tracker/changelog_page.php http://futuramerlin.com/issue-tracker/roadmap_page.php http://futuramerlin.com/issue-tracker/summary_page.php http://futuramerlin.com/issue-tracker/view.php?id={-1..1000} http://futuramerlin.com/issue-tracker/file_download.php?file_id={-1..100}\&type=bug || echo "WARNING: Wget reported non-zero exit status for issue tracker download"
+        wget --adjust-extension -p -e robots="off" --mirror --no-parent http://futuramerlin.com/news/ || echo "WARNING: Wget reported non-zero exit status for news download"
+        set -e
     )
 else
     echo "(Using existing static files. Remove them prior to building the site to make new ones.)"
