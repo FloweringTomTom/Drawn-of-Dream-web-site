@@ -15,11 +15,11 @@
 
 <p>Mirror a website (without parent directories)…<br /><br />
 
-<pre><code>wget --mirror -p --no-parent --warc-max-size=500M --warc-file=example -e robots=off -H -D example.com http://www.example.com/folder/;</code></pre></p>
+<pre><code>wget --mirror -p --no-parent --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
 
 <p>If it's being stubborn…<br /><br />
 
-<pre><code>wget --mirror -p --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M --warc-file=example -e robots=off -H -D example.com http://www.example.com/folder/;</code></pre></p>
+<pre><code>wget --mirror -p --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
 
 <p>Omit other domains (includes www. vs. non-www.)…<br /><br />
 
@@ -29,15 +29,15 @@
 
 <p>Mirror a website (without parent directories)…<br /><br />
 
-<pre><code>wget --mirror --delete-after -p --no-parent --warc-max-size=500M --warc-file=example -e robots=off -H -D example.com http://www.example.com/folder/;</code></pre></p>
+<pre><code>wget --mirror --delete-after -p --no-parent --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
 
 <p>If it's being stubborn…<br /><br />
 
-<pre><code>wget --mirror -p --delete-after --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M --warc-file=example -e robots=off -H -D example.com http://www.example.com/folder/;</code></pre></p>
+<pre><code>wget --mirror -p --delete-after --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
 
 <p>Omit other domains (includes www. vs. non-www.)…<br /><br />
 
-<pre><code>wget --mirror -p --delete-after --no-parent --warc-max-size=500M --warc-file=example -e robots=off http://www.example.com/folder/;</code></pre></p>
+<pre><code>wget --mirror -p --delete-after --no-parent --warc-max-size=500M -e robots=off --content-on-error --warc-file=example http://www.example.com/folder/</code></pre></p>
 
 <h2>Mirror a webpage and its resources</h2>
 
