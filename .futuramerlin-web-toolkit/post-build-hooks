@@ -12,7 +12,7 @@ if [ ! -f static/content/futuramerlin.com/favicon.ico ]; then
         wget --adjust-extension -p -e robots="off" --mirror --no-parent http://futuramerlin.com/news/
     )
 else
-    echo "(Using the existing static files. Remove them prior to building the site to make new ones.)"
+    echo "(Using existing static files. Remove them prior to building the site to make new ones.)"
 fi
 set +e
 rm -r ../../built/static/content
