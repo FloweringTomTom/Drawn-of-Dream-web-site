@@ -12,7 +12,7 @@
 
 Unless you are working on Wreathe or BeHeMMOth, you probably don't need the Wreathe repositories or BeHeMMOth, which are pretty big. If you do want them, run both of the following commands; otherwise, just run the second.<br />
 
-<pre><code>declare -a emberWreatheResourceProjects=("wreathe-backgrounds" "wreathe-media-resources" "wreathe-office-resources" "wreathe-typeface-family" "wreathe-typefaces-redist" "compiz-extra-snowflake-textures" "BeHeMMOth" "wreathe" "wreathe-overlay" "wreathe-overlays-redist" "wreathe-file-manager" "MailKit-meta");</code></pre><br />
+<pre><code>declare -a emberWreatheResourceProjects=("wreathe-backgrounds" "wreathe-media-resources" "wreathe-office-resources" "wreathe-typeface-family" "wreathe-typefaces-redist" "compiz-extra-snowflake-textures" "BeHeMMOth" "wreathe" "wreathe-overlay" "wreathe-overlays-redist" "wreathe-file-manager" "MailKit-meta" "moon-1");</code></pre><br />
 
 <pre><code>declare -a emberProjects=("ember" "ember-information-technology-environment" "ember-library" "ember-web-site"); declare -a emberSatelliteProjects=("BeHeMMOth" "crystallize" "futuramerlin-web-toolkit" "warcdealer" "${emberWreatheResourceProjects[@]}"); set -e; mkdir Ember\ Library; cd Ember\ Library || exit 1; mkdir Ember; cd Ember || exit 1; for i in "${emberProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ..; mkdir Ember\ satellite\ projects; cd Ember\ satellite\ projects || exit 1; for i in "${emberSatelliteProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ../.. || exit 1; echo "Finished downloading Ember."</code></pre><br />
 
