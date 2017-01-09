@@ -82,24 +82,6 @@
 </dl>
 </p>
 
-<h5>Operators</h5>
-
-<h6>One-argument</h6>
-
-<dl>
-    <dt>C Void:print</dt><dd>print: lang.print($right)</dd>
-</dl>
-
-<h6>Two-argument</h6>
-
-<dl>
-    <dt>C Boolean:=</dt><dd>comparison: if left is exactly equal to right, evaluates to true, otherwise false: lang.compare($left,$right)</dd>
-    <dt>C Boolean:|</dt><dd>exclusive or: lang.xor($left,$right)</dd>
-    <dt>C Boolean:||</dt><dd>inclusive or: lang.ior($left,$right)</dd>
-    <dt>C Void:&lt;-</dt><dd>assignment: lang.set(lang.trait($left),$right)</dd>
-    <dt>C Any:otherwise</dt><dd>simple exception handling: lang.otherwise($left,$right)</dd>
-</dl>
-
 <h5>Types</h5>
 <p>Types have CamelCase names beginning with an uppercase letter.</p>
     <h6>C Type</h6>
@@ -151,20 +133,14 @@
     </dl>
 
 <h5>System object: Traits</h5>
-<p>Traits have camelCase names beginning with a lowercase letter.</p>
+<p>Traits have camelCase names beginning with a lowercase letter. Routines are a type of trait.</p>
 <dl>
     <dt>C nd!List[Resource]:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
     <dt>C nd!String:system.implementation</dt><dd>Description of the language backend.</dd>
 </dl>
 
 <h5>System object: Routines</h5>
-<p>Routines have camelCase names beginning with a lowercase letter, and have parameters; they also sometimes have an object specification to allow for overloading (specified like <code>routine:$object { ... }</code>; to call that routine, pass it that object again; note that in most situations $object would be a Type; using routine overloading with other types of objects is only permitted in the Dangerous language profile).</p>
-<h6>C $type:lang.new(Type$type)</h6>
-<dl>
-    <dt>Return value</dt><dd>A new object of the type passed to it</dd>
-    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-    <dt>Notes</dt><dd>Determinism depends on the type's constructor, if any.</dd>
-</dl>
+<p>Routines have camelCase names beginning with a lowercase letter, and have parameters.</p>
 <h6>C Void:lang.run(Routine$routine,List$params)</h6>
 <dl>
     <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
@@ -194,24 +170,6 @@
     <dt>Exceptions thrown</dt><dd>(none additional)</dd>
     <dt>Notes</dt><dd>(none)</dd>
 </dl>
-<h6>C Boolean:lang.and(Boolean$left,Boolean$right)</h6>
-<dl>
-    <dt>Return value</dt><dd>Logical and: $left and $right</dd>
-    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-    <dt>Notes</dt><dd>(none)</dd>
-</dl>
-<h6>C Boolean:lang.xor(Boolean$left,Boolean$right)</h6>
-<dl>
-    <dt>Return value</dt><dd>Exclusive or: $left xor $right</dd>
-    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-    <dt>Notes</dt><dd>(none)</dd>
-</dl>
-<h6>C Boolean:lang.ior(Boolean$left,Boolean$right)</h6>
-<dl>
-    <dt>Return value</dt><dd>Inclusive or: $left or $right</dd>
-    <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-    <dt>Notes</dt><dd>(none)</dd>
-</dl>
 <h6>C Boolean:lang.compare(Any$left,Any$right)</h6>
 <dl>
     <dt>Return value</dt><dd>lang.and($left.compare($right),$right.compare($left))</dd>
@@ -222,15 +180,5 @@
 <dl>
     <dt>Return value</dt><dd>try { return $left }; except { return $right }</dd>
     <dt>Exceptions thrown</dt><dd>(inherit from $left and $right)</dd>
-    <dt>Notes</dt><dd>(none)</dd>
-</dl>
-<h6>C nd!Void:lang.print(String$string)</h6>
-<dl>
-    <dt>Exceptions thrown</dt><dd>!noStringOutputResourceAvailable</dd>
-    <dt>Notes</dt><dd>(none)</dd>
-</dl>
-<h6>C nd!Void:lang.sprint(Sstring$string)</h6>
-<dl>
-    <dt>Exceptions thrown</dt><dd>!noStringOutputResourceAvailable</dd>
     <dt>Notes</dt><dd>(none)</dd>
 </dl>
