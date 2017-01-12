@@ -15,7 +15,7 @@
     <ul>
         <li>Update wreathe-base and the package databases: <!-- emerge wreathe-base first to avoid smart-live-rebuild clobbering the newly updated overlays --><code>emerge wreathe-base wreathe-overlays-redist; layman -S; eix-sync</code></li>
         <li>Update any live ebuilds: <code>smart-live-rebuild</code></li>
-        <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --changed-deps=y --newuse --update --verbose --verbose-conflicts @world</code></li>
+        <li>Update all other packages: <code>haskell-updater; emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --changed-deps=y --newuse --update --verbose --verbose-conflicts @world</code></li>
         <li>Rebuild packages for any newly built libraries: <code>emerge @preserved-rebuild</code></li>
     </ul>
 </p>
