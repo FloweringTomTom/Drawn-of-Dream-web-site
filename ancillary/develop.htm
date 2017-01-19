@@ -27,12 +27,12 @@
     <dt>ember-retired-repositories</dt><dd>Meta-repository containing repositories that are no longer used by Ember</dd>
     <dt>ember-web-site-snapshots</dt><dd>Snapshots of the contents of the Ember Web site, as retrieved from the server</dd>
     <dt>futuramerlin-web-toolkit</dt><dd><a href="/ancillary/futuramerlin-web-toolkit/">Futuramerlin Web Toolkit</a></dd>
-    <dt>wreathe-charselect</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: Character selection tool (forked from kcharselect)</dd>
     <dt>MailKit-meta</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: meta-repository used for building MailKit</dd>
     <dt>moon-1</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: Moonlight (forked from discontinued code)</dd>
     <dt>warcdealer</dt><dd><a href="/ancillary/warcdealer/">Warcdealer</a></dd>
     <dt>wreathe</dt><dd><a href="/ancillary/wreathe/">Wreathe</a> core repository</dd>
     <dt>wreathe-backgrounds</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: background images</dd>
+    <dt>wreathe-charselect</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: Character selection tool (forked from kcharselect)</dd>
     <dt>wreathe-file-manager</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: File manager (forked from discontinued code)</dd>
     <dt>wreathe-kernel</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: Kernel</dd>
     <dt>wreathe-media-resources</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: Resources for media production</dd>
@@ -50,7 +50,7 @@
 
 Unless you are working on Wreathe or investigating the history of Ember, you probably don't need the Wreathe repositories or Ember history repositories, which are pretty big. If you do want them, run both of the following commands; otherwise, just run the second.<br />
 
-<pre><code>declare -a emberWreatheResourceProjects=("BeHeMMOth" "compiz-extra-snowflake-textures" "ember-retired-repositories" "ember-web-site-snapshots" "MailKit-meta" "moon-1" "wreathe" "wreathe-backgrounds" "wreathe-file-manager" "wreathe-kernel" "wreathe-media-resources" "wreathe-office-resources" "wreathe-overlay" "wreathe-overlays-redist" "wreathe-package-db" "wreathe-typeface-family" "wreathe-typefaces-redist" "xulrunner");</code></pre><br />
+<pre><code>declare -a emberWreatheResourceProjects=("BeHeMMOth" "compiz-extra-snowflake-textures" "ember-retired-repositories" "ember-web-site-snapshots" "MailKit-meta" "moon-1" "wreathe" "wreathe-backgrounds" "wreathe-charselect" "wreathe-file-manager" "wreathe-kernel" "wreathe-media-resources" "wreathe-office-resources" "wreathe-overlay" "wreathe-overlays-redist" "wreathe-package-db" "wreathe-typeface-family" "wreathe-typefaces-redist" "xulrunner");</code></pre><br />
 
 <pre><code>declare -a emberProjects=("ember" "ember-information-technology-environment" "ember-library" "ember-web-site"); declare -a emberSatelliteProjects=("crystallize" "futuramerlin-web-toolkit" "warcdealer" "${emberWreatheResourceProjects[@]}"); set -e; mkdir Ember\ Library; cd Ember\ Library || exit 1; mkdir Ember; cd Ember || exit 1; for i in "${emberProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ..; mkdir Ember\ satellite\ projects; cd Ember\ satellite\ projects || exit 1; for i in "${emberSatelliteProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ../.. || exit 1; echo "Finished downloading Ember."</code></pre><br />
 
