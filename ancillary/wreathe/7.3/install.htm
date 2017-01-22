@@ -21,8 +21,6 @@
 <p>It is probably possible to install Wreathe 7.3 on computers that do not meet the requirements to be supported. Note that systems that do not meet the recommended requirements are supported as long as they meet the basic requirements.</p>
 
 <h2>Development Version Installation (not supported; for development and/or testing)</h2>
-<p>During development, Wreathe 7.3: Elegiac is distributed as a Portage overlay, and requires a working Gentoo GNU/Linux installation. To install it, first add the overlay to the system by running:<br />
-<pre><code>layman -o https://raw.githubusercontent.com/ethus3h/wreathe-overlay/master/wreathe-overlay.xml -f -a wreathe-overlay -p 100</code></pre><br />
-<!-- FIXME should also set up a binhost, and optionally then rebuild everything -->Then, emerge the base package by running:<br />
-<pre><code>layman -s wreathe-overlay; emerge wreathe-base</code></pre></p>
-<p>Note that in my installation, <code>/var/db/pkg</code> is a symlink to <code>/Ember\ Library/Ember\ satellite\ projects/wreathe-package-db</code>.
+<p>During development, Wreathe 7.3: Elegiac is distributed as a Portage overlay, and requires a working Gentoo GNU/Linux installation with layman installed. To install it, run as root:<br />
+<pre><code>cd /; wget https://github.com/ethus3h/wreathe-bootstrap/archive/v0.7.3_pre1.tar.gz -o wreathe-bootstrap-v0.7.3_pre1.tar.gz; tar -xvzf wreathe-bootstrap-v0.7.3_pre1.tar.gz; echo 'PORTDIR_OVERLAY="/usr/local/portage/ ${PORTDIR_OVERLAY}"' >> /etc/portage/make.conf; emerge wreathe-base wreathe-overlays-redist</code></pre><br />
+Then, follow <a href="/ancillary/wreathe/documentation/experimental/update.htm">the update instructions</a>.<!-- FIXME: provide instructions for rebuilding all binary packages --></p>
