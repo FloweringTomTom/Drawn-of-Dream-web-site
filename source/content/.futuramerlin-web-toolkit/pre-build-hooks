@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+git clone https://github.com/ethus3h/ember-information-technology-environment.git
+mv ember-information-technology-environment/implementations/web information-technology/env
+rm -rf ember-information-technology-environment
