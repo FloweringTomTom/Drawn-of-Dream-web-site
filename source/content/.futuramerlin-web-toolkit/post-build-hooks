@@ -10,7 +10,7 @@ else
     echo "(Using existing static files. Remove them prior to building the site to make new ones.)"
 fi
 set +e
-rm -r ../../built/static/content
+rm -rfv ../../built/static/content
 set -e
 echo "Making first copy..."
 cp -rv static/content ../../built/static/
