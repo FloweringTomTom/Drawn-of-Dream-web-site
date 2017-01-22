@@ -12,14 +12,14 @@ else
 fi
 set +e
 pwd
-rm -rfv ../../built/static/content
+rm -rfv ../../../built/static/content
 set -e
 echo "Making first copy..."
 pwd
-cp -rv content ../../built/static/
+cp -rv content ../../../built/static/
 echo "Making second copy..."
 pwd
-cp -rv content ../../static/
+cp -rv content ../../../static/
 for i in set {1..100}; do
     echo
 done
