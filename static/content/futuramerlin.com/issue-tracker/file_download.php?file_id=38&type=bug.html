@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOOM for Chrome</title>
+</head>
+<body style="background-color: #FFFFDD">
+
+<div style="width: 400px; margin: auto;">
+<i>Any statements or opinions expressed below are those of the author of this FAQ and do not
+necessarily reflect those of Google, id Software,  or any other company.</i>
+
+<h3>What is Native Client (NaCl)?</h3>
+
+<p>
+Native Client (NaCl) is an open-source browser plugin that provides a sandboxed environment
+for running native code in the browser. This provides websites with access to native
+processing power, which in some cases may be an order of magnitude faster than javascript.
+</p>
+
+<p>
+Games are not the only thing that NaCl can be used for, but they do demonstrate
+the impressive computational abilities of NaCl.
+</p>
+
+
+<h3>Is Native Client safe?</h3>
+
+<p>
+Native Client applications must adhere to strict rules to prevent
+escape from the sandbox. An application which does not follow these
+rules will never be loaded.
+</p>
+
+<p>
+You can read more (including the research papers) at the
+<a href="https://developer.chrome.com/native-client">Native Client Website</a>
+</p>
+
+<h3>The demo is not loading</h3>
+
+<p>Native Client is still experimental technology, and may not work on
+all systems. If it doesn't work on your system, <a href="feedback.html">let me know</a>.
+Please include your OS, version of Chrome, and processor type.</p>
+
+<h3> What is that number in the upper left corner?</h3>
+
+<p>Frames Per Second. The original doom does not have this, but
+it was added for this demonstration. The original Doom is fixed
+at 35 fps, since the game physics is tied to the framerate.</p>
+
+<h3>Why does this only work on Chrome?</h3>
+
+<p>
+The original version of Native Client was developed for Firefox using the
+NPAPI (Netscape Plugin Application Programming Interface) plugin interface. However,
+this legacy interface was found to be limiting. A new plugin interface was
+developed at Google, called Pepper API (PPAPI), to allow Native Client to reach
+its full potential.
+</p>
+
+<p>
+Chrome has PPAPI support, but Mozilla has
+<a href="https://wiki.mozilla.org/NPAPI:Pepper">decided not to implement Pepper</a>.
+</p>
+
+<h3>What is Portable Native Client (PNaCl)?</h3>
+
+<p>
+There are many different types of processors, each with its own type of native code.
+One of the defining features of the web is that one page (or app) works everywhere:
+on any browser, processor, or operating system. With native code applications,
+this can't be true.
+</p>
+
+<p>
+Portable Native Client (PNaCl) is the answer to this problem. PNaCl is an 
+extension of NaCl that allows <a href="http://llvm.org/docs/BitCodeFormat.html">LLVM bitcode</a>
+to be used as the format for NaCl applications. Bitcode is an abstract form of machine code, which
+can be converted into the regular machine code of the target machine "on the fly". Thus, a single
+bitcode executable will run on any computer, any operating system, and (eventually) any browser.
+</p>
+
+<p>
+If you are curious, here's the <a href="doom.pexe">LLVM bitcode file (6MB)</a> which encodes DOOM.
+</p>
+
+<h3>Why are the graphics so blocky?</h3>
+
+<p>
+Those are the original 320 x 200 Doom graphics, scaled to fit the screen.
+</p>
+<p>
+Doom is not really a 3D game, but actually a 2D game with perspective to appear 3D.
+Everything is software generated, there is no hardware acceleration. There are
+modern source ports of Doom with higher resolution graphics, but
+this project uses the original code.
+</p>
+
+<h3>Why is there no music?</h3>
+
+<p>
+Unfortunately, SDL doom has no support for music.
+</p>
+
+<h3>Can I have the source code?</h3>
+<p>
+Of course. <a href="nacldoom.tar.bz2">nacldoom build directory</a>.
+</p>
+
+<p>
+Warning: This is not a highly-polished. I made just enough changes to get everything to work. Be sure to read the README file.
+</p>
+
+</div>
+</body>
+</html>
