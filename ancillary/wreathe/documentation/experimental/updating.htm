@@ -17,6 +17,7 @@
         <li>Update all other live ebuilds: <code>smart-live-rebuild</code></li>
         <li>Update all other packages: <code>emerge --backtrack=0 --deep --complete-graph=y --with-bdeps=y --changed-deps=y --newuse --update --verbose --verbose-conflicts @world</code></li>
         <li>Rebuild packages for any newly built libraries: <code>emerge @preserved-rebuild</code></li>
+        <li>Rebuild Xorg and kernel modules: <code>emerge @x11-module-rebuild @module-rebuild</code></li>
         <li>Update Haskell packages: <code>haskell-updater</code></li>
       <!-- emerge -uDNav --with-bdeps=y @world && emerge --depclean --ask
       emerge -f @installed
