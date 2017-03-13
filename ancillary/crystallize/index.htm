@@ -9,14 +9,14 @@
 <p>Note: There is an oddity in the version numbering: version 2.15.5.9.1 was followed immediately by version 2.15.5.9.3 (skipping 2.15.5.9.2); version 2.15.5.9.2 was then released following version 2.15.5.9.3 (and is identical to version 2.15.5.9.3 aside from the version number); normal numbering then resumed with version 2.15.5.9.4, .5, .6 etc. following version 2.15.5.9.2 (skipping version 2.15.5.9.3, as that number was already used).</p>
 <h2>Documentation</h2>
 <h3>Usage</h3>
-<p>Crystallize provides the following user-facing command-line scripts.</p>
+<p>Crystallize provides the following primary user-facing command-line scripts.</p>
 <dl>
     <dt><code>crystallize</code></dt><dd>Archives a snapshot of a file and removes it, providing an address and/or a pointer file that can be used to retrieve it. Synopsis: <code>crystallize [--] [--leave-pointer] &lt;file&gt;...</code></dd>
     <dt><code>crystallize-backup</code></dt><dd>Backs up <code>crystallize</code>d files with their associated metadata to the current directory. Synopsis: <code>crystallize-backup &lt;crystal-address&gt;</code></dd>
     <dt><code>decrystallize</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given their address. Synopsis: <code>decrystallize &lt;crystal-address&gt;</code></dd>
     <dt><code>decrystallize-pointer</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given a path to their pointer file. Synopsis: <code>decrystallize-pointer &lt;file&gt;</code></dd>
 </dl>
-<p>The following scripts are used internally by the other tools and are mainly useful for writing other shell scripts, or are not thoroughly tested.</p>
+<p>The following public-facing scripts are either used internally by the other tools and are mainly useful for writing other shell scripts, or are not thoroughly tested.</p>
 <dl>
     <dt><code>crystallize-getconf</code></dt><dd>Retrieve a configuration value from the configuration file used by Crystallize tools. Synopsis: <code>crystallize-getconf &lt;configuration-key-name&gt;</code></dd>
     <dt><code>disk-size-in-bytes</code></dt><dd>Returns an estimate sum of the disk usage of the specified files, in bytes. Synopsis: <code>disk-size-in-bytes &lt;file&gt;...</code></dd>
