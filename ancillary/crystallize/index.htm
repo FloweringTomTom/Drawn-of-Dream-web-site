@@ -35,7 +35,7 @@
     <dt><code>sreg_verify_entry</code></dt><dd>Check that the specified pointer can be retrieved. If a tracking file (should contain only an integer) is specified, the file's value will be incremented. Synopsis: <code>sreg_verify_entry &lt;retry-limit&gt; &lt;path-to-pointer&gt; [tracking-file]</code></dd>
     <dt><code>sreg_verify_hashpointer</code></dt><dd>Check that the specified hash pointer can be retrieved (does not currently retry). Synopsis: <code>sreg_verify_hashpointer &lt;retry-limit&gt; &lt;path-to-pointer&gt;</code></dd>
     <dt><code>srpull</code></dt><dd>Copy the first argument into the second and replace any enclosed sreg pointers with their contents. Synopsis: <code>srpull &lt;source-path&gt; &lt;destination-directory&gt;</code></dd>
-    <dt><code>srsync</code></dt><dd>Copy the first argument into the second and replace non-pointerized or out-of-date files in the destination with their pointers. Synopsis: <code>srsync [--no-verify] &lt;source-path&gt; &lt;destination-directory&gt;</code></dd>
+    <dt><code>srsync</code></dt><dd>Copy the first argument into the second and replace non-pointerized or out-of-date files in the destination with their pointers. Synopsis: <code>srsync [--verify|--no-verify] &lt;source-path&gt; &lt;destination-directory&gt;</code></dd>
     <dt><code>warn</code></dt><dd>Notify the user of a shell script of a warning. Synopsis: <code>warn &lt;message-to-user&gt;</code></dd>
     <dt><code>warn-timeout</code></dt><dd>Notify the user of a shell script of a warning, and wait a bit in the hope that they see the warning. Synopsis: <code>warn &lt;message-to-user&gt; [time-to-wait-in-seconds]</code> (time-to-wait defaults to 10 seconds)</dd>
 </dl>
