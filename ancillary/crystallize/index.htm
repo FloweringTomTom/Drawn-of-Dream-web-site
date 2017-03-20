@@ -55,10 +55,16 @@
 </dl>
 <p><code>crystallize-bash_setup</code> provides these bash functions.</p>
 <dl>
-    <dt><code>error-die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>error-notify [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
     <dt><code>rubberfs</code></dt><dd>Wrapper around the <code>rubberfs</code> script: this function should be used instead. Synopsis: <code>Synopsis: <code>rubberfs ( ((create|mount|soft-mount|remount|rename|cd|unmount|soft-unmount|attach|check|save|freeze|delta|gc|thaw|patch|status|list|usage-write|destroy|destroy-no-upload|historybak|historypull) [RubberFS name]) | usage | whereami | stub | (stash &lt;file&gt;...) )</code></dd>
     <dt><code>git-absolute-path</code></dt><dd>???? Synopsis: <code>git-absolute-path &lt;file&gt;</code></dd>
     <dt><code>git-escape-path</code></dt><dd>???? Synopsis: <code>git-escape-path &lt;path&gt;</code></dd>
+</dl>
+<p><code>ember_bash_setup</code> provides these bash functions.</p>
+<dl>
+    <dt><code>error-die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>error-die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
+    <dt><code>embasename</code></dt><dd>Replacement for <code>basename</code> in bash. Synopsis: <code>embasename &lt;path&gt;</code></dd>
+    <dt><code>emreadlink</code></dt><dd>Cross-platform replacement for <code>readlink</code>. Synopsis: <code>emreadlink &lt;path&gt;</code></dd>
+    <dt><code>setVariableToCommandOutput</code></dt><dd>Alternative to bash command substitution (<code>"$(command)"</code>) that preserves trailing newlines. <code>variable-name</code> must not be "<code>emSetVariableToCommandOutputVar</code>". Synopsis: <code>setVariableToCommandOutput &lt;variable-name&gt; &lt;command&gt; [argument]...</code></dd>
 </dl>
 
 <h3>Installation</h3>
