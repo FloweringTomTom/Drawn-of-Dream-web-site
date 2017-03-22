@@ -30,7 +30,6 @@
     <dt><code>sreg_fsck_hashpointers</code></dt><dd>Verify that all sreg hash pointers in the specified directory can be read correctly. Synopsis: <code>sreg_fsck_hashpointers &lt;path&gt;</code></dd>
     <dt><code>sreg_read_files</code></dt><dd>For each file specified, if it is a sreg pointer, then replace it with the pointer's contents. Synopsis: <code>sreg_read_files &lt;file&gt;...</code></dd>
     <dt><code>sreg_read_stream</code></dt><dd>Accepts a sreg pointer on stdin, and outputs the corresponding data from the stream registry. Synopsis: <code>sreg_read_stream [--disallow-hash-pointer]</code></dd>
-    <dt><code>sreg_store_files</code></dt><dd>Store the contents of the specified file(s) in the stream registry, and optionally replace them with their contents. Synopsis: <code>sreg_read_stream [--replace] &lt;file&gt;...</code></dd>
     <dt><code>sreg_store_stream</code></dt><dd>Stores data provided on stdin into the stream registry, and sends a pointer to it to stdout. Synopsis: <code>sreg_store_stream</code></dd>
     <dt><code>sreg_verify_entry</code></dt><dd>Check that the specified pointer can be retrieved. If a tracking file (should contain only an integer) is specified, the file's value will be incremented. Synopsis: <code>sreg_verify_entry &lt;retry-limit&gt; &lt;path-to-pointer&gt; [tracking-file]</code></dd>
     <dt><code>sreg_verify_hashpointer</code></dt><dd>Check that the specified hash pointer can be retrieved (does not currently retry). Synopsis: <code>sreg_verify_hashpointer &lt;retry-limit&gt; &lt;path-to-pointer&gt;</code></dd>
