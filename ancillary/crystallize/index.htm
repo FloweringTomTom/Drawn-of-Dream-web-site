@@ -65,7 +65,9 @@
     <dt><code>emreadlink</code></dt><dd>Cross-platform replacement for <code>readlink</code>. Synopsis: <code>emreadlink &lt;path&gt;</code></dd>
     <dt><code>setVariableToCommandOutput</code></dt><dd>Alternative to bash command substitution (<code>"$(command)"</code>) that preserves trailing newlines. <code>variable-name</code> must not be "<code>emSetVariableToCommandOutputVar</code>". Synopsis: <code>setVariableToCommandOutput &lt;variable-name&gt; &lt;command&gt; [argument]...</code></dd>
     <dt><code>ereplace</code></dt><dd>Replace one string with another in the specified file. Synopsis: <code>ereplace &lt;string-to-replace&gt; &lt;replacement-string&gt; &lt;file&gt;</code></dd>
-    <dt><code>readconf</code></dt><dd>Read a value from a configuration file, and return it as <code>readconfValue</code>. If the key is present multiple times in the file, an array will be returned. Synopsis: <code>readconf &lt;key&gt; &lt;file&gt;</code></dd>
+    <dt><code>print</code></dt><dd>Prints a string. Synopsis: <code>print &lt;string&gt;</code></dd>
+    <dt><code>readconf</code></dt><dd>Read a value from a configuration file, and return it as <code>readconfValue</code> (this is an array, and will contain multiple results if the key is present multiple times in the file). If <code>&lt;key&gt;</code> is not provided, it will return the non-comment lines of the file instead. Synopsis: <code>readconf [&lt;key&gt;] &lt;file&gt;</code></dd>
+    <dt><code>preadconf</code></dt><dd>Read a value from a configuration file, and print it (if the key is present multiple times in the file, the first value will be printed). Synopsis: <code>preadconf &lt;key&gt; &lt;file&gt;</code></dd>
 </dl>
 
 <h3>Installation</h3>
