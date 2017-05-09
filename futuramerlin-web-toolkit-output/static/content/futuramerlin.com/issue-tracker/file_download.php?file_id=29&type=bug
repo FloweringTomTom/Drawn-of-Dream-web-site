@@ -1,0 +1,87 @@
+ekyan@elegiac ~ nohup compiz --replace openbox $ equery y lash
+Keywords for media-sound/lash:
+            |                                 |   u   |  
+            | a a         p s     a   n r     |   n   |  
+            | l m   h i   p p   m r m i i s   | e u s | r
+            | p d a p a p c a x i m 6 o s 3   | a s l | e
+            | h 6 r p 6 p 6 r 8 p 6 8 s c 9 s | p e o | p
+            | a 4 m a 4 c 4 c 6 s 4 k 2 v 0 h | i d t | o
+------------+---------------------------------+-------+-------
+   0.5.4-r1 | + + o + o + + + + o o o o o o o | 4 # 0 | gentoo
+[I]0.5.4-r2 | + + o + o + + + + o o o o o o o | 5 o   | gentoo
+kyan@elegiac ~ nohup compiz --replace openbox $ equery y liblash
+No such package "liblash"
+kyan@elegiac ~ nohup compiz --replace openbox $ equery p 0.5.4-r2
+!!! Unknown module 'p'
+Usage: equery [global-options] module-name [module-options]
+
+global options
+ -h, --help              display this help message
+ -q, --quiet             minimal output
+ -C, --no-color          turn off colors
+ -N, --no-pipe           turn off pipe detection
+ -V, --version           display version info
+
+modules (short name)
+ (b)elongs               list what package FILES belong to
+ (c)hanges               list changelog entries for ATOM
+ chec(k)                 verify checksums and timestamps for PKG
+ (d)epends               list all packages directly depending on ATOM
+ dep(g)raph              display a tree of all dependencies for PKG
+ (f)iles                 list all files installed by PKG
+ h(a)s                   list all packages for matching ENVIRONMENT data stored in /var/db/pkg
+ (h)asuse                list all packages that have USE flag
+ ke(y)words              display keywords for specified PKG
+ (l)ist                  list package matching PKG
+ (m)eta                  display metadata about PKG
+ (s)ize                  display total size of all files owned by PKG
+ (u)ses                  display USE flags for PKG
+ (w)hich                 print full path to ebuild for PKG
+kyan@elegiac ~ nohup compiz --replace openbox $ equery f lash-0.5.4-r2
+ * Searching for lash0.5.4-r2 ...
+ * Contents of media-sound/lash-0.5.4-r2:
+/usr
+/usr/bin
+/usr/bin/lash_control
+/usr/bin/lash_simple_client
+/usr/bin/lash_synth
+/usr/bin/lashd
+/usr/include
+/usr/include/lash-1.0
+/usr/include/lash-1.0/lash
+/usr/include/lash-1.0/lash/client_interface.h
+/usr/include/lash-1.0/lash/config.h
+/usr/include/lash-1.0/lash/event.h
+/usr/include/lash-1.0/lash/lash.h
+/usr/include/lash-1.0/lash/protocol.h
+/usr/include/lash-1.0/lash/types.h
+/usr/lib64
+/usr/lib64/liblash.so -> liblash.so.1.1.1
+/usr/lib64/liblash.so.1 -> liblash.so.1.1.1
+/usr/lib64/liblash.so.1.1.1
+/usr/lib64/pkgconfig
+/usr/lib64/pkgconfig/lash-1.0.pc
+/usr/lib64/python2.7
+/usr/lib64/python2.7/site-packages
+/usr/lib64/python2.7/site-packages/_lash.so
+/usr/lib64/python2.7/site-packages/lash.py
+/usr/lib64/python2.7/site-packages/lash.pyc
+/usr/lib64/python2.7/site-packages/lash.pyo
+/usr/share
+/usr/share/doc
+/usr/share/doc/lash-0.5.4-r2
+/usr/share/doc/lash-0.5.4-r2/html
+/usr/share/doc/lash-0.5.4-r2/html/lash-manual.html
+/usr/share/lash
+/usr/share/lash/dtds
+/usr/share/lash/dtds/lash-project-1.0.dtd
+/usr/share/lash/icons
+/usr/share/lash/icons/lash.svg
+/usr/share/lash/icons/lash.xcf
+/usr/share/lash/icons/lash_16px.png
+/usr/share/lash/icons/lash_24px.png
+/usr/share/lash/icons/lash_48px.png
+/usr/share/lash/icons/lash_96px.png
+kyan@elegiac ~ nohup compiz --replace openbox $ file /usr/lib64/liblash.so.1.1.1
+/usr/lib64/liblash.so.1.1.1: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, stripped
+kyan@elegiac ~ nohup compiz --replace openbox $ 

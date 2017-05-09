@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft FrontPage 4.0">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>ActiveX Test</TITLE>
+<script language="VBScript">
+<!--
+Sub window_onLoad()
+	window.setInterval "label1.caption=now",1000
+end sub
+-->
+</script>
+</HEAD>
+<body bgcolor="#ffffff" link="#0022bb" vlink="#555555" alink="#ee0000">
+<TABLE border=0 cellPadding=1 cellSpacing=1 width="100%">
+<tr>&nbsp;<p></p>
+<TR>
+<TD width=60>&nbsp;</TD> <!-- absolute blank cell -->
+<TD width="10%">&nbsp;</TD> <!-- relative blank cell -->
+<TD width="70%">
+            <P><!-- text cell -->
+<h1>Test Your ActiveX Installation</h1>
+This page tests whether you have your browser properly configured to download,
+authenticate, install, and display ActiveX controls, and manipulate them
+with VBScript.
+<p>When prompted with a certificate, accept it. The current date and time should appear
+below:<p>
+<center>
+<OBJECT classid=clsid:9732FB42-C321-11D1-836F-00A0C993F125 codeBase="mhLbl.cab"
+height=30 id=label1 width=200>
+	<b>ActiveX is not supported</b><p>
+</OBJECT>
+</center>
+If you see the current date and time displayed above, ActiveX and VBScript are
+working properly, and you should go back to the page you were looking at.
+<p>If, instead of the time, you see a box with a small x in it, either you
+don't have ActiveX installed, you don't have ActiveX enabled, you aren't running
+an Intel processor and a 32-bit version of Windows,
+you don't have a currrent version of Authenticode, or you didn't
+accept the certificate. 
+<p>If you see a blank space, you probably have ActiveX 
+working but not VBScript. 
+<p>If you see the message <b>ActiveX is not supported</b>, then
+you are using a browser that doesn't recognize the Object tag at all.
+<p>If you think you've corrected any problem you are having 
+with this, refresh this page to try it again.</p>
+<HR>
+
+<P><A href="index.html">Martin Heller Home</A></P>           
+      
+</TD>
+<TD width="10%">&nbsp;</TD> <!-- relative blank cell -->
+</TR></TABLE>
+</body>
+</HTML>

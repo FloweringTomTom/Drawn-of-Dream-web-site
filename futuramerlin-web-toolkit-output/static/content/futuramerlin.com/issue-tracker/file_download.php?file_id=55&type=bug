@@ -1,0 +1,54 @@
+cryskyan@elegiac ~ nohup compiz --replace openbox $ crystallize^C
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_verify_entry /Ember\ Library/Futuramerlin\ Projects/Data/Stream\ Registry
+Stream Registry/                    Stream Registry.disabled-2017feb17/ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_verify_entry /Ember\ Library/Futuramerlin\ Projects/Data/Stream\ Registry/
+8/ c/ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_verify_entry /Ember\ Library/Futuramerlin\ Projects/Data/Stream\ Registry/
+8/ c/ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_verify_entry /Ember\ Library/Futuramerlin\ Projects/Data/Stream\ Registry/
+8/ c/ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_verify_entry /Ember\ Library/Futuramerlin\ Projects/Data/Stream\ Registry/
+8/ c/ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_verify_entry /Ember\ Library/Futuramerlin\ Projects/Data/Stream\ Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba 
+++(0) /usr/local/bin/scache_verify_entry::5:whoami
++(0) /usr/local/bin/scache_verify_entry::5:'[' kyan '!=' root ']'
++(0) /usr/local/bin/scache_verify_entry::5:exec sudo -- /usr/local/bin/scache_verify_entry '/Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba'
+Password: 
+++ whoami
++ '[' root '!=' root ']'
++ source crystallize-bash_setup
+++ export -f error-die
+++ export -f rubberfs
+++ export -f git-absolute-path
+++ export -f git-escape-path
+++ export -f qlstash
++ numRetries='/Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba'
++ shift
+++ basename ''
++ knownHash=
++ echo 'Started verifying stream cache database entry .'
+Started verifying stream cache database entry .
+++ scache_read_stream --disallow-hash-pointer
+++ sha512sum
+++ awk '{print $1;}'
+/usr/local/bin/scache_verify_entry: line 12: : No such file or directory
++ recoveredHash=cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
++ [[ '' == \c\f\8\3\e\1\3\5\7\e\e\f\b\8\b\d\f\1\5\4\2\8\5\0\d\6\6\d\8\0\0\7\d\6\2\0\e\4\0\5\0\b\5\7\1\5\d\c\8\3\f\4\a\9\2\1\d\3\6\c\e\9\c\e\4\7\d\0\d\1\3\c\5\d\8\5\f\2\b\0\f\f\8\3\1\8\d\2\8\7\7\e\e\c\2\f\6\3\b\9\3\1\b\d\4\7\4\1\7\a\8\1\a\5\3\8\3\2\7\a\f\9\2\7\d\a\3\e ]]
++ [[ '' != \c\f\8\3\e\1\3\5\7\e\e\f\b\8\b\d\f\1\5\4\2\8\5\0\d\6\6\d\8\0\0\7\d\6\2\0\e\4\0\5\0\b\5\7\1\5\d\c\8\3\f\4\a\9\2\1\d\3\6\c\e\9\c\e\4\7\d\0\d\1\3\c\5\d\8\5\f\2\b\0\f\f\8\3\1\8\d\2\8\7\7\e\e\c\2\f\6\3\b\9\3\1\b\d\4\7\4\1\7\a\8\1\a\5\3\8\3\2\7\a\f\9\2\7\d\a\3\e ]]
++ [[ /Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba == \0 ]]
+/usr/local/bin/scache_verify_entry: line 24: /Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba: syntax error: operand expected (error token is "/Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba")
++ error-die 'Internal error! This situation should never occur and almost certainly represents a bug in scache_verify_entry.'
++ source error-notify 'Internal error! This situation should never occur and almost certainly represents a bug in scache_verify_entry.'
+++ '[' 1 -eq 0 ']'
+++ [[ Internal error! This situation should never occur and almost certainly represents a bug in scache_verify_entry. =~ ^-?[0-9]+$ ]]
+++ ec=1
++++ ps -o args= 10498
+++ printf %b '\033[1;31m' 'sudo -- /usr/local/bin/scache_verify_entry /Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba' '\nfailed with the error:\n' 'Internal error! This situation should never occur and almost certainly represents a bug in scache_verify_entry.
+' '\033[0m'
+sudo -- /usr/local/bin/scache_verify_entry /Ember Library/Futuramerlin Projects/Data/Stream Registry/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba
+failed with the error:
+Internal error! This situation should never occur and almost certainly represents a bug in scache_verify_entry.
+++ exit 1
+kyan@elegiac ~ nohup compiz --replace openbox $ 
+
+
