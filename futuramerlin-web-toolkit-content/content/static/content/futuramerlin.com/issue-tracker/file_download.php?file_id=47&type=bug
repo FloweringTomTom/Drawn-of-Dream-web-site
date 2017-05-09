@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+
+<head>
+
+<title>multiple monitors - Is it possible to have two different DPI configurations for two different screens? - Ask Ubuntu</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/askubuntu/img/favicon.ico?v=eff8fd315b9e">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/askubuntu/img/apple-touch-icon.png?v=e16e1315edd6">
+    <link rel="search" type="application/opensearchdescription+xml" title="Ask Ubuntu" href="/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@AskUbuntu" />
+    <meta name="twitter:domain" content="askubuntu.com"/>
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/askubuntu/img/apple-touch-icon@2.png?v=c492c9229955" />
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Is it possible to have two different DPI configurations for two different screens?" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;m using Ubuntu 12.04.3 with NVidia drivers (319) for my Quadro K2100M graphic card, and when I switch my main 3200x1800 laptop screen to mode 1920x1080 (using nvidia-settings), the display goes b..." />
+    <meta property="og:url" content="http://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen"/>
+    <link rel="canonical" href="http://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" />
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.sstatic.net/Js/stub.en.js?v=f916280edb36"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/askubuntu/all.css?v=15c959b4df4c">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Is it possible to have two different DPI configurations for two different screens?&#39;" href="/feeds/question/393400">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:5,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:393400});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('89', '393400');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', false); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.ready(function () {
+                        StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('89');
+                StackExchange.realtime.subscribeToTopBarNotifications('89');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1484601174,"routeName":"Questions/Show","site":{"name":"Ask Ubuntu","description":"Q&A for Ubuntu users and developers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":89,"enableInsertDocLinkDialog":false,"enableSocialMediaInSharePopup":true},"user":{"fkey":"85eed5b32e4434d1ee183fb936515705","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"question_show_tweaks":{"v":"altern_unansw_cta","g":1},"question_page_hero":{"v":"delay_hero_3","g":2},"simplified_signup_form":{"v":"multi_check_email_copy","g":6},"mobile_signup_link":{"v":"simplified_signup_form:rdn","g":1}}},"realtime":{"newest":true,"active":true,"tagged":true,"staleDisconnectIntervalInHours":0,"workerIframeDomain":"https://cdn.sstatic.net"},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true},"comments":{},"userProfile":{},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"306c0a03611c","js/moderator.en.js":"a21527cce4e3","js/full-anon.en.js":"e1db656ec0f3","js/full.en.js":"2198dec45407","js/wmd.en.js":"7fc3061d487c","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"20710353f000","js/help.en.js":"af6d61ae5ea0","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"df20c01d2908","js/inline-tag-editing.en.js":"ada30ae89544","js/revisions.en.js":"4ba8f70874c4","js/review.en.js":"cf90ccef7491","js/tagsuggestions.en.js":"7dfec0d2a2d7","js/post-validation.en.js":"08113385afbd","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"a38adf9613b8","js/keyboard-shortcuts.en.js":"b19744d66919","js/external-editor.en.js":"235e80f649d7"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+</head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        <iframe id="adzerk-user-match" width="0" height="0" frameborder="0" scrolling="no" onload="window.AUMIframeDone=true"
+                src="https://ssum-sec.casalemedia.com/usermatch?s=183712&amp;cb=https%3A%2F%2Fengine.adzerk.net%2Fudb%2F22%2Fsync%2Fi.gif%3FpartnerId%3D1%26userId%3D"
+                style="display: none;" marginheight="0" marginwidth="0"></iframe>
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="custom-header"><div class="nav-global"><div class="nav-global-wrapper"><ul><li><a href="http://www.ubuntu.com">Ubuntu</a></li><li><a href="http://community.ubuntu.com/">Community</a></li><li><a href="http://askubuntu.com" class="active">Ask!</a></li><li><a href="http://developer.ubuntu.com">Developer</a></li><li><a href="http://design.ubuntu.com">Design</a></li><li><li><a href="http://discourse.ubuntu.com">Discourse</a></li><li><a href="http://www.ubuntu.com/certification">Hardware</a></li><li><a href="http://insights.ubuntu.com/">Insights</a></li><li><a href="https://jujucharms.com/">Juju</a></li><li><a href="http://shop.ubuntu.com">Shop</a></li><li class="more"><a href="#">More <span>›</span></a><ul><li><a href="http://apps.ubuntu.com">Apps</a></li><li><a href="https://help.ubuntu.com">Help</a></li><li><a href="http://ubuntuforums.org">Forum</a></li><li><a href="http://www.launchpad.net">Launchpad</a></li><li><a href="http://maas.ubuntu.com">MAAS</a></li><li><a href="http://www.canonical.com">Canonical</a></li></ul></li></ul></div></div> <script> $(function() { $(".nav-global .more > a").click(function(e){ $(this).closest(".more").toggleClass("open"); return false; }); $(document).click(function(){ $(".nav-global .more.open").removeClass("open"); }); }); </script></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="//askubuntu.com">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackexchange.com?tab=site&amp;host=askubuntu.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+            </div>
+
+
+
+
+    <a href="//askubuntu.com"
+       class="current-site-link site-link js-gps-track"
+       data-id="89"
+       data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-askubuntu" title="Ask Ubuntu"></div>
+        Ask Ubuntu
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+
+
+
+    <a href="http://meta.askubuntu.com"
+       class="site-link js-gps-track"
+       data-id="91"
+       data-gps-track="
+            site.switch({ target_site:91, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-askubuntumeta" title="Ask Ubuntu Meta"></div>
+        Ask Ubuntu Meta
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://askubuntu.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2faskubuntu.com%2fquestions%2f393400%2fis-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:10 })"
+>Sign up</a> or <a href="https://askubuntu.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2faskubuntu.com%2fquestions%2f393400%2fis-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:11 })"
+>log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="//stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+        </div>
+
+        <div class="network-items">
+                <a href="//stackexchange.com"
+                   class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+                   data-gps-track="site_switcher.show"
+                   title="A list of all 163 Stack Exchange sites">
+                    <span class="hidden-text">Stack Exchange</span>
+                </a>
+
+    <a href="#"
+       class="topbar-icon icon-inbox yes-hover js-inbox-button"
+       title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="#"
+       class="topbar-icon icon-achievements yes-hover js-achievements-button "
+       data-unread-class=""
+       title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://askubuntu.com/users/signup?ssrc=head&returnurl=http%3a%2f%2faskubuntu.com%2fquestions%2f393400%2fis-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" class="login-link" rel="nofollow">sign up</a>
+                                <a href="https://askubuntu.com/users/login?ssrc=head&returnurl=http%3a%2f%2faskubuntu.com%2fquestions%2f393400%2fis-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" class="login-link" rel="nofollow">log in</a>
+
+                            <a href="/tour">tour</a>
+        <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="//meta.askubuntu.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+                                            </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                        <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="/" >
+                    Ask Ubuntu
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                            <li class="youarehere">
+        <a id="nav-questions"
+           href="/questions"
+           class="js-gps-track" 
+           data-gps-track="top_nav.click({is_current:true, location:3, destination:1})">
+        Questions
+        </a>
+    </li>
+
+                                                    <li>
+        <a id="nav-tags"
+           href="/tags"
+           class="js-gps-track" 
+           data-gps-track="top_nav.click({is_current:false, location:3, destination:2})">
+        Tags
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-users"
+           href="/users"
+           class="js-gps-track" 
+           data-gps-track="top_nav.click({is_current:false, location:3, destination:3})">
+        Users
+        </a>
+    </li>
+
+                            <li>
+        <a id="nav-badges"
+           href="/help/badges"
+           class="js-gps-track" 
+           data-gps-track="top_nav.click({is_current:false, location:3, destination:4})">
+        Badges
+        </a>
+    </li>
+
+    <li>
+        <a id="nav-unanswered"
+           href="/unanswered"
+           class="js-gps-track" 
+           data-gps-track="top_nav.click({is_current:false, location:3, destination:5})">
+        Unanswered
+        </a>
+    </li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion"  href="/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/askubuntu/img/apple-touch-icon.png?v=e16e1315edd6">
+			<div id="question-header">
+                <h1 itemprop="name"><a href="/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen" class="question-hyperlink">Is it possible to have two different DPI configurations for two different screens?</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="393400"  id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk655071925",4).enableDynamicSiteSelection().setZone(29); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk655071925"></div>    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="393400">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">51</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>40</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I'm using Ubuntu 12.04.3 with NVidia drivers (319) for my Quadro K2100M graphic card, and when I switch my main 3200x1800 laptop screen to mode 1920x1080 (using <code>nvidia-settings</code>), the display goes blurry...</p>
+
+<p>I am using two screens: </p>
+
+<ul>
+<li>My main screen is a LCD with max resolution 1920x1200.</li>
+<li>My laptop screen (original resolution 3200x1800) is sitting to the right of that.</li>
+</ul>
+
+<p>The main problem is that, on Ubuntu, the font is far too small on my laptop screen. Because of that, I wanted to change the resolution of my laptop to 1920x1080.</p>
+
+<p>Reading <a href="http://askubuntu.com/a/394817/29219">Galgalesh answer</a> I tryed to <a href="http://askubuntu.com/a/272172/29219">compute my DPI</a> and here is the DPI configuration which I should have :</p>
+
+<ul>
+<li>94x94 for my main LCD screen 1920x1200</li>
+<li>235x236 for my 3200x1800 laptop screen</li>
+</ul>
+
+<p>Is there a way to have dual DPI resolutions with an extended desktop?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/multiple-monitors" class="post-tag" title="show questions tagged &#39;multiple-monitors&#39;" rel="tag">multiple-monitors</a> <a href="/questions/tagged/resolution" class="post-tag" title="show questions tagged &#39;resolution&#39;" rel="tag">resolution</a> <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> <a href="/questions/tagged/screen" class="post-tag" title="show questions tagged &#39;screen&#39;" rel="tag">screen</a> <a href="/questions/tagged/dpi" class="post-tag" title="show questions tagged &#39;dpi&#39;" rel="tag">dpi</a> 
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/q/393400" title="short permalink to this question" class="short-link" id="link-post-393400">share</a><span class="lsep">|</span><a href="/posts/393400/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/393400/revisions" title="show all edits to this post">edited <span title="2014-01-06 09:45:27Z" class="relativetime">Jan 6 '14 at 9:45</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 09:15:26Z" class="relativetime">Dec 20 '13 at 9:15</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/29219/anthony-o"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/dc7657bb53a6ada3d1d86cd88fb7cf03?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/29219/anthony-o">Anthony O.</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">327</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-393400" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-505582" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Well, driving any LCD screen on a non-native resolution will appear blurry. That&#39;s because the way the pixels are laid out in a fixed way and the signal does not match this. What exactly are you expecting to happen? Disabling scaling perhaps? But then it&#39;s only displayed in the middle of the screen and not full screen. <b>For optimal display always keep it your display on the native screen resolution.</b> I don&#39;t think this has anything to do with Ubuntu.</span>
+                    &ndash;&nbsp;<a href="/users/88802/gertvdijk"
+                       title="39,634 reputation"
+                       class="comment-user">gertvdijk</a>
+                <span class="comment-date" dir="ltr"><span title="2013-12-23 14:37:47Z" class="relativetime-clean">Dec 23 '13 at 14:37</span></span>
+                        <span class="edited-yes" title="this comment was edited 3 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-729302" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@gertvdijk: So do you have a way of keeping both monitors at their native screen resolution? I think that&#39;s what Anthony&#39;s asking.</span>
+                    &ndash;&nbsp;<a href="/users/237134/beldaz"
+                       title="188 reputation"
+                       class="comment-user">beldaz</a>
+                <span class="comment-date" dir="ltr"><span title="2014-10-07 21:56:40Z" class="relativetime-clean">Oct 7 '14 at 21:56</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-729305" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@beldaz My reply was to <a href="http://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen?noredirect=1#comment514198_394817">revision 1 of the question</a>. <b>It did not mention anything related to dual-screen setup at the time.</b> Because the question was changed significantly, this raises the eyebrows for any posts changed after that date. It basically invalidates anything contributed and really lowers my motivation to help. Users should ask a new question instead, in my opinion.</span>
+                    &ndash;&nbsp;<a href="/users/88802/gertvdijk"
+                       title="39,634 reputation"
+                       class="comment-user">gertvdijk</a>
+                <span class="comment-date" dir="ltr"><span title="2014-10-07 22:02:12Z" class="relativetime-clean">Oct 7 '14 at 22:02</span></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-729311" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@gertvdijk Sorry, makes sense now.</span>
+                    &ndash;&nbsp;<a href="/users/237134/beldaz"
+                       title="188 reputation"
+                       class="comment-user">beldaz</a>
+                <span class="comment-date" dir="ltr"><span title="2014-10-07 22:15:19Z" class="relativetime-clean">Oct 7 '14 at 22:15</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-903592" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I wonder if the possibility to use Wayland in the newest Ubuntu makes this any easier to solve.</span>
+                    &ndash;&nbsp;<a href="/users/55173/mkataja"
+                       title="101 reputation"
+                       class="comment-user">mkataja</a>
+                <span class="comment-date" dir="ltr"><span title="2015-06-08 14:18:40Z" class="relativetime-clean">Jun 8 '15 at 14:18</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-393400" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>        </table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								2 Answers
+                                <span style="display:none;" itemprop="answerCount">2</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="555812"></a>
+<div id="answer-555812" class="answer" data-answerid="555812"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="555812">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">53</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It seems people are still struggling trying to work with several monitors and HiDPI displays.
+A good workaround is described in arch wiki <a href="https://wiki.archlinux.org/index.php/HiDPI#Multiple_displays">https://wiki.archlinux.org/index.php/HiDPI#Multiple_displays</a>.
+So, I have:</p>
+
+<ul>
+<li>laptop asus ln303ux: 3200x1800,</li>
+<li>external monitor:    1920x1200</li>
+</ul>
+
+<p>Now I use Ubuntu 14.10 &amp; GNOME Shell 3.12.2 that has pretty usable HiDPI support.
+So I just use out-of-the-box support of HiDPI - scaling factor is 2 (it can be set up via GUI).
+That means that on external monitor I get everything twice bigger than acceptable.
+Thus, I use xrandr; but instead of downscaling laptop screen, I upscale external monitor screen:</p>
+
+<pre><code>xrandr --output HDMI1 --scale 2x2 --mode 1920x1200 --fb 3840x4200 --pos 0x0
+xrandr --output eDP1 --scale 1x1 --pos 320x2400
+</code></pre>
+
+<p>So, one by one:</p>
+
+<ol>
+<li><code>--output HDMI1</code> in my case is the external screen, <code>eDP1</code> is the laptop screen.</li>
+<li><code>--scale 2x2</code> - make everything on external screen twice smaller</li>
+<li><code>--mode XxY</code> - explicitly set the resolution for screen (not necessary if is already set)</li>
+<li><code>--fb XxY</code> - set size of a virtual screen (framebuffer) (<strong>important</strong> without this, you will be able to use only a fourth part of the screen). In my case one screen was on top of another, so I added up effective heights 2400+1800=4200. Also note, that maximum framebuffer size might be specified in xorg.conf - then you cannot exceed it (it is written in the first line of <code>xrandr -q</code> output).</li>
+<li><code>--pos XxY</code> - in my case I set absolute positioning of the screens, so my laptop screen is directly on the bottom of the external sceen.</li>
+</ol>
+
+<p>And this is it! Everything is as crisp as it could be.</p>
+
+<p>FYI: to get the names of the screens and available resolutions, one can run <code>xrandr --current</code>.
+More information on setting the resolution an be found here: <a href="https://wiki.ubuntu.com/X/Config/Resolution">https://wiki.ubuntu.com/X/Config/Resolution</a> .</p>
+
+<p>UPDATE - OPTION 2: one more interesting workaround for applications that support GTK3.
+If I normally use only one application on the large screen (e.g. some IDE, like leksah), I do not resize the the screen, but run the application scaled to its original size</p>
+
+<pre><code>env GDK_SCALE=0.5 GDK_DPI_SCALE=0.5 CLUTTER_SCALE=0.5 appname
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/555812" title="short permalink to this answer" class="short-link" id="link-post-555812">share</a><span class="lsep">|</span><a href="/posts/555812/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/555812/revisions" title="show all edits to this post">edited <span title="2016-04-08 16:44:16Z" class="relativetime">Apr 8 '16 at 16:44</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/250883/dotvezz"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/07d9b1e40cb899a4464edbf964be3541?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/250883/dotvezz">dotVezz</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">103</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-12-02 13:43:24Z" class="relativetime">Dec 2 '14 at 13:43</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/209213/artem"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/57ce508983a0e0cff147c3c2c06f756f?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/209213/artem">artem</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">456</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-555812" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="6"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-769997" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Tried something similar to this, I&#39;m on a Dell XPS 15 (3200x1800) and a Monoprice IPS 27&quot; (2560x1440) and it was not good times, haha. The difference between the two was still a bit much. Maybe I need to tweak the settings a bit. I dunno. Will keep trying. Thanks for tip!</span>
+                    &ndash;&nbsp;<a href="/users/89271/karlgrz"
+                       title="161 reputation"
+                       class="comment-user">karlgrz</a>
+                <span class="comment-date" dir="ltr"><span title="2014-12-11 21:27:27Z" class="relativetime-clean">Dec 11 '14 at 21:27</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-794060" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">got an <code>error of failed request:  BadValue (integer parameter out of range for operation)</code> :-(</span>
+                    &ndash;&nbsp;<a href="/users/203577/juh"
+                       title="126 reputation"
+                       class="comment-user">Juh_</a>
+                <span class="comment-date" dir="ltr"><span title="2015-01-19 13:17:46Z" class="relativetime-clean">Jan 19 '15 at 13:17</span></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-878126" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thank this works almost perfectly. The only downside is a giant cursor on the low res monitor. Any idea how to fix that?</span>
+                    &ndash;&nbsp;<a href="/users/408162/waynec"
+                       title="101 reputation"
+                       class="comment-user">WayneC</a>
+                <span class="comment-date" dir="ltr"><span title="2015-05-08 10:11:03Z" class="relativetime-clean">May 8 '15 at 10:11</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-971003" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The <code>--fb</code> option doesn&#39;t seem to enable more than a quarter of the <code>2x2</code> screen (mouse cursor can&#39;t be moved past top left quadrant)</span>
+                    &ndash;&nbsp;<a href="/users/54123/eoghanm"
+                       title="1,840 reputation"
+                       class="comment-user">EoghanM</a>
+                <span class="comment-date" dir="ltr"><span title="2015-09-08 17:33:33Z" class="relativetime-clean">Sep 8 '15 at 17:33</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-1021248" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">For a side by side setup with a 1920x1080 external monitor sitting to the left of my 3200x1800 hiDPI laptop: <code>xrandr --output eDP1 --scale 1x1 --pos 3840x0 ; xrandr --output HDMI1 --scale 2x2 --mode 1920x1080 --fb 7680x2160 --pos 0x0</code></span>
+                    &ndash;&nbsp;<a href="/users/58834/daniel-bower"
+                       title="141 reputation"
+                       class="comment-user">Daniel Bower</a>
+                <span class="comment-date" dir="ltr"><span title="2015-11-13 16:23:04Z" class="relativetime-clean">Nov 13 '15 at 16:23</span></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-555812" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link  dno"
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   ></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href=# onclick="">show <b>6</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1430690503",4).enableDynamicSiteSelection().setZone(30); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1430690503"></div>
+  
+<a name="394817"></a>
+<div id="answer-394817" class="answer" data-answerid="394817"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="394817">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+<div class="bounty-award-container"><span class="bounty-award" title="This answer has been awarded bounties worth 25 reputation by Community">+25</span></div>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<h1>Why is it blurry?</h1>
+
+<p>Your screen always displays 3200x1800 pixels. If you lower the screen resolution on your computer that just means that your screen has to scale the image to fit your screen. Depending on the ratio between your native resolution and the current resolution, that scaling will produce a blurry image.</p>
+
+<p>You can find more information on scaling and native resolution here: <a href="https://en.wikipedia.org/wiki/Native_resolution" rel="nofollow">https://en.wikipedia.org/wiki/Native_resolution</a></p>
+
+<h1>How can I make the text bigger?</h1>
+
+<p>If the text is to small you have two options: </p>
+
+<h2>1. Change Ubuntu's font size</h2>
+
+<p><a href="http://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size">How do I change fonts and adjust their size?</a></p>
+
+<h2>2. Change DPI (will make the whole interface bigger, not only text)</h2>
+
+<p><a href="http://askubuntu.com/a/272172/172367">How to find and change the screen DPI?</a> (answer by @whtyger)</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/394817" title="short permalink to this answer" class="short-link" id="link-post-394817">share</a><span class="lsep">|</span><a href="/posts/394817/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/394817/revisions" title="show all edits to this post">edited <span title="2014-05-15 07:18:05Z" class="relativetime">May 15 '14 at 7:18</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34298/rubo77"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/39a2a1be687c3e1088300dc7782a7f12?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34298/rubo77">rubo77</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8,822</span><span title="16 gold badges"><span class="badge1"></span><span class="badgecount">16</span></span><span title="72 silver badges"><span class="badge2"></span><span class="badgecount">72</span></span><span title="134 bronze badges"><span class="badge3"></span><span class="badgecount">134</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-12-23 16:23:08Z" class="relativetime">Dec 23 '13 at 16:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/172367/galgalesh"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/0uHSd.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/172367/galgalesh">Galgalesh</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,059</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="16 silver badges"><span class="badge2"></span><span class="badgecount">16</span></span><span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-394817" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="2"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-506266" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Just as a note on increasing font sizes. Rather increase the DPI so the whole user interface scales. This should be recognized properly automatically (reading the EDID from your display), but if that fails: <a href="http://askubuntu.com/q/197828/88802">How to find and change the screen DPI?</a></span>
+                    &ndash;&nbsp;<a href="/users/88802/gertvdijk"
+                       title="39,634 reputation"
+                       class="comment-user">gertvdijk</a>
+                <span class="comment-date" dir="ltr"><span title="2013-12-24 18:40:24Z" class="relativetime-clean">Dec 24 '13 at 18:40</span></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-508673" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I added the answer. Do I have to add the full answer or is it okay to just add the link?</span>
+                    &ndash;&nbsp;<a href="/users/172367/galgalesh"
+                       title="4,059 reputation"
+                       class="comment-user">Galgalesh</a>
+                <span class="comment-date" dir="ltr"><span title="2013-12-29 10:34:22Z" class="relativetime-clean">Dec 29 '13 at 10:34</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-514198" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="hot">16</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Actually that&#39;s not an answer for my question. I&#39;m using <b>two different screens with different resolutions</b>. I&#39;ve made the computation : my left main LCD screen should have 94x94 DPI resolution whereas my right laptop screen should have 235x235 DPI... And I don&#39;t find any way to set two different DPI resolution except by configuring nvidia to run 2 separated X, and then I can&#39;t pass one window from left to right... Windows is far better to handle that problem :(</span>
+                    &ndash;&nbsp;<a href="/users/29219/anthony-o"
+                       title="327 reputation"
+                       class="comment-user owner">Anthony O.</a>
+                <span class="comment-date" dir="ltr"><span title="2014-01-06 09:02:58Z" class="relativetime-clean">Jan 6 '14 at 9:02</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-705728" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">-1 for completely ignoring the point of the question</span>
+                    &ndash;&nbsp;<a href="/users/24245/martin-konecny"
+                       title="884 reputation"
+                       class="comment-user">Martin Konecny</a>
+                <span class="comment-date" dir="ltr"><span title="2014-09-03 00:19:26Z" class="relativetime-clean">Sep 3 '14 at 0:19</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-729314" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="warm">5</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@AnthonyO. Please don&#39;t change your question considerably after an answer was posted you don&#39;t like. <b>At the time this answer was posted you did not mention anything related to a dual-screen setup</b> (see <a href="http://askubuntu.com/questions/393400/is-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen?noredirect=1#comment514198_394817">revision 1</a>). Changing your question invalidates anything already posted and you should not do that. Instead, revert the question edits and post a new question instead.</span>
+                    &ndash;&nbsp;<a href="/users/88802/gertvdijk"
+                       title="39,634 reputation"
+                       class="comment-user">gertvdijk</a>
+                <span class="comment-date" dir="ltr"><span title="2014-10-07 22:18:28Z" class="relativetime-clean">Oct 7 '14 at 22:18</span></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-394817" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link  dno"
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   ></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href=# onclick="">show <b>2</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+									<a name='new-answer'></a>
+						<form id="post-form" action="/questions/393400/answer/submit" method="post"  class="post-form">
+						    <input type="hidden" id="post-id" value="393400" />
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" />
+                            <input type="hidden" name="referrer" value=""/>
+							<h2 class="space">Your Answer</h2>
+
+
+        
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="85eed5b32e4434d1ee183fb936515705">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item dno new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="/users/login?ssrc=question_page&returnurl=http%3a%2f%2faskubuntu.com%2fquestions%2f393400%2fis-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                                    
+                                var $window = $(window),
+                                    onScroll = function(e) {
+                                        var $elem = $('.new-login-left'),
+                                            docViewTop = $window.scrollTop(),
+                                            docViewBottom = docViewTop + $window.height(),
+                                            elemTop = $elem.offset().top,
+                                            elemBottom = elemTop + $elem.height();							
+                                        if ((docViewTop < elemTop) && (docViewBottom > elemBottom))  {
+                                            StackExchange.using('gps', function() { StackExchange.gps.track('embedded_signup_form.view', { location: 'question_page' }); });
+                                            $window.unbind('scroll', onScroll);
+                                        }
+                                    };
+                                $window.on('scroll', onScroll);
+                                    
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid" />
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false" />
+                    <input type="hidden" name="use-google" class="use-google" value="false" />
+                    <input type="button" class="submit-openid" value="Submit" style="display:none" />
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2faskubuntu.com%2fquestions%2f393400%2fis-it-possible-to-have-two-different-dpi-configurations-for-two-different-screen%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href='http://stackexchange.com/legal/privacy-policy' name='privacy' target='_blank'>privacy policy</a> and <a href='http://stackexchange.com/legal/terms-of-service' name='tos' target='_blank'>terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1" />								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you&#39;re looking for?							Browse other questions tagged <a href="/questions/tagged/multiple-monitors" class="post-tag" title="show questions tagged &#39;multiple-monitors&#39;" rel="tag">multiple-monitors</a> <a href="/questions/tagged/resolution" class="post-tag" title="show questions tagged &#39;resolution&#39;" rel="tag">resolution</a> <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> <a href="/questions/tagged/screen" class="post-tag" title="show questions tagged &#39;screen&#39;" rel="tag">screen</a> <a href="/questions/tagged/dpi" class="post-tag" title="show questions tagged &#39;dpi&#39;" rel="tag">dpi</a>  or <a href="/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2013-12-20 09:15:26Z"><b>3 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>42183 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-04-08 16:44:16Z">9 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr />
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://stackoverflow.blog/2017/01/Benefits-for-Developers-from-San-Francisco-to-Sweden/" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://stackoverflow.blog/2017/01/Benefits-for-Developers-from-San-Francisco-to-Sweden/" class="question-hyperlink">Benefits for Developers from San Francisco to Sweden</a>
+                </div>
+                <br class="cbt" />
+            </div>
+    </div>
+</div>			
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1774552666",[5,17]).enableDynamicSiteSelection().setZone(56016); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1774552666"></div>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="/q/505347" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="/questions/505347/how-can-i-change-the-dpi-of-my-monitors-separately?noredirect=1" class="question-hyperlink">How can I change the dpi of my monitors separately?</a>
+</div>
+<div class="spacer">
+	<a href="/q/488275" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">1</div>
+	</a>
+	<a href="/questions/488275/how-can-i-configure-x11-so-i-can-independently-set-the-dpi-for-each-monitor?noredirect=1" class="question-hyperlink">How can I configure X11 so I can independently set the DPI for each monitor?</a>
+</div>
+<div class="spacer">
+	<a href="/q/19770" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">154</div>
+	</a>
+	<a href="/questions/19770/how-do-i-change-fonts-and-adjust-their-size?noredirect=1" class="question-hyperlink">How do I change fonts and adjust their size?</a>
+</div>
+<div class="spacer">
+	<a href="/q/367963" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">52</div>
+	</a>
+	<a href="/questions/367963/ubuntu-on-lenovo-yoga-2-pro?noredirect=1" class="question-hyperlink">Ubuntu on Lenovo Yoga 2 Pro</a>
+</div>
+<div class="spacer">
+	<a href="/q/197828" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">66</div>
+	</a>
+	<a href="/questions/197828/how-to-find-and-change-the-screen-dpi?noredirect=1" class="question-hyperlink">How to find and change the screen DPI?</a>
+</div>
+<div class="spacer">
+	<a href="/q/668749" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">3</div>
+	</a>
+	<a href="/questions/668749/how-to-set-up-gnome-interface-for-hidpi-screen?noredirect=1" class="question-hyperlink">How to set up Gnome interface for HiDPI screen?</a>
+</div>
+<div class="spacer">
+	<a href="/q/513803" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">4</div>
+	</a>
+	<a href="/questions/513803/any-support-in-any-ubuntu-flavor-for-per-display-dpi-scaling?noredirect=1" class="question-hyperlink">any support in any Ubuntu flavor for per-display DPI scaling?</a>
+</div>
+<div class="spacer">
+	<a href="/q/662546" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="/questions/662546/config-dual-monitors-with-quite-different-resolution?noredirect=1" class="question-hyperlink">config dual monitors with quite different resolution</a>
+</div>
+<div class="spacer">
+	<a href="/q/614301" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">3</div>
+	</a>
+	<a href="/questions/614301/how-to-set-different-scaling-on-multiple-monitors?noredirect=1" class="question-hyperlink">How to set different scaling on multiple monitors?</a>
+</div>
+<div class="spacer">
+	<a href="/q/714008" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="/questions/714008/scale-monitors-differently-without-everything-becoming-blurry?noredirect=1" class="question-hyperlink">scale monitors differently without everything becoming blurry?</a>
+</div>					<div class="spacer more">
+				<a href="/questions/linked/393400">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer"><a href="/q/63863" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">7</div></a><a href="/questions/63863/unknown-monitor-intel-driver-want-to-set-vga-resolution-to-widescreen-tv" class="question-hyperlink">Unknown monitor, intel driver, want to set VGA resolution to widescreen TV</a></div><div class="spacer"><a href="/q/198015" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">4</div></a><a href="/questions/198015/screen-dpi-is-there-and-equivalent-command-action-to-windows-150-display" class="question-hyperlink">screen DPI - is there and equivalent command/action to Windows 150% Display</a></div><div class="spacer"><a href="/q/378551" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">3</div></a><a href="/questions/378551/ubuntu-12-04-white-stripes-on-second-monitor" class="question-hyperlink">Ubuntu 12.04 white stripes on second monitor</a></div><div class="spacer"><a href="/q/395097" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="/questions/395097/half-quarter-of-the-native-resolution-on-a-macbook-with-retina-display" class="question-hyperlink">Half/quarter of the native resolution on a MacBook with Retina display</a></div><div class="spacer"><a href="/q/413360" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">5</div></a><a href="/questions/413360/ubuntu-as-guest-in-virtualbox-at-host-with-high-dpi-screen" class="question-hyperlink">ubuntu as guest in virtualbox at host with high DPI screen</a></div><div class="spacer"><a href="/q/414934" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">2</div></a><a href="/questions/414934/different-text-scaling-factors-for-different-displays" class="question-hyperlink">Different text scaling factors for different displays?</a></div><div class="spacer"><a href="/q/462607" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">3</div></a><a href="/questions/462607/ubuntu-14-04-lenovo-yoga-2-pro-screen-resolution" class="question-hyperlink">Ubuntu 14.04 &amp; Lenovo Yoga 2 pro screen resolution</a></div><div class="spacer"><a href="/q/596407" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="/questions/596407/ubuntu-14-04-2-monitors-only-acting-as-1-monitor" class="question-hyperlink">Ubuntu 14.04 &mdash; 2 Monitors only acting as 1 monitor</a></div><div class="spacer"><a href="/q/628961" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="/questions/628961/change-dpi-on-hidpi-laptop-with-two-external-monitors" class="question-hyperlink">Change DPI on HiDPI laptop with two external monitors</a></div><div class="spacer"><a href="/q/854878" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="/questions/854878/changing-dpi-of-login-screen-ubuntu-16-04" class="question-hyperlink">Changing DPI of login screen (Ubuntu 16.04)</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/83278/when-to-allow-makeup-exams" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    When to Allow Makeup Exams
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/43014/can-i-break-a-random-number-into-two-smaller-vectors-and-consider-them-as-two-ra" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:281 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I break a random number into two smaller vectors and consider them as two random numbers?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/68044/how-does-a-self-cleaning-kitchen-put-away-the-dishes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How does a self-cleaning kitchen put away the dishes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-webapps" title="Web Applications Stack Exchange"></div><a href="http://webapps.stackexchange.com/questions/102120/how-to-utilize-2-criteria-for-a-whatif-formula-array-formula" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:34 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to utilize 2 criteria for a whatif formula/array formula
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/93241/how-to-subtly-hint-at-boss-fight-mechanics" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to subtly hint at “Boss Fight mechanics”
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/86242/what-should-i-be-aware-of-when-hiring-a-car-from-one-of-the-cheaper-rental-firms" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What should I be aware of when hiring a car from one of the cheaper rental firms in Spain?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/93236/can-i-buff-an-arcane-eye" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I buff an Arcane Eye?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/19804/why-did-early-satellites-e-g-chinas-fanhui-shi-weixing-re-enter-the-atmosphe" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did early satellites (e.g. China&#39;s Fanhui Shi Weixing) re-enter the atmosphere narrow end (nose)-first?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/86252/what-exactly-is-minimum-connection-time" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What Exactly Is Minimum Connection Time?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/106945/xor-two-monochrome-images" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    XOR two monochrome images
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/68087/is-it-possible-to-make-an-alloy-that-melts-at-low-temperatures-and-solidifies-at" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to make an alloy that melts at low temperatures and solidifies at high temperatures?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/305501/will-a-change-in-reference-frame-produce-light" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Will a change in reference frame produce light?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/41679191/why-is-math-pow-sometimes-not-equal-to-in-javascript" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is Math.pow() (sometimes) not equal to ** in JavaScript
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/41680533/is-coding-utf-8-also-a-comment-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is &#39;# -*- coding: utf-8 -*-&#39; also a comment in Python?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2100441/what-will-be-the-2014th-digit" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What will be the 2014th digit?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/68111/could-a-large-gas-planet-have-liquid-rings-that-are-dense-enough-to-have-watercr" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Could a large gas planet have liquid rings that are dense enough to have watercraft in them?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/43013/what-does-birational-equivalence-mean-in-a-cryptographic-context" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:281 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does &quot;birational equivalence&quot; mean in a cryptographic context?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/41667731/does-c-check-if-a-pointer-is-out-of-bound-without-the-pointer-being-dereferenced" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does C check if a pointer is out-of-bound without the pointer being dereferenced?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/106953/backspace-and-retype-a-list-of-words" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Backspace-and-retype a list of words
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/86234/can-i-travel-with-my-new-zealand-visa-on-my-old-passport" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I travel with my New Zealand visa on my old passport
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2100699/alternate-topological-definition-of-continuity" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Alternate topological definition of continuity
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/52246/have-orchestras-included-any-modern-instrument-lately" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Have orchestras included any modern instrument lately?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/74875/what-is-the-most-effective-saving-money-method" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the most effective saving money method?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/150368/how-was-jacob-able-to-use-the-eggs-as-collateral" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How was Jacob able to use the eggs as collateral?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="/feeds/question/393400" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/393400/ivc/2ff8');});
+</script>
+<noscript>
+    <div><img src="/posts/393400/ivc/2ff8" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang"></div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="/tour">tour</a>
+                    <a href="/help">help</a>
+                    <a href="http://stackoverflow.blog?blb=1">blog</a>
+                        <a href="http://chat.stackexchange.com?tab=site&host=askubuntu.com">chat</a>
+                    <a href="http://data.stackexchange.com">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="/contact">contact us</a></b>
+                        <b><a href="http://meta.askubuntu.com">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tr>
+            <th colspan=3>
+                Technology
+            </th>
+            <th >
+                Life / Arts
+            </th>
+            <th >
+                Culture / Recreation
+            </th>
+            <th >
+                Science
+            </th>
+            <th >
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="//softwareengineering.stackexchange.com" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li>
+                        <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="//mathematica.stackexchange.com" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                        <li><a href="//crypto.stackexchange.com" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//codereview.stackexchange.com" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="//magento.stackexchange.com" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="//dsp.stackexchange.com" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="//raspberrypi.stackexchange.com" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="//codegolf.stackexchange.com" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="//music.stackexchange.com" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="//ell.stackexchange.com" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="//japanese.stackexchange.com" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="//anime.stackexchange.com" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="//mechanics.stackexchange.com" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="//cs.stackexchange.com" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="//philosophy.stackexchange.com" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo &#169; 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.1.16.24692
+            </div>
+                <div id="additional-notices">
+                    Ubuntu and Canonical are registered trademarks of Canonical Ltd.
+                </div>
+                </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Ask Ubuntu works best with JavaScript enabled<img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('multiple-monitors,resolution,display,screen,dpi,x-community,x-host-askubuntu.com');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-29');
+                ga('set', 'dimension2', '|multiple-monitors|resolution|display|screen|dpi|');
+                ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    </body>
+</html>
