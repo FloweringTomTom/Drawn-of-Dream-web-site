@@ -1,0 +1,530 @@
+kyan@elegiac ~ nohup compiz --replace openbox $ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_copy_write Downloads /Ember\ Library/
+(2016m12d24) Irish Soda Bread Recipe.odt
+(2016m12d24) Irish Soda Bread Recipe.pdf
+2017feb05quo.txt
+addon-162063-latest.xpi?src=dp-btn-primary
+c/
+coalproject.txt
+collection.nfo
+Creative Works/
+d/
+disabled/
+Downloads/
+.egup.tags
+elf_horns_fantasy_art_104413_1920x1196.jpg.maff
+Elliot's Reference/
+Ember/
+Ember satellite projects/
+Futuramerlin Projects/
+GeorgeBergerFlashFiction2016Dec18.pdf
+GeorgeBergerFlashFiction2016Dec18.warc.zip
+GeorgeBergerFlashFiction2016Dec18.zip
+.git/
+.htaccess
+.htpasswd
+index.html
+Meta/
+(Nieuwenhuis, Christiaan Benjamin) COLLECTIE_TROPENMUSEUM_Een_rokende_man_in_traditionele_kleding_en_met_gevijlde_tanden_TMnr_10002937.jpg.maff
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_copy_write Downloads /Ember\ Library/Ember\ satellite\ projects/
+Password: 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_copy_write Downloads /Ember\ Library/Ember\ satellite\ projects/crystallize/support/
+Password: 
+### WARNING! ### WARNING! ### WARNING! ### WARNING! ### WARNING! ###
+Destination files and directories, if present, will be overwritten.
+Continuing in 10 seconds; press Ctrl+C to cancel.
+### WARNING! ^^^ WARNING! ### WARNING! ### WARNING! ^^^ WARNING! ###
+^C
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_copy_write /Ember\ Library/Ember\ satellite\ projects/crystallize/support/ /Ember\ Library/Ember\ satellite\ projects/crystallize/support/
+crystallize.conf  install           scache-test-data/ 
+kyan@elegiac ~ nohup compiz --replace openbox $ scache_copy_write /Ember\ Library/Ember\ satellite\ projects/crystallize/support/scache-test-data /Ember\ Library/Ember\ satellite\ projects/crystallize/
+### WARNING! ### WARNING! ### WARNING! ### WARNING! ### WARNING! ###
+Destination files and directories, if present, will be overwritten.
+Continuing in 10 seconds; press Ctrl+C to cancel.
+### WARNING! ^^^ WARNING! ### WARNING! ### WARNING! ^^^ WARNING! ###
+building file list ... 
+3 files to consider
+scache-test-data/
+scache-test-data/a
+          1,024 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=1/3)
+scache-test-data/b
+      3,532,590 100%  374.33MB/s    0:00:00 (xfr#2, to-chk=0/3)
+
+sent 3,534,696 bytes  received 57 bytes  7,069,506.00 bytes/sec
+total size is 3,533,614  speedup is 1.00
+building file list ... 
+3 files to consider
+
+sent 141 bytes  received 12 bytes  306.00 bytes/sec
+total size is 3,533,614  speedup is 23,095.52
+Items remaining to store: 
+/nvme0n1p5//scache-test-data
+Begun storing /nvme0n1p5//scache-test-data.
+Items remaining to store: 
+/nvme0n1p5//scache-test-data/a
+Begun storing /nvme0n1p5//scache-test-data/a.
+Done storing /nvme0n1p5//scache-test-data/a.
+Done storing all items.
+Items remaining to store: 
+/nvme0n1p5//scache-test-data/b
+Begun storing /nvme0n1p5//scache-test-data/b.
+Pointer is enabled.
+Pointer directory: /nvme0n1p5//pointers/.scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore.crystal-data
+Pointer name: /nvme0n1p5//pointers/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore.crystal
++ echo 'The crystal will have the following address when it is ready: C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8'
+The crystal will have the following address when it is ready: C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ echo 'Time (log stage 1) locally:'
+Time (log stage 1) locally:
++ date +%Y-%m-%d-%H-%M-%S-%N
+2017-02-18-22-27-05-294686331
++ xxd -pu
+++ date +%z
+2d303530300a
+++ crystallize-getconf WorkDirectory
++ crystalWorkdir=/nvme0n1p5/
++ export crystalWorkdir
++ echo 'Time (log stage 1) from http://timeapi.org/: '
+Time (log stage 1) from http://timeapi.org/: 
++ set +e
++ wget --delete-after --warc-file=/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-start -e robots=off 'http://www.timeapi.org/utc/now?\Y-\m-\d-\H-\M-\S-\6N-\z'
+Opening WARC file ‘/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-start.warc.gz’.
+
+--2017-02-18 22:27:05--  http://www.timeapi.org/utc/now?%5CY-%5Cm-%5Cd-%5CH-%5CM-%5CS-%5C6N-%5Cz
+Resolving www.timeapi.org (www.timeapi.org)... 127.0.0.1
+Connecting to www.timeapi.org (www.timeapi.org)|127.0.0.1|:80... failed: Connection refused.
++ set -e
++ echo 'Time (log stage 1b) locally:'
+Time (log stage 1b) locally:
++ date +%Y-%m-%d-%H-%M-%S-%N
+2017-02-18-22-27-05-353791950
++ xxd -pu
+++ date +%z
+2d303530300a
++ echo 'Working in /nvme0n1p5/.'
+Working in /nvme0n1p5/.
++ echo 'Arguments: ' C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
+Arguments:  C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
++ echo 'Configuration: '
+Configuration: 
++ cat //usr/local/etc/crystallize.conf
+InstallationIdentifier,73FAB73B-EEE4-4992-8622-4F3FCEC9823A
+Collection,opensource
+Passphrase,slopp7z!!!!
+WorkDirectory,/nvme0n1p5/
+++ crystallize-getconf InstallationIdentifier
++ crystalTitle=73FAB73B-EEE4-4992-8622-4F3FCEC9823A
++ export crystalTitle
+++ crystallize-getconf Collection
++ crystalCollection=opensource
++ export crystalCollection
+++ crystallize-getconf Passphrase
++ crystallizePassphrase='slopp7z!!!!'
++ export crystallizePassphrase
++ export CrystalID=C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ CrystalID=C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ echo 'Environment: '
+Environment: 
++ uname -ap
+Linux elegiac 4.7.1-gentoo-Wreathe-7.3-2016Sept25n5 #1 SMP Sun Sep 25 22:04:27 EDT 2016 x86_64 Intel(R) Core(TM) i7-6560U CPU @ 2.20GHz GenuineIntel GNU/Linux
++ echo 'Environment variables: '
+Environment variables: 
++ printenv
+crystalCollection=opensource
+TERM=xterm
+SHELL=/bin/bash
+crystalTitle=73FAB73B-EEE4-4992-8622-4F3FCEC9823A
+USER=root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.cfg=00;32:*.conf=00;32:*.diff=00;32:*.doc=00;32:*.ini=00;32:*.log=00;32:*.patch=00;32:*.pdf=00;32:*.ps=00;32:*.tex=00;32:*.txt=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+SUDO_USER=kyan
+SUDO_UID=1000
+USERNAME=root
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/bin:/usr/tqt3/bin:/usr/trinity/14/sbin:/usr/trinity/14/bin:/opt/nvidia-cg-toolkit/bin
+MAIL=/var/mail/root
+crystallizePassphrase=slopp7z!!!!
+PWD=/nvme0n1p5
+crystalWorkdir=/nvme0n1p5/
+LANG=en_US.UTF-8
+HOME=/root
+SUDO_COMMAND=/usr/local/bin/scache_copy_write /Ember Library/Ember satellite projects/crystallize/support/scache-test-data /Ember Library/Ember satellite projects/crystallize/
+SHLVL=6
+LANGUAGE=en_GB
+LOGNAME=root
+CrystalID=C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+crystallizeVersion=3.0.1.2_pre2
+DISPLAY=:0
+SUDO_GID=1000
+XAUTHORITY=/home/kyan/.Xauthority
+BASH_FUNC_git-escape-path%%=() {  if [[ "$(wc -l <<< "$1")" == "1" ]] || [[ "$(wc -l <<< "$1")" == "0" ]]; then
+ sed 's/./&\\/g' <<< "$1" | awk '{print "\\"$1}' | sed 's/.$//';
+ else
+ exit 1;
+ fi
+}
+BASH_FUNC_rubberfs%%=() {  if [[ "$1" == "cd" ]]; then
+ name="$2";
+ if [ ! -n "$name" ]; then
+ name="library";
+ fi;
+ cd "/Wreathe/.Resources/RubberFS/$name/mount" || exit 1;
+ else
+ "$(which rubberfs)" "$@";
+ fi
+}
+BASH_FUNC_qlstash%%=() {  while [[ ! -z "$1" ]]; do
+ echo "Items remaining to qlstash: ";
+ echo "$@";
+ fileToStash="$1";
+ echo "Begun qlstashing $fileToStash.";
+ ( targetFile="$(readlink -f "$1")";
+ elen;
+ cd "$(dirname "$targetFile")" || exit 1;
+ rubberfs stash "$1";
+ egup-exit );
+ echo "Done qlstashing $fileToStash.";
+ shift;
+ done;
+ printf "\033c";
+ echo "Done qlstashing all items."
+}
+BASH_FUNC_git-absolute-path%%=() {  fullpath="$(readlink -f "$1")";
+ gitroot="$(git rev-parse --show-toplevel)" || return 1;
+ [[ $fullpath == *$(printf %q "$gitroot")* ]] && echo "${fullpath/$gitroot\//}"
+}
+BASH_FUNC_error-die%%=() {  source error-notify "$@"
+}
+_=/usr/bin/printenv
++ echo 'Network environment: '
+Network environment: 
++ echo 'IP address from DNS: '
+IP address from DNS: 
++ dig +short myip.opendns.com @resolver1.opendns.com
+24.198.97.231
++ echo 'IP address from http://icanhazip.com/: '
+IP address from http://icanhazip.com/: 
++ set +e
++ set -e
++ echo 'Time (log stage 2) locally:'
+Time (log stage 2) locally:
++ date +%Y-%m-%d-%H-%M-%S-%N
++ wget --delete-after --warc-file=/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.ip -e robots=off http://icanhazip.com/
+Opening WARC file ‘/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.ip.warc.gz’.
+
+--2017-02-18 22:27:05--  http://icanhazip.com/
+Resolving icanhazip.com (icanhazip.com)... 2017-02-18-22-27-05-472967706
++ xxd -pu
+++ date +%z
+2d303530300a
++ echo 'Time (log stage 2) from http://timeapi.org/: '
+Time (log stage 2) from http://timeapi.org/: 
++ set +e
++ set -e
++ echo 'Time (log stage 2b) locally:'
+Time (log stage 2b) locally:
++ date +%Y-%m-%d-%H-%M-%S-%N
++ wget --delete-after --warc-file=/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-env -e robots=off 'http://www.timeapi.org/utc/now?\Y-\m-\d-\H-\M-\S-\6N-\z'
+2017-02-18-22-27-05-474974478
++ xxd -pu
+++ date +%z
+2d303530300a
+Opening WARC file ‘/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-env.warc.gz’.
+
++ echo 'The crystal will have the following address when it is ready: C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8'
+The crystal will have the following address when it is ready: C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ printf %s 'slopp7z!!!!'
++ CrystallizeFirstArg=C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ shift
++ export -f myreadlink
++ CrystallizePaths=("$@")
++ echo 'First entry in array: scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore'
+First entry in array: scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
+--2017-02-18 22:27:05--  http://www.timeapi.org/utc/now?%5CY-%5Cm-%5Cd-%5CH-%5CM-%5CS-%5C6N-%5Cz
++ for i in '"${!CrystallizePaths[@]}"'
+Resolving www.timeapi.org (www.timeapi.org)... + echo 'Trying to resolve scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore...'
+Trying to resolve scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore...
+++ myreadlink scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
++++ dirname scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
+++ cd .
++++ basename scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
+++ echo /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
++ abspath=/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
++ CrystallizePaths[$i]=/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore
++ echo 'Building local index...'
+Building local index...
++ localIndexPid=20385
++ echo 'Building deep index...'
+Building deep index...
++ tee /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx
++ hashdeep -c md5,sha1,sha256,tiger,whirlpool -e -o fbsd /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ tee /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore: Is a directory
++ hashdeep -c md5,sha1,sha256,tiger,whirlpool -e -o fbsd -r /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+%%%% HASHDEEP-1.0                                                         
+%%%% size,md5,sha1,sha256,tiger,whirlpool,filename
+## Invoked from: /nvme0n1p5
+## # hashdeep -c md5,sha1,sha256,tiger,whirlpool -e -o fbsd /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+## 
+9791,c0c0e271c34909aa917a896981e13c3e,23c38f4fff6ecc54f2be8d89049a10ccaf83fcb4,6449a20f862a7ce47dc8ce701e1a45a08139c6c0f1530da73241631ee52423b6,075c48113a0f0dc41b6add4082024e72cfd84e1bb358f760,6bfbdfee9b058256223b512d7d920decac0061705b2e63e8b701485b3832f8f01da0dfd18f1e8bf894652aba7aad880a4b9195cc8d80b21028732ffbfc26c439,/nvme0n1p5/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+9703,01c57daa66de9271661ec0e9b2864b1b,db691eebbd9626fe22ea56b6ef4bf052a361ce9b,71c1afc53e07cc9b506e089715e696de7fcf70689ca8ed555b7125bacc2f558b,18b22b71aebf2393e3a126f99872b02e221c2f39309603dc,14afcea27139f347a5a47df5487fec40fc93be491c52d3fcf8ce36024133ecbd910fcf50294ae5210670584d963b29dcb47ebafc365fe8faa77814c7e11d0e37,/nvme0n1p5/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+%%%% HASHDEEP-1.0                                                         
+%%%% size,md5,sha1,sha256,tiger,whirlpool,filename
+## Invoked from: /nvme0n1p5
+## # hashdeep -c md5,sha1,sha256,tiger,whirlpool -e -o fbsd -r /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+## 
+108,5567b1cb94ebbf487b96460268b51a40,1fbba7e8fc863bda8dcac92e8e0fe28dd8fb7182,28137d6623aa8c49413e3a6e52d5a6a6aea02976b51ca72b0d22556a4f077898,a511c755c04c4866bfe4dd6effd0f6ef44a5918e42806ade,aa21184088de55cf403f2cd147dcc8c24e68bd54cb26b04310f429bfb2104cf6ea749bc34d85c951468312f3e1e378527d8a9634b9dee386381fe62f3220981b,/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e/f/8efb4f73c5655351c444eb109230c556d39e2c7624e9c11abc9e3fb4b9b9254218cc5085b454a9698d085cfa92198491f07a723be4574adc70617b73eb0b6461
+11454,0667415abdd566f268c00e37a2e12698,71c21fddf67cb43e41ab486b0941c896ab5b8776,9c763cc16c10bfe929fae4a2a96c306e2c64c3550f7489a8d21eec66ca765c23,b527dcc114360843a112ac7d00853da067e570dca657bd7a,bd47fc1e746d5044a04b57ac64453df8b994ec05b6c6c084cd02dfc5a7693e779c06fcef3f42b72ac74ffbbd1c63f8a720c0ee6ac436d38424e8bb7e6e77f971,/nvme0n1p5/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+11454,0667415abdd566f268c00e37a2e12698,71c21fddf67cb43e41ab486b0941c896ab5b8776,9c763cc16c10bfe929fae4a2a96c306e2c64c3550f7489a8d21eec66ca765c23,b527dcc114360843a112ac7d00853da067e570dca657bd7a,bd47fc1e746d5044a04b57ac64453df8b994ec05b6c6c084cd02dfc5a7693e779c06fcef3f42b72ac74ffbbd1c63f8a720c0ee6ac436d38424e8bb7e6e77f971,/nvme0n1p5/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+127.0.0.1
+Connecting to www.timeapi.org (www.timeapi.org)|127.0.0.1|:80... failed: Connection refused.
+64.182.208.181, 64.182.208.182, 64.182.208.184, ...
+Connecting to icanhazip.com (icanhazip.com)|64.182.208.181|:80... connected.
+3532524,3f953fb6f9d2d272b21ad4307aa422e3,a52deee1c8b948a0332a3989a3e547110be23eb4,0e69a6cde23d12b8e1ae9426b7bb0b1d43d1c8d86eddee7438b156021be84323,6f111c0d078d441cef5b85d3200d026b997a56c8529ffff7,86b96a35597f3da76eacb323032e980eb3928cdd55d286177c5df94ec897e92d29e57adadcf3cf8134033e845ae45e4dd9d67859c957032e33eccc85d837d7fc,/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba
++ echo 'Waiting for local index...'
+Waiting for local index...
++ wait 20385
++ echo 'Counting size...'
+Counting size...
+++ disk-size-in-bytes /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
++ crystalFilesSize=3575991
++ memlimit=-1
++ hash free
++ free
++ grep -q buff/cache
+++ free
+++ grep Mem:
+++ awk 'FNR == 1 {print ($4+$6)}'
++ memlimit=2850156
++ memlimit=2850156000
++ memlimit=1776414176
+++ pwd
++ echo 'cd "/nvme0n1p5"'
+cd "/nvme0n1p5"
++ echo 'CrystalID="C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8"'
+CrystalID="C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8"
++ echo 'crystalWorkdir="/nvme0n1p5/"'
+crystalWorkdir="/nvme0n1p5/"
++ echo 'crystalTitle="73FAB73B-EEE4-4992-8622-4F3FCEC9823A"'
+crystalTitle="73FAB73B-EEE4-4992-8622-4F3FCEC9823A"
++ echo 'crystallizeVersion="3.0.1.2_pre2"'
+crystallizeVersion="3.0.1.2_pre2"
++ echo 'crystalCollection="opensource"'
+crystalCollection="opensource"
+++ basename /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5
++ CrystalFileName=C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5
++ echo 'Filesize estimate: 3575991'
+Filesize estimate: 3575991
++ echo Sending...
+Sending...
+++ grep access /root/.config/ia.ini
+++ head -n 1
+++ awk '{ print $3 }'
++ crystallizeAccessKey=9zsT8JzVBJNb7SiO
+++ head -n 1
+++ grep secret /root/.config/ia.ini
+++ awk '{ print $3 }'
++ crystallizeSecretKey=J0rRb1FKxofHgaJx
++ CrystalTmpUploadFile=/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5
++ export CrystalTmpUploadFile
++ tar -cv -P -S --format pax /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.tmp /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.tmp /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-start.warc.gz /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.ip.warc.gz /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-env.warc.gz
++ pv -tparbIfei 0.1 -s 3575991
++ xz -k -C sha256 -T 0 --lzma2=preset=1 --memlimit-compress=1776414176 --stdout -
++ gpg --yes -c -v --cipher-algo AES256 --batch --passphrase-file /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.tmp -
++ tee /dev/fd/63
+++ hashdeep -c md5,sha1,sha256 -o fbcpsde
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+tar: /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8: file changed as we read it
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9/4/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e/f/
+/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e/f/8efb4f73c5655351c444eb109230c556d39e2c7624e9c11abc9e3fb4b9b9254218cc5085b454a9698d085cfa92198491f07a723be4574adc70617b73eb0b6461
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.tmp
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.tmp
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-start.warc.gz
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.ip.warc.gz
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-env.warc.gz
+3.43MiB 0:00:00 [ 148MiB/s] [ 148MiB/s] [=======>] 100%             ETA 22:27:05
+200 OK
+Length: 14 [text/plain]
+Saving to: ‘index.html’
+
+     0K                                                       100% 2.13M=0s
+
+2017-02-18 22:27:05 (2.13 MB/s) - ‘index.html’ saved [14/14]
+
+Removing index.html.
+gpg: using cipher AES256
+gpg: writing to stdout
++ unset opt
++ unset optb
++ set +e
++ [[ linux-gnu = *inux* ]]
++ ((  opt++  ))
++ [[ linux-gnu != *inux* ]]
++ set -e
++ script -e -c crystallize-internal-ia /dev/null
+Script started, file is /dev/null
++ ia upload C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 --verify --retries=100 '--metadata=subject:Uploaded using Crystallize 3.0.1.2_pre2' --metadata=subject:1EA21BD8-DB7E-11E5-9733-728C37852114 --metadata=subject:73FAB73B-EEE4-4992-8622-4F3FCEC9823A --metadata=subject:C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 --metadata=collection:opensource --delete /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8:
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5: [                     uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5: [########             uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5: [################     uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5: [#################### uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5: [#################### uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5: [################################] 4/4 - 00:00:19
+Script done, file is /dev/null
++ getChecksumRetries=0
++ retryDelayTime=5
++ sleep 2
++ '[' 0 -ge 1000 ']'
++ grep '<file name="C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5" source="original">'
++ wget -qO - https://archive.org/download/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_files.xml
++ getChecksumRetries=1
++ sleep 5
++ '[' 5 -lt 30 ']'
++ retryDelayTime=10
++ '[' 1 -ge 1000 ']'
++ wget -qO - https://archive.org/download/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_files.xml
++ grep '<file name="C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5" source="original">'
+  <file name="C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5" source="original">
++ break
+++ grep -A 3 '<file name="C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5" source="original">'
+++ tail -n 1
+++ wget -qO - https://archive.org/download/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_files.xml
++ checksumLine='    <md5>37acad42f109a59273728a12f3aeba07</md5>'
++ checksumLine='37acad42f109a59273728a12f3aeba07</md5>'
++ checksumLine=37acad42f109a59273728a12f3aeba07
+++ awk -F, '{print $2}'
+++ grep ,stdin /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.checksums
++ knownChecksum=37acad42f109a59273728a12f3aeba07
++ [[ 37acad42f109a59273728a12f3aeba07 != \3\7\a\c\a\d\4\2\f\1\0\9\a\5\9\2\7\3\7\2\8\a\1\2\f\3\a\e\b\a\0\7 ]]
++ exitcode=1
++ '[' 1 '!=' 0 ']'
++ [[ linux-gnu != *inux* ]]
++ '[' 1 '!=' 1 ']'
++ echo 'Retrieving remote index...'
+Retrieving remote index...
++ wget --delete-after --save-headers --output-document - https://archive.org/metadata/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8/
++ tee /nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.json
+--2017-02-18 22:28:01--  https://archive.org/metadata/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8/
+Resolving archive.org (archive.org)... 207.241.224.2
+Connecting to archive.org (archive.org)|207.241.224.2|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/json]
+Saving to: ‘STDOUT’
+
+     0K ..                                                      289M=0s
+
+2017-02-18 22:28:01 (289 MB/s) - written to stdout [2470]
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.6 (Ubuntu)
+Date: Sun, 19 Feb 2017 03:28:01 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.5.9-1ubuntu4.20
+Access-Control-Allow-Origin: *
+
+{"created":1487474878,"d1":"ia601508.us.archive.org","dir":"/34/items/C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8","files":[{"name":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5","source":"original","mtime":"1487474857","size":"3535236","md5":"37acad42f109a59273728a12f3aeba07","crc32":"d66c4a4c","sha1":"edf413eb2c0ed4253ca6e084755304ed74253f18","format":"Unknown"},{"name":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_archive.torrent","source":"metadata","btih":"23da4b813d27c16fdccc44ea88f7daca107603af","mtime":"1487474878","size":"2363","md5":"f27305019056bd751c00968c65bbdf83","crc32":"e3dbaee9","sha1":"e05f3651e998c2248250b5aed5200c150b4784fa","format":"Archive BitTorrent"},{"name":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_files.xml","source":"original","format":"Metadata","md5":"f1696a973249314ea4d45e48f0aa3341"},{"name":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_meta.sqlite","source":"original","mtime":"1487474873","size":"9216","md5":"9e69e41e19234b0739e0eb5bd05a0798","crc32":"12934e04","sha1":"fbe760ed48a867fa311c14a688dad25801437145","format":"Metadata"},{"name":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8_meta.xml","source":"original","mtime":"1487474862","size":"750","md5":"515275cb93747ed3b52c2024595fc3b5","crc32":"5d9207e1","sha1":"bf8de409676bb77d0ea0059f96613a95ef55f82e","format":"Metadata"}],"files_count":5,"item_size":3547565,"metadata":{"identifier":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8","collection":"opensource","scanner":"Internet Archive Python library 1.4.0","subject":["Uploaded using Crystallize 3.0.1.2_pre2","1EA21BD8-DB7E-11E5-9733-728C37852114","73FAB73B-EEE4-4992-8622-4F3FCEC9823A","C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8"],"publicdate":"2017-02-19 03:27:38","title":"C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8","mediatype":"data","uploader":"worldpeacehaven@gmail.com","addeddate":"2017-02-19 03:27:38"},"pending_tasks":true,"server":"ia601508.us.archive.org","tasks":[{"task_id":642953565,"cmd":"book_op.php","priority":-3,"wait_admin":1,"color":"blue","status":"running"},{"task_id":642953579,"cmd":"derive.php","priority":-6,"wait_admin":0,"color":"green","status":"queued"}],"uniq":1200906201,"workable_servers":["ia601508.us.archive.org"]}+ script -e -c crystallize-internal-xz-b /dev/null
++ echo 'Time (log stage 3) locally:'
++ echo 'Finishing C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8...'
+Finishing C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8...
++ echo 'Please wait...'
+Please wait...
+Working...
+Crystal cwd is: /nvme0n1p5
+sending incremental file list
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.cmd
+             88 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=3/4)
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.cwd
+             11 100%   10.74kB/s    0:00:00 (xfr#2, to-chk=2/4)
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx
+          2,276 100%    2.17MB/s    0:00:00 (xfr#3, to-chk=1/4)
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx
+          1,211 100%    1.15MB/s    0:00:00 (xfr#4, to-chk=0/4)
+
+sent 3,997 bytes  received 92 bytes  8,178.00 bytes/sec
+total size is 3,586  speedup is 0.88
+Added crystal metadata
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8 (1/1)
+  100 %          6,880 B / 28.9 KiB = 0.233                                    
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-done.warc.gz (1/1)
+  100 %           1,944 B / 1,879 B = 1.035                                    
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx (1/1)
+  100 %             716 B / 1,211 B = 0.591                                    
+/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx (1/1)
+  100 %           1,044 B / 2,276 B = 0.459                                    
+sending incremental file list
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.xz
+          6,880 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=0/1)
+
+sent 7,055 bytes  received 35 bytes  14,180.00 bytes/sec
+total size is 6,880  speedup is 0.97
+gpg: using cipher AES256
+gpg: writing to '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.xz.gpg'
+gpg: using cipher AES256
+gpg: writing to '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-done.warc.gz.xz.gpg'
+gpg: using cipher AES256
+gpg: writing to '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx.xz.gpg'
+gpg: using cipher AES256
+gpg: writing to '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx.xz.gpg'
+gpg: using cipher AES256
+gpg: writing to '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.cmd.gpg'
+gpg: using cipher AES256
+gpg: writing to '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.cwd.gpg'
+removed '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.tmp'
+'/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.xz.gpg' -> '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-log'
+'/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.time-done.warc.gz.xz.gpg' -> '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-timestamp'
+'/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.local.idx.xz.gpg' -> '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-l'
+'/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.deep.idx.xz.gpg' -> '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-d'
+'/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.cmd.gpg' -> '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cmd'
+'/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.cwd.gpg' -> '/nvme0n1p5//C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cwd'
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-log: [                 uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-log: [################ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-log: [################################] 1/1 - 00:00:00
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-l: [               uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-l: [############## uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-l: [################################] 1/1 - 00:00:00
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-d: [               uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-d: [############## uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-idx-d: [################################] 1/1 - 00:00:00
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cmd: [                 uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cmd: [################ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cmd: [################################] 1/1 - 00:00:00
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cwd: [                 uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cwd: [################ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-cwd: [################################] 1/1 - 00:00:00
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8:
+ uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-timestamp: [           uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-timestamp: [########## uploading C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8.coal5-timestamp: [################################] 1/1 - 00:00:00
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8:
+Trying to resolve scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore...
+Cleaning up...
+removed '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9/4/c9460fbd4ded61c7ba5a100f491218d2cb48a8a6b35438477529f0753603e5a1c996e09b3138d15a6d4471b08347063b711a24e8991038182d36a99ff5954cba'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9/4'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c/9'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/c'
+removed '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e/f/8efb4f73c5655351c444eb109230c556d39e2c7624e9c11abc9e3fb4b9b9254218cc5085b454a9698d085cfa92198491f07a723be4574adc70617b73eb0b6461'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e/f'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8/e'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore/8'
+removed directory '/nvme0n1p5/scache-2017-02-18-22-27-04-277277611-2d303530300a.LocalStore'
+Done cleaning up...
+Done! The new crystal's address is:
+C3-20170218222705256088168_2d303530300a39f5cd0ff7e44c50b5a0955b04f963e8
+/bin/bash /usr/local/bin/scache_store_files --replace /nvme0n1p5//scache-test-data/b
+failed with the error:
+Failed saving stream: stored stream could not be read!
+Done storing /nvme0n1p5//scache-test-data.
+Done storing all items.
+building file list ... 
+3 files to consider
+scache-test-data/
+scache-test-data/a
+            166 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=1/3)
+scache-test-data/b
+      3,532,590 100%   91.05MB/s    0:00:00 (xfr#2, to-chk=0/3)
+
+sent 3,533,837 bytes  received 57 bytes  7,067,788.00 bytes/sec
+total size is 3,532,756  speedup is 1.00
+building file list ... 
+3 files to consider
+
+sent 140 bytes  received 12 bytes  304.00 bytes/sec
+total size is 3,532,756  speedup is 23,241.82
+kyan@elegiac ~ nohup compiz --replace openbox $ 
+
+
+
+
