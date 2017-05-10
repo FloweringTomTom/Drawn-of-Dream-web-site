@@ -1,0 +1,7 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1345864439;s:8:"modified";i:1346645501;}s:7:"creator";s:5:"admin";s:4:"user";s:5:"admin";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:5:"admin";s:5:"admin";}s:5:"title";s:7:"@-codes";s:11:"description";a:2:{s:15:"tableofcontents";a:4:{i:0;a:4:{s:3:"hid";s:5:"codes";s:5:"title";s:7:"@-codes";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:7:"in_fmnp";s:5:"title";s:8:"In FMNP:";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:15:"in_some_scripts";s:5:"title";s:16:"In some scripts:";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:7:"in_cdce";s:5:"title";s:8:"In CDCE:";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:428:"(read 'at-codes')
+
+@-codes are a coding structure using the syntax @x@ — no that's not an emoticon — to represent values — where x is an identifying code. The syntax varies among a few standards.
+
+In FMNP:
+
+In FMNP the @-codes are lowercase alphanumeric, and sometimes are paired or in sequence (as ordered dividers, e g in the 2nd generation FMNP, a generic page framework would be @p1@HTML Title@p2@Title@p3@Content@p4@)";}s:8:"relation";a:2:{s:10:"references";a:4:{s:4:"fmnp";b:1;s:19:"2nd_generation_fmnp";b:1;s:12:"futuramerlin";b:0;s:4:"cdce";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1345864439;s:8:"modified";i:1346645501;}s:7:"creator";s:5:"admin";s:4:"user";s:5:"admin";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:5:"admin";s:5:"admin";}}}
