@@ -18,11 +18,11 @@
 <p>In addition, ember-shared also provides the following scripts that it uses internally that are not supported for independent use.</p>
 <dl>
     <dt><code>ember_bash_setup</code></dt><dd>Set up the bash environment shared by various Ember projects. Synopsis: <code>source ember_bash_setup</code></dd>
-    <dt><code>error-die</code></dt><dd>Tells the user that their bash environment is misconfigured (this script should never run if everything is working). Synopsis: <code>error-die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise error-die exits with status 1)</code></dd>
+    <dt><code>die</code></dt><dd>Tells the user that their bash environment is misconfigured (this script should never run if everything is working). Synopsis: <code>die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise die exits with status 1)</code></dd>
 </dl>
 <p><code>ember_bash_setup</code> provides these bash functions.</p>
 <dl>
-    <dt><code>error-die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>error-die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
+    <dt><code>die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
     <dt><code>embasename</code></dt><dd>Replacement for <code>basename</code> in bash. Synopsis: <code>embasename &lt;path&gt;</code></dd>
     <dt><code>emreadlink</code></dt><dd>Cross-platform replacement for <code>readlink</code>. Synopsis: <code>emreadlink &lt;path&gt;</code></dd>
     <dt><code>setVariableToCommandOutput</code></dt><dd>Alternative to bash command substitution (<code>"$(command)"</code>) that preserves trailing newlines. <code>variable-name</code> must not be "<code>emSetVariableToCommandOutputVar</code>". Synopsis: <code>setVariableToCommandOutput &lt;variable-name&gt; &lt;command&gt; [argument]...</code></dd>
