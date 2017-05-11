@@ -1,0 +1,37 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1419832079;s:8:"modified";i:1419902825;}s:7:"creator";s:4:"kyan";s:4:"user";s:4:"kyan";s:11:"last_change";a:7:{s:4:"date";i:1419902825;s:2:"ip";s:13:"72.65.108.193";s:4:"type";s:1:"E";s:2:"id";s:27:"archival:software:microsoft";s:4:"user";s:4:"kyan";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:4:"kyan";s:4:"kyan";}s:5:"title";s:9:"Microsoft";s:11:"description";a:2:{s:15:"tableofcontents";a:49:{i:0;a:4:{s:3:"hid";s:9:"microsoft";s:5:"title";s:9:"Microsoft";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:6:"office";s:5:"title";s:6:"Office";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:2;a:4:{s:3:"hid";s:9:"office_10";s:5:"title";s:10:"Office 1.0";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:9:"office_15";s:5:"title";s:10:"Office 1.5";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:9:"office_16";s:5:"title";s:10:"Office 1.6";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:9:"office_30";s:5:"title";s:10:"Office 3.0";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:6;a:4:{s:3:"hid";s:9:"office_92";s:5:"title";s:9:"Office 92";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:9:"office_40";s:5:"title";s:10:"Office 4.0";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:8;a:4:{s:3:"hid";s:9:"office_43";s:5:"title";s:10:"Office 4.3";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:9;a:4:{s:3:"hid";s:16:"office_for_nt_42";s:5:"title";s:17:"Office for NT 4.2";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:10;a:4:{s:3:"hid";s:12:"office_95_70";s:5:"title";s:15:"Office 95 (7.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:11;a:4:{s:3:"hid";s:12:"office_97_80";s:5:"title";s:15:"Office 97 (8.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:12;a:4:{s:3:"hid";s:31:"office_97_powered_by_word_98_85";s:5:"title";s:34:"Office 97 Powered by Word 98 (8.5)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:13;a:4:{s:3:"hid";s:14:"office_2000_90";s:5:"title";s:17:"Office 2000 (9.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:14;a:4:{s:3:"hid";s:20:"office_2000_standard";s:5:"title";s:20:"Office 2000 Standard";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:15;a:4:{s:3:"hid";s:20:"office_2000_personal";s:5:"title";s:20:"Office 2000 Personal";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:16;a:4:{s:3:"hid";s:26:"office_2000_small_business";s:5:"title";s:26:"Office 2000 Small Business";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:17;a:4:{s:3:"hid";s:24:"office_2000_professional";s:5:"title";s:24:"Office 2000 Professional";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:18;a:4:{s:3:"hid";s:19:"office_2000_premium";s:5:"title";s:19:"Office 2000 Premium";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:19;a:4:{s:3:"hid";s:24:"office_2000_premium_sr-1";s:5:"title";s:24:"Office 2000 Premium SR-1";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:20;a:4:{s:3:"hid";s:21:"office_2000_developer";s:5:"title";s:21:"Office 2000 Developer";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:21;a:4:{s:3:"hid";s:24:"office_2000_developer_15";s:5:"title";s:25:"Office 2000 Developer 1.5";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:22;a:4:{s:3:"hid";s:12:"project_2000";s:5:"title";s:12:"Project 2000";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:23;a:4:{s:3:"hid";s:13:"mappoint_2000";s:5:"title";s:13:"MapPoint 2000";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:24;a:4:{s:3:"hid";s:11:"vizact_2000";s:5:"title";s:11:"Vizact 2000";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:25;a:4:{s:3:"hid";s:10:"visio_2000";s:5:"title";s:10:"Visio 2000";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:26;a:4:{s:3:"hid";s:8:"standard";s:5:"title";s:8:"Standard";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:27;a:4:{s:3:"hid";s:12:"professional";s:5:"title";s:12:"Professional";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:28;a:4:{s:3:"hid";s:9:"technical";s:5:"title";s:9:"Technical";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:29;a:4:{s:3:"hid";s:14:"technical_sr-1";s:5:"title";s:14:"Technical SR-1";s:4:"type";s:2:"ul";s:5:"level";i:5;}i:30;a:4:{s:3:"hid";s:10:"enterprise";s:5:"title";s:10:"Enterprise";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:31;a:4:{s:3:"hid";s:17:"service_release_1";s:5:"title";s:17:"Service Release 1";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:32;a:4:{s:3:"hid";s:14:"service_pack_2";s:5:"title";s:14:"Service Pack 2";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:33;a:4:{s:3:"hid";s:29:"office_2000_service_release_1";s:5:"title";s:29:"Office 2000 Service Release 1";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:34;a:4:{s:3:"hid";s:26:"office_2000_service_pack_3";s:5:"title";s:26:"Office 2000 Service Pack 3";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:35;a:4:{s:3:"hid";s:16:"office_2000_msdn";s:5:"title";s:16:"Office 2000 MSDN";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:36;a:4:{s:3:"hid";s:54:"microsoft_msdn_libraryoffice_2000_developer_3_disk_set";s:5:"title";s:56:"Microsoft MSDN Library: Office 2000 Developer 3 disk set";s:4:"type";s:2:"ul";s:5:"level";i:4;}i:37;a:4:{s:3:"hid";s:13:"office_xp_100";s:5:"title";s:16:"Office XP (10.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:38;a:4:{s:3:"hid";s:15:"office_2003_110";s:5:"title";s:18:"Office 2003 (11.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:39;a:4:{s:3:"hid";s:15:"office_2007_120";s:5:"title";s:18:"Office 2007 (12.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:40;a:4:{s:3:"hid";s:15:"office_2010_140";s:5:"title";s:18:"Office 2010 (14.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:41;a:4:{s:3:"hid";s:15:"office_2013_150";s:5:"title";s:18:"Office 2013 (15.0)";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:42;a:4:{s:3:"hid";s:24:"sharepoint_designer_2013";s:5:"title";s:24:"Sharepoint Designer 2013";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:43;a:4:{s:3:"hid";s:7:"windows";s:5:"title";s:7:"Windows";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:44;a:4:{s:3:"hid";s:10:"sharepoint";s:5:"title";s:10:"SharePoint";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:45;a:4:{s:3:"hid";s:15:"sharepoint_2013";s:5:"title";s:15:"SharePoint 2013";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:46;a:4:{s:3:"hid";s:26:"sharepoint_foundation_2013";s:5:"title";s:26:"SharePoint Foundation 2013";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:47;a:4:{s:3:"hid";s:31:"sharepoint_server_standard_2013";s:5:"title";s:31:"SharePoint Server Standard 2013";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:48;a:4:{s:3:"hid";s:33:"sharepoint_server_enterprise_2013";s:5:"title";s:33:"SharePoint Server Enterprise 2013";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:478:"Office 1.0
+
+Office 1.5
+
+Office 1.6
+
+Office 3.0
+
+Office 92
+
+Office 4.0
+
+Office 4.3
+
+Office for NT 4.2
+
+Office 95 (7.0)
+
+Office 97 (8.0)
+
+Office 97 Powered by Word 98 (8.5)
+
+Office 2000 (9.0)
+
+Office 2000 Standard
+
+Office 2000 Personal
+
+Office 2000 Small Business
+
+Office 2000 Professional
+
+Office 2000 Premium
+
+Office 2000 Premium SR-1
+
+<http://www.ebay.com/itm/Microsoft-Office-2000-Premium-SR-1-with-PhotoDraw-2-/151532906876?pt=US_Office_Business_Software&hash=item234810a97c>";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1419832079;s:8:"modified";i:1419902825;}s:7:"creator";s:4:"kyan";s:4:"user";s:4:"kyan";s:11:"last_change";a:7:{s:4:"date";i:1419902825;s:2:"ip";s:13:"72.65.108.193";s:4:"type";s:1:"E";s:2:"id";s:27:"archival:software:microsoft";s:4:"user";s:4:"kyan";s:3:"sum";s:0:"";s:5:"extra";s:0:"";}s:11:"contributor";a:1:{s:4:"kyan";s:4:"kyan";}}}
