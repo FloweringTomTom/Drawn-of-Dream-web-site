@@ -13,8 +13,8 @@
 <dl>
     <dt><code>crystallize</code></dt><dd>Archives a snapshot of a file and removes it, providing an address and/or a pointer file that can be used to retrieve it. Synopsis: <code>crystallize [--] [--leave-pointer] &lt;file&gt;...</code></dd>
     <dt><code>crystallize-backup</code></dt><dd>Backs up <code>crystallize</code>d files with their associated metadata to the current directory. Synopsis: <code>crystallize-backup &lt;crystal-address&gt;</code></dd>
-    <dt><code>decrystallize</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given their address. Synopsis: <code>decrystallize [--here] &lt;crystal-address&gt;</code></dd>
-    <dt><code>decrystallize-pointer</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given a path to a pointer directory. Does not handle single-file pointers: use sreg_read_stream instead. Synopsis: <code>decrystallize-pointer [--here] &lt;file&gt;</code></dd>
+    <dt><code>decrystallize</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given their address. Synopsis: <code>decrystallize &lt;crystal-address&gt; [--here]</code></dd>
+    <dt><code>decrystallize-pointer</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given a path to a pointer directory. Does not handle single-file pointers: use sreg_read_stream instead. Synopsis: <code>decrystallize-pointer &lt;file&gt; [--here]</code></dd>
 </dl>
 <p>The following public-facing scripts are either used internally by the other tools and are mainly useful for writing other shell scripts, or are not thoroughly tested.</p>
 <dl>
