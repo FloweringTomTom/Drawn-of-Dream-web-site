@@ -30,7 +30,6 @@
     <dt><code>sreg_folder_check</code></dt><dd>Go through the hashpointers in the specified directory, make sure that they are present in the stream registry, optionally verify those streams, and optionally remove any streams from the stream registry that are not referenced by the hashpointers in the specified directory. If no directory is specified, the current directory is assumed. Synopsis: <code>sreg_folder_check [--verify] [--drop-unused] [&lt;directory&gt;]</code></dd>
     <dt><code>sreg_fsck</code></dt><dd>Verify that all entries in the sreg stream database can be read correctly. Synopsis: <code>sreg_fsck [--skip-cache]</code></dd>
     <dt><code>sreg_fsck_hashpointers</code></dt><dd>Verify that all sreg hash pointers in the specified directory can be read correctly (an alias for <code>sreg_folder_check --verify</code>). Synopsis: <code>sreg_fsck_hashpointers &lt;path&gt;</code></dd>
-    <dt><code>sreg_fuse</code></dt><dd>Mount a FUSE filesystem overlay for sreg (wrapper around sreg_fuse.py). Synopsis: <code>sreg_fuse &lt;mount-point&gt;</code></dd>
     <dt><code>sreg_read_stream</code></dt><dd>Accepts a sreg pointer on stdin, and outputs the corresponding data from the stream registry. If a checksum is provided on the command line, the retrieved data will be checked against it. Synopsis: <code>sreg_read_stream [--checksum &lt;checksum&gt;] [--disallow-hash-pointer] [--skip-cache]</code></dd>
     <dt><code>sreg_store_stream</code></dt><dd>Stores data provided on stdin into the stream registry, and sends a pointer to it to stdout. A checksum, if one is known for the stream, can be provided on the command line for a slight performance improvement. Synopsis: <code>sreg_store_stream [--assume-checksum &lt;checksum&gt;]</code></dd>
     <dt><code>srfs</code></dt><dd>Mount and unmount a translation FUSE filesystem for a folder containing hash pointers. Synopsis: <code>srfs (mount|unmount) [&lt;root-folder-name&gt;]</code></dd>
@@ -60,6 +59,8 @@
     <dt><code>rubberfs</code></dt><dd>Wrapper around the <code>rubberfs</code> script: this function should be used instead. Synopsis: <code>Synopsis: <code>rubberfs ( ((create|mount|soft-mount|remount|rename|cd|unmount|soft-unmount|attach|check|save|freeze|delta|gc|thaw|patch|status|list|usage-write|destroy|destroy-no-upload|historybak|historypull) [RubberFS name]) | usage | whereami | stub | (stash &lt;file&gt;...) )</code></dd>
     <dt><code>git-absolute-path</code></dt><dd>???? Synopsis: <code>git-absolute-path &lt;file&gt;</code></dd>
     <dt><code>git-escape-path</code></dt><dd>???? Synopsis: <code>git-escape-path &lt;path&gt;</code></dd>
+    <dt><code>sreg_fuse</code></dt><dd>Mount a FUSE filesystem overlay for sreg (wrapper around sreg_fuse.py). Synopsis: <code>sreg_fuse &lt;mount-point&gt;</code></dd>
+    <dt><code>sregi_available_by_hash</code></dt><dd>Basic sanity check for a stream registry entry given a preexisting variable <code>knownChecksum</code> corresponding to the entry to check. Synopsis: <code>sregi_available_by_hash</code></dd>
 </dl>
 
 <h3>Installation</h3>
