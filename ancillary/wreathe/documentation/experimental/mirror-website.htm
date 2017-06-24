@@ -1,0 +1,60 @@
+<h1 class="title">Mirror a website &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/useful-notes/">Useful notes</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.3</p>
+
+<p class="hatnote-emphasis-warning">There have been a lot of innovations in this area since this article was written, and it may be out of date.</p>
+
+<h2>Grab a single Web page</h2>
+
+<p>
+
+  <pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -H --warc-file="$tempName" [url] )</code></pre>
+
+</p>
+
+<h2>Mirror a website (without parent directories)</h2>
+
+
+<pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -H --warc-file="$tempName" [url] )</code></pre>
+</p>
+<pre><code>wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --warc-max-size=500M -H --mirror --no-parent -D [example.com] --warc-file=[name] [url]</code></pre></p>
+
+<p>If it's being stubborn…<br /><br />
+
+  <pre><code>mkdir wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --warc-max-size=500M -H --mirror --no-parent -D [example.com] --warc-file=[name] [url]</code></pre></p>
+<pre><code>wget --mirror -p --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
+
+<p>Omit other domains (includes www. vs. non-www.)…<br /><br />
+
+<pre><code>wget --mirror -p --no-parent --warc-max-size=500M --warc-file=example -e robots=off http://www.example.com/folder/;</code></pre></p>
+
+<h3>If you don't want to keep the files as well as the WARCs:</h3>
+
+<p>Mirror a website (without parent directories)…<br /><br />
+
+<pre><code>wget --mirror --delete-after -p --no-parent --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
+
+<p>If it's being stubborn…<br /><br />
+
+<pre><code>wget --mirror -p --delete-after --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
+
+<p>Omit other domains (includes www. vs. non-www.)…<br /><br />
+
+<pre><code>wget --mirror -p --delete-after --no-parent --warc-max-size=500M -e robots=off --content-on-error --warc-file=example http://www.example.com/folder/</code></pre></p>
+
+<h2>Mirror a webpage and its resources</h2>
+
+<p>Mirror a webpage and its resources…<br /><br />
+
+<pre><code>wget -E -H -k -K -p -e robots=off --warc-max-size=500M --warc-file=example http://www.example.com/directory/page.html</code></pre></p>
+
+<p>Exclude some domains…<br /><br />
+
+<pre><code>--exclude-domains example.com,example.org</code></pre></p>
