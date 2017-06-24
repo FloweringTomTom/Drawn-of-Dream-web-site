@@ -21,19 +21,19 @@
 
 <h2>Mirror a website (without parent directories)</h2>
 
+<p>
 
-<pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -H --warc-file="$tempName" [url] )</code></pre>
+  <pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -H --mirror --no-parent -D [example.com] --warc-file="$tempName" [url] )</code></pre>
+
 </p>
-<pre><code>wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --warc-max-size=500M -H --mirror --no-parent -D [example.com] --warc-file=[name] [url]</code></pre></p>
 
-<p>If it's being stubborn…<br /><br />
+<h3>Omit other subdomains (including www. vs. non-www.)</h3>
 
-  <pre><code>mkdir wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --warc-max-size=500M -H --mirror --no-parent -D [example.com] --warc-file=[name] [url]</code></pre></p>
-<pre><code>wget --mirror -p --no-parent --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -e robots=off -H --content-on-error --warc-file=example -D example.com http://www.example.com/folder/</code></pre></p>
+<p>
 
-<p>Omit other domains (includes www. vs. non-www.)…<br /><br />
+  <pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M --mirror --no-parent --warc-file="$tempName" [url] )</code></pre>
 
-<pre><code>wget --mirror -p --no-parent --warc-max-size=500M --warc-file=example -e robots=off http://www.example.com/folder/;</code></pre></p>
+</p>
 
 <h3>If you don't want to keep the files as well as the WARCs:</h3>
 
