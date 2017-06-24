@@ -12,13 +12,13 @@
 <p class="hatnote-emphasis-warning">There have been a lot of innovations in this area since this article was written, and it may be out of date.</p>
 
 <h2>Grab a single Web page</h2>
-<pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --warc-file="$tempName" -H [url] )</code></pre>
+<pre><code>( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --warc-file="$tempName" -H [url] )</code></pre>
 
 <h2>Mirror a website (without parent directories)</h2>
-<pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --no-parent --warc-file="$tempName" --mirror -H -D [example.com] [url] )</code></pre>
+<pre><code>( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --no-parent --warc-file="$tempName" --mirror -H -D [example.com] [url] )</code></pre>
 
 <h3>Omit other subdomains (including www. vs. non-www.)</h3>
-<pre><code>( tempName="$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --no-parent --warc-file="$tempName" --mirror [url] )</code></pre>
+<pre><code>( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --no-parent --warc-file="$tempName" --mirror [url] )</code></pre>
 
 <h2>If you don't want to keep the files as well as the WARCs</h2>
 <pre><code>--delete-after</code></pre>
