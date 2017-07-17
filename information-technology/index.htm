@@ -52,21 +52,27 @@
 <h2>Data formats</h2>
 
     <h3>Ember Language</h3>
-        <p>Objective: Develop a machine-readable language that can be source-to-source translated into other languages. A NQP translator should be the current development priority, followed by Qt and JavaScript translators.</p>
-        <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
-        <p>Ember Language programs can optionally run in one of three modes: Document, Terminal, and Web; these modes set up a basic environment for the program for running with a graphical raster display output, with a character-based terminal output, and as a Web server, respectively.</p>
-        <h4>Specification</h4>
-            <h5>Standard syntax (Ember Language source files, terminal: .em/.emc/.emb/.emd; document: .ed/.edc/.edb/.edd; Web: .ew/.ewc/.ewb/.ewd)</h5>
-                <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x3B0A (semicolon+line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.) File must end with 0x0A.</p>
-                <p>Text after a "#" on a line are comments.</p>
-            <h5>Ember Language intermediate code, .emi</h5>
-                <p>This is similar to standard syntax, but where shorthand notations are all expanded into the equivalent Dc sequences.</p>
+        <h4>Objective</h4>
+            <p>Develop a machine-readable language that can be source-to-source translated into other languages. A NQP translator should be the current development priority, followed by Qt and JavaScript translators.</p>
+        <h4>Language profiles</h4>
+            <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
+        <h4>Document modes</h4>
+            <p>Ember Language documents can <em>optionally</em> run in one of four modes: "Document", "Library", "Structured", "Terminal", and "Web". The selected mode expresses information about the document's expected execution environment. "Document" mode assumes a graphical raster display output. "Library" mode indicates that the document provides resources (such as routine, class, or other definitions) for consumption by other documents. "Structured" indicates that the document represents structured data. "Terminal" mode assumes a character-based terminal. "Web" mode indicates that the document is designed to respond to a Web request in a manner similar to a PHP script. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
+        <h4>Document formats</h4>
+            <h5>Ember Language source files, .em</h5>
+                <p>Ember Language source files are a subset of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are invalid. (0x0A may not be used except as a line separator.) Files must end with 0x0A.</p>
             <h5>Ember Language sequence files, .ems</h5>
                 <p>A comma-separated list of Dc numbers.</p>
-            <h5>Ember Language Dc documents, .edc</h5>
-                <p>Documents stored using a format similar to the DCE file format.</p>
             <h5>Ember Record Documents, .emr</h5>
-                <p>This is a special format that can only represent a subset of Ember Documents, used for records storage in the Ember cloud.</p>
+                <p>This is a special format in the "Structured" mode used for structured record storage in the Ember cloud. It is a subset of the source file format.</p>
+        <h4>Structures in the Ember Language</h4>
+            <p>The Ember Language uses the following main types of entity to represent information. They are:
+                <dl>
+                    <dt>Type</dt><dd>Types are templates describing the structure of Objects. They are known as <em>classes</em> in most programming languages.</dd>
+                    <dt>Object</dt><dd>An Object is an entity that conforms to a given Type (an <em>instance</em> of that Type).</dd>
+                    <dt>Routine</dt><dd>A Routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as <em>functions</em> or <em>subroutines</em> in most programming languages. Similar concepts are known as <em>methods</em> when used within objects in most programming languages.</dd>
+                    <dt>Operator</dt><dd></dd>
+                </dl>
                 <p>Routines with some dangerous properties must be labeled accordingly, as follows:
                     <dl>
                         <dt>cs!</dt><dd><span class="important-letter">C</span>hangeable routine <span class="important-letter">s</span>ignature (subtypes don't need to use this routine's signature when overriding it.)</dd>
