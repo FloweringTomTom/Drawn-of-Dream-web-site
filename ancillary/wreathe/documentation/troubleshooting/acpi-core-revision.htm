@@ -11,26 +11,26 @@
 
 <h2>Problem</h2>
 
-<p>Wreathe freezes while booting at "ACPI CORE REVISION" message</p>
+    <p>Wreathe freezes while booting at "ACPI CORE REVISION" message</p>
 
 <h2>Solution</h2>
 
-<p>Try one or all of the following possible solutions, which may or may not work:<br /><br />
+    <p>Try one or all of the following possible solutions, which may or may not work:<br /><br />
 
-<ul>
-    <li>Unplug the computer; if it has a main power battery (for example a laptop battery or a UPS), disconnect it. Wait a bit, then plug everything back in and restart again.</li>
-    <li>More likely solution: Select Wreathe in the boot menu. Press e to edit the boot commands. Add<br /><br />
+    <ul>
+        <li>Unplug the computer; if it has a main power battery (for example a laptop battery or a UPS), disconnect it. Wait a bit, then plug everything back in and restart again.</li>
+        <li>More likely solution: Select Wreathe in the boot menu. Press e to edit the boot commands. Add<br /><br />
 
-<pre><code>acpi=off</code></pre><br /><br />
+    <pre><code>acpi=off</code></pre><br /><br />
 
-to the end of the line beginning with<br /><br />
+    to the end of the line beginning with<br /><br />
 
-<pre><code>linux</code></pre><br /><br />
+    <pre><code>linux</code></pre><br /><br />
 
-, something like this:<br /><br />
+    , something like this:<br /><br />
 
-<pre><code>linux	/boot/vmlinuz-2.6.35-32-generic-pae root=UUID=78f2b919-b283-4d6b-a062-0886549c3b92 ro nosplash  quiet splash acpi=off</code></pre><br /><br />
+    <pre><code>linux	/boot/vmlinuz-2.6.35-32-generic-pae root=UUID=78f2b919-b283-4d6b-a062-0886549c3b92 ro nosplash  quiet splash acpi=off</code></pre><br /><br />
 
-. Press Control+X to boot. When you are given a login prompt, shut down the computer. Start the computer again.</li>
-    <li>Also possible: Disable USB support in the BIOS options.</li>
-</ul></p>
+    . Press Control+X to boot. When you are given a login prompt, shut down the computer. Start the computer again.</li>
+        <li>Also possible: Disable USB support in the BIOS options.</li>
+    </ul></p>

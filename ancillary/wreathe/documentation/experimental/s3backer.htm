@@ -13,10 +13,10 @@
 
 <h2>Mounting an s3backer storage unit</h2>
 
-<p>Example:<br /><br />
-<pre><code>s3backer --accessId=foo --accessKey=bar --baseURL=https://s3.us.example.org/ --blockCacheFile=/Wreathe/.Resources/WreatheCloudService/Example/LocalCache --blockSize=16M --compress=9 --blockCacheWriteDelay=40000 --blockCacheThreads=2 --listBlocks --maxRetryPause=600000 --timeout=600 --encrypt --password=example --prefix=example --size=128T --filename=StorageBlockDevice --debug --debug-http example-bucket-name /Wreathe/.Resources/WreatheCloudService/Example/dev/; losetup /dev/loop8 /Wreathe/.Resources/WreatheCloudService/Example/dev/StorageBlockDevice; mount -t ext4 /dev/loop8 /Wreathe/.Resources/WreatheCloudService/Example/mount/</code></pre></p>
+    <p>Example:<br /><br />
+    <pre><code>s3backer --accessId=foo --accessKey=bar --baseURL=https://s3.us.example.org/ --blockCacheFile=/Wreathe/.Resources/WreatheCloudService/Example/LocalCache --blockSize=16M --compress=9 --blockCacheWriteDelay=40000 --blockCacheThreads=2 --listBlocks --maxRetryPause=600000 --timeout=600 --encrypt --password=example --prefix=example --size=128T --filename=StorageBlockDevice --debug --debug-http example-bucket-name /Wreathe/.Resources/WreatheCloudService/Example/dev/; losetup /dev/loop8 /Wreathe/.Resources/WreatheCloudService/Example/dev/StorageBlockDevice; mount -t ext4 /dev/loop8 /Wreathe/.Resources/WreatheCloudService/Example/mount/</code></pre></p>
 
 <h2>Checking the storage limits</h2>
 
-<p>Example:<br /><br />
-<pre><code>curl "http://s3.us.example.org/?check_limit=1&accesskey=example&bucket=example-bucket-name"</code></pre></p>
+    <p>Example:<br /><br />
+    <pre><code>curl "http://s3.us.example.org/?check_limit=1&accesskey=example&bucket=example-bucket-name"</code></pre></p>

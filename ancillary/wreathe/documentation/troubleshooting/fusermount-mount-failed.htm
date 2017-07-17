@@ -11,14 +11,14 @@
 
 <h2>Problem</h2>
 
-<p>When trying to mount using sshfs, an error is given:<br /><br />
+    <p>When trying to mount using sshfs, an error is given:<br /><br />
 
-<pre><code>fusermount: mount failed: Operation not permitted</code></pre></p>
+    <pre><code>fusermount: mount failed: Operation not permitted</code></pre></p>
 
 <h2>Solution</h2>
 
-<p>Run:<br /><br />
+    <p>Run:<br /><br />
 
-<pre><code># chmod 4755 /usr/bin/fusermount</code></pre><br /><br />
+    <pre><code># chmod 4755 /usr/bin/fusermount</code></pre><br /><br />
 
-(from: <a href="http://forums.debian.net/viewtopic.php?p=442891#p442891">http://forums.debian.net/viewtopic.php?p=442891#p442891</a>)</p>
+    (from: <a href="http://forums.debian.net/viewtopic.php?p=442891#p442891">http://forums.debian.net/viewtopic.php?p=442891#p442891</a>)</p>
