@@ -70,10 +70,10 @@
                 <p>Ember Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@b@</code>" followed by the integer Dc ID followed by "<code>@e@</code>", such that, for instance, "<code>@</code>" would be represented as "<code>@b@1@e@</code>".</p>
                 <pre><code>Hello, World!</code></pre>
             <h5>Ember Language source files (EM), .em</h5>
-                <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. # begins a comment; /* */ allows for block comments (which may be nested). ; can be used to separate multiple lines, { and } may be used in place of indentation to express block structure, and \ may be used at the end of a line to indicate that the logical line is continued on the subsequent line of input.</p>
+                <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. It is the most readable of the formats, but also the most technically complicated. # begins a comment; /* */ allows for block comments (which may be nested). ; can be used to separate multiple lines, { and } may be used in place of indentation to express block structure, and \ may be used at the end of a line to indicate that the logical line is continued on the subsequent line of input.</p>
                 <pre><code>dc:
     Hello, World!</code></pre>
-                <p>or more idiomatically,</p>
+                <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
                 <pre><code>print 'Hello, World!'</code></pre>
             <h5>Ember Language sequence files (EMS), .ems</h5>
                 <p>A list of Dc numbers. Four Dcs are given per line, separated by spaces.</p>
