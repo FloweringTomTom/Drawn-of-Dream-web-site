@@ -62,7 +62,7 @@
                 <p>The mode indicators (Dcs 241 through 245) are <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
         <h4>Document formats</h4>
             <p>There are five file formats defined by this specification. Four of them (EMD, EM, EMS, and EMB) are general-use formats, while the fifth (EMR) is a special-purpose subset of the EMB format.</p>
-            <p>EMD, EM, and EMS files are subsets of UTF-8 text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed.</p>
+            <p>EMD, EM, and EMS files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed.</p>
             <h5>Ember Language documents (EMD), .emd</h5>
                 <p>Ember Language documents are a list of Dcs.</p>
             <h5>Ember Language source files (EM), .em</h5>
