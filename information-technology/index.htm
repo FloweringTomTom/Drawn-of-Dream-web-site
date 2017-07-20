@@ -59,8 +59,10 @@
         <h4>Dcs</h4>
             <p>The core unit of the Ember Language is the Dc (Document Character<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv.</p>
             <h5>Notes on specific Dcs</h5>
-                <p>The mode indicators (Dcs 241 through 245) are <em>optional</em> to include in documents. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
-                <p>Dcs 246 through 255 control the formatting of the EM format version of a document.</p>
+                <h6>Dcs 241–245: Mode indicators</h6>
+                    <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
+                <h6>Dcs 246–255: Source formatting control</h6>
+                    <p>Dcs 246 through 255 control the formatting of the EM format version of a document.</p>
         <h4>Document formats</h4>
             <p>There are six file formats defined by this specification. Four of them (EMD, EM, EMS, and DEMS) are general-use formats, while the fifth (EMR) is a special-purpose subset of the EMB format. EMS and DEMS are intended as an intermediate, more-readable format between EMD and EMB, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
             <p>To allow backward compatibility, once a completed version of this standard has been released, the meaning of any given Dc will not change. That will ensure that existing documents retain their meaning.</p>
