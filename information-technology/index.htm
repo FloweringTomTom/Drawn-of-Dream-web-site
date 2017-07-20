@@ -59,7 +59,8 @@
         <h4>Dcs</h4>
             <p>The core unit of the Ember Language is the Dc (Document Character<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv.</p>
             <h5>Notes on specific Dcs</h5>
-                <p>The mode indicators (Dcs 241 through 245) are <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
+                <p>The mode indicators (Dcs 241 through 245) are <em>optional</em> to include in documents. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
+                <p>Dcs 246 through 255 control the formatting of the EM format version of a document.</p>
         <h4>Document formats</h4>
             <p>There are six file formats defined by this specification. Four of them (EMD, EM, EMS, and DEMS) are general-use formats, while the fifth (EMR) is a special-purpose subset of the EMB format. EMS and DEMS are intended as an intermediate, more-readable format between EMD and EMB, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
             <p>To allow backward compatibility, once a completed version of this standard has been released, the meaning of any given Dc will not change. That will ensure that existing documents retain their meaning.</p>
@@ -70,7 +71,7 @@
                 <p>Ember Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@b@</code>" followed by the integer Dc ID followed by "<code>@e@</code>", such that, for instance, "<code>@</code>" would be represented as "<code>@b@1@e@</code>".</p>
                 <pre><code>Hello, World!</code></pre>
             <h5>Ember Language source files (EM), .em</h5>
-                <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. It is the most readable of the formats, but also the most technically complex. # begins a comment; /* */ allows for block comments (which may be nested). ; can be used to separate multiple lines, { and } may be used in place of indentation to express block structure, and \ may be used at the end of a line to indicate that the logical line is continued on the subsequent line of input.</p>
+                <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. It is the most readable of the formats, but also the most technically complex.</p>
                 <pre><code>dc:
     Hello, World!</code></pre>
                 <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
