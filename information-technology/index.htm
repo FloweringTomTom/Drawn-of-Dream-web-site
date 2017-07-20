@@ -61,14 +61,30 @@
             <h5>Notes on specific Dcs</h5>
                 <p>The mode indicators (Dcs 241 through 245) are <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
         <h4>Document formats</h4>
-            <p>There are five file formats defined by this specification. Four of them (EMD, EM, EMS, and EMB) are general-use formats, while the fifth (EMR) is a special-purpose subset of the EMB format.</p>
-            <p>EMD, EM, and EMS files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed.</p>
+            <p>There are six file formats defined by this specification. Four of them (EMD, EM, EMS, DEMS, and EMB) are general-use formats, while the fifth (EMR) is a special-purpose subset of the EMB format. EMS and DEMS are intended as an intermediate, more-readable format between EMD and EMB, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
+            <p>EMD, EM, and EMS files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A.</p>
+            <p>At the end of each format's summary, a simple "Hello, World!" application is given in the format.</p>
             <h5>Ember Language documents (EMD), .emd</h5>
                 <p>Ember Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@b@</code>" followed by the integer Dc ID followed by "<code>@e@</code>", such that, for instance, "<code>@</code>" would be represented as "<code>@b@1@e@</code>".</p>
+                <pre><code>Hello, World!</code></pre>
             <h5>Ember Language source files (EM), .em</h5>
-                <p>Ember Language source files are a textual representation of Files must end with 0x0A. # begins a comment; /* */ allows for block comments (which may be nested). ; can be used to separate multiple lines, { and } may be used in place of indentation to express block structure, and \ may be used at the end of a line to indicate that the logical line is continued on the subsequent line of input.</p>
+                <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. # begins a comment; /* */ allows for block comments (which may be nested). ; can be used to separate multiple lines, { and } may be used in place of indentation to express block structure, and \ may be used at the end of a line to indicate that the logical line is continued on the subsequent line of input.</p>
+                <pre><code>dc:
+    Hello, World!</code></pre>
+                <p>or more idiomatically,</p>
+                <pre><code>print 'Hello, World!'</code></pre>
             <h5>Ember Language sequence files (EMS), .ems</h5>
-                <p>A list of Dc numbers. Spaces or newlines can be used to separate them. A # begins a comment.</p>
+                <p>A list of Dc numbers. Four Dcs are given per line, separated by spaces.</p>
+                <pre><code>57 86 93 93
+96 30 18 72
+96 99 93 85
+19</code></pre>
+            <h5>Documented Ember Language sequence files (DEMS), .dems</h5>
+                <p>A variant of the EMS format for easier reading: after each line, the printable ASCII equivalent of each Dc is given following <code>0x202320</code>, each separated from the next by a space. If there is no printable ASCII equivalent, or the character is a space, "." is used instead.</p>
+                <pre><code>57 86 93 93 # H e l l
+96 30 18 72 # o , . W
+96 99 93 85 # o r l d
+19 # !</code></pre>
             <h5>Ember Language binary files (EMB), .emb</h5>
                 <p>Binary-encoded Ember Language documents, using a format similar to the DCE binary format. There is a one-to-one correspondence between .emb, .em, and .emd files (for any given document in one of those formats, there is only one way to represent it in the other formats), but not for .ems or .emr files.</p>
             <h5>Ember Record Documents (EMR), .emr</h5>
