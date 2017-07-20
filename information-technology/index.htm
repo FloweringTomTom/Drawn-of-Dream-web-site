@@ -5,7 +5,7 @@
 </p>
 
 <h2>Introduction</h2>
-    <p>This section documents the Ember computing environment: a centralized append-only information store, a computer operating system integrated with that information store, and related specifications.</p>
+    <p>This section documents the Ember computing environment: a centralized append-only information store, a computer operating system integrated with that information store, and related specifications. This is a work-in-progress draft, and everything here is subject to change and is not presently suited for implementation.</p>
 
 <h2>Overview</h2>
     <p>The computing environment will consist of the following components:</p>
@@ -57,8 +57,14 @@
         <h4>Language profiles</h4>
             <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
         <h4>Document modes</h4>
-            <p>Ember Language documents can <em>optionally</em> run in one of four modes: "Document", "Library", "Structured", "Terminal", and "Web". The selected mode expresses information about the document's expected execution environment. "Document" mode assumes a graphical raster display output. "Library" mode indicates that the document provides resources (such as routine, class, or other definitions) for consumption by other documents. "Structured" indicates that the document represents structured data. "Terminal" mode assumes a character-based terminal. "Web" mode indicates that the document is designed to respond to a Web request in a manner similar to a PHP script. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
+            <p>Ember Language files can <em>optionally</em> use one of five modes: "Document", "Library", "Structured", "Terminal", and "Web". The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts, making the resulting documents more concise and readable.</p>
+            <p>"Document" mode assumes a graphical raster display output. Following the "Document" mode declaration, the remaining content is to be treated in the same manner as the .emd format.</p>
+            <p>"Library" mode indicates that the document provides resources (such as routine, class, or other definitions) for consumption by other documents.</p>
+            <p>"Structured" indicates that the document represents structured data.</p>
+            <p>"Terminal" mode assumes a character-based terminal.</p>
+            <p>"Web" mode indicates that the document is designed to respond to a Web request in a manner similar to a PHP script.</p>
         <h4>Document formats</h4>
+            <p>There are five file formats defined by this specification. </p>
             <h5>Ember Language documents, .emd</h5>
                 <p>Ember Language documents are strings, using the format used for strings in Ember Language source files.</p>
             <h5>Ember Language source files, .em</h5>
@@ -68,7 +74,7 @@
             <h5>Ember Language binary files, .emb</h5>
                 <p>Binary-encoded Ember Language documents, using a format similar to the DCE binary format. There is a one-to-one correspondence between .emb, .em, and .emd files (for any given document in one of those formats, there is only one way to represent it in the other formats), but not for .ems or .emr files.</p>
             <h5>Ember Record Documents, .emr</h5>
-                <p>This is a special format in the "Structured" mode used for structured record storage in the Ember cloud. It is a subset of the source file format.</p>
+                <p>This is a special format in the "Structured" mode used for structured record storage in the Ember cloud. It is a subset of the source file format. Its form is not yet determined.</p>
         <h4>Structures in the Ember Language</h4>
             <p>The Ember Language uses the following main types of entity to represent information. They are:
                 <dl>
