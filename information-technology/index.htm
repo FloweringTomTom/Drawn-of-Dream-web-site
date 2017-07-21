@@ -98,7 +98,7 @@
             <p>EMD, EM, and EMS files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A. This may later be changed to use UTF-8.</p>
             <p>At the end of each format's summary (except for EMR), a simple "Hello, World!" document is given in the format.</p>
             <h5>Ember Language documents (EMD), .emd</h5>
-                <p>Ember Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>". Each instance of this syntax should be followed by a line feed.</p>
+                <p>Ember Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>".</p>
                 <pre><code>Hello, World!</code></pre>
             <h5>Ember Language source files (EM), .em</h5>
                 <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. It is the most readable of the formats, but also the most technically complex.</p>
