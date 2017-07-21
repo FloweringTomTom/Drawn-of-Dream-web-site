@@ -129,17 +129,19 @@
             <h5>Ember Record Documents (EMR), .emr</h5>
                 <p>This is a special format in the "Structured" mode used for structured record storage in the Ember cloud. It is not yet defined, but will most likely be a subset of one of the other formats.</p>
         <h4>Structures in the Ember Language</h4>
-            <p>The Ember Language uses the following main types of entity to represent information. They are:
+            <p>The Ember Language uses the following main types of entity to represent information:
                 <dl>
+                    <dt>Type</dt><dd>Types are templates describing the structure of Objects. They are known as <em>classes</em> in most programming languages. (Objects and Types can be used interchangeably by casting one to the other; the distinction is purely for clarity.)</dd>
+                    <dt>Object</dt><dd>An Object is an entity that conforms to a given Type (an <em>instance</em> of that Type). The most general Type is Object, and there is no need for an Object to conform to any other type. An Object can inherit its properties from a Type, or from another Object (in which case the other Object would typically be called a <em>prototype</em> in other languages).</dd>
                     <dt>Project</dt><dd>A Project is a single document, and if relevant, any other documents maintained as part of that document.</dd>
                     <dt>Module</dt><dd>A Module is one or more Library-mode documents that have a package name for addressing the things they provide.</dd>
-                    <dt>Routine</dt><dd>A Routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as <em>functions</em> or <em>subroutines</em> in most programming languages. Similar concepts are known as <em>methods</em> when used within objects in most programming languages.</dd>
-                    <dt>Operator</dt><dd>An Operator is a short notation or syntax pattern for some common Routines (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then print 'Hello, World!'; else die</code> in place of <code>if(true, {print 'Hello, World!'}, {die})</code>).</dd>
+                    <dt>List</dt><dd>A List is an ordered list of Objects.</dd>
+                    <dt>String</dt><dd>A String is a List of Dcs. (Because all Dcs can be used in Strings, any data type can be cast to a string.)</dd>
+                    <dt>Routine</dt><dd>A Routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as <em>functions</em> or <em>subroutines</em> in most programming languages. Similar concepts are known as <em>methods</em> when used within objects in most programming languages. Routines accept a List of parameters.</dd>
+                    <dt>Operator</dt><dd>An Operator is a short notation or syntax pattern for some common Routines (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then print 'Hello, World!'; else die</code> in place of <code>if(true, (){print 'Hello, World!'}, (){die})</code>).</dd>
                     <dt>Identifier</dt><dd>An Identifier is a name for an entity.</dd>
                     <dt>Structure</dt><dd>A Structure is the definition of what the structure is that an entity can have, similar to type definitions or type signatures in some programming languages.</dd>
                     <dt>Statement</dt><dd>A Statement is a logical line of a document. It can be an invocation of a Routine, or a Declaration of an entity's Structure or value.</dd>
-                    <dt>Type</dt><dd>Types are templates describing the structure of Objects. They are known as <em>classes</em> in most programming languages.</dd>
-                    <dt>Object</dt><dd>An Object is an entity that conforms to a given Type (an <em>instance</em> of that Type).</dd>
                 </dl>
             </p>
 <!-- 
