@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>0000106: Akonadi not working - MantisBT</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/common_config.php" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/status_config.php" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/dropzone-4.3.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/bootstrap-3.3.6.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/open-sans.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/bootstrap-datetimepicker-4.17.43.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-mantis.css" />
+<!--[if lte IE 9]>	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-part2.min.css" />
+<![endif]-->	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-skins.min.css" />
+<!--[if lte IE 9]>	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-ie.min.css" />
+<![endif]-->
+	<link rel="shortcut icon" href="/issue-tracker/../../../favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: full-text search" href="http://futuramerlin.com/issue-tracker/browser_search_plugin.php?type=text"/>
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: search by Issue Id" href="http://futuramerlin.com/issue-tracker/browser_search_plugin.php?type=id"/>
+	<script type="text/javascript" src="/issue-tracker/javascript_config.php"></script>
+	<script type="text/javascript" src="/issue-tracker/javascript_translations.php"></script>
+	<script type="text/javascript" src="/issue-tracker/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/dropzone-4.3.0.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/common.js"></script>
+</head>
+<body id="view-issue-page" class="skin-3">
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="ace-icon fa fa-user fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="grey">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+&#160;Wreathe&#160;
+ <i class="ace-icon fa fa-angle-down bigger-110"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close scrollable-menu">
+<li class="active"><a href="/issue-tracker/set_project.php?project_id=0" selected="selected"> All Projects </a></li> 
+<li class="divider"></li>
+<li><div id="projects-list"><div class="projects-searchbox"><input class="search form-control input-md" placeholder="Search" /></div><ul class="list dropdown-yellow no-margin"><li><a href="/issue-tracker/set_project.php?project_id=1" class="project-link"> Ember </a></li>
+<li><a href="/issue-tracker/set_project.php?project_id=6" class="project-link"> Futuramerlin.com </a></li>
+<li><a href="/issue-tracker/set_project.php?project_id=2" class="project-link"> Wreathe </a></li>
+</ul></div></li></ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="ace-icon fa fa-user fa-2x white"></i> <span class="user-info">anonymous</span><i class="ace-icon fa fa-angle-down"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="http://futuramerlin.com/issue-tracker/issues_rss.php?"><i class="ace-icon fa fa-rss-square orange"> </i> RSS</a></li><li class="divider"></li><li><a href="/issue-tracker/logout_page.php"><i class="ace-icon fa fa-sign-out"> </i> Logout</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="/issue-tracker/my_view_page.php">
+<i class="menu-icon fa fa-dashboard"></i> 
+<span class="menu-text"> My View </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="/issue-tracker/view_all_bug_page.php">
+<i class="menu-icon fa fa-list-alt"></i> 
+<span class="menu-text"> View Issues </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/issue-tracker/changelog_page.php">
+<i class="menu-icon fa fa-retweet"></i> 
+<span class="menu-text"> Change Log </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/issue-tracker/roadmap_page.php">
+<i class="menu-icon fa fa-road"></i> 
+<span class="menu-text"> Roadmap </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left"
+		class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+ <li><i class="fa fa-user home-icon active"></i> Anonymous </li>
+<div class="btn-group btn-corner">
+	<a href="/issue-tracker/login_page.php?return=%2Fissue-tracker%2Fview.php%3Fid%3D106" class="btn btn-primary btn-xs">Login</a>
+</div>
+</ul>
+<div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/issue-tracker/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Issue #"><i class="ace-icon fa fa-search nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<div class="col-md-12 col-xs-12"><div class="widget-box widget-color-blue2"><div class="widget-header widget-header-small"><h4 class="widget-title lighter"><i class="ace-icon fa fa-bars"></i>View Issue Details</h4></div><div class="widget-body"><div class="widget-toolbox padding-8 clearfix noprint"><div class="btn-group pull-left"><a class="btn btn-primary btn-white btn-round btn-sm" href="#bugnotes">Jump to Notes</a><a class="btn btn-primary btn-white btn-round btn-sm" href="view.php?id=106&amp;history=1#history">Issue History</a></div><div class="btn-group pull-right"></div></div><div class="widget-main no-padding"><div class="table-responsive"><table class="table table-bordered table-condensed"><tfoot><tr class="noprint"><td colspan="6"><div class="btn-group"><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"></div></div></td></tr></tfoot><tbody><tr class="bug-header"><th class="bug-id category" width="15%">ID</th><th class="bug-project category" width="20%">Project</th><th class="bug-category category" width="15%">Category</th><th class="bug-view-status category" width="15%">View Status</th><th class="bug-date-submitted category" width="15%">Date Submitted</th><th class="bug-last-modified category" width="20%">Last Update</th></tr><tr class="bug-header-data"><td class="bug-id">0000106</td><td class="bug-project">Wreathe</td><td class="bug-category">[All Projects] Bug</td><td class="bug-view-status">public</td><td class="bug-date-submitted">2012-08-24 22:07</td><td class="bug-last-modified">2012-08-31 22:38</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-reporter category">Reporter</th><td class="bug-reporter">admin</td><th class="bug-assigned-to category">Assigned To</th><td class="bug-assigned-to">admin</td><td colspan="2">&#160;</td></tr><tr><th class="bug-priority category">Priority</th><td class="bug-priority">urgent</td><th class="bug-severity category">Severity</th><td class="bug-severity">minor</td><th class="bug-reproducibility category">Reproducibility</th><td class="bug-reproducibility">have not tried</td></tr><tr><th class="bug-status category">Status</th><td class="bug-status"><i class="fa fa-square fa-status-box status-90-color"></i> closed</td><th class="bug-resolution category">Resolution</th><td class="bug-resolution">fixed</td><td colspan="2">&#160;</td></tr><tr><th class="bug-product-version category">Product Version</th><td class="bug-product-version"></td><td colspan="4">&#160;</td></tr><tr><th class="bug-target-version category">Target Version</th><td class="bug-target-version"></td><th class="bug-fixed-in-version category">Fixed in Version</th><td class="bug-fixed-in-version"></td><td colspan="2">&#160;</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-summary category">Summary</th><td class="bug-summary" colspan="5">0000106: Akonadi not working</td></tr><tr><th class="bug-description category">Description</th><td class="bug-description" colspan="5">Akonadi not working. Reasons:<br />
+QMYSQL QtSQL driver not installed<br />
+Error log /home/kyan/.local/share/akonadi/db_data/mysql.err contains errors:<br />
+120821  1:43:54 [Note] Plugin 'FEDERATED' is disabled. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+120821  1:43:54  InnoDB: Retrying to lock the first data file <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Unable to lock ./ibdata1, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+120821  1:45:34  InnoDB: Unable to open the first data file <br />
+InnoDB: Error in opening ./ibdata1 <br />
+120821  1:45:34  InnoDB: Operating system error number 11 in a file operation. <br />
+InnoDB: Error number 11 means 'Resource temporarily unavailable'. <br />
+InnoDB: Some operating system error numbers are described at <br />
+InnoDB: <a href="http://dev.mysql.com/doc/refman/5.1/en/operating-system-error-codes.html">http://dev.mysql.com/doc/refman/5.1/en/operating-system-error-codes.html</a> <br />
+InnoDB: Could not open or create data files. <br />
+InnoDB: If you tried to add new data files, and it failed here, <br />
+InnoDB: you should now edit innodb_data_file_path in my.cnf back <br />
+InnoDB: to what it was, and remove the new ibdata files InnoDB created <br />
+InnoDB: in this failed attempt. InnoDB only wrote those files full of <br />
+InnoDB: zeros, but did not yet use them in any way. But be careful: do not <br />
+InnoDB: remove old data files which contain your precious data! <br />
+120821  1:45:34 [ERROR] Plugin 'InnoDB' init function returned error. <br />
+120821  1:45:34 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed. <br />
+120821  1:45:34 [ERROR] Unknown/unsupported table type: innodb <br />
+120821  1:45:34 [ERROR] Aborting <br />
+<br />
+120821  1:45:34 [Note] /usr/sbin/mysqld-akonadi: Shutdown complete <br />
+“The Akonadi control process is not registered at D-Bus which typically means it was not started or encountered a fatal error during startup.”<br />
+“The Akonadi server process is not registered at D-Bus which typically means it was not started or encountered a fatal error during startup.”<br />
+“The Nepomuk search service is not registered at D-Bus which typically means it was not started or encountered a fatal error during startup.”<br />
+“No resource agents have been found, Akonadi is not usable without at least one. This usually means that no resource agents are installed or that there is a setup problem. The following paths have been searched: '/usr/share/akonadi/agents /usr/share/akonadi/agents'. The XDG_DATA_DIRS environment variable is set to '/usr/share/openbox-gnome:/usr/local/share/:/usr/share/'; make sure this includes all paths where Akonadi agents are installed.”<br />
+“The Akonadi server reported errors during its current startup. The log can be found in /home/kyan/.local/share/akonadi/akonadiserver.error.” Error log:<br />
+&quot;[ <br />
+0: akonadiserver(_Z11akBacktracev+0x35) [0x8051b55] <br />
+1: akonadiserver() [0x8052016] <br />
+2: [0x123400] <br />
+3: [0x123416] <br />
+4: /lib/libc.so.6(gsignal+0x51) [0x3af941] <br />
+5: /lib/libc.so.6(abort+0x182) [0x3b2e42] <br />
+6: /usr/lib/libQtCore.so.4(_Z17qt_message_output9QtMsgTypePKc+0x86) [0x84c166] <br />
+] <br />
+&quot; <br />
+“The Akonadi server reported errors during its previous startup. The log can be found in /home/kyan/.local/share/akonadi/akonadiserver.error.old.” Error log:<br />
+&quot;[ <br />
+0: akonadiserver(_Z11akBacktracev+0x35) [0x8051b55] <br />
+1: akonadiserver() [0x8052016] <br />
+2: [0xd69400] <br />
+3: [0xd69416] <br />
+4: /lib/libc.so.6(gsignal+0x51) [0x637941] <br />
+5: /lib/libc.so.6(abort+0x182) [0x63ae42] <br />
+6: /usr/lib/libQtCore.so.4(_Z17qt_message_output9QtMsgTypePKc+0x86) [0x300166] <br />
+] <br />
+&quot; <br />
+Comment: Fixed ibdata1 lock problem by renaming file. New mysql.err log:<br />
+120821  1:53:56 [Note] Plugin 'FEDERATED' is disabled. <br />
+InnoDB: Unable to lock ./ib_logfile0, error: 11 <br />
+InnoDB: Check that you do not already have another mysqld process <br />
+InnoDB: using the same InnoDB data or log files. <br />
+InnoDB: Error in opening ./ib_logfile0 <br />
+120821  1:53:56 [ERROR] Plugin 'InnoDB' init function returned error. <br />
+120821  1:53:56 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed. <br />
+120821  1:53:56 [ERROR] Unknown/unsupported table type: innodb <br />
+120821  1:53:56 [ERROR] Aborting <br />
+<br />
+120821  1:53:56 [Note] /usr/sbin/mysqld-akonadi: Shutdown complete </td></tr><tr><th class="bug-additional-information category">Additional Information</th><td class="bug-additional-information" colspan="5">Bug report from Wreathe notes V11.</td></tr><tr><th class="bug-tags category">Tags</th><td class="bug-tags" colspan="5">No tags attached.</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr></tbody></table></div></div></div></div></div>
+<div class="col-md-12 col-xs-12">
+<a id="attachments"></a>
+<a id="bugnotes"></a>
+<div class="space-10"></div>
+
+<div id="bugnotes" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+	<i class="ace-icon fa fa-comments"></i>
+		Activities	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+		</a>
+	</div>
+	</div>
+	<div class="widget-body">
+	<div class="widget-main no-padding">
+	<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-striped">
+<tr class="bugnote" id="c66">
+		<td class="category">
+		<div class="pull-left padding-2">		</div>
+		<div class="pull-left padding-2">
+		<p class="no-margin">
+			<i class="fa fa-user grey"></i> <a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>		</p>
+		<p class="no-margin small lighter">
+			<i class="fa fa-clock-o grey"></i> 2012-08-25 20:41					</p>
+		<p class="no-margin">
+			<span class="label label-sm label-default arrowed-in-right">administrator</span>			&#160;
+						<i class="fa fa-link grey"></i>
+			<a rel="bookmark" href="view.php?id=106#c66" class="lighter" title="Direct link to note">
+				~0000066			</a>
+					</p>
+				<div class="clearfix"></div>
+		<div class="space-2"></div>
+		<div class="btn-group-sm">
+				</div>
+		</div>
+	</td>
+	<td class="bugnote-note bugnote-public">
+	<a href="mailto:kyan@elegy">kyan@elegy</a>:~$ akonadictl start<br />
+Starting Akonadi Server...<br />
+&#160;&#160;&#160;done.<br />
+<a href="mailto:kyan@elegy">kyan@elegy</a>:~$ Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)<br />
+[akonadiserver] search paths:  (&quot;/usr/local/bin&quot;, &quot;/usr/bin&quot;, &quot;/bin&quot;, &quot;/home/kyan/.rvm/bin&quot;, &quot;/usr/sbin&quot;, &quot;/usr/local/sbin&quot;, &quot;/usr/local/libexec&quot;, &quot;/usr/libexec&quot;, &quot;/opt/mysql/libexec&quot;, &quot;/opt/local/lib/mysql5/bin&quot;, &quot;/opt/mysql/sbin&quot;)<br />
+[akonadiserver] Found mysql_install_db:  &quot;/usr/bin/mysql_install_db&quot;<br />
+[akonadiserver] Found mysql_upgrade:  &quot;/usr/bin/mysql_upgrade&quot;<br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysql' as: /usr/bin/mysql<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysqlcheck' as: /usr/bin/mysqlcheck<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;This installation of MySQL is already upgraded to 5.1.61, use --force if you still need to run mysql_upgrade<br />
+&quot; <br />
+[akonadiserver] Database &quot;akonadi&quot; opened using driver &quot;QMYSQL&quot;<br />
+[akonadiserver] DbInitializer::run()<br />
+[akonadiserver] checking table  &quot;SchemaVersionTable&quot;<br />
+[akonadiserver] &quot;ALTER TABLE SchemaVersionTable ADD COLUMN version INTEGER NOT NULL DEFAULT 0&quot;<br />
+[akonadiserver] &quot;Unable to add column 'version' to table 'SchemaVersionTable'.<br />
+[akonadiserver] Query error: 'Table 'akonadi.schemaversiontable' doesn't exist QMYSQL: Unable to execute query'&quot;<br />
+[akonadiserver] Unable to initialize database.<br />
+[akonadiserver] &quot;[<br />
+[akonadiserver] 0: akonadiserver(_Z11akBacktracev+0x35) [0x8051b55]<br />
+[akonadiserver] 1: akonadiserver() [0x8052016]<br />
+[akonadiserver] 2: [0xace400]<br />
+[akonadiserver] 3: [0xace416]<br />
+[akonadiserver] 4: /lib/libc.so.6(gsignal+0x51) [0xbd5941]<br />
+[akonadiserver] 5: /lib/libc.so.6(abort+0x182) [0xbd8e42]<br />
+[akonadiserver] 6: /usr/lib/libQtCore.so.4(_Z17qt_message_output9QtMsgTypePKc+0x8c) [0x1682dc]<br />
+[akonadiserver] 7: akonadiserver(_ZN15FileDebugStream9writeDataEPKcx+0xc4) [0x8053074]<br />
+[akonadiserver] 8: /usr/lib/libQtCore.so.4(_ZN9QIODevice5writeEPKcx+0x8e) [0x20368e]<br />
+[akonadiserver] 9: /usr/lib/libQtCore.so.4(+0x103425) [0x213425]<br />
+[akonadiserver] 10: /usr/lib/libQtCore.so.4(_ZN11QTextStreamD1Ev+0x3d) [0x21495d]<br />
+[akonadiserver] 11: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServerC1EP7QObject+0x72a) [0x924eba]<br />
+[akonadiserver] 12: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServer8instanceEv+0x58) [0x926448]<br />
+[akonadiserver] 13: akonadiserver(main+0x35c) [0x804cabc]<br />
+[akonadiserver] 14: /lib/libc.so.6(__libc_start_main+0xe7) [0xbc1ce7]<br />
+[akonadiserver] 15: akonadiserver() [0x804c691]<br />
+[akonadiserver] ]<br />
+[akonadiserver] &quot;<br />
+ProcessControl: Application 'akonadiserver' returned with exit code 255 (Unknown error)<br />
+[akonadiserver] search paths:  (&quot;/usr/local/bin&quot;, &quot;/usr/bin&quot;, &quot;/bin&quot;, &quot;/home/kyan/.rvm/bin&quot;, &quot;/usr/sbin&quot;, &quot;/usr/local/sbin&quot;, &quot;/usr/local/libexec&quot;, &quot;/usr/libexec&quot;, &quot;/opt/mysql/libexec&quot;, &quot;/opt/local/lib/mysql5/bin&quot;, &quot;/opt/mysql/sbin&quot;)<br />
+[akonadiserver] Found mysql_install_db:  &quot;/usr/bin/mysql_install_db&quot;<br />
+[akonadiserver] Found mysql_upgrade:  &quot;/usr/bin/mysql_upgrade&quot;<br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysql' as: /usr/bin/mysql<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysqlcheck' as: /usr/bin/mysqlcheck<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;This installation of MySQL is already upgraded to 5.1.61, use --force if you still need to run mysql_upgrade<br />
+&quot; <br />
+[akonadiserver] Database &quot;akonadi&quot; opened using driver &quot;QMYSQL&quot;<br />
+[akonadiserver] DbInitializer::run()<br />
+[akonadiserver] checking table  &quot;SchemaVersionTable&quot;<br />
+[akonadiserver] &quot;ALTER TABLE SchemaVersionTable ADD COLUMN version INTEGER NOT NULL DEFAULT 0&quot;<br />
+[akonadiserver] &quot;Unable to add column 'version' to table 'SchemaVersionTable'.<br />
+[akonadiserver] Query error: 'Table 'akonadi.schemaversiontable' doesn't exist QMYSQL: Unable to execute query'&quot;<br />
+[akonadiserver] Unable to initialize database.<br />
+[akonadiserver] &quot;[<br />
+[akonadiserver] 0: akonadiserver(_Z11akBacktracev+0x35) [0x8051b55]<br />
+[akonadiserver] 1: akonadiserver() [0x8052016]<br />
+[akonadiserver] 2: [0xbf0400]<br />
+[akonadiserver] 3: [0xbf0416]<br />
+[akonadiserver] 4: /lib/libc.so.6(gsignal+0x51) [0x9c2941]<br />
+[akonadiserver] 5: /lib/libc.so.6(abort+0x182) [0x9c5e42]<br />
+[akonadiserver] 6: /usr/lib/libQtCore.so.4(_Z17qt_message_output9QtMsgTypePKc+0x8c) [0x3c12dc]<br />
+[akonadiserver] 7: akonadiserver(_ZN15FileDebugStream9writeDataEPKcx+0xc4) [0x8053074]<br />
+[akonadiserver] 8: /usr/lib/libQtCore.so.4(_ZN9QIODevice5writeEPKcx+0x8e) [0x45c68e]<br />
+[akonadiserver] 9: /usr/lib/libQtCore.so.4(+0x103425) [0x46c425]<br />
+[akonadiserver] 10: /usr/lib/libQtCore.so.4(_ZN11QTextStreamD1Ev+0x3d) [0x46d95d]<br />
+[akonadiserver] 11: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServerC1EP7QObject+0x72a) [0x229eba]<br />
+[akonadiserver] 12: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServer8instanceEv+0x58) [0x22b448]<br />
+[akonadiserver] 13: akonadiserver(main+0x35c) [0x804cabc]<br />
+[akonadiserver] 14: /lib/libc.so.6(__libc_start_main+0xe7) [0x9aece7]<br />
+[akonadiserver] 15: akonadiserver() [0x804c691]<br />
+[akonadiserver] ]<br />
+[akonadiserver] &quot;<br />
+ProcessControl: Application 'akonadiserver' returned with exit code 255 (Unknown error)<br />
+[akonadiserver] search paths:  (&quot;/usr/local/bin&quot;, &quot;/usr/bin&quot;, &quot;/bin&quot;, &quot;/home/kyan/.rvm/bin&quot;, &quot;/usr/sbin&quot;, &quot;/usr/local/sbin&quot;, &quot;/usr/local/libexec&quot;, &quot;/usr/libexec&quot;, &quot;/opt/mysql/libexec&quot;, &quot;/opt/local/lib/mysql5/bin&quot;, &quot;/opt/mysql/sbin&quot;)<br />
+[akonadiserver] Found mysql_install_db:  &quot;/usr/bin/mysql_install_db&quot;<br />
+[akonadiserver] Found mysql_upgrade:  &quot;/usr/bin/mysql_upgrade&quot;<br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysql' as: /usr/bin/mysql<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysqlcheck' as: /usr/bin/mysqlcheck<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;This installation of MySQL is already upgraded to 5.1.61, use --force if you still need to run mysql_upgrade<br />
+&quot; <br />
+[akonadiserver] Database &quot;akonadi&quot; opened using driver &quot;QMYSQL&quot;<br />
+[akonadiserver] DbInitializer::run()<br />
+[akonadiserver] checking table  &quot;SchemaVersionTable&quot;<br />
+[akonadiserver] &quot;ALTER TABLE SchemaVersionTable ADD COLUMN version INTEGER NOT NULL DEFAULT 0&quot;<br />
+[akonadiserver] &quot;Unable to add column 'version' to table 'SchemaVersionTable'.<br />
+[akonadiserver] Query error: 'Table 'akonadi.schemaversiontable' doesn't exist QMYSQL: Unable to execute query'&quot;<br />
+[akonadiserver] Unable to initialize database.<br />
+[akonadiserver] &quot;[<br />
+[akonadiserver] 0: akonadiserver(_Z11akBacktracev+0x35) [0x8051b55]<br />
+[akonadiserver] 1: akonadiserver() [0x8052016]<br />
+[akonadiserver] 2: [0xeab400]<br />
+[akonadiserver] 3: [0xeab416]<br />
+[akonadiserver] 4: /lib/libc.so.6(gsignal+0x51) [0x803941]<br />
+[akonadiserver] 5: /lib/libc.so.6(abort+0x182) [0x806e42]<br />
+[akonadiserver] 6: /usr/lib/libQtCore.so.4(_Z17qt_message_output9QtMsgTypePKc+0x8c) [0x3b32dc]<br />
+[akonadiserver] 7: akonadiserver(_ZN15FileDebugStream9writeDataEPKcx+0xc4) [0x8053074]<br />
+[akonadiserver] 8: /usr/lib/libQtCore.so.4(_ZN9QIODevice5writeEPKcx+0x8e) [0x44e68e]<br />
+[akonadiserver] 9: /usr/lib/libQtCore.so.4(+0x103425) [0x45e425]<br />
+[akonadiserver] 10: /usr/lib/libQtCore.so.4(_ZN11QTextStreamD1Ev+0x3d) [0x45f95d]<br />
+[akonadiserver] 11: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServerC1EP7QObject+0x72a) [0x15aeba]<br />
+[akonadiserver] 12: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServer8instanceEv+0x58) [0x15c448]<br />
+[akonadiserver] 13: akonadiserver(main+0x35c) [0x804cabc]<br />
+[akonadiserver] 14: /lib/libc.so.6(__libc_start_main+0xe7) [0x7efce7]<br />
+[akonadiserver] 15: akonadiserver() [0x804c691]<br />
+[akonadiserver] ]<br />
+[akonadiserver] &quot;<br />
+ProcessControl: Application 'akonadiserver' returned with exit code 255 (Unknown error)<br />
+[akonadiserver] search paths:  (&quot;/usr/local/bin&quot;, &quot;/usr/bin&quot;, &quot;/bin&quot;, &quot;/home/kyan/.rvm/bin&quot;, &quot;/usr/sbin&quot;, &quot;/usr/local/sbin&quot;, &quot;/usr/local/libexec&quot;, &quot;/usr/libexec&quot;, &quot;/opt/mysql/libexec&quot;, &quot;/opt/local/lib/mysql5/bin&quot;, &quot;/opt/mysql/sbin&quot;)<br />
+[akonadiserver] Found mysql_install_db:  &quot;/usr/bin/mysql_install_db&quot;<br />
+[akonadiserver] Found mysql_upgrade:  &quot;/usr/bin/mysql_upgrade&quot;<br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysql' as: /usr/bin/mysql<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;Looking for 'mysqlcheck' as: /usr/bin/mysqlcheck<br />
+&quot; <br />
+&quot;akonadiserver&quot; [out] &quot;This installation of MySQL is already upgraded to 5.1.61, use --force if you still need to run mysql_upgrade<br />
+&quot; <br />
+[akonadiserver] Database &quot;akonadi&quot; opened using driver &quot;QMYSQL&quot;<br />
+[akonadiserver] DbInitializer::run()<br />
+[akonadiserver] checking table  &quot;SchemaVersionTable&quot;<br />
+[akonadiserver] &quot;ALTER TABLE SchemaVersionTable ADD COLUMN version INTEGER NOT NULL DEFAULT 0&quot;<br />
+[akonadiserver] &quot;Unable to add column 'version' to table 'SchemaVersionTable'.<br />
+[akonadiserver] Query error: 'Table 'akonadi.schemaversiontable' doesn't exist QMYSQL: Unable to execute query'&quot;<br />
+[akonadiserver] Unable to initialize database.<br />
+[akonadiserver] &quot;[<br />
+[akonadiserver] 0: akonadiserver(_Z11akBacktracev+0x35) [0x8051b55]<br />
+[akonadiserver] 1: akonadiserver() [0x8052016]<br />
+[akonadiserver] 2: [0x71f400]<br />
+[akonadiserver] 3: [0x71f416]<br />
+[akonadiserver] 4: /lib/libc.so.6(gsignal+0x51) [0x2e7941]<br />
+[akonadiserver] 5: /lib/libc.so.6(abort+0x182) [0x2eae42]<br />
+[akonadiserver] 6: /usr/lib/libQtCore.so.4(_Z17qt_message_output9QtMsgTypePKc+0x8c) [0xd492dc]<br />
+[akonadiserver] 7: akonadiserver(_ZN15FileDebugStream9writeDataEPKcx+0xc4) [0x8053074]<br />
+[akonadiserver] 8: /usr/lib/libQtCore.so.4(_ZN9QIODevice5writeEPKcx+0x8e) [0xde468e]<br />
+[akonadiserver] 9: /usr/lib/libQtCore.so.4(+0x103425) [0xdf4425]<br />
+[akonadiserver] 10: /usr/lib/libQtCore.so.4(_ZN11QTextStreamD1Ev+0x3d) [0xdf595d]<br />
+[akonadiserver] 11: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServerC1EP7QObject+0x72a) [0xaadeba]<br />
+[akonadiserver] 12: /usr/lib/libakonadiprivate.so.1(_ZN7Akonadi13AkonadiServer8instanceEv+0x58) [0xaaf448]<br />
+[akonadiserver] 13: akonadiserver(main+0x35c) [0x804cabc]<br />
+[akonadiserver] 14: /lib/libc.so.6(__libc_start_main+0xe7) [0x2d3ce7]<br />
+[akonadiserver] 15: akonadiserver() [0x804c691]<br />
+[akonadiserver] ]<br />
+[akonadiserver] &quot;<br />
+ProcessControl: Application 'akonadiserver' returned with exit code 255 (Unknown error)<br />
+&quot;akonadiserver&quot; crashed too often and will not be restarted!	</td>
+</tr>
+<tr class="spacer">
+	<td colspan="2"></td>
+</tr>
+<tr class="bugnote" id="c73">
+		<td class="category">
+		<div class="pull-left padding-2">		</div>
+		<div class="pull-left padding-2">
+		<p class="no-margin">
+			<i class="fa fa-user grey"></i> <a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>		</p>
+		<p class="no-margin small lighter">
+			<i class="fa fa-clock-o grey"></i> 2012-08-31 22:38					</p>
+		<p class="no-margin">
+			<span class="label label-sm label-default arrowed-in-right">administrator</span>			&#160;
+						<i class="fa fa-link grey"></i>
+			<a rel="bookmark" href="view.php?id=106#c73" class="lighter" title="Direct link to note">
+				~0000073			</a>
+					</p>
+				<div class="clearfix"></div>
+		<div class="space-2"></div>
+		<div class="btn-group-sm">
+				</div>
+		</div>
+	</td>
+	<td class="bugnote-note bugnote-public">
+	Fixed with revert to Rain base.	</td>
+</tr>
+<tr class="spacer">
+	<td colspan="2"></td>
+</tr>
+<tr class="bugnote" id="c74">
+		<td class="category">
+		<div class="pull-left padding-2">		</div>
+		<div class="pull-left padding-2">
+		<p class="no-margin">
+			<i class="fa fa-user grey"></i> <a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>		</p>
+		<p class="no-margin small lighter">
+			<i class="fa fa-clock-o grey"></i> 2012-08-31 22:38					</p>
+		<p class="no-margin">
+			<span class="label label-sm label-default arrowed-in-right">administrator</span>			&#160;
+						<i class="fa fa-link grey"></i>
+			<a rel="bookmark" href="view.php?id=106#c74" class="lighter" title="Direct link to note">
+				~0000074			</a>
+					</p>
+				<div class="clearfix"></div>
+		<div class="space-2"></div>
+		<div class="btn-group-sm">
+				</div>
+		</div>
+	</td>
+	<td class="bugnote-note bugnote-public">
+	Fixed with revert to Rain base.	</td>
+</tr>
+<tr class="spacer">
+	<td colspan="2"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    <div class="col-md-12 col-xs-12">
+        <a id="history"></a>
+        <div class="space-10"></div>
+
+<div id="history" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+		<i class="ace-icon fa fa-history"></i>
+		Issue History	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+		</a>
+	</div>
+</div>
+<div class="widget-body">
+<div class="widget-main no-padding">
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-hover table-striped">
+	<thead>
+		<tr>
+			<th class="small-caption">
+				Date Modified			</th>
+			<th class="small-caption">
+				Username			</th>
+			<th class="small-caption">
+				Field			</th>
+			<th class="small-caption">
+				Change			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td class="small-caption">
+				2012-08-24 22:07			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				New Issue			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-24 22:07			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Status			</td>
+			<td class="small-caption">
+				new =&gt; assigned			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-24 22:07			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Assigned To			</td>
+			<td class="small-caption">
+				 =&gt; admin			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-25 20:41			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Note Added: 0000066			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-31 22:38			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Note Added: 0000073			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-31 22:38			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Note Added: 0000074			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-31 22:38			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Status			</td>
+			<td class="small-caption">
+				assigned =&gt; closed			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-08-31 22:38			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Resolution			</td>
+			<td class="small-caption">
+				open =&gt; fixed			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright &copy; 2000 - 2017 MantisBT Team</small><br><small>Contact <a href="mailto:webmaster@example.com" title="Contact the webmaster via e-mail.">administrator</a> for assistance</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/issue-tracker/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system." /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/issue-tracker/js/bootstrap-3.3.6.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/bootstrap-datetimepicker-4.17.43.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/list-1.4.1.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/ace.min.js"></script>
+</body>
+</html>
