@@ -105,7 +105,7 @@
                 <pre><code>dc:
     Hello, World!</code></pre>
                 <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
-                <pre><code>print 'Hello, World!'</code></pre>
+                <pre><code>say 'Hello, World!'</code></pre>
                 <p>which would be</p>
                 <pre><code>256 258 260 262 # . . . .
 264 263 57 86 # . . H e
@@ -138,7 +138,7 @@
                     <dt>List</dt><dd>A List is an ordered list of Objects.</dd>
                     <dt>String</dt><dd>A String is a List of Dcs. (Because all Dcs can be used in Strings, any data type can be cast to a string.)</dd>
                     <dt>Routine</dt><dd>A Routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as <em>functions</em> or <em>subroutines</em> in most programming languages. Similar concepts are known as <em>methods</em> when used within objects in most programming languages. Routines accept a List of parameters. Specifying a return type for a Routine is optional. If none is specified, it will be treated as "void", meaning no return type is expected.</dd>
-                    <dt>Operator</dt><dd>An Operator is a short notation or syntax pattern for some common Routines (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then print 'Hello, World!'; else die</code> in place of <code>if(true, (){print 'Hello, World!'}, (){die})</code>).</dd>
+                    <dt>Operator</dt><dd>An Operator is a short notation or syntax pattern for some common Routines (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then say 'Hello, World!'; else die</code> in place of <code>if(true, (){say 'Hello, World!'}, (){die})</code>).</dd>
                     <dt>Identifier</dt><dd>An Identifier is a name for an entity.</dd>
                     <dt>Structure</dt><dd>A Structure is the definition of what the structure is that an entity can have, similar to type definitions or type signatures in some programming languages. A Type can contain named Structures without any values for defining an interface.</dd>
                     <dt>Statement</dt><dd>A Statement is a logical line of a document. It can be an invocation of a Routine, or a declaration of an entity's Structure or value.</dd>
