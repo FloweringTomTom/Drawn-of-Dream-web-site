@@ -133,7 +133,7 @@
                 <dl>
                     <dt>Type</dt><dd>Types are templates describing the structure of Objects. They are known as classes in most programming languages. (Objects can be used as types by casting.)</dd>
                     <dt>Object</dt><dd>An object is an entity that conforms to a given type (an <em>instance</em> of that type). The most general type is <em>object</em>, and there is no need for an object to conform to any other type.</dd>
-                    <dt>Block</dt><dd>A block is a group of statements. They are usually indicated by whitespace, but when necessary, the keyword <code>block</code> can be used to indicate a separation between blocks.</dd>
+                    <dt>Block</dt><dd>A block is a group of statements. The routine <code>block</code> indicates a separation between blocks, although in most cases it is indicated implicitly by whitespace.</dd>
                     <dt>Project</dt><dd>A project is a single document, and if relevant, any other documents maintained as part of that document.</dd>
                     <dt>Module</dt><dd>A module is one or more Library-mode documents that have a package name for addressing the things they provide.</dd>
                     <dt>List</dt><dd>A list is an ordered list of objects. An inline list is begun by <code>[</code> and terminated by <code>]</code>. Example: <code>listName=["a" [5 6] $b]; say $listName[0]</code> stores three Objects in a list named <code>listName</code> and prints <code>a</code>. Objects can be given custom identifiers for addressing them by separating them using <code>: </code>, in which case they should be additionally separated by <code>, </code>. Example: <code>listName=[foo: "a", bar: [5, 6], baz: b]; say $listName[foo]</code>.</dd>
