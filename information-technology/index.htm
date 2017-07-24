@@ -135,8 +135,8 @@
                     <dt>Object</dt><dd>An Object is an entity that conforms to a given Type (an <em>instance</em> of that Type). The most general Type is Object, and there is no need for an Object to conform to any other type.</dd>
                     <dt>Project</dt><dd>A Project is a single document, and if relevant, any other documents maintained as part of that document.</dd>
                     <dt>Module</dt><dd>A Module is one or more Library-mode documents that have a package name for addressing the things they provide.</dd>
-                    <dt>List</dt><dd>A List is an ordered list of Objects.</dd>
-                    <dt>String</dt><dd>A String is a List of Dcs. (Because all Dcs can be used in Strings, any data type can be cast to a string.)</dd>
+                    <dt>List</dt><dd>A List is an ordered list of Objects, denoted by beginning with [. The Objects are separated by ,.</dd>
+                    <dt>String</dt><dd>A String is a List of Dcs. (Because all Dcs can be used in Strings, any data type can be cast to a string.) A String is denoted by beginning with ". A literal string is terminated by a second ".</dd>
                     <dt>Routine</dt><dd>A Routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as <em>functions</em> or <em>subroutines</em> in most programming languages. Similar concepts are known as <em>methods</em> when used within objects in most programming languages. Routines accept a List of parameters. Specifying a return type for a Routine is optional. If none is specified, it will be treated as "void", meaning no return type is expected.</dd>
                     <dt>Operator</dt><dd>An Operator is a short notation or syntax pattern for some common Routines (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then say 'Hello, World!'; else die</code> in place of <code>if(true, (){say 'Hello, World!'}, (){die})</code>).</dd>
                     <dt>Identifier</dt><dd>An Identifier is a name for an entity.</dd>
