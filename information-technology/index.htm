@@ -62,7 +62,7 @@
                 <p>DcData.csv contains nine columns, each of which gives some information about a given Dc.</p>
                 <p>From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description.</p>
                 <p>The "ID" column specifies the number used to refer to a given Dc. Once an ID has been specified in a stable version, its meaning will not change in future versions.</p>
-                <p>The "Name" column specifies an informative name for the Dc. The names may change in future versions if the current names seem suboptimal. They should not be relied on as unique identifiers. If a name is prefixed with "!", then that Dc is deprecated.</p>
+                <p>The "Name" column specifies an informative name for the Dc. The names may change in future versions if the current names seem suboptimal. They should not be relied on as unique or stable identifiers. If a name is prefixed with "!", then that Dc is deprecated. Names <em>should</em> be unique within any given version of DcData.csv, although errors in it could compromise that (it is not currently checked by a computer).</p>
                 <p>"Combining class" column: See below.</p>
                 <p>"Bidirectional class" column: See below.</p>
                 <p>"Simple case mapping" column: This column contains the ID of the uppercase form of characters with the "Ll" type, and the ID of the lowercase form of characters with the "Lu" type.</p>
