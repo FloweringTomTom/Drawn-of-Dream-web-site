@@ -39,15 +39,15 @@
                     <li>Folders may not be named '<code>.sreg</code>'</li>
                     <li>Files may not begin with any of the following ASCII strings:
                         <ul>
-                            <li>a5e2f296-3085-49c0-8f48-24ea436b7a8b</li>
-                            <li>c39f8657-384b-438b-a5a2-eece17147589</li>
-                            <li>2fae2004-94bb-4aa8-a01a-fc44298efc2c</li>
-                            <li>209fcfdf-d1ad-4345-8ef7-1fdc2d583d49</li>
-                            <li>760fa662-89cf-4ebd-9664-150b7637ddd4</li>
+                            <li><code>a5e2f296-3085-49c0-8f48-24ea436b7a8b</code></li>
+                            <li><code>c39f8657-384b-438b-a5a2-eece17147589</code></li>
+                            <li><code>2fae2004-94bb-4aa8-a01a-fc44298efc2c</code></li>
+                            <li><code>209fcfdf-d1ad-4345-8ef7-1fdc2d583d49</code></li>
+                            <li><code>760fa662-89cf-4ebd-9664-150b7637ddd4</code></li>
                         </ul>
                     </li>
                 </ul>
-              While it is suboptimal to have these restrictions, they allowed the implementation of sreg to be simpler. Patches to fix these issues would be considered, if someone has the interest to write them. Synopsis: <code>sreg_init [--passphrase &lt;passphrase&gt;] [&lt;path-to-folder-to-prepare&gt;]</code></dd>
+              While it is suboptimal to have these restrictions, they allowed the implementation of sreg to be simpler. Patches to fix these issues would be considered, if someone has the interest to write them (it's currently on the to-do list at <a href="http://futuramerlin.com/issue-tracker/view.php?id=587">issue #587</a>). Synopsis: <code>sreg_init [--passphrase &lt;passphrase&gt;] [&lt;path-to-folder-to-prepare&gt;]</code></dd>
             <dt><code>sreg_read_stream</code></dt><dd>Accepts a sreg pointer on stdin, and outputs the corresponding data from the stream registry. If a checksum is provided on the command line, the retrieved data will be checked against it. Synopsis: <code>sreg_read_stream [--sreg-dir &lt;directory&gt;] [--checksum &lt;checksum&gt;] [--disallow-hash-pointer] [--skip-cache]</code></dd>
             <dt><code>sreg_store_stream</code></dt><dd>Stores data provided on stdin into the stream registry, and sends a pointer to it to stdout. A checksum, if one is known for the stream, can be provided on the command line for a slight performance improvement. Synopsis: <code>sreg_store_stream [--sreg-dir &lt;directory&gt;] [--assume-checksum &lt;checksum&gt;]</code></dd>
             <dt><code>srfs</code></dt><dd>Mount and unmount a translation FUSE filesystem for a folder containing hash pointers. Synopsis: <code>srfs (mount|unmount) [&lt;root-folder-name&gt;]</code></dd>
