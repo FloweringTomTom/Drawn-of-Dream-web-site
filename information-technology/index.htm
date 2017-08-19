@@ -57,7 +57,7 @@
         <h4>Language profiles</h4>
             <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
         <h4>Dcs</h4>
-            <p>The core unit of the Ember Language is the Dc (Document Character<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv.</p>
+            <p>The core unit of the Ember Language is the Dc (Document Component<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv. A Dc can have syntactical patterns that it must be used in to have meaning (for example, a marker to <em>begin</em> a section of a document might be required to have a matching <em>end</em> marker for a document containing it to be syntactically valid).</p>
             <h5>Reading DcData.csv</h5>
                 <p>DcData.csv contains nine columns, each of which gives some information about a given Dc.</p>
                 <p>From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description.</p>
