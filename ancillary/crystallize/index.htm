@@ -34,7 +34,7 @@
             <dt><code>sreg_fsck_hashpointers</code></dt><dd>Verify that all sreg hash pointers in the specified directory can be read correctly (an alias for <code>sreg_folder_check --verify</code>). Synopsis: <code>sreg_fsck_hashpointers [--sreg-dir &lt;directory&gt;] &lt;path&gt;</code></dd>
             <dt><code>sreg_init</code></dt><dd>Prepare a directory (need not exist) as a stream-registry-backed repository. The stream registry tools, with names prefaced by "sreg" (<em>s</em>tream <em>reg</em>istry), is a virtual file system layer that allows files to be stored as small text-based pointers that can be tracked using Git while avoiding the need to have the entire repository stored locally (the most-used data are cached locally, instead). It has some restrictions on what can be stored in it:
                 <ul>
-                    <li>Special files (symbolic links, block and character devices, named pipes, etc.) are not supported</li>
+                    <li>Special files are not supported, other than symbolic links</li>
                     <li>Files or folders may not be named '<code>.git.686fc528-0e8e-4724-91bb-c103cdcdd592</code>'</li>
                     <li>Folders may not be named '<code>.sreg</code>'</li>
                     <li>Files may not begin with any of the following ASCII strings:
@@ -45,8 +45,9 @@
                             <li>209fcfdf-d1ad-4345-8ef7-1fdc2d583d49</li>
                             <li>760fa662-89cf-4ebd-9664-150b7637ddd4</li>
                         </ul>
+                    </li>
                 </ul>
-              Synopsis: <code>sreg_init [--passphrase &lt;passphrase&gt;] [&lt;path-to-folder-to-prepare&gt;]</code></dd>
+              While it is suboptimal to have these restrictions, they allowed the implementation of sreg to be simpler. Patches to fix these issues would be considered, if someone has the interest to write them. Synopsis: <code>sreg_init [--passphrase &lt;passphrase&gt;] [&lt;path-to-folder-to-prepare&gt;]</code></dd>
             <dt><code>sreg_read_stream</code></dt><dd>Accepts a sreg pointer on stdin, and outputs the corresponding data from the stream registry. If a checksum is provided on the command line, the retrieved data will be checked against it. Synopsis: <code>sreg_read_stream [--sreg-dir &lt;directory&gt;] [--checksum &lt;checksum&gt;] [--disallow-hash-pointer] [--skip-cache]</code></dd>
             <dt><code>sreg_store_stream</code></dt><dd>Stores data provided on stdin into the stream registry, and sends a pointer to it to stdout. A checksum, if one is known for the stream, can be provided on the command line for a slight performance improvement. Synopsis: <code>sreg_store_stream [--sreg-dir &lt;directory&gt;] [--assume-checksum &lt;checksum&gt;]</code></dd>
             <dt><code>srfs</code></dt><dd>Mount and unmount a translation FUSE filesystem for a folder containing hash pointers. Synopsis: <code>srfs (mount|unmount) [&lt;root-folder-name&gt;]</code></dd>
