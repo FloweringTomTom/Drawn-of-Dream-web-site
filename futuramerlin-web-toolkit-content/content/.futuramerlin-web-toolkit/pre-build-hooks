@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+mv ember-information-technology-environment/implementations/web information-technology/env
+rm -rf ember-information-technology-environment

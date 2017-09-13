@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>0000130: Banshee crashes on playing videos - MantisBT</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/common_config.php" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/status_config.php" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/dropzone-4.3.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/bootstrap-3.3.6.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/font-awesome-4.6.3.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/open-sans.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/bootstrap-datetimepicker-4.17.43.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-mantis.css" />
+<!--[if lte IE 9]>	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-part2.min.css" />
+<![endif]-->	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-skins.min.css" />
+<!--[if lte IE 9]>	<link rel="stylesheet" type="text/css" href="http://futuramerlin.com/issue-tracker/css/ace-ie.min.css" />
+<![endif]-->
+	<link rel="shortcut icon" href="/issue-tracker/../../../favicon.ico" type="image/x-icon" />
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: full-text search" href="http://futuramerlin.com/issue-tracker/browser_search_plugin.php?type=text"/>
+	<link rel="search" type="application/opensearchdescription+xml" title="MantisBT: search by Issue Id" href="http://futuramerlin.com/issue-tracker/browser_search_plugin.php?type=id"/>
+	<script type="text/javascript" src="/issue-tracker/javascript_config.php"></script>
+	<script type="text/javascript" src="/issue-tracker/javascript_translations.php"></script>
+	<script type="text/javascript" src="/issue-tracker/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/dropzone-4.3.0.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/common.js"></script>
+</head>
+<body id="view-issue-page" class="skin-3">
+<div id="navbar" class="navbar navbar-default navbar-collapse navbar-fixed-top noprint"><div id="navbar-container" class="navbar-container"><button id="menu-toggler" type="button" class="navbar-toggle menu-toggler pull-left hidden-lg" data-target="#sidebar"><span class="sr-only">Toggle sidebar</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="my_view_page.php" class="navbar-brand"><span class="smaller-75"> MantisBT </span></a><button type="button" class="navbar-toggle navbar-toggle collapsed pull-right hidden-sm hidden-md hidden-lg" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu"><span class="sr-only">Toggle user menu</span><i class="ace-icon fa fa-user fa-2x white"></i> </button></div><div class="navbar-buttons navbar-header navbar-collapse collapse"><ul class="nav ace-nav"><li class="grey">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+&#160;Wreathe&#160;
+ <i class="ace-icon fa fa-angle-down bigger-110"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close scrollable-menu">
+<li class="active"><a href="/issue-tracker/set_project.php?project_id=0" selected="selected"> All Projects </a></li> 
+<li class="divider"></li>
+<li><div id="projects-list"><div class="projects-searchbox"><input class="search form-control input-md" placeholder="Search" /></div><ul class="list dropdown-yellow no-margin"><li><a href="/issue-tracker/set_project.php?project_id=1" class="project-link"> Ember </a></li>
+<li><a href="/issue-tracker/set_project.php?project_id=6" class="project-link"> Futuramerlin.com </a></li>
+<li><a href="/issue-tracker/set_project.php?project_id=2" class="project-link"> Wreathe </a></li>
+</ul></div></li></ul>
+</li>
+<li class="grey"><a data-toggle="dropdown" href="#" class="dropdown-toggle"><i class="ace-icon fa fa-user fa-2x white"></i> <span class="user-info">anonymous</span><i class="ace-icon fa fa-angle-down"></i></a><ul class="user-menu dropdown-menu dropdown-menu-right dropdown-yellow dropdown-caret dropdown-close"><li><a href="http://futuramerlin.com/issue-tracker/issues_rss.php?"><i class="ace-icon fa fa-rss-square orange"> </i> RSS</a></li><li class="divider"></li><li><a href="/issue-tracker/logout_page.php"><i class="ace-icon fa fa-sign-out"> </i> Logout</a></li></ul></li></ul></div></div></div><div class="main-container" id="main-container">
+<div id="sidebar" class="sidebar sidebar-fixed responsive compact "><ul class="nav nav-list"><li>
+<a href="/issue-tracker/my_view_page.php">
+<i class="menu-icon fa fa-dashboard"></i> 
+<span class="menu-text"> My View </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="active">
+<a href="/issue-tracker/view_all_bug_page.php">
+<i class="menu-icon fa fa-list-alt"></i> 
+<span class="menu-text"> View Issues </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/issue-tracker/changelog_page.php">
+<i class="menu-icon fa fa-retweet"></i> 
+<span class="menu-text"> Change Log </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li>
+<a href="/issue-tracker/roadmap_page.php">
+<i class="menu-icon fa fa-road"></i> 
+<span class="menu-text"> Roadmap </span>
+</a>
+<b class="arrow"></b>
+</li>
+</ul><div id="sidebar" class="sidebar-toggle sidebar-collapse"><i data-icon2="ace-icon fa fa-angle-double-right" data-icon1="ace-icon fa fa-angle-double-left"
+		class="ace-icon fa fa-angle-double-left"></i></div></div><div class="main-content">
+<div id="breadcrumbs" class="breadcrumbs noprint">
+<ul class="breadcrumb">
+ <li><i class="fa fa-user home-icon active"></i> Anonymous </li>
+<div class="btn-group btn-corner">
+	<a href="/issue-tracker/login_page.php?return=%2Fissue-tracker%2Fview.php%3Fid%3D130" class="btn btn-primary btn-xs">Login</a>
+</div>
+</ul>
+<div id="nav-search" class="nav-search"><form class="form-search" method="post" action="/issue-tracker/jump_to_bug.php"><span class="input-icon"><input type="text" name="bug_id" autocomplete="off" class="nav-search-input" placeholder="Issue #"><i class="ace-icon fa fa-search nav-search-icon"></i></span></form></div>
+</div>
+  <div class="page-content">
+<div class="row">
+<div class="col-md-12 col-xs-12"><div class="widget-box widget-color-blue2"><div class="widget-header widget-header-small"><h4 class="widget-title lighter"><i class="ace-icon fa fa-bars"></i>View Issue Details</h4></div><div class="widget-body"><div class="widget-toolbox padding-8 clearfix noprint"><div class="btn-group pull-left"><a class="btn btn-primary btn-white btn-round btn-sm" href="#bugnotes">Jump to Notes</a><a class="btn btn-primary btn-white btn-round btn-sm" href="view.php?id=130&amp;history=1#history">Issue History</a></div><div class="btn-group pull-right"></div></div><div class="widget-main no-padding"><div class="table-responsive"><table class="table table-bordered table-condensed"><tfoot><tr class="noprint"><td colspan="6"><div class="btn-group"><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"></div><div class="pull-left padding-right-2"></div></div></td></tr></tfoot><tbody><tr class="bug-header"><th class="bug-id category" width="15%">ID</th><th class="bug-project category" width="20%">Project</th><th class="bug-category category" width="15%">Category</th><th class="bug-view-status category" width="15%">View Status</th><th class="bug-date-submitted category" width="15%">Date Submitted</th><th class="bug-last-modified category" width="20%">Last Update</th></tr><tr class="bug-header-data"><td class="bug-id">0000130</td><td class="bug-project">Wreathe</td><td class="bug-category">[All Projects] Bug</td><td class="bug-view-status">public</td><td class="bug-date-submitted">2012-11-07 12:10</td><td class="bug-last-modified">2012-11-09 00:16</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-reporter category">Reporter</th><td class="bug-reporter">admin</td><th class="bug-assigned-to category">Assigned To</th><td class="bug-assigned-to">admin</td><td colspan="2">&#160;</td></tr><tr><th class="bug-priority category">Priority</th><td class="bug-priority">normal</td><th class="bug-severity category">Severity</th><td class="bug-severity">minor</td><th class="bug-reproducibility category">Reproducibility</th><td class="bug-reproducibility">always</td></tr><tr><th class="bug-status category">Status</th><td class="bug-status"><i class="fa fa-square fa-status-box status-90-color"></i> closed</td><th class="bug-resolution category">Resolution</th><td class="bug-resolution">duplicate</td><td colspan="2">&#160;</td></tr><tr><th class="bug-product-version category">Product Version</th><td class="bug-product-version"></td><td colspan="4">&#160;</td></tr><tr><th class="bug-target-version category">Target Version</th><td class="bug-target-version"></td><th class="bug-fixed-in-version category">Fixed in Version</th><td class="bug-fixed-in-version"></td><td colspan="2">&#160;</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr><tr><th class="bug-summary category">Summary</th><td class="bug-summary" colspan="5">0000130: Banshee crashes on playing videos</td></tr><tr><th class="bug-description category">Description</th><td class="bug-description" colspan="5">Playing a video with banshee causes it to crash.<br />
+Output of banshee --debug:<br />
+<br />
+<a href="mailto:kyan@elegy">kyan@elegy</a>:~$ banshee --debug<br />
+** Running Mono with --debug   **<br />
+[1 Debug 12:08:41.719] Bus.Session.RequestName ('org.bansheeproject.Banshee') replied with PrimaryOwner<br />
+[1 Info  12:08:41.747] Running Banshee 2.6.0: [Wreathe 7r2 alpha: Elegy / Banshee build W7r2a1 (linux-gnu, i686) @ 2012-11-06 17:24:44 EST]<br />
+[1 Debug 12:08:41.768] Initializing GTK<br />
+<br />
+progname=Banshee; RGBA=on<br />
+[1 Debug 12:08:43.490] Post-Initializing GTK<br />
+[1 Debug 12:08:43.510] Configuration client extension loaded (Banshee.GnomeBackend.GConfConfigurationClient)<br />
+[1 Debug 12:08:43.531] Using default gconf-base-key<br />
+[1 Debug 12:08:43.665] Core service started (DBusServiceManager, 0.001635)<br />
+[1 Debug 12:08:43.668] Registering remote object /org/bansheeproject/Banshee/DBusCommandService (Banshee.ServiceStack.DBusCommandService) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:43.679] Core service started (DBusCommandService, 0.013537)<br />
+[1 Debug 12:08:43.718] Opened SQLite (version 3.7.2) connection to /home/kyan/.config/banshee-1/banshee.db<br />
+[1 Debug 12:08:43.718] Core service started (DbConnection, 0.039057)<br />
+[1 Debug 12:08:43.732] Database version 45 is up to date<br />
+[1 Debug 12:08:43.773] Core service started (PreferenceService, 0.020555)<br />
+[1 Debug 12:08:43.781] Core service started (Network, 0.007573)<br />
+[1 Debug 12:08:43.782] Registering remote object /org/bansheeproject/Banshee/SourceManager (Banshee.Sources.SourceManager) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:43.782] Core service started (SourceManager, 0.001181)<br />
+[1 Debug 12:08:43.788] Core service started (MediaProfileManager, 0.000531)<br />
+[1 Debug 12:08:43.792] Registering remote object /org/bansheeproject/Banshee/PlayerEngine (Banshee.MediaEngine.PlayerEngineService) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:43.795] Core service started (PlayerEngine, 0.006778)<br />
+[1 Debug 12:08:43.816] Registering remote object /org/bansheeproject/Banshee/PlaybackController (Banshee.PlaybackController.PlaybackControllerService) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:43.817] Core service started (PlaybackController, 0.004055)<br />
+[1 Debug 12:08:43.825] Starting - Startup Job<br />
+[1 Debug 12:08:43.827] Core service started (JobScheduler, 0.009151)<br />
+[1 Debug 12:08:43.843] IO provider extension loaded (Banshee.IO.Gio.Provider)<br />
+[1 Debug 12:08:43.893] Loaded HardwareManager backend: Banshee.Hardware.Gio<br />
+[1 Debug 12:08:43.895] Core service started (HardwareManager, 0.068476)<br />
+[1 Debug 12:08:43.897] Bus.Session.RequestName ('org.bansheeproject.CollectionIndexer') replied with PrimaryOwner<br />
+[1 Debug 12:08:43.899] Registering remote object /org/bansheeproject/Banshee/CollectionIndexerService (Banshee.Collection.Indexer.CollectionIndexerService) on org.bansheeproject.CollectionIndexer<br />
+[1 Debug 12:08:43.902] Core service started (CollectionIndexerService, 0.00627)<br />
+[1 Debug 12:08:43.904] Core service started (SaveTrackMetadataService, 0.002363)<br />
+[1 Debug 12:08:43.917] Adding icon theme search path: /usr/share/banshee/icons<br />
+[1 Debug 12:08:43.918] Core service started (GtkElementsService, 0.014139)<br />
+[1 Debug 12:08:43.920] Core service started (InterfaceActionService, 0.001917)<br />
+[1 Debug 12:08:44.102] Extension actions loaded: MetadataFixActions<br />
+[1 Debug 12:08:44.102] Registering remote object /org/bansheeproject/Banshee/GlobalUIActions (Banshee.Gui.GlobalActions) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:44.104] Album artwork path set to /home/kyan/.cache/media-art<br />
+[1 Debug 12:08:44.139] Core service started (ArtworkManager, 0.037115)<br />
+[1 Debug 12:08:44.140] Core service started (BookmarksService, 0.000171)<br />
+[1 Debug 12:08:44.438] Adding context page lastfm-recommendations<br />
+[1 Debug 12:08:44.714] Constructed Nereid interface: 0.528098<br />
+[1 Debug 12:08:44.822] Creating new surface cache for 90px images, capped at 0.49 MiB (16 items)<br />
+[1 Debug 12:08:44.930] Registering remote object /org/bansheeproject/Banshee/ClientWindow (Nereid.PlayerInterface) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:44.930] Core service started (NereidPlayerInterface, 0.775021)<br />
+[1 Debug 12:08:44.934] Extension service started (DapService, 0.002556)<br />
+[1 Debug 12:08:44.936] Extension service started (DaapService, 0.001811)<br />
+[1 Info  12:08:44.941] Updating web proxy from GConf<br />
+[1 Debug 12:08:44.948] Direct connection, no proxy in use<br />
+[1 Debug 12:08:44.971] Extension service started (GnomeService, 0.034402)<br />
+[1 Debug 12:08:44.973] Extension service started (CoverArtService, 0.002621)<br />
+[1 Debug 12:08:45.009] Extension service started (GStreamerCoreService, 0.035244)<br />
+[1 Debug 12:08:45.047] Extension service started (EmusicService, 0.038287)<br />
+[1 Debug 12:08:45.178] Extension service started (NotificationAreaService, 0.130485)<br />
+[1 Debug 12:08:45.230] Audioscrobbler state: connected<br />
+[1 Debug 12:08:45.233] Extension service started (AudioscrobblerService, 0.054971)<br />
+[1 Debug 12:08:45.239] Using GNOME 2.22 API for Multimedia Keys<br />
+[1 Debug 12:08:45.240] Extension service started (MultimediaKeysService, 0.006845)<br />
+[1 Debug 12:08:45.271] Extension service started (AudioCdService, 0.030996)<br />
+[1 Debug 12:08:45.273] Extension service started (DvdService, 0.001988)<br />
+[1 Debug 12:08:45.283] Extension service started (MiniModeService, 0.01017)<br />
+[1 Info  12:08:45.284] All services are started 1.711814<br />
+[1 Debug 12:08:45.724] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Debug 12:08:45.851] Extension source loaded: Now Playing<br />
+[1 Debug 12:08:45.987] Registering remote object /org/bansheeproject/Banshee/SourceManager/PlayQueue (Banshee.PlayQueue.PlayQueueSource) on org.bansheeproject.Banshee<br />
+[1 Debug 12:08:45.987] Extension source loaded: Play Queue<br />
+[1 Debug 12:08:46.010] Extension source loaded: Last.fm<br />
+[1 Debug 12:08:46.015] Starting GTK main loop<br />
+[1 Debug 12:08:46.550] Growing surface cache for 90px images to 0.56 MiB (18 items)<br />
+[1 Debug 12:08:46.677] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Debug 12:08:46.800] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Info  12:08:47.631] nereid Client Started<br />
+[1 Debug 12:08:47.634] Delayed Initializating Banshee.MediaEngine.PlayerEngineService<br />
+[1 Debug 12:08:47.758] (libbanshee:player) Audiosink has volume: YES<br />
+[1 Debug 12:08:47.779] (libbanshee:player) Using system (gst-plugins-good) equalizer element<br />
+[1 Debug 12:08:47.839] Player state change: NotReady -&gt; Ready<br />
+[1 Debug 12:08:47.852] Loaded equalizer presets: 0.008702<br />
+[1 Debug 12:08:47.857] Selected equalizer: New Preset<br />
+[1 Debug 12:08:47.860] Syncing equalizer to engine: New Preset<br />
+[1 Debug 12:08:47.866] Player state change: Ready -&gt; Idle<br />
+[1 Debug 12:08:47.871] (libbanshee:player) Enabled ReplayGain<br />
+[1 Debug 12:08:47.890] (libbanshee:player) scaled volume: 1.00 (ReplayGain) * 1.00 (User) = 1.00<br />
+[1 Info  12:08:47.891] GStreamer version 0.10.30.0, gapless: True, replaygain: True<br />
+[1 Debug 12:08:47.921] (libbanshee:player) scaled volume: 1.00 (ReplayGain) * 1.00 (User) = 1.00<br />
+[1 Debug 12:08:47.924] Delayed Initializating Banshee.Dap.DapService<br />
+[1 Debug 12:08:47.937] Dap support extension loaded: Banshee.Dap.Mtp<br />
+[1 Debug 12:08:47.938] Dap support extension loaded: Banshee.Dap.MassStorage<br />
+[1 Debug 12:08:47.939] Dap support extension loaded: Banshee.Dap.Karma<br />
+[1 Debug 12:08:47.941] Dap support extension loaded: Banshee.Dap.AppleDevice<br />
+[1 Debug 12:08:47.947] Delayed Initializating Banshee.Daap.DaapService<br />
+[2 Info  12:08:48.017] AppleDeviceSource is ignoring unmounted volume 155 GB File system<br />
+[3 Debug 12:08:48.132] DAAP Proxy listening for connections on port 8089<br />
+[1 Debug 12:08:48.950] Finished - Startup Job<br />
+[1 Debug 12:08:48.956] Starting - Downloading Cover Art<br />
+[4 Debug 12:08:48.958] Finished - Downloading Cover Art<br />
+[1 Debug 12:08:50.357] EqualizerManager - Saved equalizers to disk<br />
+[1 Debug 12:08:51.026] Player state change: Idle -&gt; Loading<br />
+[1 Debug 12:08:51.126] Loaded IScreensaverManager: Banshee.GnomeBackend.GnomeScreensaverManager<br />
+[1 Debug 12:08:51.145] (libbanshee:player) [subtitle]: lookup for subtitle for video file.<br />
+[1 Debug 12:08:51.621] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Debug 12:08:51.621] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Debug 12:08:51.819] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Debug 12:08:51.820] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Debug 12:08:51.820] Creating Pango.Layout, configuring Cairo.Context<br />
+[1 Warn  12:08:52.572] Seem to be stuck loading <a href="file:///media/MyBook/Media/Audio/Music/Traditional/Folk/Contra%20dance/Wizard_s%20Walk.flv,">file:///media/MyBook/Media/Audio/Music/Traditional/Folk/Contra%20dance/Wizard_s%20Walk.flv,</a> so re-trying<br />
+[1 Debug 12:08:52.723] TrackInfoDisplay RenderAnimation: 19.00 FPS<br />
+[1 Debug 12:08:52.815] TrackInfoDisplay RenderAnimation: 20.00 FPS<br />
+The program 'Banshee' received an X Window System error.<br />
+This probably reflects a bug in the program.<br />
+The error was 'BadMatch (invalid parameter attributes)'.<br />
+&#160;&#160;(Details: serial 90 error_code 8 request_code 132 minor_code 19)<br />
+&#160;&#160;(Note to programmers: normally, X errors are reported asynchronously;<br />
+&#160;&#160;&#160;that is, you will receive the error a while after causing it.<br />
+&#160;&#160;&#160;To debug your program, run it with the --sync command line<br />
+&#160;&#160;&#160;option to change this behavior. You can then get a meaningful<br />
+&#160;&#160;&#160;backtrace from your debugger if you break on the gdk_x_error() function.)<br />
+<a href="mailto:kyan@elegy">kyan@elegy</a>:~$ <br />
+</td></tr><tr><th class="bug-tags category">Tags</th><td class="bug-tags" colspan="5">No tags attached.</td></tr><tr class="spacer"><td colspan="6"></td></tr><tr class="hidden"></tr></tbody></table></div></div></div></div></div>	<div class="col-md-12 col-xs-12">
+	<div class="space-10"></div>
+
+		<div id="relationships" class="widget-box widget-color-blue2 ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			<i class="ace-icon fa fa-sitemap"></i>
+			Relationships		</h4>
+		<div class="widget-toolbar">
+			<a data-action="collapse" href="#">
+				<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+			</a>
+		</div>
+	</div>
+	<div class="widget-body">
+		
+		<div class="widget-main no-padding">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed table-hover"><tr><td><span class="nowrap">duplicate of</span>&#160;</td><td><a href="view.php?id=50">0000050</a></td><td><i class="fa fa-square fa-status-box status-50-color"></i> <span class="issue-status" title="open">assigned</span></td><td><span class="nowrap"><a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a></span>&#160;</td><td>Banshee crashes when playing video from video library&#160;</td></tr></table>			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+
+<div class="col-md-12 col-xs-12">
+<a id="attachments"></a>
+<a id="bugnotes"></a>
+<div class="space-10"></div>
+
+<div id="bugnotes" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+	<i class="ace-icon fa fa-comments"></i>
+		Activities	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+		</a>
+	</div>
+	</div>
+	<div class="widget-body">
+	<div class="widget-main no-padding">
+	<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-striped">
+<tr class="bugnote" id="c8">
+		<td class="category">
+		<div class="pull-left padding-2">		</div>
+		<div class="pull-left padding-2">
+		<p class="no-margin">
+			<i class="fa fa-user grey"></i> <a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>		</p>
+		<p class="no-margin small lighter">
+			<i class="fa fa-clock-o grey"></i> 2012-11-07 12:19					</p>
+		<p class="no-margin">
+			<span class="label label-sm label-default arrowed-in-right">administrator</span>			&#160;
+					</p>
+				<div class="clearfix"></div>
+		<div class="space-2"></div>
+		<div class="btn-group-sm">
+				</div>
+		</div>
+	</td>
+	<td class="bugnote-note">
+	
+<div id="attachment_preview_8_open" class=" collapse-closed noprint">
+<a href="file_download.php?file_id=8&amp;type=bug"><i class="fa fa-file-o" alt="? file icon" width="16" height="16"></i></a>&#32;<a href="file_download.php?file_id=8&amp;type=bug">banshee-bug-7November2012</a>&#32;(9,118&#32;bytes)&#32;<a id="attachment_preview_8_open_link" class="collapse-link noprint"><i class="fa fa-minus-square-o" alt="-"></i></a>
+<pre class="bug-attachment-preview-text">kyan@elegy:~$ banshee --debug
+** Running Mono with --debug   **
+[1 Debug 12:08:41.719] Bus.Session.RequestName ('org.bansheeproject.Banshee') replied with PrimaryOwner
+[1 Info  12:08:41.747] Running Banshee 2.6.0: [Wreathe 7r2 alpha: Elegy / Banshee build W7r2a1 (linux-gnu, i686) @ 2012-11-06 17:24:44 EST]
+[1 Debug 12:08:41.768] Initializing GTK
+
+progname=Banshee; RGBA=on
+[1 Debug 12:08:43.490] Post-Initializing GTK
+[1 Debug 12:08:43.510] Configuration client extension loaded (Banshee.GnomeBackend.GConfConfigurationClient)
+[1 Debug 12:08:43.531] Using default gconf-base-key
+[1 Debug 12:08:43.665] Core service started (DBusServiceManager, 0.001635)
+[1 Debug 12:08:43.668] Registering remote object /org/bansheeproject/Banshee/DBusCommandService (Banshee.ServiceStack.DBusCommandService) on org.bansheeproject.Banshee
+[1 Debug 12:08:43.679] Core service started (DBusCommandService, 0.013537)
+[1 Debug 12:08:43.718] Opened SQLite (version 3.7.2) connection to /home/kyan/.config/banshee-1/banshee.db
+[1 Debug 12:08:43.718] Core service started (DbConnection, 0.039057)
+[1 Debug 12:08:43.732] Database version 45 is up to date
+[1 Debug 12:08:43.773] Core service started (PreferenceService, 0.020555)
+[1 Debug 12:08:43.781] Core service started (Network, 0.007573)
+[1 Debug 12:08:43.782] Registering remote object /org/bansheeproject/Banshee/SourceManager (Banshee.Sources.SourceManager) on org.bansheeproject.Banshee
+[1 Debug 12:08:43.782] Core service started (SourceManager, 0.001181)
+[1 Debug 12:08:43.788] Core service started (MediaProfileManager, 0.000531)
+[1 Debug 12:08:43.792] Registering remote object /org/bansheeproject/Banshee/PlayerEngine (Banshee.MediaEngine.PlayerEngineService) on org.bansheeproject.Banshee
+[1 Debug 12:08:43.795] Core service started (PlayerEngine, 0.006778)
+[1 Debug 12:08:43.816] Registering remote object /org/bansheeproject/Banshee/PlaybackController (Banshee.PlaybackController.PlaybackControllerService) on org.bansheeproject.Banshee
+[1 Debug 12:08:43.817] Core service started (PlaybackController, 0.004055)
+[1 Debug 12:08:43.825] Starting - Startup Job
+[1 Debug 12:08:43.827] Core service started (JobScheduler, 0.009151)
+[1 Debug 12:08:43.843] IO provider extension loaded (Banshee.IO.Gio.Provider)
+[1 Debug 12:08:43.893] Loaded HardwareManager backend: Banshee.Hardware.Gio
+[1 Debug 12:08:43.895] Core service started (HardwareManager, 0.068476)
+[1 Debug 12:08:43.897] Bus.Session.RequestName ('org.bansheeproject.CollectionIndexer') replied with PrimaryOwner
+[1 Debug 12:08:43.899] Registering remote object /org/bansheeproject/Banshee/CollectionIndexerService (Banshee.Collection.Indexer.CollectionIndexerService) on org.bansheeproject.CollectionIndexer
+[1 Debug 12:08:43.902] Core service started (CollectionIndexerService, 0.00627)
+[1 Debug 12:08:43.904] Core service started (SaveTrackMetadataService, 0.002363)
+[1 Debug 12:08:43.917] Adding icon theme search path: /usr/share/banshee/icons
+[1 Debug 12:08:43.918] Core service started (GtkElementsService, 0.014139)
+[1 Debug 12:08:43.920] Core service started (InterfaceActionService, 0.001917)
+[1 Debug 12:08:44.102] Extension actions loaded: MetadataFixActions
+[1 Debug 12:08:44.102] Registering remote object /org/bansheeproject/Banshee/GlobalUIActions (Banshee.Gui.GlobalActions) on org.bansheeproject.Banshee
+[1 Debug 12:08:44.104] Album artwork path set to /home/kyan/.cache/media-art
+[1 Debug 12:08:44.139] Core service started (ArtworkManager, 0.037115)
+[1 Debug 12:08:44.140] Core service started (BookmarksService, 0.000171)
+[1 Debug 12:08:44.438] Adding context page lastfm-recommendations
+[1 Debug 12:08:44.714] Constructed Nereid interface: 0.528098
+[1 Debug 12:08:44.822] Creating new surface cache for 90px images, capped at 0.49 MiB (16 items)
+[1 Debug 12:08:44.930] Registering remote object /org/bansheeproject/Banshee/ClientWindow (Nereid.PlayerInterface) on org.bansheeproject.Banshee
+[1 Debug 12:08:44.930] Core service started (NereidPlayerInterface, 0.775021)
+[1 Debug 12:08:44.934] Extension service started (DapService, 0.002556)
+[1 Debug 12:08:44.936] Extension service started (DaapService, 0.001811)
+[1 Info  12:08:44.941] Updating web proxy from GConf
+[1 Debug 12:08:44.948] Direct connection, no proxy in use
+[1 Debug 12:08:44.971] Extension service started (GnomeService, 0.034402)
+[1 Debug 12:08:44.973] Extension service started (CoverArtService, 0.002621)
+[1 Debug 12:08:45.009] Extension service started (GStreamerCoreService, 0.035244)
+[1 Debug 12:08:45.047] Extension service started (EmusicService, 0.038287)
+[1 Debug 12:08:45.178] Extension service started (NotificationAreaService, 0.130485)
+[1 Debug 12:08:45.230] Audioscrobbler state: connected
+[1 Debug 12:08:45.233] Extension service started (AudioscrobblerService, 0.054971)
+[1 Debug 12:08:45.239] Using GNOME 2.22 API for Multimedia Keys
+[1 Debug 12:08:45.240] Extension service started (MultimediaKeysService, 0.006845)
+[1 Debug 12:08:45.271] Extension service started (AudioCdService, 0.030996)
+[1 Debug 12:08:45.273] Extension service started (DvdService, 0.001988)
+[1 Debug 12:08:45.283] Extension service started (MiniModeService, 0.01017)
+[1 Info  12:08:45.284] All services are started 1.711814
+[1 Debug 12:08:45.724] Creating Pango.Layout, configuring Cairo.Context
+[1 Debug 12:08:45.851] Extension source loaded: Now Playing
+[1 Debug 12:08:45.987] Registering remote object /org/bansheeproject/Banshee/SourceManager/PlayQueue (Banshee.PlayQueue.PlayQueueSource) on org.bansheeproject.Banshee
+[1 Debug 12:08:45.987] Extension source loaded: Play Queue
+[1 Debug 12:08:46.010] Extension source loaded: Last.fm
+[1 Debug 12:08:46.015] Starting GTK main loop
+[1 Debug 12:08:46.550] Growing surface cache for 90px images to 0.56 MiB (18 items)
+[1 Debug 12:08:46.677] Creating Pango.Layout, configuring Cairo.Context
+[1 Debug 12:08:46.800] Creating Pango.Layout, configuring Cairo.Context
+[1 Info  12:08:47.631] nereid Client Started
+[1 Debug 12:08:47.634] Delayed Initializating Banshee.MediaEngine.PlayerEngineService
+[1 Debug 12:08:47.758] (libbanshee:player) Audiosink has volume: YES
+[1 Debug 12:08:47.779] (libbanshee:player) Using system (gst-plugins-good) equalizer element
+[1 Debug 12:08:47.839] Player state change: NotReady -&gt; Ready
+[1 Debug 12:08:47.852] Loaded equalizer presets: 0.008702
+[1 Debug 12:08:47.857] Selected equalizer: New Preset
+[1 Debug 12:08:47.860] Syncing equalizer to engine: New Preset
+[1 Debug 12:08:47.866] Player state change: Ready -&gt; Idle
+[1 Debug 12:08:47.871] (libbanshee:player) Enabled ReplayGain
+[1 Debug 12:08:47.890] (libbanshee:player) scaled volume: 1.00 (ReplayGain) * 1.00 (User) = 1.00
+[1 Info  12:08:47.891] GStreamer version 0.10.30.0, gapless: True, replaygain: True
+[1 Debug 12:08:47.921] (libbanshee:player) scaled volume: 1.00 (ReplayGain) * 1.00 (User) = 1.00
+[1 Debug 12:08:47.924] Delayed Initializating Banshee.Dap.DapService
+[1 Debug 12:08:47.937] Dap support extension loaded: Banshee.Dap.Mtp
+[1 Debug 12:08:47.938] Dap support extension loaded: Banshee.Dap.MassStorage
+[1 Debug 12:08:47.939] Dap support extension loaded: Banshee.Dap.Karma
+[1 Debug 12:08:47.941] Dap support extension loaded: Banshee.Dap.AppleDevice
+[1 Debug 12:08:47.947] Delayed Initializating Banshee.Daap.DaapService
+[2 Info  12:08:48.017] AppleDeviceSource is ignoring unmounted volume 155 GB File system
+[3 Debug 12:08:48.132] DAAP Proxy listening for connections on port 8089
+[1 Debug 12:08:48.950] Finished - Startup Job
+[1 Debug 12:08:48.956] Starting - Downloading Cover Art
+[4 Debug 12:08:48.958] Finished - Downloading Cover Art
+[1 Debug 12:08:50.357] EqualizerManager - Saved equalizers to disk
+[1 Debug 12:08:51.026] Player state change: Idle -&gt; Loading
+[1 Debug 12:08:51.126] Loaded IScreensaverManager: Banshee.GnomeBackend.GnomeScreensaverManager
+[1 Debug 12:08:51.145] (libbanshee:player) [subtitle]: lookup for subtitle for video file.
+[1 Debug 12:08:51.621] Creating Pango.Layout, configuring Cairo.Context
+[1 Debug 12:08:51.621] Creating Pango.Layout, configuring Cairo.Context
+[1 Debug 12:08:51.819] Creating Pango.Layout, configuring Cairo.Context
+[1 Debug 12:08:51.820] Creating Pango.Layout, configuring Cairo.Context
+[1 Debug 12:08:51.820] Creating Pango.Layout, configuring Cairo.Context
+[1 Warn  12:08:52.572] Seem to be stuck loading file:///media/MyBook/Media/Audio/Music/Traditional/Folk/Contra%20dance/Wizard_s%20Walk.flv, so re-trying
+[1 Debug 12:08:52.723] TrackInfoDisplay RenderAnimation: 19.00 FPS
+[1 Debug 12:08:52.815] TrackInfoDisplay RenderAnimation: 20.00 FPS
+The program 'Banshee' received an X Window System error.
+This probably reflects a bug in the program.
+The error was 'BadMatch (invalid parameter attributes)'.
+  (Details: serial 90 error_code 8 request_code 132 minor_code 19)
+  (Note to programmers: normally, X errors are reported asynchronously;
+   that is, you will receive the error a while after causing it.
+   To debug your program, run it with the --sync command line
+   option to change this behavior. You can then get a meaningful
+   backtrace from your debugger if you break on the gdk_x_error() function.)
+kyan@elegy:~$ 
+
+</pre></div>
+<div id="attachment_preview_8_closed" class="collapse-section-closed collapse-open">
+<a href="file_download.php?file_id=8&amp;type=bug"><i class="fa fa-file-o" alt="? file icon" width="16" height="16"></i></a>&#32;<a href="file_download.php?file_id=8&amp;type=bug">banshee-bug-7November2012</a>&#32;(9,118&#32;bytes)&#32;<a id="attachment_preview_8_closed_link" class="collapse-link noprint"><i class="fa fa-plus-square-o" alt="+"></i></a></div>	</td>
+</tr>
+<tr class="spacer">
+	<td colspan="2"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    <div class="col-md-12 col-xs-12">
+        <a id="history"></a>
+        <div class="space-10"></div>
+
+<div id="history" class="widget-box widget-color-blue2 ">
+<div class="widget-header widget-header-small">
+	<h4 class="widget-title lighter">
+		<i class="ace-icon fa fa-history"></i>
+		Issue History	</h4>
+	<div class="widget-toolbar">
+		<a data-action="collapse" href="#">
+			<i class="1 ace-icon fa fa-chevron-up bigger-125"></i>
+		</a>
+	</div>
+</div>
+<div class="widget-body">
+<div class="widget-main no-padding">
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-hover table-striped">
+	<thead>
+		<tr>
+			<th class="small-caption">
+				Date Modified			</th>
+			<th class="small-caption">
+				Username			</th>
+			<th class="small-caption">
+				Field			</th>
+			<th class="small-caption">
+				Change			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td class="small-caption">
+				2012-11-07 12:10			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				New Issue			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-11-07 12:10			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Status			</td>
+			<td class="small-caption">
+				new =&gt; assigned			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-11-07 12:10			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Assigned To			</td>
+			<td class="small-caption">
+				 =&gt; admin			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-11-07 12:19			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				File Added: banshee-bug-7November2012			</td>
+			<td class="small-caption">
+							</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-11-09 00:16			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Relationship added			</td>
+			<td class="small-caption">
+				duplicate of 0000050			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-11-09 00:16			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Status			</td>
+			<td class="small-caption">
+				assigned =&gt; closed			</td>
+		</tr>
+		<tr>
+			<td class="small-caption">
+				2012-11-09 00:16			</td>
+			<td class="small-caption">
+				<a class="user" href="http://futuramerlin.com/issue-tracker/view_user_page.php?id=1">admin</a>			</td>
+			<td class="small-caption">
+				Resolution			</td>
+			<td class="small-caption">
+				open =&gt; duplicate			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="space-20"></div>
+<div class="footer noprint">
+<div class="footer-inner">
+<div class="footer-content">
+<div class="col-md-6 col-xs-12 no-padding">
+<address>
+<strong>Powered by <a href="https://www.mantisbt.org" title="bug tracking software">MantisBT </a></strong> <br>
+<small>Copyright &copy; 2000 - 2017 MantisBT Team</small><br><small>Contact <a href="mailto:webmaster@example.com" title="Contact the webmaster via e-mail.">administrator</a> for assistance</small><br>
+</address>
+</div>
+<div class="col-md-6 col-xs-12">
+<div class="pull-right" id="powered-by-mantisbt-logo">
+<a href="https://www.mantisbt.org" title="Mantis Bug Tracker: a free and open source web based bug tracking system."><img src="/issue-tracker/images/mantis_logo.png" width="102" height="35" alt="Powered by Mantis Bug Tracker: a free and open source web based bug tracking system." /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="btn-scroll-up btn btn-sm btn-inverse display" id="btn-scroll-up" href="#">
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+</a>
+</div>
+	<script type="text/javascript" src="/issue-tracker/js/bootstrap-3.3.6.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/moment-with-locales-2.15.2.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/bootstrap-datetimepicker-4.17.43.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/typeahead.jquery-1.1.1.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/list-1.4.1.min.js"></script>
+	<script type="text/javascript" src="/issue-tracker/js/ace.min.js"></script>
+</body>
+</html>

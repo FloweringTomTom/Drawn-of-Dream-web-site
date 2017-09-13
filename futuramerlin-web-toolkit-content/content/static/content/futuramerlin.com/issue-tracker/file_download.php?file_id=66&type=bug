@@ -1,0 +1,849 @@
+uploading C3-20170324083222692132914_2d303430300a6c1917168c184bd58f26c2a775843405.coal5-timestamp: [##########Done! The new crystal's address is:
+C3-20170324083222692132914_2d303430300a6c1917168c184bd58f26c2a775843405
+Started verifying stream registry database entry c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb.
+/usr/local/bin/sreg_read_stream: line 107: /nvme0n1p5//.LocalStoreCache//0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+/usr/local/bin/sreg_read_stream: line 107: /nvme0n1p5//.LocalStoreCache//0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+mv: cannot move '/nvme0n1p5/.LocalStoreCache/ByCount/1/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2' to '/nvme0n1p5//.LocalStoreCache//ByCount/2/0/2/c/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2/02c86d14f9f54a323e1e679193b49708f8ab01fd57763c3d470cd3ba4696b74d669f2d4c5b7f19b5f3e6849306afe04d30d293055309a42308e84a30ad1a14f2': Directory not empty
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/localstorecache_request line 103.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 106.
+/usr/local/bin/sreg_read_stream: line 107: /scache-*.LocalStore/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb: No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 107.
+mv: cannot stat 'biggify-stream-2017-03-24-08-47-15-504330914-2d303430300a.out': No such file or directory
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 120.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 126.
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+sends the warning:
+A nonfatal error was reported on /usr/local/bin/sreg_read_stream line 131.
+/bin/bash /usr/local/bin/sregi_verify_entry /Ember Library/Futuramerlin Projects/Data/Stream Registry/c/0/c/c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb
+failed with the error:
+Failed retrieving stream, and no retries left!
+/bin/bash /usr/local/bin/sreg_read_stream --checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --disallow-hash-pointer
+failed with the error:
+A fatal error was reported on /usr/local/bin/sreg_read_stream line 196.
+/bin/bash /usr/local/bin/sreg_store_stream --assume-checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --verbose
+failed with the error:
+Error verifying stream registry database entry c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb! Marking entry as corrupted.
+/bin/bash /usr/local/bin//sregi_copy_write /home/kyan/.local/share/Colossal Order/Cities_Skylines/Saves/2017mar22n2.crp . /nvme0n1p5//srsync-2017-03-24-05-13-19-592837790-2d303430300a/.srsync.status 5
+failed with the error:
+Failed saving stream: stored stream could not be read!
+/bin/bash /usr/local/bin/sreg_store_stream --assume-checksum c0c02c0469adaa9e3e808e398a6827f3ceeba960a5adca61ae065b0048763bf0d99c7c595d2912a3861daac1939164ef6fb2bc893ae62d705842934f914867eb --verbose
+failed with the error:
+A fatal error was reported on /usr/local/bin/sreg_store_stream line 113.
+find /home/kyan -type f -exec sregi_copy_write {} . /nvme0n1p5//srsync-2017-03-24-05-13-19-592837790-2d303430300a/.srsync.status 5 ;
+failed with the error:
+A fatal error was reported on /usr/local/bin//sregi_copy_write line 82.
+Copying item /home/kyan/.local/share/Colossal Order/Cities_Skylines/Saves/2017mar22n13.crp: #34368 of 180837 (19.005%)
+Begun storing /nvme0n1p5//sreg-2017-03-24-09-11-13-612407242-2d303430300a/2017mar22n13.crp.
