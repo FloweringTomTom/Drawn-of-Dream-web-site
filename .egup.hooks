@@ -6,7 +6,7 @@ source ember_bash_setup &> /dev/null
 finish() {
     (
         if [[ -e "${tempDir:?}" ]]; then
-            rm -r "${tempDir:?}"
+            rm -rf "${tempDir:?}"
         fi
     )
 }
