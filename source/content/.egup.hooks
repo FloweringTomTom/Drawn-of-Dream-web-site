@@ -3,22 +3,5 @@
 source ember_bash_setup &> /dev/null
 # set -x
 
-finish() {
-    (
-        if [[ -e "${tempDir:?}" ]]; then
-            rm -rf "${tempDir:?}"
-        fi
-    )
-}
-trap 'error-notify "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO}."; finish; exit 1' ERR
-trap finish EXIT
-
-tempDir="$(tempDir)"
-pushd "$tempDir" || die
-git clone https://github.com/ethus3h/ember-information-technology-environment.git
-popd || die
 rm -r information-technology/env
-mv "$tempDir"/ember-information-technology-environment/implementations/web information-technology/env
-rm -rf ember-information-technology-environment
-
-finish
+cp -r ../ember-information-technology-environment/implementations/web information-technology/env
