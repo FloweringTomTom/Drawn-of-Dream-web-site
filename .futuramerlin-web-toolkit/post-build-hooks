@@ -1,7 +1,7 @@
 #!/bin/bash
 pwd
 cd static
-if [ ! -f content/futuramerlin.com/favicon.ico ]; then
+if [[ ! -f content/futuramerlin.com/favicon.ico ]]; then
     rm -r ./* || echo "(nothing to remove; this is probably nothing to worry about)"
     #FIXME: this will break for bugs over 1000 and files over 100
     #FIXME: this will not get revision history of issue notes, issues, etc.
