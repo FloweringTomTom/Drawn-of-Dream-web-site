@@ -26,7 +26,7 @@
         <p><code>ember_bash_setup</code> provides these bash functions.</p>
         <dl>
             <dt><code>assert</code></dt><dd>Test for a condition, and report a failing status if the test fails. This is to facilitate writing readable unit tests. The <code>-v</code> makes some test types print additional information. Synopsis: <code>assert [-v] ( [directoryEquals &lt;directory-1&gt; &lt;directory-2&gt;] | [fileEquals &lt;file-1&gt; &lt;file-2&gt;] | [stringEquals &lt;string-1&gt; &lt;string-2&gt;] )</code></dd>
-            <dt><code>checkedxz</code></dt><dd>Like xz, but make sure the output isn't corrupt. Synopsis: <code>checkedxz [ (-|&lt;input-file&gt;) &lt;argument-for-xz&gt;... ]</code></dd>
+            <dt><code>checkedxz</code></dt><dd>Like xz, but make sure the output isn't corrupt. If <code>-</code> is specified as the input file, output will be to stdout regardless of the presence or absence of <code>--stdout</code>. Synopsis: <code>checkedxz [ (-|&lt;input-file&gt;) [--stdout] &lt;argument-for-xz&gt;... ]</code></dd>
             <dt><code>die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
             <dt><code>eescape</code></dt><dd>Prepare a string for use as a Perl replacement match pattern (left side), used by <code>ereplace</code>. Synopsis: <code>eescape &lt;string&gt;</dd>
             <dt><code>embasename</code></dt><dd>Replacement for <code>basename</code> in bash. Synopsis: <code>embasename &lt;path&gt;</code></dd>
