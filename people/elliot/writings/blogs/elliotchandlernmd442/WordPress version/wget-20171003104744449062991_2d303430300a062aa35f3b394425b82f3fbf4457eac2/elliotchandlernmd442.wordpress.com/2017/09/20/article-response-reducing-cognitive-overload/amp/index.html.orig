@@ -1,0 +1,463 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Article response: &#8220;Reducing Cognitive Overload&#8221;" />
+<meta property="og:url" content="https://elliotchandlernmd442.wordpress.com/2017/09/20/article-response-reducing-cognitive-overload/" />
+<meta property="og:description" content="This post is a response to this article (IA). &nbsp; This article provides ways to create user experiences that help the user be able to work with complex products. A failing in this zone is what l…" />
+<meta property="article:published_time" content="2017-09-20T02:10:24+00:00" />
+<meta property="article:modified_time" content="2017-09-20T02:13:31+00:00" />
+<meta property="og:site_name" content="Elliot&#039;s NMD442 Blog!" />
+<meta property="og:image" content="https://elliotchandlernmd442.files.wordpress.com/2017/09/cognitive-overload-image10-large-opt.png" />
+<meta property="og:image:width" content="974" />
+<meta property="og:image:height" content="603" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Article response: &#8220;Reducing Cognitive Overload&#8221;" />
+<meta name="twitter:image" content="https://elliotchandlernmd442.files.wordpress.com/2017/09/cognitive-overload-image10-large-opt.png?w=240" />
+<meta name="twitter:card" content="summary" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+	<title>Article response: &#8220;Reducing Cognitive Overload&#8221; &#8211; Elliot&#039;s NMD442 Blog!</title>
+		<link rel="canonical" href="https://elliotchandlernmd442.wordpress.com/2017/09/20/article-response-reducing-cognitive-overload/" />
+		<script src="https://cdn.ampproject.org/v0.js" async></script>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic">
+		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":"https:\/\/elliotchandlernmd442.wordpress.com\/2017\/09\/20\/article-response-reducing-cognitive-overload\/","publisher":{"@type":"Organization","name":"Elliot&#039;s NMD442 Blog!","logo":{"@type":"ImageObject","url":"https:\/\/s2.wp.com\/i\/favicons\/apple-touch-icon-60x60.png","width":60,"height":60}},"headline":"Article response: &#8220;Reducing Cognitive Overload&#8221;","datePublished":"2017-09-20T02:10:24+00:00","dateModified":"2017-09-20T02:13:31+00:00","author":{"@type":"Person","name":"elliotchandlernmd100"},"image":{"@type":"ImageObject","url":"https:\/\/elliotchandlernmd442.files.wordpress.com\/2017\/09\/cognitive-overload-image10-large-opt.png","width":840,"height":520}}</script>
+		<style amp-custom>
+		/* Generic WP styling */
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.amp-wp-enforced-sizes {
+	/** Our sizes fallback is 100vw, and we have a padding on the container; the max-width here prevents the element from overflowing. **/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.amp-wp-unknown-size img {
+	/** Worst case scenario when we can't figure out dimensions for an image. **/
+	/** Force the image into a box of fixed dimensions and use object-fit to scale. **/
+	object-fit: contain;
+}
+
+/* Template Styles */
+
+.amp-wp-content,
+.amp-wp-title-bar div {
+		margin: 0 auto;
+	max-width: 840px;
+	}
+
+html {
+	background: #0a89c0;
+}
+
+body {
+	background: #fff;
+	color: #353535;
+	font-family: 'Merriweather', 'Times New Roman', Times, Serif;
+	font-weight: 300;
+	line-height: 1.75em;
+}
+
+p,
+ol,
+ul,
+figure {
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+a,
+a:visited {
+	color: #0a89c0;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #353535;
+}
+
+/* Quotes */
+
+blockquote {
+	color: #353535;
+	background: rgba(127,127,127,.125);
+	border-left: 2px solid #0a89c0;
+	margin: 8px 0 24px 0;
+	padding: 16px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* UI Fonts */
+
+.amp-wp-meta,
+.amp-wp-header div,
+.amp-wp-title,
+.wp-caption-text,
+.amp-wp-tax-category,
+.amp-wp-tax-tag,
+.amp-wp-comments-link,
+.amp-wp-footer p,
+.back-to-top {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+
+/* Header */
+
+.amp-wp-header {
+	background-color: #0a89c0;
+}
+
+.amp-wp-header div {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: .875em 16px;
+	position: relative;
+}
+
+.amp-wp-header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Site Icon */
+
+.amp-wp-header .amp-wp-site-icon {
+	/** site icon is 32px **/
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 18px;
+	top: 10px;
+}
+
+/* Article */
+
+.amp-wp-article {
+	color: #353535;
+	font-weight: 400;
+	margin: 1.5em auto;
+	max-width: 840px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* Article Header */
+
+.amp-wp-article-header {
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1.5em 16px 1.5em;
+}
+
+.amp-wp-title {
+	color: #353535;
+	display: block;
+	flex: 1 0 100%;
+	font-weight: 900;
+	margin: 0 0 .625em;
+	width: 100%;
+}
+
+/* Article Meta */
+
+.amp-wp-meta {
+	color: #696969;
+	display: inline-block;
+	flex: 2 1 50%;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+.amp-wp-article-header .amp-wp-meta:last-of-type {
+	text-align: right;
+}
+
+.amp-wp-article-header .amp-wp-meta:first-of-type {
+	text-align: left;
+}
+
+.amp-wp-byline amp-img,
+.amp-wp-byline .amp-wp-author {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.amp-wp-byline amp-img {
+	border: 1px solid #0a89c0;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 6px;
+}
+
+.amp-wp-posted-on {
+	text-align: right;
+}
+
+/* Featured image */
+
+.amp-wp-article-featured-image {
+	margin: 0 0 1em;
+}
+.amp-wp-article-featured-image amp-img {
+	margin: 0 auto;
+}
+.amp-wp-article-featured-image.wp-caption .wp-caption-text {
+	margin: 0 18px;
+}
+
+/* Article Content */
+
+.amp-wp-article-content {
+	margin: 0 16px;
+}
+
+.amp-wp-article-content ul,
+.amp-wp-article-content ol {
+	margin-left: 1em;
+}
+
+.amp-wp-article-content amp-img {
+	margin: 0 auto;
+}
+
+.amp-wp-article-content amp-img.alignright {
+	margin: 0 0 1em 16px;
+}
+
+.amp-wp-article-content amp-img.alignleft {
+	margin: 0 16px 1em 0;
+}
+
+/* Captions */
+
+.wp-caption {
+	padding: 0;
+}
+
+.wp-caption.alignleft {
+	margin-right: 16px;
+}
+
+.wp-caption.alignright {
+	margin-left: 16px;
+}
+
+.wp-caption .wp-caption-text {
+	border-bottom: 1px solid #c2c2c2;
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: .66em 10px .75em;
+}
+
+/* AMP Media */
+
+amp-carousel {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+amp-iframe,
+amp-youtube,
+amp-instagram,
+amp-vine {
+	background: #c2c2c2;
+	margin: 0 -16px 1.5em;
+}
+
+.amp-wp-article-content amp-carousel amp-img {
+	border: none;
+}
+
+amp-carousel > amp-img > img {
+	object-fit: contain;
+}
+
+.amp-wp-iframe-placeholder {
+	background: #c2c2c2 url( https://s2.wp.com/wp-content/plugins/amp/assets/images/placeholder-icon.png ) no-repeat center 40%;
+	background-size: 48px 48px;
+	min-height: 48px;
+}
+
+/* Article Footer Meta */
+
+.amp-wp-article-footer .amp-wp-meta {
+	display: block;
+}
+
+.amp-wp-tax-category,
+.amp-wp-tax-tag {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	margin: 1.5em 16px;
+}
+
+.amp-wp-comments-link {
+	color: #696969;
+	font-size: .875em;
+	line-height: 1.5em;
+	text-align: center;
+	margin: 2.25em 0 1.5em;
+}
+
+.amp-wp-comments-link a {
+	border-style: solid;
+	border-color: #c2c2c2;
+	border-width: 1px 1px 2px;
+	border-radius: 4px;
+	background-color: transparent;
+	color: #0a89c0;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	margin: 0 auto;
+	max-width: 200px;
+	padding: 11px 16px;
+	text-decoration: none;
+	width: 50%;
+	-webkit-transition: background-color 0.2s ease;
+			transition: background-color 0.2s ease;
+}
+
+/* AMP Footer */
+
+.amp-wp-footer {
+	border-top: 1px solid #c2c2c2;
+	margin: calc(1.5em - 1px) 0 0;
+}
+
+.amp-wp-footer div {
+	margin: 0 auto;
+	max-width: calc(840px - 32px);
+	padding: 1.25em 16px 1.25em;
+	position: relative;
+}
+
+.amp-wp-footer h2 {
+	font-size: 1em;
+	line-height: 1.375em;
+	margin: 0 0 .5em;
+}
+
+.amp-wp-footer p {
+	color: #696969;
+	font-size: .8em;
+	line-height: 1.5em;
+	margin: 0 85px 0 0;
+}
+
+.amp-wp-footer a {
+	text-decoration: none;
+}
+
+.back-to-top {
+	bottom: 1.275em;
+	font-size: .8em;
+	font-weight: 600;
+	line-height: 2em;
+	position: absolute;
+	right: 16px;
+}
+		/* Inline styles */
+.amp-wp-inline-94dd042f5fe2bf3f7b398ea33bd1b851{max-width:310px;}	</style>
+</head>
+
+<body class="">
+
+<header id="#top" class="amp-wp-header">
+	<div>
+		<a href="https://elliotchandlernmd442.wordpress.com">
+						Elliot&#039;s NMD442 Blog!		</a>
+	</div>
+</header>
+
+<article class="amp-wp-article">
+
+	<header class="amp-wp-article-header">
+		<h1 class="amp-wp-title">Article response: &#8220;Reducing Cognitive Overload&#8221;</h1>
+				<div class="amp-wp-meta amp-wp-byline">
+					<amp-img src="https://secure.gravatar.com/avatar/6c131a183e27a862fe8ac3ed4b919287?s=24&#038;d=identicon&#038;r=g" width="24" height="24" layout="fixed"></amp-img>
+				<span class="amp-wp-author author vcard">elliotchandlernmd100</span>
+	</div>
+<div class="amp-wp-meta amp-wp-posted-on">
+	<time datetime="2017-09-20T02:10:24+00:00">
+		2 weeks ago	</time>
+</div>
+	</header>
+
+	
+	<div class="amp-wp-article-content">
+		<p><em>This post is a response to <a href="https://www.smashingmagazine.com/2016/09/reducing-cognitive-overload-for-a-better-user-experience/">this article</a> (<a href="https://web.archive.org/web/20170920021142/https://www.smashingmagazine.com/2016/09/reducing-cognitive-overload-for-a-better-user-experience/">IA</a>).</em></p>
+<p> </p>
+<p>This article provides ways to create user experiences that help the user be able to work with complex products. A failing in this zone is what led to the “Discord” Web communication app confusing me when I tried to use it — it simply was too visually cluttered to be practical to use. There are a number of elements of design that the article suggests contribute to cognitive overload. One of the points that really struck a chord with me is the idea of <em>simplicity</em> not necessarily directly corresponding to the ease of use. The article gives</p>
+<p><figure data-shortcode="caption" id="attachment_159" class="wp-caption alignright amp-wp-inline-94dd042f5fe2bf3f7b398ea33bd1b851"><amp-img class="alignright size-medium wp-image-159 amp-wp-enforced-sizes" src="https://elliotchandlernmd442.files.wordpress.com/2017/09/cognitive-overload-image10-large-opt.png?w=300&amp;h=186" alt="cognitive-overload-image10-large-opt" width="300" height="186" srcset="https://elliotchandlernmd442.files.wordpress.com/2017/09/cognitive-overload-image10-large-opt.png?w=300&amp;h=186 300w, https://elliotchandlernmd442.files.wordpress.com/2017/09/cognitive-overload-image10-large-opt.png?w=600&amp;h=372 600w, https://elliotchandlernmd442.files.wordpress.com/2017/09/cognitive-overload-image10-large-opt.png?w=150&amp;h=93 150w" sizes="(min-width: 300px) 300px, 100vw"></amp-img><figcaption class="wp-caption-text">Article’s example of an excessively simplified design that leads to cognitive overload (<a href="https://www.smashingmagazine.com/wp-content/uploads/2016/08/cognitive-overload-image10-large-opt.png">source</a> [<a href="https://web.archive.org/web/20170920012116/https://www.smashingmagazine.com/wp-content/uploads/2016/08/cognitive-overload-image10-large-opt.png">IA</a>])</figcaption></figure>the screen shot to the right as an example of a user interface that, despite being simple, clean, and elegant, creates extreme cognitive overload for any user uninitiated into the arcane rites of its use. A reason this specifically resonates with me is my experiences with some similarly confusing computer user interfaces, most significantly apps created for the GNOME 3 desktop environment. For example, the Disks app,</p>
+<p><figure data-shortcode="caption" id="attachment_178" class="wp-caption alignnone amp-wp-inline-94dd042f5fe2bf3f7b398ea33bd1b851"><amp-img class="alignnone size-medium wp-image-178 amp-wp-enforced-sizes" src="https://elliotchandlernmd442.files.wordpress.com/2017/09/gnome-disk-utility.png?w=300&amp;h=200" alt="gnome-disk-utility" width="300" height="200" srcset="https://elliotchandlernmd442.files.wordpress.com/2017/09/gnome-disk-utility.png?w=300&amp;h=200 300w, https://elliotchandlernmd442.files.wordpress.com/2017/09/gnome-disk-utility.png?w=600&amp;h=400 600w, https://elliotchandlernmd442.files.wordpress.com/2017/09/gnome-disk-utility.png?w=150&amp;h=100 150w" sizes="(min-width: 300px) 300px, 100vw"></amp-img><figcaption class="wp-caption-text"><em>Disks</em> from GNOME 3 (<a href="https://software.opensuse.org/package/screenshot/gnome-disk-utility.png">source</a> [<a href="https://web.archive.org/web/20170920013346/https://software.opensuse.org/package/screenshot/gnome-disk-utility.png">IA</a>])</figcaption></figure>shown to the left, while being simple, suffers from the same “mystery meat navigation” problem that afflicts the example shown in the article. While it is probably less intimidating to users who are entirely unfamiliar with computers, its tendency to break tradition from traditional computing metaphors makes it truly infuriating to use when one has familiarity with existing software, and the conventional meanings of icons. For instance, while the ⏹️︎ button, which looks like a “Stop” button from a cassette player, is logical in its meaning (it means “unmount”), it is confusing because it doesn’t follow the established convention for icons representing “unmount”, which is to use ⏏︎ (an “eject” symbol), used by the other major GUIs (KDE, macOS, and Windows). One reason for doing this is that when a partition is unmounted, it remains available in the interface, with the button changing to ▶︎ (a “play” symbol), but this is not immediately obvious. A better solution would be to use a text label reading “Unmount” and changing to “Mount”, rather than a non-obvious icon. (Adding to the problem, the GNOME 3 Human Interface Guidelines <a href="https://developer.gnome.org/hig/stable/design-principles.html.en">suggest</a> (<a href="https://web.archive.org/web/20170920012937/https://developer.gnome.org/hig/stable/design-principles.html.en">IA</a>) “[using] configuration options sparingly”, an approach which has been taken to an unnecessary extreme — if the Guidelines’ exhortation to “Use progressive disclosure” were applied, configuration options would not place any significant burden on the software’s users.) Compare</p>
+<p><figure data-shortcode="caption" id="attachment_220" class="wp-caption alignright amp-wp-inline-94dd042f5fe2bf3f7b398ea33bd1b851"><amp-img class="alignright size-medium wp-image-220 amp-wp-enforced-sizes" src="https://elliotchandlernmd442.files.wordpress.com/2017/09/zuhzt.jpg?w=300&amp;h=260" alt="ZUhZT" width="300" height="260" srcset="https://elliotchandlernmd442.files.wordpress.com/2017/09/zuhzt.jpg?w=300&amp;h=260 300w, https://elliotchandlernmd442.files.wordpress.com/2017/09/zuhzt.jpg?w=600&amp;h=520 600w, https://elliotchandlernmd442.files.wordpress.com/2017/09/zuhzt.jpg?w=150&amp;h=130 150w" sizes="(min-width: 300px) 300px, 100vw"></amp-img><figcaption class="wp-caption-text">Partition management in macOS (<a href="https://i.stack.imgur.com/ZUhZT.jpg">source</a> [<a href="https://web.archive.org/web/20170920015856/https://i.stack.imgur.com/ZUhZT.jpg">IA</a>])</figcaption></figure>the equivalent tool in an earlier version of macOS, which manages to be readable and fairly obvious in its operation, while being more visually elegant than the GNOME 3 version (although that last is rather subjective). (More recent versions of macOS have brought the interface progressively closer to the painful GNOME 3 version, which is why an older version is shown here.) Similarly,</p>
+<p><figure data-shortcode="caption" id="attachment_237" class="wp-caption alignleft amp-wp-inline-94dd042f5fe2bf3f7b398ea33bd1b851"><amp-img class="alignleft size-medium wp-image-237 amp-wp-enforced-sizes" src="https://elliotchandlernmd442.files.wordpress.com/2017/09/747cbc24206f2e42a170377b80b0bc890819d031.png?w=300&amp;h=206" alt="747cbc24206f2e42a170377b80b0bc890819d031" width="300" height="206" srcset="https://elliotchandlernmd442.files.wordpress.com/2017/09/747cbc24206f2e42a170377b80b0bc890819d031.png?w=300&amp;h=206 300w, https://elliotchandlernmd442.files.wordpress.com/2017/09/747cbc24206f2e42a170377b80b0bc890819d031.png?w=600&amp;h=412 600w, https://elliotchandlernmd442.files.wordpress.com/2017/09/747cbc24206f2e42a170377b80b0bc890819d031.png?w=150&amp;h=103 150w" sizes="(min-width: 300px) 300px, 100vw"></amp-img><figcaption class="wp-caption-text">KDE Partition Manager (<a href="https://forum.manjaro.org/uploads/default/original/2X/7/747cbc24206f2e42a170377b80b0bc890819d031.png">source</a> [<a href="https://web.archive.org/web/20170920020539/https://forum.manjaro.org/uploads/default/original/2X/7/747cbc24206f2e42a170377b80b0bc890819d031.png">IA</a>])</figcaption></figure>the KDE Partition Manager is also quite clear in its operation, although personally I would prefer something between the KDE and macOS strategies. In summary, poorly executed simplification can lead to disorienting user interfaces that lead to cognitive overload for the user.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+	</div>
+
+	<footer class="amp-wp-article-footer">
+			<div class="amp-wp-meta amp-wp-tax-category">
+		Categories: <a href="https://elliotchandlernmd442.wordpress.com/category/uncategorized/" rel="category tag">Uncategorized</a>	</div>
+
+		<div class="amp-wp-meta amp-wp-comments-link">
+		<a href="https://elliotchandlernmd442.wordpress.com/2017/09/20/article-response-reducing-cognitive-overload/#respond">
+			Leave a Comment		</a>
+	</div>
+	</footer>
+
+</article>
+
+<footer class="amp-wp-footer">
+	<div>
+		<h2>Elliot&#039;s NMD442 Blog!</h2>
+		<p>
+			<a href="https://wordpress.com/?ref=footer_website">Create a free website or blog at WordPress.com.</a>
+		</p>
+		<a href="#top" class="back-to-top">Back to top</a>
+	</div>
+</footer>
+
+	<amp-pixel src="https://pixel.wp.com/b.gif?rand=RANDOM&#038;host=elliotchandlernmd442.wordpress.com&#038;ref=DOCUMENT_REFERRER&#038;amp=1&#038;blog=135104064&#038;v=wpcom&#038;tz=0&#038;user_id=0&#038;post=152&#038;subd=elliotchandlernmd442"></amp-pixel>
+	<amp-pixel src="https://pixel.wp.com/b.gif?rand=RANDOM&#038;v=wpcom-no-pv&#038;crypt=UE40eW5QN0p8M2Y%2FRE1mJVY3bm9aR3VCbS9mWm1pRyZuJS1LX1t5QmRXZzE3RC9rQWZHK1FjbDltdWdaMVFFZTcxUGVHLWR0WTJoODFFSDFKdXJwS1k0PTg1NWJLRjBKRGdqcFdsb0hoTG1SUHVsVVhjZGEtZU51OGRnaStxX35CPXJnMCU3blpQQzF0LzdbOVA1WDJjZX5DU1pxYms3Jl83enxdfHd4ZHlCM21bTTQ%2FeC94NW1%2BUEVZYkgyNktWUEgtPU9xR0RXcWs3UVhCN3NzQVg9LD9HdUFmbUs5bVo%2FYm0mS1VB"></amp-pixel>
+	
+</body>
+</html>
