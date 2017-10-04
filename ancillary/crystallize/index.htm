@@ -146,7 +146,7 @@
         <dt>InstallationIdentifier</dt><dd>Installation UUID</dd>
         <dt>Collection</dt><dd>Internet Archive collection identifier (write access to the collection is required)</dd>
         <dt>Passphrase</dt><dd>Passphrase (must be a valid GPG passphrase)</dd>
-        <dt>WorkDirectory</dt><dd>Directory for working data (should be writeable and have sufficient free space to hold approximately three times the amount of data being crystallized at any one time)</dd>
+        <dt>WorkDirectory</dt><dd>Directory for working data (should be writeable and have sufficient free space to hold approximately three times the amount of data being crystallized at any one time). MUST NOT have newline in the path. A space in the path may cause degraded performance (see comments in <code>scache_gc</code>), and will cause failure if the part of the path name preceding the space is also a pathname that exists; ideally, don't have a space in the path.</dd>
         <dt>EmberLibrary</dt><dd>Path to a directory tree of the format used by the <a href="/library/">Ember Library</a></dd>
     </dl>
     <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
