@@ -12,7 +12,6 @@
         <p>ember-shared provides the following command-line scripts, mainly useful for writing other scripts.</p>
         <dl>
             <dt><code>csum</code></dt><dd>Generate and check against lists of file checksums. If no action is specified, <code>save</code> is assumed; if no checksum file name is specified, stdout/stdin are used for <code>save</code> and <code>check</code> respectively. Synopsis: <code>csum [(--save|--check)] [&lt;dir&gt; [&lt;checksum-file-name&gt;]]</code></dd>
-            <dt><code>date-uuid</code></dt><dd>Returns a timestamp combined with a random (V4) UUID. Synopsis: <code>date-uuid</code></dd>
             <dt><code>disk-size-in-bytes</code></dt><dd>Returns an estimate sum of the disk usage of the specified files, in bytes. Synopsis: <code>disk-size-in-bytes &lt;file&gt;...</code></dd>
             <dt><code>error-notify</code></dt><dd>Notify the user of a shell script of an error condition. Synopsis: <code>error-notify [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise error-notify exits with status 1)</dd>
             <dt><code>warn</code></dt><dd>Notify the user of a shell script of a warning. Synopsis: <code>warn &lt;message-to-user&gt;</code></dd>
@@ -27,7 +26,9 @@
         <dl>
             <dt><code>assert</code></dt><dd>Test for a condition, and report a failing status if the test fails. This is to facilitate writing readable unit tests. The <code>-v</code> makes some test types print additional information. Synopsis: <code>assert [-v] ( [directoryEquals &lt;directory-1&gt; &lt;directory-2&gt;] | [fileEquals &lt;file-1&gt; &lt;file-2&gt;] | [stringEquals &lt;string-1&gt; &lt;string-2&gt;] )</code></dd>
             <dt><code>checkedxz</code></dt><dd>Wrapper around <code>xz</code>, to make sure the output isn't corrupt. If <code>-</code> is specified as the input file, output will be to stdout regardless of the presence or absence of <code>--stdout</code>. <code>--quiet</code> can be used to suppress the progress bars that are shown by default. Synopsis: <code>checkedxz [--quiet] [ (-|&lt;input-file&gt;) [--stdout] &lt;argument-for-xz&gt;... ]</code></dd>
+            <dt><code>date-uuid</code></dt><dd>Returns a timestamp combined with a random (V4) UUID. Synopsis: <code>date-uuid</code></dd>
             <dt><code>die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
+            <dt><code>emdate</code></dt><dd>Returns a timestamp. Synopsis: <code>emdate</code></dd>
             <dt><code>eescape</code></dt><dd>Prepare a string for use as a Perl replacement match pattern (left side), used by <code>ereplace</code>. Synopsis: <code>eescape &lt;string&gt;</dd>
             <dt><code>embasename</code></dt><dd>Replacement for <code>basename</code> in bash. Synopsis: <code>embasename &lt;path&gt;</code></dd>
             <dt><code>emreadlink</code></dt><dd>Cross-platform replacement for <code>readlink</code>. Synopsis: <code>emreadlink &lt;path&gt;</code></dd>
