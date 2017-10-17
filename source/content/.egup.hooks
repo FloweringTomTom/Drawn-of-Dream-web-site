@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC1091
+source ember_bash_setup &> /dev/null
+# set -x
+
+rm -r information-technology/env
+cp -r ../ember-information-technology-environment/implementations/web information-technology/env
