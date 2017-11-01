@@ -24,6 +24,7 @@
         </dl>
         <p><code>ember_bash_setup</code> provides these bash functions.</p>
         <dl>
+            <dt><code>abspath</code></dt><dd>Get the absolute path to the specified file or directory, like <code>readlink -f</code> but without resolving symlinks. The path must exist. Synopsis: <code>abspath &lt;path&gt;</code></dd>
             <dt><code>assert</code></dt><dd>Test for a condition, and report a failing status if the test fails. This is to facilitate writing readable unit tests. The <code>-v</code> makes some test types print additional information. Synopsis: <code>assert [-v] ( [directoryEquals &lt;directory-1&gt; &lt;directory-2&gt;] | [fileEquals &lt;file-1&gt; &lt;file-2&gt;] | [stringEquals &lt;string-1&gt; &lt;string-2&gt;] )</code></dd>
             <dt><code>checkedxz</code></dt><dd>Wrapper around <code>xz</code>, to make sure the output isn't corrupt. If <code>-</code> is specified as the input file, output will be to stdout regardless of the presence or absence of <code>--stdout</code>. <code>--quiet</code> can be used to suppress the progress bars that are shown by default. Synopsis: <code>checkedxz [--quiet|--request-wait-after] [ (-|&lt;input-file&gt;) [--stdout] &lt;argument-for-xz&gt;... ]</code></dd>
             <dt><code>date-uuid</code></dt><dd>Returns a timestamp combined with a random (V4) UUID. Synopsis: <code>date-uuid</code></dd>
@@ -37,7 +38,6 @@
             <dt><code>findso</code></dt><dd>Given the file name of a <code>.so</code> shared library, print the full path to it. The <code>--plain</code> option indicates that the library name is in the form <code>libfoo.so</code>, while by default it assumes that the form <code>foo</code> is used. Synopsis: <code>findso [--plain] &lt;library-name&gt;</code></dd>
             <dt><code>ia</code></dt><dd>Wrapper around the <code>ia</code> tool for communicating with the Internet Archive, which can be used as a drop-in replacement for the standard <code>ia</code> command. Using the <code>downloadAsStream</code> subcommand will send the contents of the file represented by the Internet Archive file download URL specified to stdout. The <code>downloadHere</code> subcommand is equivalent to <code>wget &lt;URL&gt;</code> for Internet Archive download URLs. Synopsis: <code>ia ( ((downloadAsStream|downloadHere) &lt;URL&gt;) | ([argument]...) )</code></dd>
             <dt><code>normalizeWhitespace</code></dt><dd>Given a string, replace all whitespace with spaces, collapsing to a single space in the case of consecutive whitespace characters, and trim any whitespace from the beginning and end of the string. (This is simply an alias for <code>xargs</code> to facilitate writing more readable code.) Synopsis: <code>normalizeWhitespace &lt;string&gt;</code></dd>
-            <dt><code>version_gt</code></dt><dd>Return 0 if the first version number is greater than the second, or non-zero otherwise (including if the two version numbers are the same). Synopsis: <code>version_gt &lt;version-number-1&gt; &lt;version-number-2&gt;</code></dd>
             <dt><code>preadconf</code></dt><dd>Read a value from a configuration file, and print it (if the key is present multiple times in the file, the first value will be printed). Synopsis: <code>preadconf &lt;key&gt; &lt;file&gt;</code></dd>
             <dt><code>print</code></dt><dd>Prints a string. Synopsis: <code>print &lt;string&gt;</code></dd>
             <dt><code>readconf</code></dt><dd>Read a value from a configuration file, and return it as <code>readconfValue</code> (this is an array, and will contain multiple results if the key is present multiple times in the file). If <code>&lt;key&gt;</code> is not provided, it will return the non-comment lines of the file instead. Synopsis: <code>readconf [&lt;key&gt;] &lt;file&gt;</code></dd>
@@ -48,6 +48,7 @@
             <dt><code>tempFile</code></dt><dd>Print a path to a temporary file (in /tmp) that can be safely deleted when you're done with it. Multiple temporary files can be created through multiple calls to <code>tempFile</code>. Synopsis: <code>tempFile</code></dd>
             <dt><code>urldecode</code></dt><dd>URL decode the specified string. Synopsis: <code>urldecode &lt;string&gt;</code></dd>
             <dt><code>urlencode</code></dt><dd>URL encode the specified string. Synopsis: <code>urlencode &lt;string&gt;</code></dd>
+            <dt><code>version_gt</code></dt><dd>Return 0 if the first version number is greater than the second, or non-zero otherwise (including if the two version numbers are the same). Synopsis: <code>version_gt &lt;version-number-1&gt; &lt;version-number-2&gt;</code></dd>
         </dl>
 
     <h3>Installation</h3>
