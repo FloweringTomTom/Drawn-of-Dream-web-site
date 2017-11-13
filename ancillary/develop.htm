@@ -71,7 +71,7 @@
         </dl>
 
 <h2>Getting the data</h2>
-    <p>This section discusses how to download the data of, and the projects maintained by, Ember. These instructions will result in the creation of a development environment for the repositories similar to the one used by Ember. If you want to use the Ember tools for working with this environment, additional configuration steps should be taken after getting the data (see "Configuring the environment"). If you just want to examine the contents, or use standard Git tools with it, those steps are not necessary. a copy of Crystallize must be installed and configured with the <code>EmberLibrary</code></p>
+    <p>This section discusses how to download the data of, and the projects maintained by, Ember. These instructions will result in the creation of a development environment for the repositories similar to the one used by Ember. If you want to use the Ember tools for working with this environment, additional configuration steps should be taken after getting the data (see "Configuring the environment"). If you just want to examine the contents, or use standard Git tools with it, those steps are not necessary.</p>
 
     <h3>Getting only the basic repositories</h3>
     <p>Unless you are working on Wreathe or investigating the history of Ember, you probably don't need the Wreathe repositories or Ember history repositories, which are pretty big. This section does not discuss getting them. If you do want them, see the next section. To get these basic repositories, run the following command in the directory where you want the Ember development data to be stored.</p>
@@ -83,6 +83,9 @@
     <p>This does not currently get the ember-library-2 repository, because it is weird and complicated (it's an overlay on top of the ember-meta repository — to use it, clone it and then move its .git directory to <code>Ember/ember-library/ember-library-2/.egup.git</code>; from a semantic perspective, the ember-meta repository should be considered part of the ember-library-2 repository, but having a submodule with the same working directory as the current git repository is kinda weird and confusing and I'm not really sure how to do it, so I haven't done that yet — also, it's not currently public). It also does not get the personal repositories, because personal-private is not currently public, and personal is probably of limited interest.<br />
     <pre><code>git clone --recursive https://github.com/ethus3h/ember-meta.git Ember\ Library</code></pre><br />
 
+    <h3>Configuring the environment</h3>
+    <p>This step is only needed if you want to use the Ember tools to work with the development environment. If you just want to examine its contents or develop it using standard Git tools, this is not necessary.</p>
+    <p>To use these tools (egup/eogup), a copy of Crystallize must be installed and configured with the <code>EmberLibrary</code> configuration field set to the location of the folder (called "Ember Library") containing the development environment. For example, if as in the Ember setup the folder is in the root directory, the Crystallize configuration file (crystallize.conf) would contain a line reading '<code>EmberLibrary,/Ember Library</code>'.</p>
 
     <pre><code>git clone --recursive https://github.com/ethus3h/ember-meta.git Ember\ Library</code></pre><br />
 
