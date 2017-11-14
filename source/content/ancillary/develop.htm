@@ -20,7 +20,7 @@
             <dt>ember</dt><dd>Core project repository (pulls in all other core repositories as submodules)</dd>
             <dt>ember-information-technology-environment</dt><dd><a href="/information-technology">Information technology environment</a></dd>
             <dt>ember-library</dt><dd><a href="/library">Library</a></dd>
-            <dt>ember-library-2</dt><dd><a href="/library">Library</a>: Section 2 (not publicly available)</dd>
+            <dt>ember-library-2</dt><dd><a href="/library">Library</a>: Section 2 (not publicly available at this <time></time>)</dd>
             <dt>ember-web-site</dt><dd>This Web site</dd>
         </dl>
 
@@ -63,29 +63,41 @@
             <dt>xulrunner</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: XULRunner (forked from discontinued code)</dd>
         </dl>
 
-<h2>Getting the code</h2>
-    <p>To download all of Ember and the projects it maintains (except for most of the third-party code used in Wreathe, which I don't have a distribution model set up for yet):<br />
+    <h3>Personal scratch space</h3>
+        <p>These repositories are personal scratch spaces used by <a href="/people/elliot">Elliot Chandler</a>. They are not officially part of Ember, but may at times contain some information of relevance to the development history of Ember. They may in the future be added to parts 2 or 3 of the Ember Library.</p>
+        <dl>
+            <dt>personal</dt><dd>Personal scratch space</dd>
+            <dt>personal-private</dt><dd>Personal scratch space (not publicly available at this time)</dd>
+        </dl>
 
-    Unless you are working on Wreathe or investigating the history of Ember, you probably don't need the Wreathe repositories or Ember history repositories, which are pretty big. If you do want them, only run the second of the following commands; otherwise, only run the first. Note that this does not currently get the ember-library-2 repository, because it is weird and complicated (it's an overlay on top of the ember-meta repository — to use it, clone it and then move its .git directory to <code>Ember/ember-library/ember-library-2/.egup.git</code>; from a semantic perspective, the ember-meta repository should be considered part of the ember-library-2 repository, but having a submodule with the same working directory as the current git repository is kinda weird and confusing and I'm not really sure how to do it, so I haven't done that yet).<br />
+<h2>Getting the data</h2>
+    <p>This section discusses how to download the data of, and the projects maintained by, Ember. These instructions will result in the creation of a development environment for the repositories similar to the one used by Ember. If you want to use the Ember tools for working with this environment, and are not using Wreathe 7.3, then additional configuration steps should be taken after getting the data (see "Configuring the environment"). If you just want to examine the contents, or use standard Git tools with it, those steps are not necessary. If you are using Wreathe 7.3, these commands for getting the development data should either be run in the root directory, or else the existing <code>/Ember Library</code> folder should be moved to the desired loctaion, and the value of the <code>EmberLibrary</code> configuration field for Crystallize set to that new location as described in the "Configuring the environment" section below.</p>
 
-    <pre><code>declare -a emberProjects=("ember" "ember-information-technology-environment" "ember-library" "ember-web-site"); declare -a emberSatelliteProjects=("crystallize" "ember-shared" "futuramerlin-web-toolkit" "warcdealer"); set -e; mkdir Ember\ Library; cd Ember\ Library || exit 1; git clone --recursive https://github.com/ethus3h/ember.git Ember; cd Ember || exit 1; for i in "${emberProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ..; mkdir Ember\ satellite\ projects; cd Ember\ satellite\ projects || exit 1; for i in "${emberSatelliteProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ../.. || exit 1; echo "Finished downloading Ember."</code></pre><br />
+    <p>It is important to check the information in the "Working with Stream Registry repositories, and crystal backups" if you are concerned that you may not be getting all the data you want.</p>
 
-    <pre><code>git clone --recursive https://github.com/ethus3h/ember-meta.git Ember\ Library</code></pre><br />
+    <h3>Getting only the basic repositories</h3>
+        <p>Unless you are working on Wreathe or investigating the history of Ember, you probably don't need the Wreathe repositories or Ember history repositories, which are pretty big. This section does not discuss getting them. If you do want them, see the next section. To get these basic repositories, run the following command in the directory where you want the Ember development data to be stored.</p>
 
-    To synchronise your changes to the resulting development environment (assuming you aren't using Wreathe 7.3; Wreathe 7.3 users can run <code>egup</code>, or <code>egup-web</code> to also build the Web site, or <code>eogup</code> if there isn't a Web connection available or GitHub is unavailable) if you have remote commit privileges (if not, use a fork of the repository you want to work on):<br />
+        <pre><code>declare -a emberProjects=("ember" "ember-information-technology-environment" "ember-library" "ember-web-site"); declare -a emberSatelliteProjects=("crystallize" "ember-shared" "futuramerlin-web-toolkit" "warcdealer"); set -e; mkdir -p Ember\ Library; cd Ember\ Library || exit 1; git clone --recursive https://github.com/ethus3h/ember.git Ember; cd Ember || exit 1; for i in "${emberProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ..; mkdir Ember\ satellite\ projects; cd Ember\ satellite\ projects || exit 1; for i in "${emberSatelliteProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ../.. || exit 1; echo "Finished downloading Ember."</code></pre><br />
 
-    Upload only:<br />
-    <pre><code>cd ember || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre><br />
+    <h3>Getting all public repositories</h3>
+        <p>This section discusses getting all publicly available Ember data, which is quite large. Unless you are working on Wreathe or investigating the history of Ember, you probably don't need this, and can use the previous section to get a more limited subset of data.</p>
+        <p>These main instructions do not currently get the ember-library-2, personal, or personal-private repositories, the first and third because they are not currently publicly available, and the second (and third) because they are probably of limited interest. To get this more complete set of repositories, run the following command in the directory where you want the Ember development data to be stored.</p>
+        <pre><code>git clone --recursive https://github.com/ethus3h/ember-meta.git Ember\ Library</code></pre><br />
 
-    Update overlay and upload (requires repoman to be installed):<br />
-    <pre><code>cd ember || exit 1; cd ember-satellite-projects/wreathe-overlay || exit 1; repoman manifest; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre><br />
+        <h4>About the "ember-library-2" repository</h4>
+            <p>The "ember-library-2" repository is not currently publicly available, and is weird and complicated. It is an overlay on top of the ember-meta repository. To use it, clone it and then move its .git directory to <code>Ember/ember-library/ember-library-2/.egup.git</code> (within the main <code>EmberLibrary</code> folder — see the section "Configuring the environment" below). From a semantic perspective, the ember-meta repository should be considered part of the ember-library-2 repository, but having a submodule with the same working directory as the current git repository is kinda weird and confusing and I'm not really sure how to do it, so I haven't done that yet.</p>
 
-    Update Web site and upload (requires futuramerlin-web-toolkit to be installed):<br />
-    <pre><code>cd ember || exit 1; cd ember/ember-web-site || exit 1; ~/.futuramerlin-web-toolkit-build; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre><br />
+        <h4>Getting the "personal" repository (and about the "personal-private" repository)</h4>
+            <p>If you really do want this, go to the folder where you ran the above command, and run: <code>cd Ember\ Library/Ember\ satellite\ projects; git clone https://github.com/ethus3h/personal.git</code>. (The "personal-private" repository works in the same manner as this, but is not currently publicly available.)</p>
 
-    Update overlay and Web site and upload (requires repoman and futuramerlin-web-toolkit to be installed):<br />
-    <pre><code>cd ember || exit 1; cd ember/ember-web-site || exit 1; ~/.futuramerlin-web-toolkit-build; cd ../.. || exit 1; cd ember-satellite-projects/wreathe-overlay || exit 1; repoman manifest; cd ../.. || exit 1; findemberfolders() { find . -maxdepth 1 -not -name '\.*' -type d -print0 | xargs -i{} -0 -P 15 sh -c 'cd "$1" || exit 1; git add -A; git commit -a -m "Update Ember tree"; git pull; git push -u origin master' -- '{}' \; ; }; set -e; cd ember || exit 1; findemberfolders; cd ../ember-satellite-projects || exit 1; findemberfolders; cd .. || exit 1; cd .. || exit 1</code></pre>
-    </p>
+    <h3>Configuring and using the environment</h3>
+        <p>This step is only needed if you want to use the Ember tools to work with the development environment, and are not using Wreathe 7.3 (which has this already taken care of). If you just want to examine its contents or develop it using standard Git tools, this is not necessary.</p>
+        <p>To use these tools (egup/eogup), a copy of Crystallize must be installed and configured with the <code>EmberLibrary</code> configuration field set to the location of the folder (called "Ember Library") containing the development environment. For example, if as in the Ember setup the folder is in the root directory, the Crystallize configuration file (crystallize.conf) would contain a line reading '<code>EmberLibrary,/Ember Library</code>'. Also, the scripts with names beginning with "egup" and "eogup" that are in the <code>usr/bin</code> folder of the wreathe-base repository must be executable and available in the <code>PATH</code> for your user and the root user on your system.</p>
+        <p>To synchronise your changes to the development environment, run <code>egup</code>, or <code>eogup</code> if there isn't a Web connection available or GitHub is unavailable) if you have remote commit privileges. (If you do not have remote commit privileges, use a fork of the repository you want to work on, in the traditional Git manner.) To build the Ember Web site, run <code>egup-web</code>.</p>
+
+    <h3>Working with Stream Registry repositories, and crystal backups</h2>
+        <p>Five of the repositories (ember-library-2, ember-retired-repositories, personal, personal-private, and wreathe-packages) contain contents stored using the stream registry feature of Crystallize. This method of storing data keeps pointers to the files in the Git repositories, and stores the actual file contents elsewhere (currently only the Internet Archive; additional mirrors should be added for redundancy). A copy of those file contents is necessary to be able to access the data referenced by those pointers. This means that to obtain a complete copy of these repositories, a list of the addresses of the data (the crystal addresses) that the pointers depend on must be generated from the pointers, and then those crystals must be copied locally. In addition, there are two other sources of data stored at the Internet Archive that may be desired. First, the ember-library-2 repository contains a folder <code>.rubberfs/history</code> that contains a set of files that reference incremental snapshots of the filesystem used for Ember development. These incremental snapshots are ZFS replication streams that can be used by sending them back into an empty ZFS filesystem. They are stored as crystals, and can be added to the set of crystal addresses to be backed up locally if desired. Second, the ember-web-site repostiory contains a folder <code>people/elliot/music</code> that contains files with names ending in <code>.conf</code> describing various musical works released by Elliot (only tangentially related to Ember, but described here for completeness). Some of those files contain lines beginning with "<code>ia,</code>". The part of those lines after that prefix is an Internet Archive identifier for an item containing the files of the item described in that <code>.conf</code> file. Because crystal addresses are a subset of Internet Archive identifiers, and the tools for managing Crystallize backups should work with all Internet Archive items as a general rule, these identifiers can be added to the list of crystal addresses to be backed up as well, if desired.<!-- FIXME: Getting a list of all these crystal identifiers/IA addresses and backing them up should be an automatable/automated process. --></p>
 
 <h2>Relevant how-to articles</h2>
     <ul>
@@ -93,32 +105,3 @@
         <li><a href="/ancillary/wreathe/documentation/experimental/find-non-source-files.htm">Finding non-source files (e.g. in a git repository)</a></li>
         <li><a href="/ancillary/wreathe/documentation/experimental/installing-offline.htm">Installing or updating a live package without an Internet connection</a></li>
     </ul>
-
-<h2>Repository health report</h2>
-    <p>This is a list of repositories that contain anomalies, as determined by running <code>git fsck --full --strict --lost-found --cache --unreachable</code> in each repository, as of 2017-January-19. TODO: Automate generating this data, and record what commits each repository is at when it is generated.</p>
-    <h3>crystallize</h3>
-        <pre><code>unreachable tag d4867b59464e37fbda25ad548baae23732487bc8
-        unreachable tag 3ea891b4883aa3872249b88eacb786810829415f
-        unreachable tag bd08b7a159725ed5631f0fe2ae3067922c8cfbbd
-        unreachable tag 15ac0157c606734cfccb52a9451f1b1932fcb084
-        unreachable tag 4254c20a2efcbeff9d85f8d58d38a3bb9283ebfb
-        unreachable tag 01fe567dae7c5744b78e79c2565b29e266c589aa</code></pre>
-    <h3>futuramerlin-web-toolkit</h3>
-        <pre><code>unreachable tag 7928f71efacfe57f0ba17eefe5202da5ba51d98d</code></pre>
-    <h3>wreathe</h3>
-        <pre><code>unreachable commit 91c02cff04247ba88ca496f0a889cfc52c740fa2</code></pre>
-    <h3>wreathe-overlays-redist</h3>
-        <pre><code>unreachable blob bc84e75cbdf6baa838c6eb0a8020610da0d0d36a
-        unreachable blob 138d07eb6b9922fec37c4287850fc37e5d77c6ff
-        unreachable blob 690f8398f030cde159a9e24fe71da81befe6712d
-        unreachable blob cbab7a5f42d068d7a7aebc5737f880d2c9b40eff
-        unreachable blob 73b7f274c9aa086da76a71d14274f39257a918d9
-        unreachable blob 8d3777c6888368df9b9cd7caec40a4d583f04d07
-        unreachable blob 5bc31567f59c2b22e76b6603d12d4f0af8a0f544
-        unreachable blob 824c24ce5143d105f818c2380ede4e030b1bc357
-        unreachable blob 6e4e5656122b6602c076b03f773e0b092f81934c
-        unreachable blob 9052a46a677b52846eebb80ad21e254c55d3f4a5
-        unreachable blob c1d25952a609355818a0a309d346052ada77b644
-        unreachable blob ae6fddad6ae4fea3b2ace2eac247c932fe7b3085
-        unreachable blob 7573bcc494c51e746f2857a3e7c642dd41e274ca
-        unreachable blob 067579ee14ed40d9fb4ac5de6b070cf29930ee2a</code></pre>
