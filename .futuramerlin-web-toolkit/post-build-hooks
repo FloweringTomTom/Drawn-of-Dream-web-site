@@ -22,3 +22,5 @@ cp -rv content ../../../static/
 for i in set {1..100}; do
     echo
 done
+
+find ../people/elliot/writings/blogs/elliotchandlernmd442 -type f -name '*.htm' -exec ./nmd442blogcleanup {} \;
