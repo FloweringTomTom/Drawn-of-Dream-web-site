@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    ChromeVer = 0;
+    isModuleLoaded = 0;
+    multiplier = 2;
+    function rescale(delta) {
+        var doom_module = document.getElementById('doom');
+        multiplier += delta;
+        if (multiplier < 1) multiplier = 1;
+        doom_module.width = 320 * multiplier;
+        doom_module.height = 200 * multiplier;
+    }
+
+    function createEmbed() {
+      if (checkChrome()) return 0;
+
+      var doom_div = document.getElementById('doom_div');
+      doom_div.addEventListener('error', moduleDidLoad, true);
+      doom_div.addEventListener('abort', moduleDidLoad, true);
+      doom_div.addEventListener('loadend', moduleDidLoad, true);
+
+      doom_div.innerHTML =
+        "<embed name=\"nacl_module\" " +
+        "id=\"doom\" " +
+        "width=640 height=400 " +
+        "src=\"doom.nmf\" " +
+        "type=\"application/x-pnacl\"/>";
+      setTimeout("detectProblem()", 20000);
+    }
+
+    function detectProblem() {
+      if (!isModuleLoaded) {
+        var status = document.getElementById('status');
+        var newstatus = "It seems to be taking longer than usual to load the plugin.<br/>" +
+                        "The connection may be slow, or Native Client might be disabled.<br/>" +
+                        "Continuing to wait...";
+        status.innerHTML = newstatus;
+      }
+    }
+
+    function destroyEmbed() {
+      var doom_module = document.getElementById('doom');
+      var doom_div = document.getElementById('doom_div');
+      doom_div.removeChild(doom_module);
+    }
+
+    function checkChrome() {
+      var userAgent = navigator.userAgent;
+      var chromeIndex = userAgent.toLowerCase().indexOf('chrome/');
+      if (chromeIndex) {
+        ChromeVer = parseInt(userAgent.substring(chromeIndex+7, chromeIndex+9));
+      }
+      if (!chromeIndex || ChromeVer < 11) {
+        var status = document.getElementById('status');
+        status.innerHTML = "Error: This demo requires Chrome 11 or higher.<br/>" +
+                           "<span style=\"font-size: 11pt\">" +
+                           userAgent +
+                           "</span>";
+        return 1;
+      }
+      return 0;
+    }
+
+    function moduleDidLoad(e) {
+      isModuleLoaded = 1;
+      var status = document.getElementById('status');
+      if (e != null) {
+        if (e == "error" || e == "abort") {
+          destroyEmbed();
+          status.innerHTML = "Something went wrong :(";
+          return 0;
+        }
+      }
+      var status_div = document.getElementById('status_div');
+      status_div.removeChild(status);
+      window.focus();
+    }
+  </script>
+</head>
+<body style="color: white; background-color: black" onload="createEmbed();">
+<div id="doom_controls" style="text-align: center">
+  <table style="margin: auto">
+  <tr><td>Doom Size</td><td><button onclick="rescale(-1)">-</button><button onclick="rescale(+1)">+</button></td></tr>
+  <tr><td>Move</td><td>Arrow Keys | ASDW | Mouse</td></tr>
+  <tr><td>Fire</td><td>Z | CTRL | Mouse Button 1</td></tr>
+  <tr><td>Run</td><td>SHIFT | Mouse Button 2</td></tr>
+  <tr><td>Toggle Full-Screen</td><td>ALT-ENTER</td></tr>
+  </table>
+</div>
+
+<div id="status_div" style="text-align: center; margin: auto;">
+<p id="status" style="color:white; font-size: 30pt;">
+  Downloading game...<br/>
+</p>
+</div>
+
+<div id="doom_div" style="text-align: center; margin: auto;">
+</div>
+</body>
+</html>
