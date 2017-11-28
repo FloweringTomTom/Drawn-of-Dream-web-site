@@ -14,7 +14,7 @@ ereplace '<main>' '<main class="lessChrome">' "$fileToClean"
 
 ereplace '</p> <p class="entry-title">' '</li> <li class="entry-title">' "$fileToClean"
 
-ereplaceRegEx '(.+)(<li class="entry-title">.+)<\/p> <\/main>' '\1\2</li></ul></main>' "$fileToClean"
+ereplaceRegEx '(.+)(<li class="entry-title">.+)<\/p> <\/main>' '\1\2<\/li><\/ul><\/main>' "$fileToClean"
 
 ereplace 'Page location: <span><a href="..">Home</a></span> </p> <p class="entry-title">' 'Page location: <span><a href="..">Home</a></span> </p><p>Hi! I'\''m Elliot. This blog documents my work and learning reflections from a user experience design class at the University of Maine.</p><ul><li>' "$fileToClean"
 
