@@ -10,7 +10,7 @@ pwd
 
 fileToClean="$1"
 
-ereplace '<main>' '<main class="lessChrome">' "$fileToClean"
+ereplace '<body>' '<body class="lessChrome">' "$fileToClean"
 
 ereplace '</p> <p class="entry-title">' '</li> <li class="entry-title">' "$fileToClean"
 
