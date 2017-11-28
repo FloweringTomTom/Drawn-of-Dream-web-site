@@ -6,6 +6,8 @@ set -x
 ((EUID)) && exec sudo -- "$0" "$@"
 trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(pwd) at $(emdate)."' ERR
 
+pwd
+
 fileToClean="$1"
 
 ereplace '<input class="nav-trigger" id="nav-trigger" type="checkbox"> <label for="nav-trigger">&nbsp;</label> <nav> <p class="logo"> <a class="nodecorate logolink" href="/">ember</a> </p> <ul> <li>Navigation:</li> <li class="nav-item nav-item-inactive"> <a href="/">Home</a> </li> <li class="nav-item nav-item-inactive"> <a href="/news">News</a> </li> <li class="nav-item nav-item-inactive"> <a href="/ancillary/ready-to-use.htm">Software</a> </li> <li class="nav-item nav-item-inactive"> <a href="/components.htm">Primary project components</a> </li> <li class="nav-item nav-item-inactive"> <a href="/people">People</a> </li> </ul> <a href="#">&#x1F51D;&#xFE0E;</a> </nav>' '' "$fileToClean"
