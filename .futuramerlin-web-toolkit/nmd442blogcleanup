@@ -16,7 +16,7 @@ ereplace '</p> <p class="entry-title">' '</li> <li class="entry-title">' "$fileT
 
 ereplaceRegEx '(.+)(<li class="entry-title">.+)<\/p> <\/main>' '\1\2<\/li><\/ul><\/main>' "$fileToClean"
 
-ereplace '<p class="breadcrumbs">Page location: <span><a href="..">Home</a></span> </li> <li class="entry-title">' '<p>Hi! I'\''m Elliot. This blog documents my work and learning reflections from a user experience design class at the University of Maine.</p><p>Index of posts:</p><ul><li class="entry-title">' "$fileToClean"
+ereplace '<p class="breadcrumbs">Page location: <span><a href="..">Home</a></span> </li> <li class="entry-title">' '<p>Hi! I'\''m Elliot. This blog documents my work and learning reflections from a user experience design class at the University of Maine.</p><br /><p>Index of posts:</p><ul><li class="entry-title">' "$fileToClean"
 
 ereplace '<input class="nav-trigger" id="nav-trigger" type="checkbox"> <label for="nav-trigger">&nbsp;</label> <nav> <p class="logo"> <a class="nodecorate logolink" href="/">ember</a> </p> <ul> <li>Navigation:</li> <li class="nav-item nav-item-inactive"> <a href="/">Home</a> </li> <li class="nav-item nav-item-inactive"> <a href="/news">News</a> </li> <li class="nav-item nav-item-inactive"> <a href="/ancillary/ready-to-use.htm">Software</a> </li> <li class="nav-item nav-item-inactive"> <a href="/components.htm">Primary project components</a> </li> <li class="nav-item nav-item-inactive"> <a href="/people">People</a> </li> </ul> <a href="#">&#x1F51D;&#xFE0E;</a> </nav>' '' "$fileToClean"
 
