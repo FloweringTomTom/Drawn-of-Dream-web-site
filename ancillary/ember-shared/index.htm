@@ -34,7 +34,7 @@
             <dt><code>emdate</code></dt><dd>Returns a timestamp. Synopsis: <code>emdate</code></dd>
             <dt><code>eescape</code></dt><dd>Prepare a string for use as a Perl replacement match pattern (left side), used by <code>ereplace</code>. Synopsis: <code>eescape &lt;string&gt;</dd>
             <dt><code>embasename</code></dt><dd>Replacement for <code>basename</code> in bash. Synopsis: <code>embasename &lt;path&gt;</code></dd>
-            <dt><code>emreadlink</code></dt><dd>Cross-platform replacement for <code>readlink</code>. Synopsis: <code>emreadlink &lt;path&gt;</code></dd>
+            <dt><code>emreadlink</code></dt><dd>Alias for <code>abspath</code>. Synopsis: <code>emreadlink &lt;path&gt;</code></dd>
             <dt><code>ereplace</code></dt><dd>Replace one string with another in the specified file (without interpreting metacharacters). Synopsis: <code>ereplace &lt;string-to-replace&gt; &lt;replacement-string&gt; &lt;file&gt;</code></dd>
             <dt><code>ereplaceRegEx</code></dt><dd>Perform a Perl regex substitution on the specified file (interpreting metacharacters). The match and replacement must be a valid within a <code>s///g</code> in Perl (it will be literally interpolated into the Perl code, rather than escaped as it is with <code>ereplace</code>). Synopsis: <code>ereplaceRegEx &lt;regex-match&gt; &lt;replacement&gt; &lt;file&gt;</code></dd>
             <dt><code>findso</code></dt><dd>Given the file name of a <code>.so</code> shared library, print the full path to it. The <code>--plain</code> option indicates that the library name is in the form <code>libfoo.so</code>, while by default it assumes that the form <code>foo</code> is used. Synopsis: <code>findso [--plain] &lt;library-name&gt;</code></dd>
