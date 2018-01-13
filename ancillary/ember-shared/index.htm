@@ -30,6 +30,8 @@
             <dt><code>checkedxz</code></dt><dd>Wrapper around <code>xz</code>, to make sure the output isn't corrupt. If <code>-</code> is specified as the input file, output will be to stdout regardless of the presence or absence of <code>--stdout</code>. <code>--quiet</code> can be used to suppress the progress bars that are shown by default. Synopsis: <code>checkedxz [--quiet|--request-wait-after] [ (-|&lt;input-file&gt;) [--stdout] &lt;argument-for-xz&gt;... ]</code></dd>
             <dt><code>contains</code></dt><dd>Test whether an array contains a particular value. Synopsis: <code>contains &lt;value&gt; &lt;array-arg&gt;...</code></dd>
             <dt><code>date-uuid</code></dt><dd>Returns a timestamp combined with a random (V4) UUID. Synopsis: <code>date-uuid</code></dd>
+            <dt><code>invertReturnValue</code></dt><dd>Returns 1 if the command returns true, or 0 if it returns false. Synopsis: <code>invertReturnValue &lt;command&gt; [&lt;argument&gt;...]</code></dd>
+            <dt><code>print_r</code></dt><dd>Prints its arguments. Synopsis: <code>print_r [&lt;array-element&gt;...]</code></dd>
             <dt><code>defaultEditor</code></dt><dd>Wrapper around the default text editor. Synopsis: <code>defaultEditor</code></dd>
             <dt><code>die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
             <dt><code>emdate</code></dt><dd>Returns a timestamp. Synopsis: <code>emdate</code></dd>
