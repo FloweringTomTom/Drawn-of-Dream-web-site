@@ -1,4 +1,4 @@
-<h1>How to tag a version in a Git repository &mdash; Wreathe Documentation</h1>
+<h1>How to silence the <code>warning: command substitution: ignored null byte in input</code> warning in Bash 4.4+ &mdash; Wreathe Documentation</h1>
 
 <p class="breadcrumbs">Page location:
     <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
@@ -9,4 +9,4 @@
 
 <p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.3</p>
 
-<p><code>git tag -m version -a v2.13.7 40d6206befa3faeb8c15eca04723306c21aa1114</code>, replacing the version number and the commit hash.</p>
+<p>Here are two options for suppressing this warning message. First: <code>var="$(command)"</code> becomes <code>{ var="$(command 2>&amp;3-)"; } 3>&amp;2 2>/dev/null</code>. This can be simplified if the stderr of <code>command</code> is not needed, to simply <code>{ var="$(command)"; } 2>/dev/null</code>. The braces in these versions are necessary to allow redirecting the error message. Second: <code>var="$(command)"</code> becomes <code>var="$(command | tr -d '\0')"</code>, deleting the null bytes; this requires starting a separate process, though.</p>
