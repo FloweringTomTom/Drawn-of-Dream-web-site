@@ -3,5 +3,5 @@
 source ember_bash_setup &> /dev/null
 # set -x
 
-rm -r information-technology/env
+rm -rf information-technology/env
 cp -r ../ember-information-technology-environment/implementations/web information-technology/env
