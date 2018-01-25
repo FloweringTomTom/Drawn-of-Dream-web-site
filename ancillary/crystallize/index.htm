@@ -11,6 +11,8 @@
     <h3>Usage</h3>
         <p>Crystallize provides the following primary user-facing command-line scripts.</p>
         <dl>
+            <dt><code>crystal-search</code></dt><dd>Show the addresses of crystals that contain files (or, optionally, a maximum of one file per crystal) with path names matching the given pattern. Synopsis: <code>crystal-search [--single] [--] &lt;search-key&gt;</code></dd>
+            <dt><code>crystal-view</code></dt><dd>List the contents of the given Crystal ID. Synopsis: <code>crystal-view [--single] [--] &lt;search-key&gt;</code></dd>
             <dt><code>crystallize</code></dt><dd>Archives a snapshot of a file or files and removes it/them (unless <code>--keep</code> is specified), providing an address and/or a pointer file that can be used to retrieve it/them. <code>crystallize --update</code> is an alias for <code>crystallize-update</code>. Synopsis: <code>crystallize ( ([--version] | [--update]) | ([--leave-locked] [--keep] [--passphrase &lt;passphrase-to-use&gt;] [--] [--leave-pointer] &lt;file&gt;...) )</code></dd>
             <dt><code>crystallize-backup</code></dt><dd>Backs up <code>crystallize</code>d files with their associated metadata to the current directory. Synopsis: <code>crystallize-backup [--passphrase &lt;passphrase-to-use&gt;] &lt;crystal-address&gt;</code></dd>
             <dt><code>decrystallize</code></dt><dd>Retrieves files stored using <code>crystallize</code> to the current directory, given their address. Synopsis: <code>decrystallize [--passphrase &lt;passphrase-to-use&gt;] [--lock-override|--no-lock-override] &lt;crystal-address&gt; [--here]</code></dd>
@@ -18,7 +20,6 @@
         </dl>
         <p>The following public-facing scripts are either used internally by the other tools and are mainly useful for writing other shell scripts, or are not thoroughly tested.</p>
         <dl>
-            <dt><code>crystal-search</code></dt><dd>Show the addresses of crystals that contain files (or, optionally, a maximum of one file per crystal) with path names matching the given pattern. Synopsis: <code>crystal-search [--single] [--] &lt;search-key&gt;</code></dd>
             <dt><code>crystallize-editconf</code></dt><dd>Open the Ember configuration file in the default editor. This is a deprecated wrapper around <code>ember-getconf</code> from <a href="../ember-shared">ember-shared</a>. Synopsis: <code>crystallize-editconf</code></dd>
             <dt><code>crystallize-getconf</code></dt><dd>Retrieve a configuration value from the configuration file used by Ember tools. The value returned for the <code>WorkDirectory</code> option can be overridden by setting <code>EmberWorkdirOverride54ae685dc782437c99bc46c7a1211377</code> to a non-empty value. This is a deprecated wrapper around <code>ember-getconf</code> from <a href="../ember-shared">ember-shared</a>. Synopsis: <code>crystallize-getconf (&lt;configuration-key-name&gt;|ConfigLocation|ConfigDir|crystallizeVersion|emberSharedVersion)</code></dd>
             <dt><code>crystallize-update</code></dt><dd>Attempt to update Crystallize. Synopsis: <code>crystallize-update</code></dd>
