@@ -49,6 +49,13 @@
             <li>Missing features</li>
         </ol>
 
+<h2>Documentation</h2>
+    <h3>Usage</h3>
+        <p>ember-shared provides the following command-line scripts, mainly useful for writing other scripts.</p>
+        <dl>
+            <dt><code>csum</code></dt><dd>Generate and check against lists of file checksums. If no action is specified, <code>save</code> is assumed; if no path is specified, the current directory is assumed; if no checksum file name is specified, stdout/stdin are used for <code>save</code> and <code>check</code> respectively. Note that at least one checksummable file must be specified for the resulting file to be usable: a single empty directory, for instance, will result in an unusable file. Synopsis: <code>csum [(--save|--check)] [&lt;path&gt;... [&lt;checksum-file-name&gt;|""|-]]</code></dd>
+            <dt><code>disk-size-in-bytes</code></dt><dd>Returns an estimate sum of the disk usage of the specified files, in bytes. Synopsis: <code>disk-size-in-bytes &lt;file&gt;...</code></dd>
+
 <h2>Data formats</h2>
 
     <h3>Ember Language</h3>
