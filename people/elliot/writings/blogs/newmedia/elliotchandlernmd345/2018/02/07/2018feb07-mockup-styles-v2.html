@@ -50,10 +50,7 @@
         #edit, #expand, #weather, #calendar, #play, #overview {
             align-self: end;
         }
-        #greeting, #actions, #tools {
-            display: flex;
-        }
-        #greeting, #actions {
+        #greeting, #actions, #search {
             flex-shrink: 1;
         }
         #greeting .right-align {
@@ -63,10 +60,13 @@
             width: 3rem;
             flex-grow: 1;
         }
+        main > section {
+            width: 100%;
+            display: flex;
+        }
         #tools {
             flex-shrink: 1;
             overflow: hidden;
-            width: 100%;
         }
         #tools > section {
             overflow-y: scroll;
@@ -98,9 +98,15 @@
         <p>Hello, Name.</p>
         <p class="right-align">Today is 5 December, 2017.</p>
     </section>
-    <section id="actions">
+    <section id="search">
         <input type="text" id="search-input" value="Type to search or open…">
-        <button id="search">Search</button>
+        <button id="search-button">Search</button>
+    </section>
+    <section id="actions">
+        <button id="create">Create</button>
+        <button id="open">Open</button>
+        <button id="media">Media</button>
+        <button id="help">Help</button>
     </section>
     <section id="tools">
         <section id="projects">
