@@ -93,12 +93,17 @@
             margin: 1rem 0.5rem;
             border: 1px solid black;
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         #tools > section:first-of-type {
             margin-left: 1rem;
         }
         #tools > section:last-of-type {
             margin-right: 1rem;
+        }
+        .to-do-priority, .notification-time, .folder-chevron {
+            float: right;
         }
     </style>
 </head>
@@ -135,7 +140,7 @@
                 <li class="project">Fisheries report</li>
                 <li class="project">Leedsville bridge proposal</li>
                 <li class="project">Latest IWG minutes</li>
-                <li class="project"><p>Music compositions</p><p class="right-align">❭</p></li>
+                <li class="project"><p>Music compositions</p><p class="folder-chevron">❭</p></li>
                 <li class="project">Hidden item</li>
             </ul>
             <button id="projects-button">Open project journal…</button>
