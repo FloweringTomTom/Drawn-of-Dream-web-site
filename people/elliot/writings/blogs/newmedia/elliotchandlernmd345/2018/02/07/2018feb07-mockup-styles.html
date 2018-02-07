@@ -50,17 +50,17 @@
         #edit, #expand, #weather, #calendar, #play, #overview {
             align-self: end;
         }
-        .right-align {
-            float: right;
+        #greeting, #actions, #tools {
+            display: flex;
         }
-        #greeting {
-            
+        #greeting .right-align {
+            float: right;
         }
         #actions {
             
         }
-        #tools {
-            
+        #tools > section {
+            overflow-y: scroll;
         }
     </style>
 </head>
