@@ -102,7 +102,7 @@
         #tools > section:last-of-type {
             margin-right: 1rem;
         }
-        .to-do-priority, .notification-time, .folder-chevron {
+        .to-do-priority, .notification-time, .notification-priority, .folder-chevron {
             float: right;
         }
     </style>
@@ -168,8 +168,8 @@
             <section id="to-do">
                 <h3>To do</h3>
                 <ul>
-                    <li class="to-do-item"><p>Phone Kerry</p><p class="to-do-priority">[!!!]</p></li>
-                    <li class="to-do-item"><p>Fix typo in p…</p><p class="to-do-priority">[!!]</p></li>
+                    <li class="to-do-item"><p class="to-do-priority">[!!!]</p><p>Phone Kerry</p></li>
+                    <li class="to-do-item"><p class="to-do-priority">[!!]</p><p>Fix typo in p…</p></li>
                     <li class="to-do-item">Research boats</li>
                     <li class="to-do-item">Hidden item</li>
                     <li class="to-do-item">Hidden item</li>
@@ -181,19 +181,19 @@
             <h2>Updates</h2>
             <ul>
                 <li class="notification">
+                    <p class="notification-time">[10:00 PM]</p>
                     <p>Jolene wrote:</p>
                     <p>Hey, party 6PM here :)</p>
-                    <p class="notification-time">[10:00 PM]</p>
                 </li>
                 <li class="notification notification-urgent">
+                    <p class="notification-time">[9:12 PM]</p>
+                    <p class="notification-priority">[URGENT]</p>
                     <p>Bob wrote:</p>
                     <p>The production server is down!</p>
-                    <p class="notification-priority">[URGENT]</p>
-                    <p class="notification-time">[9:12 PM]</p>
                 </li>
                 <li class="notification notification-emergency">
-                    <p>Flood watch: Orono</p>
                     <p class="notification-time">[Yesterday]</p>
+                    <p>Flood watch: Orono</p>
                 </li>
             </ul>
             <button id="notifications-button">Open update log…</button>
