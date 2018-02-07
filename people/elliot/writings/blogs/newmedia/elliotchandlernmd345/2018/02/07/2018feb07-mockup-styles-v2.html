@@ -108,14 +108,33 @@
         .to-do-priority, .notification-time, .notification-priority, .folder-chevron {
             float: right;
         }
+        li, h2 {
+            padding: 0.5rem;
+        }
         h2 {
             text-align: center;
         }
         #to-do {
             display: flex;
         }
+        #to-do > ul {
+            flex-grow: 1;
+            padding: 0 0 0 0.5rem;
+        }
         ul {
             list-style: none;
+        }
+        #schedule-calendar {
+            width: 100%;
+        }
+        #schedule-calendar td {
+            vertical-align: text-top;
+        }
+        #schedule-calendar td:last-of-type {
+            padding: 0 0 0 0.5rem;
+        }
+        #schedule-calendar table {
+            width: 100%;
         }
     </style>
 </head>
