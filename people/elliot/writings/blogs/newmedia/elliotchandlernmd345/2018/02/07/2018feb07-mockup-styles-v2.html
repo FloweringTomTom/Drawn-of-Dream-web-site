@@ -65,13 +65,13 @@
             display: flex;
             justify-content: space-between;
         }
-        main > section:not(#tools) {
+        main > section:not(:last-of-type) {
             padding: 0.25rem 20vw;
         }
-        #tools > section:first-of-type {
+        main > section:first-of-type {
             padding-top: 0.5rem;
         }
-        #tools > section:last-of-type {
+        main > section:last-of-type {
             padding-bottom: 0rem;
         }
         #tools {
