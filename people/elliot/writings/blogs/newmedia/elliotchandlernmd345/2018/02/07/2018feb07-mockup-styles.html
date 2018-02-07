@@ -55,11 +55,18 @@
         #greeting, #actions, #tools {
             display: flex;
         }
+        #greeting, #actions {
+            flex-shrink: 1;
+        }
         #greeting .right-align {
             float: right;
         }
         #actions {
             
+        }
+        #tools {
+            flex-shrink: 0;
+            overflow: scroll;
         }
         #tools > section {
             overflow-y: scroll;
