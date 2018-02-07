@@ -111,8 +111,11 @@
         h2 {
             text-align: center;
         }
-        #to-do h3 {
-            float: left;
+        #to-do {
+            display: flex;
+        }
+        ul {
+            list-style: none;
         }
     </style>
 </head>
@@ -149,7 +152,7 @@
                 <li class="project">Fisheries report</li>
                 <li class="project">Leedsville bridge proposal</li>
                 <li class="project">Latest IWG minutes</li>
-                <li class="project"><p>Music compositions</p><p class="folder-chevron">❭</p></li>
+                <li class="project"><p class="folder-chevron">❭</p><p>Music compositions</p></li>
                 <li class="project">Hidden item</li>
             </ul>
             <button id="projects-button">Open project journal…</button>
