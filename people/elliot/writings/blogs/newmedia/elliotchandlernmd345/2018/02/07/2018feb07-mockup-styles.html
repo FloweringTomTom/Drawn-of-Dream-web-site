@@ -66,9 +66,19 @@
         #tools {
             flex-shrink: 1;
             overflow: hidden;
+            width: 100%;
         }
         #tools > section {
             overflow-y: scroll;
+            margin: 1rem 0.5rem;
+            border: 1px solid black;
+            flex-grow: 1;
+        }
+        #tools > section:first-of-type {
+            margin-left: 1rem;
+        }
+        #tools > section:last-of-type {
+            margin-right: 1rem;
         }
     </style>
 </head>
