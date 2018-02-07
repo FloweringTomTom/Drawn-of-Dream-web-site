@@ -91,7 +91,6 @@
         #tools > section {
             overflow-y: scroll;
             margin: 1rem 0.5rem;
-            border: 1px solid black;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -101,6 +100,9 @@
         }
         #tools > section:last-of-type {
             margin-right: 1rem;
+        }
+        #tools ul {
+            border: 1px solid black;
         }
         .to-do-priority, .notification-time, .notification-priority, .folder-chevron {
             float: right;
@@ -147,35 +149,37 @@
         </section>
         <section id="schedule">
             <h2>Schedule</h2>
-            <section id="schedule-calendar">
-                <table>
-                    <tr>
-                        <td>8 AM</td>
-                        <td rowspan="2">
-                            <p>8:00 AM–8:45 AM:</p>
-                            <p>Meeting with James</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>9 AM</td>
-                        <td></td>
-                    </tr>
-                </table>
+            <section id="schedule-inner">
+                <section id="schedule-calendar">
+                    <table>
+                        <tr>
+                            <td>8 AM</td>
+                            <td rowspan="2">
+                                <p>8:00 AM–8:45 AM:</p>
+                                <p>Meeting with James</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9 AM</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+                <section id="to-do">
+                    <h3>To do</h3>
+                    <ul>
+                        <li class="to-do-item"><p class="to-do-priority">[!!!]</p><p>Phone Kerry</p></li>
+                        <li class="to-do-item"><p class="to-do-priority">[!!]</p><p>Fix typo in p…</p></li>
+                        <li class="to-do-item">Research boats</li>
+                        <li class="to-do-item">Hidden item</li>
+                        <li class="to-do-item">Hidden item</li>
+                    </ul>
+                </section>
+                <button id="schedule-button">Open schedule…</button>
             </section>
-            <section id="to-do">
-                <h3>To do</h3>
-                <ul>
-                    <li class="to-do-item"><p class="to-do-priority">[!!!]</p><p>Phone Kerry</p></li>
-                    <li class="to-do-item"><p class="to-do-priority">[!!]</p><p>Fix typo in p…</p></li>
-                    <li class="to-do-item">Research boats</li>
-                    <li class="to-do-item">Hidden item</li>
-                    <li class="to-do-item">Hidden item</li>
-                </ul>
-            </section>
-            <button id="schedule-button">Open schedule…</button>
         </section>
         <section id="updates">
             <h2>Updates</h2>
