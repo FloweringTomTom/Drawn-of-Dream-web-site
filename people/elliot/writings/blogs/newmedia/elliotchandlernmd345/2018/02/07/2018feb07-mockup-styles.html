@@ -12,7 +12,8 @@
         }
         nav, main {
             position: fixed;
-            display: flex;
+            display: grid;
+            grid-template-rows: 1fr;
             width: 100vw;
         }
         nav {
@@ -33,7 +34,7 @@
             height: 100%;
         }
         #edit, #expand, #weather, #calendar, #play, #overview {
-            flex-direction: 
+            justify-self: end;
         }
     </style>
 </head>
