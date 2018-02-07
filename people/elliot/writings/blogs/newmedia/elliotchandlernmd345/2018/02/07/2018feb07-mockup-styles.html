@@ -5,10 +5,23 @@
     <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
     <title>Mockup</title>
     <style>
-        nav {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav, main {
             position: fixed;
-            height: 0.1vh;
+            width: 100vw;
+        }
+        nav {
+            height: 10vh;
+            min-height: 1rem;
             max-height: 3rem;
+        }
+        main {
+            height: 90vh;
+            max-height: calc(100vh - 1rem);
+            min-height: calc(100vh - 3rem);
         }
         nav button {
             
