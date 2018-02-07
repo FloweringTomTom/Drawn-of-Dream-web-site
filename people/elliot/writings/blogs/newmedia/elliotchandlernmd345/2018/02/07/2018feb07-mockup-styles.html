@@ -12,6 +12,7 @@
         }
         nav, main {
             position: fixed;
+            display: flex;
             width: 100vw;
         }
         nav {
@@ -31,11 +32,15 @@
         nav button {
             height: 100%;
         }
+        #edit, #expand, #weather, #calendar, #play, #overview {
+            flex-direction: 
+        }
     </style>
 </head>
 <body>
 <nav>
     <button id="start">Start</button>
+    <input type="text" id="tabbar">
     <button id="edit">🖉</button>
     <button id="expand">❬</button>
     <button id="weather">🌤</button>
