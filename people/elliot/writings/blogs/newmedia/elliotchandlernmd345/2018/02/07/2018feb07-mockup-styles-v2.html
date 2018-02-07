@@ -63,6 +63,16 @@
         main > section {
             width: 100%;
             display: flex;
+            justify-content: space-between;
+        }
+        main > section:not(#tools) {
+            padding: 0.25rem 20vw;
+        }
+        #tools > section:first-of-type {
+            padding-top: 0.5rem;
+        }
+        #tools > section:last-of-type {
+            padding-bottom: 0rem;
         }
         #tools {
             flex-shrink: 1;
