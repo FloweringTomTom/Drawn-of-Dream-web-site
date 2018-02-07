@@ -15,6 +15,7 @@
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: 100%;
+            align-items: center;
             width: 100vw;
         }
         nav {
@@ -27,9 +28,20 @@
             height: 90vh;
             max-height: calc(100vh - 1rem);
             min-height: calc(100vh - 3rem);
+            display: flex;
+            flex-direction: column;
         }
         button {
             vertical-align: top;
+            font-size: 100%;
+        }
+        #calendar {
+            font-size: 50%;
+        }
+        nav button:not(#calendar) {
+            width: 10vh;
+            min-width: 1rem;
+            max-width: 3rem;
         }
         nav button, nav input {
             height: 100%;
@@ -37,6 +49,18 @@
         }
         #edit, #expand, #weather, #calendar, #play, #overview {
             align-self: end;
+        }
+        .right-align {
+            float: right;
+        }
+        #greeting {
+            
+        }
+        #actions {
+            
+        }
+        #tools {
+            
         }
     </style>
 </head>
