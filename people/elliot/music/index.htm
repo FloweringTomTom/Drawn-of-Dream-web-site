@@ -1,457 +1,458 @@
 <h1>Music</h1>
 <style type="text/css">
-a#tl {
-    color: white !important;
-    z-index: 110 !important
-}
+    a#tl {
+        color: white !important;
+        z-index: 110 !important
+    }
 
-div.floattb {
-    z-index: 110 !important;
-    color: white !important
-}
+    div.floattb {
+        z-index: 110 !important;
+        color: white !important
+    }
 
-div {
-    color: #ffffff !important;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    word-wrap: break-word;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: left
-}
+    div {
+        color: #ffffff !important;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        word-wrap: break-word;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left
+    }
 
-table,
-tbody,
-tr,
-td {
-    color: #ffffff;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    table-layout: fixed
-}
+    table,
+    tbody,
+    tr,
+    td {
+        color: #ffffff;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        table-layout: fixed
+    }
 
-table {
-    border: 1px solid white !important
-}
+    table {
+        border: 1px solid white !important
+    }
 
-td {
-    border: 1px dotted white !important
-}
+    td {
+        border: 1px dotted white !important
+    }
 
-div.floatbg {
-    z-index: 105 !important;
-    opacity: 0.25 !important
-}
+    div.floatbg {
+        z-index: 105 !important;
+        opacity: 0.25 !important
+    }
 
-a.floatlink {
-    color: white !important
-}
+    a.floatlink {
+        color: white !important
+    }
 
-a {
-    color: #aaaaff !important
-}
+    a {
+        color: #aaaaff !important
+    }
 
-p {
-    color: white !important
-}
+    p {
+        color: white !important
+    }
 
-p.mdate {
-    padding-bottom: 15px
-}
+    p.mdate {
+        padding-bottom: 15px
+    }
 
-h2 {
-    color: white !important;
-    font-style: normal !important
-}
+    h2 {
+        color: white !important;
+        font-style: normal !important
+    }
 
-html {
-    min-height: 100% !important;
-    position: relative !important
-}
+    html {
+        min-height: 100% !important;
+        position: relative !important
+    }
 
-body {
-    height: 100% !important;
-    overflow: hidden !important
-}
+    body {
+        height: 100% !important;
+        overflow: hidden !important
+    }
 
-div#mconstraints {
-    position: fixed;
-    bottom: 0px;
-    top: 0px;
-    right: 0px;
-    left: 0px
-}
+    div#mconstraints {
+        position: fixed;
+        bottom: 0px;
+        top: 0px;
+        right: 0px;
+        left: 0px
+    }
 
-#content {
-    position: fixed !important;
-    bottom: 0px !important;
-    top: 0px !important;
-    right: 0px !important;
-    left: 0px !important
-}
+    #content {
+        position: fixed !important;
+        bottom: 0px !important;
+        top: 0px !important;
+        right: 0px !important;
+        left: 0px !important
+    }
 
-div#musicwrapper {
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
-    top: -80px;
-    max-width: 680px !important;
-    z-index: 100;
-    height: 100%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px #888 solid;
-    background-color: #111;
-    width: 100%
-}
+    div#musicwrapper {
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+        top: -80px;
+        max-width: 680px !important;
+        z-index: 100;
+        height: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px #888 solid;
+        background-color: #111;
+        width: 100%
+    }
 
-div#intro {
-    left: -0px !important
-}
+    div#intro {
+        left: -0px !important
+    }
 
-.file_button {
-    display: none !important
-}
+    .file_button {
+        display: none !important
+    }
 
-.file_description {
-    display: none !important
-}
+    .file_description {
+        display: none !important
+    }
 
-span.artist {
-    display: none !important
-}
+    span.artist {
+        display: none !important
+    }
 
-div#musicthumbcontainer {
-    background-color: #333;
-    float: left;
-    max-width: 30%;
-    width: 180px;
-    z-index: 110;
-    position: absolute;
-    top: 36px;
-    bottom: 0px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+    div#musicthumbcontainer {
+        background-color: #333;
+        float: left;
+        max-width: 30%;
+        width: 180px;
+        z-index: 110;
+        position: absolute;
+        top: 36px;
+        bottom: 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-div#musicthumbnails {
-    position: relative;
-    bottom: 0px;
-    height: 100%;
-}
+    div#musicthumbnails {
+        position: relative;
+        bottom: 0px;
+        height: 100%;
+    }
 
-div.musicbig {
-    display: none;
-    position: absolute;
-    bottom: 0px;
-    margin-left: 30%;
-    padding: 15px;
-    top: 36px;
-    right: 0px;
-    background-color: #111;
-    overflow-y: scroll;
-}
+    div.musicbig {
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        margin-left: 30%;
+        padding: 15px;
+        top: 36px;
+        right: 0px;
+        background-color: #111;
+        overflow-y: scroll;
+    }
 
-img.musicbigimage {
-    width: 100%;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1)
-}
+    img.musicbigimage {
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1)
+    }
 
-iframe.musicbigplayer {
-    width: 100%;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-    border: 0;
-    -moz-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1)
-}
+    iframe.musicbigplayer {
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+        border: 0;
+        -moz-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1)
+    }
 
-img.musicthumb {
-    width: 80%;
-    max-width: 150px;
-    margin: 10%;
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
-    cursor: pointer;
-}
+    img.musicthumb {
+        width: 80%;
+        max-width: 150px;
+        margin: 10%;
+        -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
 
-img.musicthumb:hover {
-    border-left: 3px white solid
-}
+    img.musicthumb:hover {
+        border-left: 3px white solid
+    }
 
-.mlefti {
-    text-align: left !important;
-    padding-left: 3px;
-}
+    .mlefti {
+        text-align: left !important;
+        padding-left: 3px;
+    }
 
-form {
-    display: inline
-}
+    form {
+        display: inline
+    }
 
-pre,
-blockquote,
-li,
-table,
-tbody,
-tr,
-td,
-ul,
-ol {
-    color: #22520f;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    table-layout: fixed
-}
+    pre,
+    blockquote,
+    li,
+    table,
+    tbody,
+    tr,
+    td,
+    ul,
+    ol {
+        color: #22520f;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        table-layout: fixed
+    }
 
-a {
-    color: #520f22;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: none
-}
+    a {
+        color: #520f22;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: none
+    }
 
-a:hover {
-    color: #520f22;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: underline
-}
+    a:hover {
+        color: #520f22;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: underline
+    }
 
-p {
-    color: #22520f;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    word-wrap: break-word;
-    text-indent: 30pt;
-    text-align: justify;
-    margin-top: 0;
-    margin-bottom: 0
-}
+    p {
+        color: #22520f;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        word-wrap: break-word;
+        text-indent: 30pt;
+        text-align: justify;
+        margin-top: 0;
+        margin-bottom: 0
+    }
 
-table {
-    border-color: transparent
-}
+    table {
+        border-color: transparent
+    }
 
-input {
-    background-color: transparent
-}
+    input {
+        background-color: transparent
+    }
 
-h1 {
-    color: #22520f;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    font-weight: normal;
-    text-align: center
-}
+    h1 {
+        color: #22520f;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        font-weight: normal;
+        text-align: center
+    }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #22520f;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    font-weight: normal;
-    font-style: italic;
-    text-align: center
-}
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #22520f;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        font-weight: normal;
+        font-style: italic;
+        text-align: center
+    }
 
-.t {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
-    overflow: visible;
-    font-size: 1em;
-    color: #520f22;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif
-}
+    .t {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        overflow: visible;
+        font-size: 1em;
+        color: #520f22;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif
+    }
 
-.t:hover {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
-    overflow: visible;
-    font-size: 1em;
-    color: #520f22;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: underline;
-    cursor: pointer;
-}
+    .t:hover {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        overflow: visible;
+        font-size: 1em;
+        color: #520f22;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
-div.floattb {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    text-align: center
-}
+    div.floattb {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        text-align: center
+    }
 
-div.floatbg {
-    left: 25px;
-    right: 25px;
-    position: fixed;
-    bottom: 0;
-    height: 25px;
-    z-index: 2;
-    opacity: .85;
-    background-color: #f0f0f0
-}
+    div.floatbg {
+        left: 25px;
+        right: 25px;
+        position: fixed;
+        bottom: 0;
+        height: 25px;
+        z-index: 2;
+        opacity: .85;
+        background-color: #f0f0f0
+    }
 
-a.floatlink {
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: none
-}
+    a.floatlink {
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: none
+    }
 
-a.floatlink:hover {
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: underline
-}
+    a.floatlink:hover {
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: underline
+    }
 
-div.generated-toc {
-    text-align: left;
-    list-style-type: none;
-    position: fixed;
-    bottom: 25px;
-    left: 35px;
-    width: 25%;
-    z-index: 2;
-    background-color: #efefef;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: none
-}
+    div.generated-toc {
+        text-align: left;
+        list-style-type: none;
+        position: fixed;
+        bottom: 25px;
+        left: 35px;
+        width: 25%;
+        z-index: 2;
+        background-color: #efefef;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: none
+    }
 
-div#hideshow {
-    position: fixed;
-    bottom: 0;
-    left: -12px;
-    width: 10%;
-    z-index: 4;
-    text-align: left
-}
+    div#hideshow {
+        position: fixed;
+        bottom: 0;
+        left: -12px;
+        width: 10%;
+        z-index: 4;
+        text-align: left
+    }
 
-div#generated-toc a {
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: none;
-    overflow-y: scroll
-}
+    div#generated-toc a {
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: none;
+        overflow-y: scroll
+    }
 
-div#generated-toc ul {
-    text-indent: -10pt;
-    list-style-type: none;
-    font-size: x-small
-}
+    div#generated-toc ul {
+        text-indent: -10pt;
+        list-style-type: none;
+        font-size: x-small
+    }
 
-a#generated_toc_d_toggle:hover {
-    text-decoration: none
-}
+    a#generated_toc_d_toggle:hover {
+        text-decoration: none
+    }
 
-p#toggle-container {
-    text-align: left
-}
+    p#toggle-container {
+        text-align: left
+    }
 
-div.greenpage {
-    position: absolute;
-    top: 0;
-    min-height: 18.75em;
-    background-color: transparent;
-    margin: 8px;
-    margin-right: 8px;
-    z-index: -1
-}
+    div.greenpage {
+        position: absolute;
+        top: 0;
+        min-height: 18.75em;
+        background-color: transparent;
+        margin: 8px;
+        margin-right: 8px;
+        z-index: -1
+    }
 
-div.fh {
-    left: 25px;
-    right: 25px;
-    position: absolute;
-    top: 25px;
-    height: 25px;
-    z-index: 100;
-    text-align: center;
-    font-size: large
-}
+    div.fh {
+        left: 25px;
+        right: 25px;
+        position: absolute;
+        top: 25px;
+        height: 25px;
+        z-index: 100;
+        text-align: center;
+        font-size: large
+    }
 
-div.litem {
-    padding: 10px;
-    text-align: center
-}
+    div.litem {
+        padding: 10px;
+        text-align: center
+    }
 
-div.smalllink {
-    padding-top: 20px;
-    text-align: center;
-    font-size: x-small
-}
+    div.smalllink {
+        padding-top: 20px;
+        text-align: center;
+        font-size: x-small
+    }
 
-div.relative {
-    position: relative;
-    padding-top: 0px
-}
+    div.relative {
+        position: relative;
+        padding-top: 0px
+    }
 
-.reveal-modal-bg {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    background: rgba(0, 0, 0, .8);
-    z-index: 100;
-    display: none;
-    top: 0;
-    left: 0
-}
+    .reveal-modal-bg {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        background: rgba(0, 0, 0, .8);
+        z-index: 100;
+        display: none;
+        top: 0;
+        left: 0
+    }
 
-.reveal-modal {
-    visibility: hidden;
-    top: 75px;
-    left: 0;
-    margin-left: -10px;
-    width: 90%;
-    max-width: 900px;
-    background: #eee url(/web/20131014234448im_/http://futuramerlin.com/d/g.png) no-repeat -200px -80px;
-    position: absolute;
-    z-index: 101;
-    padding: 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-    -box-shadow: 0 0 10px rgba(0, 0, 0, .4)
-}
+    .reveal-modal {
+        visibility: hidden;
+        top: 75px;
+        left: 0;
+        margin-left: -10px;
+        width: 90%;
+        max-width: 900px;
+        background: #eee url(/web/20131014234448im_/http://futuramerlin.com/d/g.png) no-repeat -200px -80px;
+        position: absolute;
+        z-index: 101;
+        padding: 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+        -box-shadow: 0 0 10px rgba(0, 0, 0, .4)
+    }
 
-.reveal-modal .close-reveal-modal {
-    font-size: 22px;
-    line-height: .5;
-    position: absolute;
-    top: 8px;
-    right: 11px;
-    color: #aaa;
-    font-weight: bold;
-    cursor: pointer
-}
+    .reveal-modal .close-reveal-modal {
+        font-size: 22px;
+        line-height: .5;
+        position: absolute;
+        top: 8px;
+        right: 11px;
+        color: #aaa;
+        font-weight: bold;
+        cursor: pointer
+    }
 
-div.logobox {
-    margin: auto;
-    display: inline-block;
-    position: relative;
-    height: 20%;
-    width: auto;
-    padding-top: 16px;
-    padding-left: 24px;
-    float: left;
-    padding-right: 75px;
-}
+    div.logobox {
+        margin: auto;
+        display: inline-block;
+        position: relative;
+        height: 20%;
+        width: auto;
+        padding-top: 16px;
+        padding-left: 24px;
+        float: left;
+        padding-right: 75px;
+    }
 
-div.holder {
-    -webkit-box-shadow: 0px 0px 10px 5px #FFF;
-    box-shadow: 0px 0px 10px 0px #FFF;
-    margin: auto;
-    position: relative;
-    left: 25px;
-    width: 322px;
-    display: inline-block;
-}
+    div.holder {
+        -webkit-box-shadow: 0px 0px 10px 5px #FFF;
+        box-shadow: 0px 0px 10px 0px #FFF;
+        margin: auto;
+        position: relative;
+        left: 25px;
+        width: 322px;
+        display: inline-block;
+    }
 
-div.caption {
-    color: white;
-    font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
-    text-decoration: none
-}</style>
+    div.caption {
+        color: white;
+        font-family: 'wreatherweb', 'Wreathe', 'Centaur MT Std', 'Centaur MT', 'Centaur', serif;
+        text-decoration: none
+    }
+</style>
 <p class="breadcrumbs">Page location: <span><a href="/people">People</a></span>
     <span><a href="/people/elliot">Elliot Chandler</a></span>
 </p>
