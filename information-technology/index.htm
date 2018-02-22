@@ -57,11 +57,12 @@
    [○ Document execution state] ╮    ╭ [○ document as Dc sequence] ←╮
                 ↑               ↓    ↓                              │
                 ╰───── Document execution loop:  ───────────────────╯
-           Other I/O ← iterate over tokens (Dcs)
+           Other I/O ← iterates over tokens (Dcs)
                                    ↓
-                              Renderer: converts EDOM
+                              Renderer: converts and
                               and writes to renderer
-                              buffer
+                              buffer visible document
+                              elements
                                      ↓
                               ⎡ Renderer buffer: holds     ⎤
                               ⎢ representation of document ⎥
