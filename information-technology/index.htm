@@ -54,13 +54,23 @@
     <pre>External I/O as document source → [document contents buffer]
                                                        ↓
                                            Document execution loop:
-                            I/O executor ← iterate over input tokens,
+                               Other I/O ← iterate over input tokens,
                                            interpreting+consuming each
                                                        ↓
-                                            ⎡ ○ document tree       ⎤
-                                            ⎣   (equivalent to DOM) ⎦
+                                            ⎡ ○ document tree "EDOM" ⎤
+                                            ⎣   (equivalent to DOM)  ⎦
                                             
-                                            Renderer to 
+                                            Renderer: converts EDOM
+                                            and writes to renderer
+                                            buffer
+                                            
+                                            Renderer buffer: holds
+                                            representation of document
+                                            in the format desired for
+                                            output (terminal text for
+                                            a CLI, HTML for a browser,
+                                            bitmap for a monitor,
+                                            ⎣other formats for export) ⎦
 
 <h2>Command-line interface (mostly unimplemented)</h2>
     <p>The EITE provides the following user-facing command-line scripts.</p>
