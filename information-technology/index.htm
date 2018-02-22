@@ -54,9 +54,9 @@
     <pre>External I/O: document source → [   ○ document contents   ]
                (as Dc sequence)                      ↓
                
-                                      ╭→ [○ document as Dc sequence]
-                                      │              ↓
-                                      ╰─ Document execution loop:
+         [○ Document execution state] ╭→ [○ document as Dc sequence] ←╮
+                                      │              ↓                │
+                      ╰───────────────┴─ Document execution loop:     ╯
                              Other I/O ← iterate over tokens (Dcs)
                                                      ↓
                                           ⎡ ○ document tree "EDOM" ⎤
