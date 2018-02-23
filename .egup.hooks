@@ -6,4 +6,4 @@ source ember_bash_setup &> /dev/null
 mkdir -p information-technology/env
 rm -rf information-technology/env || sudo rm -rf information-technology/env
 mkdir -p information-technology/env
-cp -r ../ember-information-technology-environment/work-docs/other-implementations/web information-technology/env
+cp -r ../ember-information-technology-environment/web information-technology/env
