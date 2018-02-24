@@ -90,6 +90,11 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 
 <h2>Data formats</h2>
 
+    <h3>Test suite</h3>
+    <dl>
+    <dt>eet</dt><dd>EITE execution test: given an input document in a specified format, run it and compare its output (the printable state of the document after it exits) to the expected output.</dd>
+    <dt>ept</dt><dd>EITE parse test: given an input document in a specified format, parse it and compare its representation as a Dc list to the expected representation.</dd>
+    </dl>
     <h3>EITE Language</h3>
         <h4>Objective</h4>
             <p>Develop a machine-readable language that can be source-to-source translated into other languages. It should be practically useable as a shell as well as for running stored programs. Possible target languages to investigate include Bash, Rakudo Perl 6, NQP, C--, C, PyQt5, and JQuery.</p>
