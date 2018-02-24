@@ -90,13 +90,13 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 
 <h2>Data formats</h2>
 
-    <h3>Ember Language</h3>
+    <h3>EITE Language</h3>
         <h4>Objective</h4>
             <p>Develop a machine-readable language that can be source-to-source translated into other languages. It should be practically useable as a shell as well as for running stored programs. Possible target languages to investigate include Bash, Rakudo Perl 6, NQP, C--, C, PyQt5, and JQuery.</p>
         <h4>Language profiles</h4>
-            <p>Ember Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
+            <p>EITE Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
         <h4>Dcs</h4>
-            <p>The core unit of the Ember Language is the Dc (Document Component<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv. An Ember Language document is a list of Dcs, and a file is considered <em>structurally valid</em> if it can be interpreted as such. A Dc can have a syntactical pattern that it can require if it is to be meaningful. For example, a marker to <em>begin</em> a section of a document might be required to have a matching <em>end</em> marker. A document is only <em>syntactically valid</em> if the usage of each Dc contained within it conforms to the Dc's defined syntax, even if the document is otherwise structurally valid.</p>
+            <p>The core unit of the EITE Language is the Dc (Document Component<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv. An EITE Language document is a list of Dcs, and a file is considered <em>structurally valid</em> if it can be interpreted as such. A Dc can have a syntactical pattern that it can require if it is to be meaningful. For example, a marker to <em>begin</em> a section of a document might be required to have a matching <em>end</em> marker. A document is only <em>syntactically valid</em> if the usage of each Dc contained within it conforms to the Dc's defined syntax, even if the document is otherwise structurally valid.</p>
             <h5>Reading DcData.csv</h5>
                 <p>DcData.csv contains nine columns, each of which gives some information about a given Dc.</p>
                 <p>From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description.</p>
@@ -110,7 +110,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
                 <p>The "Details" column contains various additional information about characters, as a comma-separated list.
                     <ul>
                         <li>List entries beginning with "&gt;" are cross-references to related Dcs. List entries beginning with "&lt;" are decompositions.</li>
-                        <li>List entries beginning with "(" indicate the syntax (parameter type signatures) for Ember Language routines.</li>
+                        <li>List entries beginning with "(" indicate the syntax (parameter type signatures) for EITE Language routines.</li>
                         <li>List entries beginning with ":" indicate the required syntax for the given Dc, using a form similar to regular expressions:
                             <ul>
                                 <li>a bracketed list of Dcs [] indicate a set of possible Dcs</li>
@@ -123,7 +123,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
                     </ul>
                     The remaining list entries are aliases (alternate names for the characters, for ease of look-up).</p>
                 <p>The "Description" column contains additional comments regarding the Dc.</p>
-                <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the Ember Language standard. Unicode's values should take precedence.</p>
+                <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the EITE Language standard. Unicode's values should take precedence.</p>
                 <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
             <h5>Notes on specific Dcs</h5>
                 <h6>Dcs 241–245: Mode indicators</h6>
@@ -137,10 +137,10 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
             <p>ELD, ELS, and ELQ files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A. This may later be changed to use UTF-8.</p>
             <p>At the end of each format's summary (except for EMR), a simple "Hello, World!" document is given in the format.</p>
             <h5>EITE Language documents (ELD), .eld</h5>
-                <p>Ember Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>".</p>
+                <p>EITE Language documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>".</p>
                 <pre><code>Hello, World!</code></pre>
             <h5>EITE Language source files (ELS), .els</h5>
-                <p>Ember Language source files are a programming language–inspired representation of Ember Language documents. It is the most readable of the formats, but also the most technically complex.</p>
+                <p>EITE Language source files are a programming language–inspired representation of EITE Language documents. It is the most readable of the formats, but also the most technically complex.</p>
                 <pre><code>dc:
     Hello, World!</code></pre>
                 <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
@@ -171,8 +171,8 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 57 86 93 93 96 96 30 18 72 96 99 93 85 19 #     Hello, World!</code></pre>
             <h5>EITE Record Documents (ERD), .erd</h5>
                 <p>This is a special format in the "Structured" mode used for structured record storage in the EITE cloud. It is not yet defined, but will most likely be a subset of one of the other formats.</p>
-        <h4>Structures in the Ember Language</h4>
-            <p>The Ember Language uses the following main types of entity to represent information:
+        <h4>Structures in the EITE Language</h4>
+            <p>The EITE Language uses the following main types of entity to represent information:
                 <dl>
                     <dt>Type</dt><dd>Types are templates describing the structure of objects. They are known as prototypes or classes in most programming languages, depending on whether objects described by them inherit changes to the types made after the object was created. (Objects can be used as types by casting.) Type names begin with a capital letter when in source form.</dd>
                     <dt>Object</dt><dd>An object is an entity that conforms to a given type (an <em>instance</em> of that type). The most general type is <em>object</em>, and there is no need for an object to conform to any other type.</dd>
