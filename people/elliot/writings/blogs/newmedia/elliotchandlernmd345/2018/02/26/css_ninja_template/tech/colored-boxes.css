@@ -23,10 +23,10 @@ body {
 	display: flex;
 	flex-direction: column-reverse;
 }
-#description-container > :nth-child(1)::before, #description-container > :nth-child(2)::before {
+#description-container > p::before {
 	position: fixed;
 	color: white;
-	width: 50vw;
+	width: calc(100vw / 3);
 	background-color: rgba(195,83,229,0.9);
 	height: 3rem;
 	font-size: 3rem;
@@ -83,11 +83,15 @@ body {
 	overflow-x: scroll;
 }
 
-#description-container > :nth-child(2)::before {
-	content: 'Navigation 1';
-	left:calc(100vw / 3);
-}
 #description-container > :nth-child(1)::before {
-	content: 'Navigation 2';
-	left:calc(200vw / 3);
+	content: 'Button 1';
+	left: 0;
+}
+#description-container > :nth-child(2)::before {
+	content: 'Button 2';
+	left: calc(100vw / 3);
+}
+#description-container > :nth-child(3)::before {
+	content: 'Mutton 3';
+	left: calc(200vw / 3);
 }
