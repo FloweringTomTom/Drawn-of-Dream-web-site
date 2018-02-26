@@ -48,11 +48,11 @@ body {
 	text-indent: 1rem;
 	background-color: rgba(0,0,0,0.7);
 	position: fixed;
-	right: 110vw;
-	top: 20vh;
+	left: 1rem;
+	top: 4rem;
 	transition: all 1s ease-in-out, filter 1s ease-in-out;
-	height: 60vh;
-	width: 75vw;
+	height: calc(100vh - 5rem);
+	width: calc(100vw - 2rem);
 	padding: 1rem;
 	overflow-y: hidden;
 	overflow-x: scroll;
