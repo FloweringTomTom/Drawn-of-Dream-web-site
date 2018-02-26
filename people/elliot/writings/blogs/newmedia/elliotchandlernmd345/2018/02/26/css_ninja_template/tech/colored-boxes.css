@@ -83,13 +83,11 @@ body {
 	overflow-x: scroll;
 }
 
-#description-container > :nth-child(1):not(:hover)::before, #description-container > :nth-child(2):not(:hover)::before {
-	background-color: rgba(195,83,229,1);
-}
 #description-container > :nth-child(2)::before {
-	content: 'Filter';
-	left:50vw;
+	content: 'Navigation 1';
+	left:calc(100vw / 3);
 }
 #description-container > :nth-child(1)::before {
-	content: 'Columns';
+	content: 'Navigation 2';
+	left:calc(200vw / 3);
 }
