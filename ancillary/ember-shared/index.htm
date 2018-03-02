@@ -37,7 +37,7 @@
             <dt><code>defaultEditor</code></dt><dd>Wrapper around the default text editor. Synopsis: <code>defaultEditor</code></dd>
             <dt><code>die</code></dt><dd>Notify the user of a shell script of an error condition, and exit. Synopsis: <code>die [exit-status] [message-to-user]...</code> (if the first argument is an integer, it is used as the exit status; otherwise the script exits with status 1)</dd>
             <dt><code>removeDuplicateLines</code></dt><dd>Prints unique lines from the specified file to standard output. Synopsis: <code>removeDuplicateLines &lt;file&gt;</code></dd>
-            <dt><code>isEmptyDir</code></dt><dd>Exits with exit code 0 if the path specified is an empty directory, and 1 otherwise. Synopsis: <code>isEmptyDir &lt;path&gt;</code></dd>
+            <dt><code>isEmptyDir</code></dt><dd>Exits with exit code 0 if the path specified is an empty directory, and 1 otherwise. <strong>Does not</strong> work with <code>  <code>find .. -maxdepth 0 -type d -empty</code> Synopsis: <code>isEmptyDir &lt;path&gt;</code></dd>
             <dt><code>emdate</code></dt><dd>Returns a timestamp. Synopsis: <code>emdate</code></dd>
             <dt><code>eescape</code></dt><dd>Prepare a string for use as a Perl replacement match pattern (left side), used by <code>ereplace</code>. Synopsis: <code>eescape &lt;string&gt;</dd>
             <dt><code>embasename</code></dt><dd>Replacement for <code>basename</code> in bash. Synopsis: <code>embasename &lt;path&gt;</code></dd>
