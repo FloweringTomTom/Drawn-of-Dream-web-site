@@ -1,5 +1,35 @@
 window.onload = function() {
 
+    // START PORTABLE CODE
+
+    function normalizeMessage(message) {
+        if (typeof message == 'object') {
+            return (JSON && JSON.stringify ? JSON.stringify(message) : message);
+        } else {
+            return message;
+        }
+    }
+    function eiteLog(message) {
+        eiteImplLog(message);
+    }
+    function eiteWarn(message) {
+        eiteLog('EITE reported warning: '+normalizeMessage(message));
+    }
+    function eiteError(message) {
+        eiteLog('EITE reported error!: '+normalizeMessage(message));
+        throw 'EITE reported error!: '+normalizeMessage(message);
+    }
+
+    // Tools for Dc text
+    {
+        function dcIsNewline(dc) {
+            return false; // TODO: Unimplemented
+        }
+        function dcIsPrintable(dc) {
+            return false; // TODO: Unimplemented
+        }
+    }
+
     // Tools for ASCII text
     {
         // Checks whether n is within the range a and b, including endpoints
@@ -8,6 +38,9 @@ window.onload = function() {
         }
         function isDigit(n) {
             return isBetween(n, 48, 57);
+        }
+        function isPrintable(n) {
+            return isBetween(n, 32, 126);
         }
         function isSpace(n) {
             return n == 32;
@@ -34,23 +67,27 @@ window.onload = function() {
         15 SI     31 US     47 /    63 ?    79 O    95 _    111 o    127 DEL
         */
     }
-    // Attach console.log to log element
-    (function() {
-        var logger = document.getElementById('log');
-        console.log = function(message) {
-            if (typeof message == 'object') {
-                logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
-            } else {
-                logger.innerHTML += message + '<br />';
-            }
-            logger.scrollTop = logger.scrollHeight;
-        };
-    })();
+
+    function printableDcToChar(dc, characterEncoding) {
+        switch (characterEncoding) {
+            case 'ASCII-safe-subset':
+            case 'UTF-8':
+                console.log(dc+' became '+String.fromCharCode(dc));
+                return String.fromCharCode(dc); // TODO: Unimplemented
+                break;
+            default:
+                eiteError('Unimplemented character encoding: '+characterEncoding);
+                break;
+        }
+    }
 
     function docParse(format, content) {
         switch (format) {
             case 'sems':
                 return parseSems(content);
+                break;
+            default:
+                eiteError('Unimplemented document parsing format: '+format);
                 break;
         }
     }
@@ -88,40 +125,105 @@ window.onload = function() {
         return dcSeq;
     }
 
-    function doRenderIo(targetFormat, renderBuffer) {
-        switch (targetFormat) {
-            case 'integerList':
-                for (var i = 0; i < renderBuffer.length; i++) {
-                    console.log(renderBuffer[i]);
-                }
-                break;
-        }
-    }
-
     function createDocObj(format, content) {
         // content is an ArrayBuffer. Perhaps it could be other data types later if useful (they would be implemented as other formats in docParse).
         var doc = {};
             doc.dcState = docParse(format, content);
             doc.renderInputBuf = null;
             doc.renderOutputBuf = null;
-            doc.render = function (targetFormat) {
+            doc.render = function(targetFormat, renderTraits) {
+                if ( targetFormat === undefined ) {
+                    targetFormat = getEnvironmentBestFormat();
+                }
+                if ( renderTraits === undefined ) {
+                    renderTraits = getEnvironmentRenderTraits(targetFormat);
+                }
                 this.renderInputBuf = this.dcState; // copy Dcs for renderer call
                 // Build render output buffer for specified format
                 switch (targetFormat) {
                     case 'integerList':
                         this.renderOutputBuf = [];
                         for (var i = 0; i < this.renderInputBuf.length; i++) {
-                            this.renderOutputBuf[i] = this.renderInputBuf[i]; // TODO unimplemented
+                            this.renderOutputBuf[i] = this.renderInputBuf[i];
                         }
+                        break;
+                    case 'immutableCharacterCells':
+                        this.renderOutputBuf = [];
+                        let line=0;
+                        this.renderOutputBuf[0] = '';
+                        for (var i = 0; i < this.renderInputBuf.length; i++) {
+                            if (dcIsNewline(this.renderInputBuf[i])) {
+                                line = line + 1;
+                                this.renderOutputBuf[line] = '';
+                            }
+                            if (dcIsPrintable(this.renderInputBuf[i])) {
+                                this.renderOutputBuf[line] = this.renderOutputBuf[line] + printableDcToChar(this.renderInputBuf[i], renderTraits.characterEncoding);
+                            }
+                        }
+                        break;
+                    default:
+                        eiteError('Unimplemented document render target format: '+targetFormat);
                         break;
                 }
                 // Do I/O as needed for the rendering
                 doRenderIo(targetFormat, this.renderOutputBuf);
             };
-            doc.run = function () {
-                this.render('integerList');
+            doc.run = function (targetFormat) {
+                this.render(targetFormat);
             };
         return doc;
+    }
+
+    // END PORTABLE CODE #######################################################
+
+    function eiteImplLog(message) {
+        // This function implements logging (which may differ between platforms).
+        console.log(normalizeMessage(message));
+    };
+
+    function getEnvironmentBestFormat() {
+        return 'immutableCharacterCells';
+    }
+
+    function getEnvironmentRenderTraits(targetFormat) {
+        if ( targetFormat === undefined ) {
+            eiteError('getEnvironmentRenderTraits was called without any targetFormat!');
+        }
+        var traits = {};
+        switch (targetFormat) {
+            case 'integerList':
+            case 'immutableCharacterCells':
+                traits.cellTableWidth = -1; // unlimited
+                traits.cellTableHeight = -1; // unlimited
+                let cs = document.characterSet.toLowerCase();
+                switch(cs) {
+                    case 'utf-8':
+                        traits.characterEncoding = 'UTF-8';
+                        break;
+                    default:
+                        eiteWarn('Unimplemented character set: '+cs+'. Falling back to ASCII-safe-subset.');
+                        traits.characterEncoding = 'ASCII-safe-subset';
+                        break;
+                }
+                break;
+        }
+        return traits;
+    }
+
+    function doRenderIo(targetFormat, renderBuffer) {
+        switch (targetFormat) {
+            case 'integerList':
+            case 'immutableCharacterCells':
+                let immutableCharCellOutput = document.getElementById('log');
+                for (var i = 0; i < renderBuffer.length; i++) {
+                    immutableCharCellOutput.innerHTML += normalizeMessage(renderBuffer[i]) + '<br />';
+                    immutableCharCellOutput.scrollTop = immutableCharCellOutput.scrollHeight;
+                }
+                break;
+            default:
+                eiteError('Unimplemented render I/O format: '+targetFormat);
+                break;
+        }
     }
 
     function urlLoadAndRun(url, callback) {
@@ -150,7 +252,23 @@ window.onload = function() {
                     parserState = 'dc';
                 }
                 break;
+            default:
+                eiteError('Unimplemented test format: '+format);
+                break;
         }
+    }
+
+    // Override error reporting method to show alert
+    function eiteError(message) {
+        console.trace();
+        eiteLog('EITE reported error!: '+normalizeMessage(message));
+        alert('EITE reported error!: '+normalizeMessage(message));
+        throw 'EITE reported error!: '+normalizeMessage(message);
+    }
+    function eiteWarn(message) {
+        console.trace();
+        eiteLog('EITE reported warning: '+normalizeMessage(message));
+        alert('EITE reported warning: '+normalizeMessage(message));
     }
 
     runEiteTest('ept', 'idiomatic-hello-world-sems');
