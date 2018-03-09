@@ -9,24 +9,25 @@ window.onload = function() {
             return message;
         }
     }
-    function eiteLog(message) {
-        eiteImplLog(message);
+    async function eiteLog(message) {
+        await eiteImplLog(message);
     }
-    function eiteWarn(message) {
-        eiteLog('EITE reported warning: '+normalizeMessage(message));
+    async function eiteWarn(message) {
+        await eiteLog('EITE reported warning: '+normalizeMessage(message));
     }
-    function eiteError(message) {
-        eiteLog('EITE reported error!: '+normalizeMessage(message));
+    async function eiteError(message) {
+        await eiteLog('EITE reported error!: '+normalizeMessage(message));
         throw 'EITE reported error!: '+normalizeMessage(message);
     }
 
     // Tools for Dc text
     {
-        function dcIsNewline(dc) {
+        async function dcIsNewline(dc) {
+            await loadCsv('../data/DcData.csv', appendLineToData, errorHappened, callback);
             return false; // TODO: Unimplemented
         }
         function dcIsPrintable(dc) {
-            return false; // TODO: Unimplemented
+            return true; // TODO: Unimplemented
         }
     }
 
@@ -36,11 +37,11 @@ window.onload = function() {
         function isBetween(n, a, b) {
             return (n - a) * (n - b) <= 0;
         }
-        function isDigit(n) {
-            return isBetween(n, 48, 57);
+        async function isDigit(n) {
+            return await isBetween(n, 48, 57);
         }
-        function isPrintable(n) {
-            return isBetween(n, 32, 126);
+        async function isPrintable(n) {
+            return await isBetween(n, 32, 126);
         }
         function isSpace(n) {
             return n == 32;
@@ -68,7 +69,7 @@ window.onload = function() {
         */
     }
 
-    function printableDcToChar(dc, characterEncoding) {
+    async function printableDcToChar(dc, characterEncoding) {
         switch (characterEncoding) {
             case 'ASCII-safe-subset':
             case 'UTF-8':
@@ -76,23 +77,23 @@ window.onload = function() {
                 return String.fromCharCode(dc); // TODO: Unimplemented
                 break;
             default:
-                eiteError('Unimplemented character encoding: '+characterEncoding);
+                await eiteError('Unimplemented character encoding: '+characterEncoding);
                 break;
         }
     }
 
-    function docParse(format, content) {
+    async function docParse(format, content) {
         switch (format) {
             case 'sems':
-                return parseSems(content);
+                return await parseSems(content);
                 break;
             default:
-                eiteError('Unimplemented document parsing format: '+format);
+                await eiteError('Unimplemented document parsing format: '+format);
                 break;
         }
     }
 
-    function parseSems(arrayBuffer) {
+    async function parseSems(arrayBuffer) {
         // Accepts an ArrayBuffer of bytes of a SEMS format document. Returns an array of Dcs.
         var dcSeq = [];
         var parserState = 'dc';
@@ -115,7 +116,7 @@ window.onload = function() {
                         }
                         break;
                     case 'comment':
-                        if (isNewline(byteArray[i])) {
+                        if (await isNewline(byteArray[i])) {
                             parserState = 'dc';
                         }
                         break;
@@ -125,18 +126,18 @@ window.onload = function() {
         return dcSeq;
     }
 
-    function createDocObj(format, content) {
+    async function createDocObj(format, content) {
         // content is an ArrayBuffer. Perhaps it could be other data types later if useful (they would be implemented as other formats in docParse).
         var doc = {};
             doc.dcState = docParse(format, content);
             doc.renderInputBuf = null;
             doc.renderOutputBuf = null;
-            doc.render = function(targetFormat, renderTraits) {
+            doc.render = async function(targetFormat, renderTraits) {
                 if ( targetFormat === undefined ) {
-                    targetFormat = getEnvironmentBestFormat();
+                    targetFormat = await getEnvironmentBestFormat();
                 }
                 if ( renderTraits === undefined ) {
-                    renderTraits = getEnvironmentRenderTraits(targetFormat);
+                    renderTraits = await getEnvironmentRenderTraits(targetFormat);
                 }
                 this.renderInputBuf = this.dcState; // copy Dcs for renderer call
                 // Build render output buffer for specified format
@@ -152,29 +153,46 @@ window.onload = function() {
                         let line=0;
                         this.renderOutputBuf[0] = '';
                         for (var i = 0; i < this.renderInputBuf.length; i++) {
-                            if (dcIsNewline(this.renderInputBuf[i])) {
+                            if (await dcIsNewline(this.renderInputBuf[i])) {
                                 line = line + 1;
                                 this.renderOutputBuf[line] = '';
                             }
-                            if (dcIsPrintable(this.renderInputBuf[i])) {
-                                this.renderOutputBuf[line] = this.renderOutputBuf[line] + printableDcToChar(this.renderInputBuf[i], renderTraits.characterEncoding);
+                            if (await dcIsPrintable(this.renderInputBuf[i])) {
+                                this.renderOutputBuf[line] = this.renderOutputBuf[line] + await printableDcToChar(this.renderInputBuf[i], renderTraits.characterEncoding);
                             }
                         }
                         break;
                     default:
-                        eiteError('Unimplemented document render target format: '+targetFormat);
+                        await eiteError('Unimplemented document render target format: '+targetFormat);
                         break;
                 }
                 // Do I/O as needed for the rendering
-                doRenderIo(targetFormat, this.renderOutputBuf);
+                await doRenderIo(targetFormat, this.renderOutputBuf);
             };
-            doc.run = function (targetFormat) {
-                this.render(targetFormat);
+            doc.run = async function (targetFormat) {
+                await this.render(targetFormat);
             };
         return doc;
     }
 
     // END PORTABLE CODE #######################################################
+
+    // Implementation-specific overrides of routines available portably
+
+    // Override error reporting method to show alert
+    async function eiteError(message) {
+        console.trace();
+        await eiteLog('EITE reported error!: '+normalizeMessage(message));
+        alert('EITE reported error!: '+normalizeMessage(message));
+        throw 'EITE reported error!: '+normalizeMessage(message);
+    }
+    async function eiteWarn(message) {
+        console.trace();
+        await eiteLog('EITE reported warning: '+normalizeMessage(message));
+        alert('EITE reported warning: '+normalizeMessage(message));
+    }
+
+    // Fully implementation-specific code
 
     function eiteImplLog(message) {
         // This function implements logging (which may differ between platforms).
@@ -185,9 +203,9 @@ window.onload = function() {
         return 'immutableCharacterCells';
     }
 
-    function getEnvironmentRenderTraits(targetFormat) {
+    async function getEnvironmentRenderTraits(targetFormat) {
         if ( targetFormat === undefined ) {
-            eiteError('getEnvironmentRenderTraits was called without any targetFormat!');
+            await eiteError('getEnvironmentRenderTraits was called without any targetFormat!');
         }
         var traits = {};
         switch (targetFormat) {
@@ -201,7 +219,7 @@ window.onload = function() {
                         traits.characterEncoding = 'UTF-8';
                         break;
                     default:
-                        eiteWarn('Unimplemented character set: '+cs+'. Falling back to ASCII-safe-subset.');
+                        await eiteWarn('Unimplemented character set: '+cs+'. Falling back to ASCII-safe-subset.');
                         traits.characterEncoding = 'ASCII-safe-subset';
                         break;
                 }
@@ -210,7 +228,26 @@ window.onload = function() {
         return traits;
     }
 
-    function doRenderIo(targetFormat, renderBuffer) {
+    function loadCsv(url, lineLoadedCallback, documentLoadedCallback, errorCallback) {
+        Papa.parse(url, {
+            download: true,
+            encoding: 'UTF-8',
+            newline: "\n",
+            delimiter: ',',
+            quoteChar: '"',
+            step: function(results, parser) {
+                lineLoadedCallback(results, parser);
+            },
+            complete: function(results, file) {
+                documentLoadedCallback(results, file);
+            },
+            error: function(results, file) {
+                errorCallback(results, file);
+            }
+        });
+    }
+
+    async function doRenderIo(targetFormat, renderBuffer) {
         switch (targetFormat) {
             case 'integerList':
             case 'immutableCharacterCells':
@@ -221,12 +258,12 @@ window.onload = function() {
                 }
                 break;
             default:
-                eiteError('Unimplemented render I/O format: '+targetFormat);
+                await eiteError('Unimplemented render I/O format: '+targetFormat);
                 break;
         }
     }
 
-    function urlLoadAndRun(url, callback) {
+    async function urlLoadForCallback(url, callback) {
         var oReq = new XMLHttpRequest();
         oReq.open("GET", url, true);
         oReq.responseType = "arraybuffer";
@@ -236,42 +273,31 @@ window.onload = function() {
         oReq.send(null);
     }
 
-    function docFromUrl(format, url, callback) {
-        urlLoadAndRun(url, function(responseArrayBuffer) { callback(createDocObj(format, responseArrayBuffer)); })
+    async function docFromUrl(format, url, callback) {
+        urlLoadForCallback(url, function(responseArrayBuffer) { callback(createDocObj(format, responseArrayBuffer)); })
     }
 
-    function runEiteTest(format, name) {
+    async function runEiteTest(format, name) {
         urlPrefix='../tests/'+name+'.'+format+'/';
         inFormatUrl='../tests/'+name+'.'+format+'/in-format';
         switch (format) {
             case 'ept': // Parser test
-                urlLoadAndRun(inFormatUrl, function(responseArrayBuffer) {})
+                await urlLoadForCallback(inFormatUrl, function(responseArrayBuffer) {})
                 break;
             case 'comment':
-                if (isNewline(byteArray[i])) {
+                if (await isNewline(byteArray[i])) {
                     parserState = 'dc';
                 }
                 break;
             default:
-                eiteError('Unimplemented test format: '+format);
+                await eiteError('Unimplemented test format: '+format);
                 break;
         }
     }
 
-    // Override error reporting method to show alert
-    function eiteError(message) {
-        console.trace();
-        eiteLog('EITE reported error!: '+normalizeMessage(message));
-        alert('EITE reported error!: '+normalizeMessage(message));
-        throw 'EITE reported error!: '+normalizeMessage(message);
-    }
-    function eiteWarn(message) {
-        console.trace();
-        eiteLog('EITE reported warning: '+normalizeMessage(message));
-        alert('EITE reported warning: '+normalizeMessage(message));
-    }
-
     runEiteTest('ept', 'idiomatic-hello-world-sems');
-    docFromUrl('sems', 'idiomatic-hello-world.sems', function (doc) { doc.run(); } );
+    (async function () {
+        await docFromUrl('sems', 'idiomatic-hello-world.sems', async function (doc) { await doc.run(); } );
+    })();
 
 };
