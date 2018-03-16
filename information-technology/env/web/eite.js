@@ -6,74 +6,76 @@
 // Things that depend on I/O and JavaScript-specific libraries (e.g. logging using JSON.stringify) should be implemented in eite-[platform].js  (for platform-specific code) or eite-nonportable.js for JavaScript-specific code.
 // Those files should use clearly defined APIs that this file's code can call, so that they can be implemented as appropriate in other implementations.
 // dcData object must be available before calling these functions.
+// TODO: Function parameters and return values should be type-checked to ensure their validity. Similarly, the string types that correspond to a set of possible values (format names, encoding names, etc.) should be checked against the set (this could also be reflected in more specific/meaningful identifier prefixes).
 
-function eiteLog(message) {
-    eiteImplLog(message);
+function eiteLog(strMessage) {
+    implEiteLog(strMessage);
 }
-function eiteWarn(message) {
-    eiteLog('EITE reported warning: '+normalizeMessage(message));
+function eiteWarn(strMessage) {
+    // TODO: implNormalizeMessage isn't relevant if callers of the logging functions obey the string constraint on the parameter.
+    eiteLog('EITE reported warning: '+implNormalizeMessage(strMessage));
 }
-function eiteError(message) {
-    eiteLog('EITE reported error!: '+normalizeMessage(message));
-    throw 'EITE reported error!: '+normalizeMessage(message);
+function eiteError(strMessage) {
+    eiteLog('EITE reported error!: '+implNormalizeMessage(strMessage));
+    throw 'EITE reported error!: '+implNormalizeMessage(strMessage);
 }
 
 // Tools for Dc text
 {
-    function dcIdToIdx(dc) {
+    function intDcIdToCsvRow(dc) {
         return parseInt(dc) + 1;
     }
-    function dcDataLookupById(dataset, dc, fieldNumber) {
-        return dcData[dataset][dcIdToIdx(dc)].data[0][fieldNumber];
+    function strDcDataLookupById(strDataset, dc, intFieldNumber) {
+        return dcData[strDataset][intDcIdToCsvRow(dc)].data[0][intFieldNumber];
     }
-    function dcDataLookupByValue(dataset, filterField, filterValue, desiredField) {
-        let length = dcData[dataset].length;
+    function strDcDataLookupByValue(strDataset, filterField, filterValue, desiredField) {
+        let intLength = dcData[strDataset].length;
         // start at 1 to skip header row
-        for(let index = 1; index < length; index++) {
-            if(dcData[dataset][index].data[0][filterField] === filterValue) {
-                return dcData[dataset][index].data[0][desiredField];
+        for (let intRow = 1; intRow < intLength; intRow++) {
+            if(dcData[strDataset][intRow].data[0][filterField] === filterValue) {
+                return dcData[strDataset][intRow].data[0][desiredField];
             }
         }
     }
-    function dcGetField(dc, fieldNumber) {
-        return dcDataLookupById("DcData", dc, fieldNumber);
+    function strDcGetField(dc, intFieldNumber) {
+        return strDcDataLookupById("DcData", dc, intFieldNumber);
     }
-    function dcGetName(dc) {
-        return dcGetField(dc, 1);
+    function strDcGetName(dc) {
+        return strDcGetField(dc, 1);
     }
-    function dcGetCombiningClass(dc) {
-        return dcGetField(dc, 2);
+    function strDcGetCombiningClass(dc) {
+        return strDcGetField(dc, 2);
     }
-    function dcGetBidiClass(dc) {
-        return dcGetField(dc, 3);
+    function strDcGetBidiClass(dc) {
+        return strDcGetField(dc, 3);
     }
-    function dcGetCasing(dc) {
-        return dcGetField(dc, 4);
+    function strDcGetCasing(dc) {
+        return strDcGetField(dc, 4);
     }
-    function dcGetType(dc) {
-        return dcGetField(dc, 5);
+    function strDcGetType(dc) {
+        return strDcGetField(dc, 5);
     }
-    function dcGetScript(dc) {
-        return dcGetField(dc, 6);
+    function strDcGetScript(dc) {
+        return strDcGetField(dc, 6);
     }
-    function dcGetComplexTraits(dc) {
-        return dcGetField(dc, 7);
+    function strDcGetComplexTraits(dc) {
+        return strDcGetField(dc, 7);
     }
-    function dcGetDescription(dc) {
-        return dcGetField(dc, 8);
+    function strDcGetDescription(dc) {
+        return strDcGetField(dc, 8);
     }
 
-    function dcIsNewline(dc) {
-        if(dcGetBidiClass(dc) === 'B') {
+    function boolDcIsNewline(dc) {
+        if(strDcGetBidiClass(dc) === 'B') {
             return true;
         }
         return false;
     }
 
-    function dcIsPrintable(dc) {
-        type=dcGetType(dc);
-        generalType=type[0];
-        switch(type) {
+    function boolDcIsPrintable(dc) {
+        strType=strDcGetType(dc);
+        strGeneralType=strType[0];
+        switch(strType) {
             case 'Zl':
             case 'Zp':
                 return false;
@@ -81,7 +83,7 @@ function eiteError(message) {
             default:
                 break;
         }
-        switch(generalType) {
+        switch(strGeneralType) {
             case '!':
             case 'C':
                 return false;
@@ -95,21 +97,21 @@ function eiteError(message) {
 
 // Tools for ASCII text
 {
-    // Checks whether n is within the range a and b, including endpoints
-    function isBetween(n, a, b) {
-        return (n - a) * (n - b) <= 0;
+    // Checks whether N is within the range A and B, including endpoints
+    function boolIsBetween(intN, intA, intB) {
+        return (intN - intA) * (intN - intB) <= 0;
     }
-    function isDigit(n) {
-        return isBetween(n, 48, 57);
+    function boolIsDigit(intN) {
+        return boolIsBetween(intN, 48, 57);
     }
-    function isPrintable(n) {
-        return isBetween(n, 32, 126);
+    function boolIsPrintable(intN) {
+        return boolIsBetween(intN, 32, 126);
     }
-    function isSpace(n) {
-        return n == 32;
+    function boolIsSpace(intN) {
+        return intN == 32;
     }
-    function isNewline(n) {
-        return (n == 10) || (n == 13);
+    function boolIsNewline(intN) {
+        return (intN == 10) || (intN == 13);
     }
     /*
     0  NUL    16 DLE    32 SP   48 0    64 @    80 P    96  `    112 p
@@ -131,108 +133,90 @@ function eiteError(message) {
     */
 }
 
-function printableDcToChar(dc, characterEncoding) {
-    switch (characterEncoding) {
+function strPrintableDcToChar(dc, strCharacterEncoding) {
+    switch (strCharacterEncoding) {
         case 'ASCII-safe-subset':
         case 'UTF-8':
-            return String.fromCharCode('0x'+dcDataLookupByValue("mappings/from/unicode", 1, dc, 0));
+            return String.fromCharCode('0x'+strDcDataLookupByValue("mappings/from/unicode", 1, dc, 0));
             break;
         default:
-            eiteError('Unimplemented character encoding: '+characterEncoding);
+            eiteError('Unimplemented character encoding: '+strCharacterEncoding);
             break;
     }
 }
 
-function docParse(format, content) {
-    switch (format) {
+function dcarrParseDocument(strFormat, bytearrayContent) {
+    switch (strFormat) {
         case 'sems':
-            return parseSems(content);
+            return dcarrParseSems(bytearrayContent);
             break;
         default:
-            eiteError('Unimplemented document parsing format: '+format);
+            eiteError('Unimplemented document parsing format: '+strFormat);
             break;
     }
 }
 
-function parseSems(arrayBuffer) {
-    // Accepts an ArrayBuffer of bytes of a SEMS format document. Returns an array of Dcs.
-    var dcSeq = [];
-    var parserState = 'dc';
-    var currentDc = '';
-    if (arrayBuffer) {
-        var byteArray = new Uint8Array(arrayBuffer);
-        for (var i = 0; i < byteArray.byteLength; i++) {
-            // do something with each byte in the array. byteArray[i] holds the decimal value of the given byte.
-            switch (parserState) {
-                case 'dc':
-                    if (isDigit(byteArray[i])) {
-                        currentDc = currentDc + String.fromCharCode(byteArray[i]);
-                    }
-                    if (isSpace(byteArray[i])) {
-                        dcSeq.push(currentDc);
-                        currentDc = '';
-                    }
-                    if (byteArray[i] == 35) { // pound sign: start comment
-                        parserState = 'comment';
-                    }
-                    break;
-                case 'comment':
-                    if (isNewline(byteArray[i])) {
-                        parserState = 'dc';
-                    }
-                    break;
-            }
+function dcarrParseSems(bytearrayContent) {
+    // Accepts an array of bytes of a SEMS format document. Returns an array of Dcs.
+    var dcarrParseResults = [];
+    var strParserState = 'dc';
+    var strCurrentDc = '';
+    for (var intByteOffset = 0; intByteOffset < bytearrayContent.byteLength; intByteOffset++) {
+        // do something with each byte in the array. bytearrayContent[intByteOffset] holds the decimal value of the given byte.
+        switch (strParserState) {
+            case 'dc':
+                if (boolIsDigit(bytearrayContent[intByteOffset])) {
+                    strCurrentDc = strCurrentDc + String.fromCharCode(bytearrayContent[intByteOffset]);
+                }
+                if (boolIsSpace(bytearrayContent[intByteOffset])) {
+                    dcarrParseResults.push(strCurrentDc);
+                    strCurrentDc = '';
+                }
+                if (bytearrayContent[intByteOffset] == 35) { // pound sign: start comment
+                    strParserState = 'comment';
+                }
+                break;
+            case 'comment':
+                if (boolIsNewline(bytearrayContent[intByteOffset])) {
+                    strParserState = 'dc';
+                }
+                break;
         }
     }
-    return dcSeq;
+    return dcarrParseResults;
 }
 
-function createDocObj(format, content) {
-    // content is an ArrayBuffer. Perhaps it could be other data types later if useful (they would be implemented as other formats in docParse).
-    var doc = {};
-        doc.dcState = docParse(format, content);
-        doc.renderInputBuf = null;
-        doc.renderOutputBuf = null;
-        doc.render = function(targetFormat, renderTraits) {
-            if ( targetFormat === undefined ) {
-                targetFormat = getEnvironmentBestFormat();
+function dcarrConvertDocument(dcarrInput, strTargetFormat, renderTraits) {
+    dcarrOutput=[]
+    // Build render output buffer for specified format
+    switch (strTargetFormat) {
+        case 'integerList':
+            for (var intInputIndex = 0; intInputIndex < dcarrInput.length; intInputIndex++) {
+                dcarrOutput[intInputIndex] = dcarrInput[intInputIndex];
             }
-            if ( renderTraits === undefined ) {
-                renderTraits = getEnvironmentRenderTraits(targetFormat);
+            break;
+        case 'immutableCharacterCells':
+            let intLine=0;
+            dcarrOutput[0] = '';
+            for (var intInputIndex = 0; intInputIndex < dcarrInput.length; intInputIndex++) {
+                if (boolDcIsNewline(dcarrInput[intInputIndex])) {
+                    intLine = intLine + 1;
+                    dcarrOutput[intLine] = '';
+                }
+                if (boolDcIsPrintable(dcarrInput[intInputIndex])) {
+                    dcarrOutput[intLine] = dcarrOutput[intLine] + strPrintableDcToChar(dcarrInput[intInputIndex], renderTraits.characterEncoding);
+                }
             }
-            this.renderInputBuf = this.dcState; // copy Dcs for renderer call
-            // Build render output buffer for specified format
-            switch (targetFormat) {
-                case 'integerList':
-                    this.renderOutputBuf = [];
-                    for (var i = 0; i < this.renderInputBuf.length; i++) {
-                        this.renderOutputBuf[i] = this.renderInputBuf[i];
-                    }
-                    break;
-                case 'immutableCharacterCells':
-                    this.renderOutputBuf = [];
-                    let line=0;
-                    this.renderOutputBuf[0] = '';
-                    for (var i = 0; i < this.renderInputBuf.length; i++) {
-                        if (dcIsNewline(this.renderInputBuf[i])) {
-                            line = line + 1;
-                            this.renderOutputBuf[line] = '';
-                        }
-                        if (dcIsPrintable(this.renderInputBuf[i])) {
-                            this.renderOutputBuf[line] = this.renderOutputBuf[line] + printableDcToChar(this.renderInputBuf[i], renderTraits.characterEncoding);
-                        }
-                    }
-                    break;
-                default:
-                    eiteError('Unimplemented document render target format: '+targetFormat);
-                    break;
-            }
-            // Do I/O as needed for the rendering
-            doRenderIo(targetFormat, this.renderOutputBuf);
-        };
-        doc.run = function (targetFormat) {
-            this.render(targetFormat);
-        };
-    return doc;
+            break;
+        default:
+            eiteError('Unimplemented document render target format: '+strTargetFormat);
+            break;
+    }
+    return dcarrOutput;
+}
+
+function runDocument(dcarrContent) {
+    strTargetFormat = implGetEnvironmentBestFormat();
+    implDoRenderIo(dcarrConvertDocument(dcarrContent, strTargetFormat, implGetEnvironmentRenderTraits(strTargetFormat)), strTargetFormat);
 }
 // @license-end

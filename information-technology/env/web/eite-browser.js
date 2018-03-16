@@ -5,32 +5,32 @@
 // Platform-specific overrides of routines available portably
 
 // Override error reporting method to show alert
-function eiteError(message) {
+function voidEiteError(strMessage) {
     console.trace();
-    eiteLog('EITE reported error!: '+normalizeMessage(message));
-    alert('EITE reported error!: '+normalizeMessage(message));
-    throw 'EITE reported error!: '+normalizeMessage(message);
+    eiteLog('EITE reported error!: '+implNormalizeMessage(strMessage));
+    alert('EITE reported error!: '+implNormalizeMessage(strMessage));
+    throw 'EITE reported error!: '+implNormalizeMessage(strMessage);
 }
-function eiteWarn(message) {
+function eiteWarn(strMessage) {
     console.trace();
-    eiteLog('EITE reported warning: '+normalizeMessage(message));
-    alert('EITE reported warning: '+normalizeMessage(message));
+    eiteLog('EITE reported warning: '+implNormalizeMessage(strMessage));
+    alert('EITE reported warning: '+implNormalizeMessage(strMessage));
 }
 
 // Fully platform-specific code
 
-function eiteImplLog(message) {
+function implEiteLog(strMessage) {
     // This function implements logging (which may differ between platforms).
-    console.log(normalizeMessage(message));
+    console.log(implNormalizeMessage(strMessage));
 };
 
-function getEnvironmentBestFormat() {
+function implGetEnvironmentBestFormat() {
     return 'immutableCharacterCells';
 }
 
-function getEnvironmentRenderTraits(targetFormat) {
+function implGetEnvironmentRenderTraits(targetFormat) {
     if ( targetFormat === undefined ) {
-        eiteError('getEnvironmentRenderTraits was called without any targetFormat!');
+        eiteError('implGetEnvironmentRenderTraits was called without any targetFormat!');
     }
     var traits = {};
     switch (targetFormat) {
@@ -72,13 +72,13 @@ function loadCsv(url, lineLoadedCallback, documentLoadedCallback, errorCallback)
     })
 }
 
-function doRenderIo(targetFormat, renderBuffer) {
+function implDoRenderIo(renderBuffer, targetFormat) {
     switch (targetFormat) {
         case 'integerList':
         case 'immutableCharacterCells':
             let immutableCharCellOutput = document.getElementById('log');
             for (var i = 0; i < renderBuffer.length; i++) {
-                immutableCharCellOutput.innerHTML += normalizeMessage(renderBuffer[i]) + '<br />';
+                immutableCharCellOutput.innerHTML += implNormalizeMessage(renderBuffer[i]) + '<br />';
                 immutableCharCellOutput.scrollTop = immutableCharCellOutput.scrollHeight;
             }
             break;
@@ -93,29 +93,25 @@ function urlLoadForCallback(url, callback) {
     oReq.open("GET", url, true);
     oReq.responseType = "arraybuffer";
     oReq.onload = function(oEvent) {
-        callback(oReq.response); // Note: not oReq.responseText
+        callback(new Uint8Array(oReq.response)); // Note: not oReq.responseText
     };
     oReq.send(null);
 }
 
-function docFromUrl(format, url, callback) {
-    urlLoadForCallback(url, function(responseArrayBuffer) { callback(createDocObj(format, responseArrayBuffer)); })
+function operateOnDocFromUrl(strFormat, strUrl, callback) {
+    urlLoadForCallback(strUrl, function(bytearrayContent) { callback(dcarrParseDocument(strFormat, bytearrayContent)); })
 }
 
-function runEiteTest(format, name) {
-    urlPrefix='../tests/'+name+'.'+format+'/';
-    inFormatUrl='../tests/'+name+'.'+format+'/in-format';
-    switch (format) {
+function runEiteTest(strTestFormat, strTestName) {
+    // TODO: Unfinished implementation
+    strTestUrlPrefix='../tests/'+strTestName+'.'+strTestFormat+'/';
+    strTestInputFormatUrl='../tests/'+strTestName+'.'+strTestFormat+'/in-format';
+    switch (strTestFormat) {
         case 'ept': // Parser test
-            urlLoadForCallback(inFormatUrl, function(responseArrayBuffer) {})
-            break;
-        case 'comment':
-            if (isNewline(byteArray[i])) {
-                parserState = 'dc';
-            }
+            urlLoadForCallback(strTestInputFormatUrl, function(bytearrayContent) {})
             break;
         default:
-            eiteError('Unimplemented test format: '+format);
+            eiteError('Unimplemented test format: '+strTestFormat);
             break;
     }
 }
