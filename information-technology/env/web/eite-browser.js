@@ -19,6 +19,16 @@ function eiteWarn(strMessage) {
 
 // Fully platform-specific code
 
+function assertIsString(str) {
+    if (typeof str !== "string") {
+        eiteError("Assertion failed: "+str+" is not a string.")
+    }
+}
+
+function die(strMessage) {
+    throw strMessage;
+}
+
 function implEiteLog(strMessage) {
     // This function implements logging (which may differ between platforms).
     console.log(implNormalizeMessage(strMessage));
@@ -77,7 +87,7 @@ function implDoRenderIo(renderBuffer, targetFormat) {
         case 'integerList':
         case 'immutableCharacterCells':
             let immutableCharCellOutput = document.getElementById('log');
-            for (var i = 0; i < renderBuffer.length; i++) {
+            for (let i = 0; i < renderBuffer.length; i++) {
                 immutableCharCellOutput.innerHTML += implNormalizeMessage(renderBuffer[i]) + '<br />';
                 immutableCharCellOutput.scrollTop = immutableCharCellOutput.scrollHeight;
             }
@@ -100,6 +110,10 @@ function urlLoadForCallback(url, callback) {
 
 function operateOnDocFromUrl(strFormat, strUrl, callback) {
     urlLoadForCallback(strUrl, function(bytearrayContent) { callback(dcarrParseDocument(strFormat, bytearrayContent)); })
+}
+
+function implStrFromUnicodeHex(strCharacter) {
+    return String.fromCharCode('0x'+strCharacter);
 }
 
 function runEiteTest(strTestFormat, strTestName) {
