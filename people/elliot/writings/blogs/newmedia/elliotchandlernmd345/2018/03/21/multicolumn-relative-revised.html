@@ -5,9 +5,8 @@
         elem.style.display = 'none';
     }
     function toggle(id) {
-        document.getElementsByClassName('toggleset').forEach(elem => hide(elem));
-        let elem = document.getElementById(id);
-        elem.style.display = 'block';
+        [].forEach.call(document.getElementsByClassName('toggleset'), elem => hide(elem));
+        document.getElementById(id).style.display = 'block';
     }
     </script>
     <style>
