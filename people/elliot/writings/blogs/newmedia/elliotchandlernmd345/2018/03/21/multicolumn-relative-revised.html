@@ -1,13 +1,13 @@
 <html>
 <head>
     <script>
+    function hide(elem) {
+        elem.style.display = 'none';
+    }
     function toggle(id) {
+        document.getElementsByClassName('toggleset').forEach(elem => hide(elem));
         let elem = document.getElementById(id);
-        if (elem.style.display === 'none'){
-            elem.style.display = 'block';
-        } else {
-            elem.style.display = 'none';
-        };
+        elem.style.display = 'block';
     }
     </script>
     <style>
