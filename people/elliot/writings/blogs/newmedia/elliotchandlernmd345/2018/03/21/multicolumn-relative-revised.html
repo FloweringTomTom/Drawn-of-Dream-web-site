@@ -1,8 +1,13 @@
 <html>
 <head>
     <script>
-    function toggle(div) {
-        div.style.display='none';
+    function toggle(id) {
+        let elem = document.getElementById(id);
+        if (elem.style.display === 'none'){
+            elem.style.display = 'block';
+        } else {
+            elem.style.display = 'none';
+        };
     }
     </script>
     <style>
