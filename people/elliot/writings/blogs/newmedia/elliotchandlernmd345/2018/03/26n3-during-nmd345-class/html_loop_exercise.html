@@ -31,7 +31,7 @@
 				[].forEach.call(document.getElementsByClassName(name), (elem) => elem.style.color='white');
 			}
 			function hideAll() {
-				[].forEach(document.getElementById('message-box').getElementsByTagName('div')).style.display='none';
+				[].forEach.call(document.getElementById('message-box').getElementsByTagName('div'), (elem) => elem.style.display='none');
 			}
 		</script>
 	</head>
