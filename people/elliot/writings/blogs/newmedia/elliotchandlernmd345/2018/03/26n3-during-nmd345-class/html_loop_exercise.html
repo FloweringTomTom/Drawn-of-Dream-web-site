@@ -31,20 +31,15 @@
 				[].forEach(document.getElementsByClassName(name)).style.display='none';
 			}
 			function hideAll() {
-				switch (na) {
-					case 'jamie':
-						break;
-					default:
-						[].forEach(document.getElementById('message-box').getElementsByTagName('div')).style.display='none';
-				}
+				[].forEach(document.getElementById('message-box').getElementsByTagName('div')).style.display='none';
 			}
 		</script>
 	</head>
 	<body>
 		<h2>Welcome to Friendbook!</h2>
 		<div id="controls">
-			<p><a href="#" onclick="hide('jamie')">Mute Jamie</a></p>
-			<p><a href="#" onclick="hide()">Hide all messages</a></p>
+			<p><a href="#" onclick="hidePerson('jamie')">Mute Jamie</a></p>
+			<p><a href="#" onclick="hideAll()">Hide all messages</a></p>
 		</div>
 		<div id="message-box">
 			<div class="robin">
