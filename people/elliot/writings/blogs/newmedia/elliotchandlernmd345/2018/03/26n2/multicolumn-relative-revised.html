@@ -57,7 +57,7 @@
         }
         ul {
             background-color: red;
-            height: 1rem;
+            height: 2rem;
         }
         ul, li {
             z-index: 1000;
@@ -69,16 +69,25 @@
             display: block;
         }
         li:hover {
-            background-color: rgba(255,255,255,0.3);
+            background-color: rgba(255,255,255,0.9);
         }
         li {
             list-style: none;
             position: relative;
             float: left;
+            padding-left:1rem;
+            padding-top: 0.5rem;
+        }
+        ul ul {
+            background-color: rgba(255,0,255,0.5);
+            position: absolute;
+            padding-left: 1rem;
         }
         li li {
+            background-color: rgba(255,255,50,0.5);
             position: relative;
             clear:both;
+            width:100%;
         }
     </style>
 </head>
@@ -95,6 +104,7 @@
         <li>Food
             <ul>
                 <li>Lava</li>
+                <li>Larva</li>
                 <li>Ears</li>
                 <li>Marijuana</li>
                 <li>Gorp
