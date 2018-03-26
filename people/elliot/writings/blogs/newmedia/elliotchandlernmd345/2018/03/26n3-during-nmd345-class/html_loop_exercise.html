@@ -28,9 +28,7 @@
 		</style>
 		<script>
 			function hidePerson(name) {
-				let elems=;
-				console.log(elems);
-				[].forEach((elem) => {elem.style.color='white';}, document.getElementsByClassName(name));
+				[].forEach.call(document.getElementsByClassName(name), (elem) => elem.style.color='white');
 			}
 			function hideAll() {
 				[].forEach(document.getElementById('message-box').getElementsByTagName('div')).style.display='none';
