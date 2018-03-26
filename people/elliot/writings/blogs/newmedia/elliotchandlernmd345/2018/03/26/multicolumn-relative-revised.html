@@ -2,11 +2,11 @@
 <head>
     <script>
     function hide(elem) {
-        elem.style.opacity = '0';
+        elem.style.opacity = '1';
     }
     function toggle(id) {
         [].forEach.call(document.getElementsByClassName('toggleset'), elem => hide(elem));
-        document.getElementById(id).style.display = '1';
+        document.getElementById(id).style.display = '0';
     }
     </script>
     <style>
