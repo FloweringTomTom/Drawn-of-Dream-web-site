@@ -26,12 +26,23 @@
 				background-color: khaki ;
 			}
 		</style>
+		<script>
+			hide(type) {
+				switch (type) {
+					case 'jamie':
+						[].forEach(getElementsByClassName('jamie')).style.display='none';
+						break;
+					default:
+						[].forEach(getElementsByClassName('jamie')).style.display='none';
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<h2>Welcome to Friendbook!</h2>
 		<div id="controls">
-			<p><a href="#" onclick="// Call first JavaScript function here">Mute Jamie</a></p>
-			<p><a href="#" onclick="// Call second JavaScript function here">Hide all messages</a></p>
+			<p><a href="#" onclick="hide('jamie')">Mute Jamie</a></p>
+			<p><a href="#" onclick="hide()">Hide all messages</a></p>
 		</div>
 		<div id="message-box">
 			<div class="robin">
