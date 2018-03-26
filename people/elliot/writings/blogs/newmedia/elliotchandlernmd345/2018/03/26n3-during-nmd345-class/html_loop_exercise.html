@@ -27,13 +27,13 @@
 			}
 		</style>
 		<script>
-			hide(type) {
+			function hide(type) {
 				switch (type) {
 					case 'jamie':
-						[].forEach(getElementsByClassName('jamie')).style.display='none';
+						[].forEach(document.getElementsByClassName('jamie')).style.display='none';
 						break;
 					default:
-						[].forEach(getElementsByClassName('jamie')).style.display='none';
+						[].forEach(document.getElementById('message-box').getElementsByTagName('div')).style.display='none';
 				}
 			}
 		</script>
