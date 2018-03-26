@@ -55,16 +55,30 @@
             margin-bottom: 1rem;
             float: left;
         }
+        ul {
+            background-color: red;
+            height: 1rem;
+        }
+        ul, li {
+            z-index: 1000;
+        }
         li > ul > li{
             display:none;
         }
         li:hover > ul > li {
             display: block;
         }
+        li:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
         li {
             list-style: none;
             position: relative;
             float: left;
+        }
+        li li {
+            position: relative;
+            clear:both;
         }
     </style>
 </head>
