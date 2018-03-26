@@ -2,11 +2,11 @@
 <head>
     <script>
     function hide(elem) {
-        elem.style.display = 'none';
+        elem.style.opacity = '0';
     }
     function toggle(id) {
         [].forEach.call(document.getElementsByClassName('toggleset'), elem => hide(elem));
-        document.getElementById(id).style.display = 'block';
+        document.getElementById(id).style.display = '1';
     }
     </script>
     <style>
@@ -17,6 +17,7 @@
             position: relative;
             text-indent: 1.25rem;
             text-align: justify;
+            transition: opacity 2s ease-in-out;
         }
         #header {
             background-color: #a3b789;
