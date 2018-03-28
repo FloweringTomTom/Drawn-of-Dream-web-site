@@ -10,7 +10,7 @@
     }
     function contentFromUrl(url) {
         r = new XMLHttpRequest();
-        r.onreadystatechange = function {
+        r.onreadystatechange = () => {
             if (r.status === 200) {
                 this.innerHtml=r.responseText;
             }
