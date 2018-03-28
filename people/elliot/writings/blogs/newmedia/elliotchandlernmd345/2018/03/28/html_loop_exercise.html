@@ -10,9 +10,9 @@
     }
     function contentFromUrl(url) {
         r = new XMLHttpRequest();
-        r.onreadystatechange = () => {
+        r.onreadystatechange = function() {
             if (r.status === 200) {
-                this.innerHtml=r.responseText;
+                this.innerHTML=r.responseText;
             }
         };
         r.open('GET', url);
@@ -112,9 +112,9 @@
     <ul>
         <li><span style="color:blue">Menu menu menu menu</span>
             <ul>
-                <li onClick="toggle('a'); contentFromUrl('a.txt');"><span style="color:blue">Menuitem menuitem!</span></li>
-                <li onClick="toggle('b'); contentFromUrl('b.txt');"><span style="color:blue">Mneu Etem Merut Itom</span></li>
-                <li onClick="toggle('c'); contentFromUrl('c.txt');"><span style="color:blue">Britain Eaton Beirut Atom</span></li>
+                <li onClick="toggle('a'); contentFromUrl('a', 'a.txt');"><span style="color:blue">Menuitem menuitem!</span></li>
+                <li onClick="toggle('b'); contentFromUrl('b', 'b.txt');"><span style="color:blue">Mneu Etem Merut Itom</span></li>
+                <li onClick="toggle('c'); contentFromUrl('c', 'c.txt');"><span style="color:blue">Britain Eaton Beirut Atom</span></li>
                 <li>Menuuuuuuuuuuuuuuuuuuuuu</li>
             </ul>
         </li>
