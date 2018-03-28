@@ -9,15 +9,10 @@
         document.getElementById(id).style.opacity = '1';
     }
     function contentFromUrl(id, url) {
-    httpRequest = new XMLHttpRequest();
-
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
-    }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'test.html');
-    httpRequest.send();
+        r = new XMLHttpRequest();
+        httpRequest.onreadystatechange = alertContents;
+        httpRequest.open('GET', 'test.html');
+        httpRequest.send();
     }
     </script>
     <style>
