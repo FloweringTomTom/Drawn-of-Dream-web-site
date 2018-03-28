@@ -8,6 +8,9 @@
         [].forEach.call(document.getElementsByClassName('toggleset'), elem => hide(elem));
         document.getElementById(id).style.opacity = '1';
     }
+    function contentFromUrl(id, url) {
+        
+    }
     </script>
     <style>
         body {
@@ -89,13 +92,13 @@
             clear:both;
             width:100%;
         }
-		.toggleset {
-			top: 4rem;
-			left:2rem;
-			right:2rem;
-			bottom:2rem;
-			position:absolute;
-		}
+        .toggleset {
+            top: 4rem;
+            left:2rem;
+            right:2rem;
+            bottom:2rem;
+            position:absolute;
+        }
     </style>
 </head>
 <body onLoad="toggle('a');">
