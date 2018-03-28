@@ -8,11 +8,11 @@
         [].forEach.call(document.getElementsByClassName('toggleset'), elem => hide(elem));
         document.getElementById(id).style.opacity = '1';
     }
-    function contentFromUrl(url) {
+    function contentFromUrl(id, url) {
         r = new XMLHttpRequest();
         r.onreadystatechange = function() {
             if (r.status === 200) {
-                this.innerHTML=r.responseText;
+                document.getElementById(id).innerHTML=r.responseText;
             }
         };
         r.open('GET', url);
