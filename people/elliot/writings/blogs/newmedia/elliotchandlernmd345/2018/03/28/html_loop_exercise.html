@@ -14,7 +14,7 @@
             if (r.status === 200) {
                 this.innerHtml=r.responseText;
             }
-        }();
+        };
         r.open('GET', url);
         r.send();
     }
