@@ -1,6 +1,15 @@
 <html>
 <head>
     <script>
+    RandomDiv = function() {
+        this.div = document.createElement('div');
+        this.div.style.top = parseInt(100 * Math.random()) + '%';
+        this.div.style.left = parseInt(100 * Math.random()) + '%';
+        this.div.style.width = parseInt(100 * Math.random()) + '%';
+        this.div.style.height = parseInt(100 * Math.random()) + '%';
+        this.div.style.backgroundColor = 'hsla('+parseInt(360 * Math.random())+','+parseInt(100 * Math.random())+'%,'+parseInt(100 * Math.random())+'%,'+Math.random()+')';
+        document.body.appendChild(this.div);
+    }
     function hide(elem) {
         elem.style.opacity = '0';
     }
