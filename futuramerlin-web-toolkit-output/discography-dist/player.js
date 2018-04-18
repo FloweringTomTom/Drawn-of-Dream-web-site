@@ -107,7 +107,12 @@ function updateCurrentTime() {
     audioScrubber.value=parseInt(((currTime / duration) * 100), 10);
     let timelineWidth=audioScrubber.offsetWidth;
     audioPlayhead.style.left=((timelineWidth * progressPercentage)+convertRemToPixels(4))+'px';
-    audioCurrentTime.style.right=((timelineWidth * (1 - progressPercentage))-convertRemToPixels(10))+'px';
+    let desiredRightPosition=((timelineWidth * (1 - progressPercentage))-convertRemToPixels(10));
+    let maximumRightPosition=(timelineWidth - convertRemToPixels(10));
+    if(desiredRightPosition>maximumRightPosition) {
+        desiredRightPosition=maximumRightPosition;
+    }
+    audioCurrentTime.style.right=desiredRightPosition+'px';
     audioCurrentTime.style.display='block';
 
     if (isNaN(duration)){
@@ -240,5 +245,5 @@ for(let i=1;i<trackRows.length;i++) {
     trackPlayButton.className='playButton';
     trackPlayButton.innerHTML="▶";
     trackPlayButton.onclick=function(){playTrackFromTrackButton(this);};
-    trackAudioCell.appendChild(trackPlayButton);
+    trackAudioCell.insertBefore(trackPlayButton, trackAudioCell.firstChild);
 }
