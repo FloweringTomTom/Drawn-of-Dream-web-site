@@ -24,16 +24,25 @@ audioContainer.className="audioContainer";
 audioContainer.appendChild(audioTag);
 
 let audioMainPlayButton=document.createElement('button');
+audioMainPlayButton.className="audioMainPlayButton";
 let audioTitle=document.createElement('div');
+audioTitle.className="audioTitle";
 let audioDuration=document.createElement('div');
+audioDuration.className="audioDuration";
 let audioPlayhead=document.createElement('div');
+audioPlayhead.className="audioPlayhead";
 let audioCurrentTime=document.createElement('div');
+audioCurrentTime.className="audioCurrentTime";
 let audioWaveform=document.createElement('img');
+audioWaveform.className="audioWaveform";
 let audioScrubber=document.createElement('input');
+audioScrubber.className="audioScrubber";
 let audioVolume=document.createElement('input');
+audioVolume.className="audioVolume";
 audioScrubber.type='range';
 audioVolume.type='range';
 let audioPlayNextButton=document.createElement('button');
+audioPlayNextButton.className="audioPlayNextButton";
 
 audioScrubber.onchange=seekInAudio;
 
@@ -54,12 +63,12 @@ function updateVolume() {
 audioMainPlayButton.innerHTML="▶";
 audioPlayNextButton.innerHTML="⏭";
 
-audioContainer.appendChild(audioMainPlayButton);
-audioContainer.appendChild(audioTitle);
-audioContainer.appendChild(audioDuration);
-audioContainer.appendChild(audioPlayhead);
-audioContainer.appendChild(audioCurrentTime);
 audioContainer.appendChild(audioWaveform);
+audioContainer.appendChild(audioPlayhead);
+audioContainer.appendChild(audioTitle);
+audioContainer.appendChild(audioMainPlayButton);
+audioContainer.appendChild(audioDuration);
+audioContainer.appendChild(audioCurrentTime);
 audioContainer.appendChild(audioScrubber);
 audioContainer.appendChild(audioVolume);
 audioContainer.appendChild(audioPlayNextButton);
@@ -81,7 +90,10 @@ audioVolume.style.transform='rotate(270deg)';
 document.body.appendChild(audioContainer);
 let trackRows=document.getElementsByTagName('tr');
 loadTrack(1);
-
+function convertRemToPixels(rem) {    
+    /* from https://stackoverflow.com/questions/36532307/rem-px-in-javascript */
+    return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
 function updateCurrentTime() {
     /* based on https://stackoverflow.com/questions/4993097/html5-display-audio-currenttime */
     let currTime = Math.floor(audioTag.currentTime).toString(); 
@@ -91,7 +103,11 @@ function updateCurrentTime() {
 
     audioCurrentTime.innerHTML = formatSecondsAsTime(currTime) + '; ' + '-' + formatSecondsAsTime(remaining) + ' (' + percentage.toFixed(3) + '%)';
 
+    let progressPercentage=(currTime / duration);
     audioScrubber.value=parseInt(((currTime / duration) * 100), 10);
+    let timelineWidth=audioScrubber.offsetWidth;
+    audioPlayhead.left=(timelineWidth * progressPercentage)+convertRemToPixels(4);
+    audioCurrentTime.right= (timelineWidth * (1 - progressPercentage))-convertRemToPixels(10);
 
     if (isNaN(duration)){
         audioDuration.innerHTML = '??:??';
@@ -106,7 +122,12 @@ audioTag.addEventListener("durationchange", updateCurrentTime);
 
 function loadTrack(trackNumber) {
     currentTrack=trackNumber;
-    audioWaveform.src=trackNumber+'w.png'
+    // based on https://stackoverflow.com/questions/16611497/how-can-i-get-the-name-of-an-html-page-in-javascript
+    let path = window.location.pathname;
+    let file = path.split("/").pop();
+    let name = file.split(".").shift();
+
+    audioWaveform.src=name+'/'+trackNumber+'w.png'
     let trackRows=document.getElementsByTagName('tr');
     let trackRowToPlay=trackRows[trackNumber];
     let audioTag=document.getElementsByClassName('audioContainer')[0].getElementsByTagName('audio')[0];
