@@ -1,8 +1,836 @@
-<p class="hatnote-emphasis">Futuramerlin.com is a temporary Web site for the Ember project.</p>
-<p>"Ember" is the current working name for a project to develop and facilitate collaboration on a specification, a computing environment, a library, and a model community, to serve as resources and infrastructure for innovative communities.</p>
-<p>The primary components comprising the project are currently unfinished, but a variety of software maintained to facilitate the development of the project is available.</p>
+<h1>Music</h1>
 
-<ul>
-	<li><a href="ancillary/ready-to-use.htm">Ancillary software</a> (ready to use)</li>
-	<li><a href="components.htm">Primary project components</a> (work in progress)</li>
-</ul>
+<style type="text/css">
+    a#tl {
+        color: white !important;
+        z-index: 110 !important
+    }
+
+    div.floattb {
+        z-index: 110 !important;
+        color: white !important
+    }
+
+    div {
+        word-wrap: break-word;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left
+    }
+
+    table,
+    tbody,
+    tr,
+    td {
+        table-layout: fixed
+    }
+
+    table {
+        border: 1px solid white !important
+    }
+
+    td {
+        border: 1px dotted white !important
+    }
+
+    div.floatbg {
+        z-index: 105 !important;
+        opacity: 0.25 !important
+    }
+
+    div#mconstraints {
+        position: fixed;
+        bottom: 0px;
+        top: 0px;
+        right: 0px;
+        left: 0px
+    }
+
+    div#musicwrapper {
+        max-width: 680px !important;
+        z-index: 100;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100vw;
+        bottom: 0;
+        height: 50vh;
+        min-height: 50rem;
+    }
+
+    div#intro {
+        left: -0px !important
+    }
+
+    div#musicthumbcontainer {
+        max-width: 30%;
+        width: 180px;
+        z-index: 110;
+        bottom: 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    div#musicthumbnails {
+        position: relative;
+        bottom: 0px;
+        height: 100%;
+    }
+
+    div.musicbig {
+        display: none;
+        bottom: 0px;
+        margin-left: 30%;
+        padding: 15px;
+        right: 0px;
+        overflow-y: scroll;
+    }
+
+    img.musicbigimage {
+        width: 100%;
+    }
+
+    img.musicthumb {
+        width: 80%;
+        max-width: 150px;
+        margin: 10%;
+        box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+
+    img.musicthumb:hover {
+        border-left: 3px white solid
+    }
+
+    .mlefti {
+        text-align: left !important;
+        padding-left: 3px;
+    }
+</style>
+<p class="breadcrumbs">Page location: <span><a href="/people">People</a></span>
+    <span><a href="/people/elliot">Elliot Chandler</a></span>
+</p>
+<p>I compose music in several styles. My current efforts generally are in the
+    electronic dance music genre.
+</p>
+<p>Currently featured track: <span class="song-title">The Truthteller</span>
+    (2013)
+</p>
+<audio controls="" preload="none">
+    <source src=
+        "https://archive.org/download/TheSpiritTruthfuturamerlinId5105/1.%20The%20Truthteller%20%5brev.%203-2%5d.flac"
+        type="audio/flac">
+    <source src=
+        "https://archive.org/download/TheSpiritTruthfuturamerlinId5105/1.%20The%20Truthteller%20%5brev.%203-2%5d.ogg"
+        type="audio/ogg">
+    <source src=
+        "https://archive.org/download/TheSpiritTruthfuturamerlinId5105/1.%20The%20Truthteller%20%5brev.%203-2%5d.mp3"
+        type="audio/mpeg">
+    Could not start audio player.
+</audio>
+<script type="text/javascript">
+    function getElementsByClassName(classname, node) {
+        if (!node) node = document.getElementsByTagName("body")[0];
+        var a = [];
+        var re = new RegExp('\\b' + classname + '\\b');
+        var els = node.getElementsByTagName("*");
+        for (var i = 0, j = els.length; i < j; i++)
+            if (re.test(els[i].className)) a.push(els[i]);
+        return a;
+    }
+    
+    function hideAll() {
+        var elements = new Array();
+        elements = getElementsByClassName('musicbig');
+        for (i in elements) {
+            elements[i].style.display = "none";
+        }
+    }
+</script>
+<div id="musicthumbcontainer">
+    <div id="musicthumbnails">
+        <img alt="��☆�☆�����!! ~SPIRIT TRUTH SUPER COLLECTION~" class=
+            "musicthumb" onclick=
+            "hideAll();document.getElementById('bonnousuper').style.display='block';"
+            src=
+            "https://web.archive.org/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/bonnousuper/t1.png">
+        <img alt="�: The Spirit Truth ~Internet Demos~"
+            class="musicthumb" onclick=
+            "hideAll();document.getElementById('bonnou').style.display='block';"
+            src=
+            "https://web.archive.org/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/bonnou/t1.png">
+        <img alt="Flautrock"
+            class="musicthumb" onclick=
+            "hideAll();document.getElementById('flautrock').style.display='block';"
+            src=
+            "https://web.archive.org/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/flautrock/t1.png">
+    </div>
+</div>
+<div class="musicbig" id="intro" style="display:block !important;">
+    <div id="musicbigcontainer">
+        <h2>Music</h2>
+        <p class="mdate">Choose a release from the column to the
+            left.<br>
+            <br>
+        </p>
+    </div>
+</div>
+<div id="musicbigcontainerb">
+    <div class="musicbig" id="bonnousuper">
+        <h2><span style=
+            "font-family: anoeyfuturamerlincommedium,AnoeyFuturamerlincom;">
+            &#57350;&#57350;</span>&#9734;<span style=
+                "font-family: anoeyfuturamerlincommedium,AnoeyFuturamerlincom;">&#57359;</span>&#9734;<span style="font-family: anoeyfuturamerlincommedium,AnoeyFuturamerlincom;">&#57350;&#57350;&#57348;&#57346;&#57345;!!</span>
+            ~SPIRIT TRUTH SUPER COLLECTION~
+        </h2>
+        <a href=
+            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/relsrc.tar.bz2"
+            target="_blank">Link to release source files</a><br>
+        <br>
+        Album artwork:<br>
+        &nbsp;<br>
+        <a class="mlefti" href="d/s/music/r/a/bonnousuper/1.png"
+            target="_blank"><img alt="" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/bonnousuper/t1.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><a class="mlefti"
+            href="d/s/music/r/a/bonnousuper/2.png" target=
+            "_blank"><img alt="" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/bonnousuper/t2.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><br>
+        The album artwork includes <a href=
+            "https://web.archive.org/web/20131014234456/http://fc05.deviantart.net/fs7/i/2005/258/3/4/Paper_texture_v1_by_bashcorpo.jpg"
+            target="_blank">this image</a>, by the DeviantArt user <a href=
+            "https://web.archive.org/web/20131014234456/http://bashcorpo.deviantart.com/"
+            target="_blank">bashcorpo</a> (Dan Bashie Larsen).<br>
+        Artist credited: Futuramerlin.com<br>
+        Date: 29 August 2013<br>
+        Duration: 19.18<br>
+        Media: Free Lossless Audio Codec<br>
+        Label: <a href="d/s/music/f/label/futuramerlin.html" target=
+            "_blank">Futuramerlin</a><br>
+        Catalogue numbers: Original series: [none]; Revised series:
+        [none]; ID: #5106<br>
+        Description: (none)<br>
+        Comment: The durations shown here are the correct durations,
+        which should be accepted as canonical for this release.<br>
+        <br>
+        Track list:<br>
+        <br>
+        <table border="1" style="text-align: left; width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">#<br></td>
+                    <td style="vertical-align: top;">&#128266;</td>
+                    <td style="vertical-align: top;">Track
+                        name<br>
+                    </td>
+                    <td style="vertical-align: top;">Duration<br></td>
+                    <td style="vertical-align: top;">
+                        Instrumentation<br>
+                    </td>
+                    <td style="vertical-align: top;">Comments<br></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">1<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/1.%20The%20Truthteller%20%5Brev.%203-2%5D.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/1.%20The%20Truthteller%20%5Brev.%203-2%5D.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/truthteller.html" target=
+                            "_blank">The Truthteller [rev. 3-2]</a><br>
+                    </td>
+                    <td style="vertical-align: top;">9.01<br></td>
+                    <td style="vertical-align: top;">Samples,
+                        synthesizer, vocals<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">2<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/2.%20In%20the%20Kingdom%20of%20the%20Undead%20%5BVersion%202,%2010%20July%202013%5D.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/2.%20In%20the%20Kingdom%20of%20the%20Undead%20%5BVersion%202,%2010%20July%202013%5D.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/kingdomoftheundead.html"
+                            target="_blank">In the Kingdom of the Undead
+                        [Version 2, 10 July 2013]<br></a>
+                    </td>
+                    <td style="vertical-align: top;">3.08<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">3<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/3.%20Ke%ef%bf%bdl.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/3.%20Ke%ef%bf%bdl.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/kerl.html" target=
+                            "_blank">K<span style=
+                            "font-family: anoeyfuturamerlincommedium,AnoeyFuturamerlincom;">2</span>l</a>
+                    </td>
+                    <td style="vertical-align: top;">4.49<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">4<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/4.%20Hashemjahsabaothlordhostsbuddahjehovahallahzulugodshammah%e2%80%a6.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/4.%20Hashemjahsabaothlordhostsbuddahjehovahallahzulugodshammah%e2%80%a6.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/hashemjah.html" target=
+                            "_blank">Hashemjahsabaothlordhostsbuddahjehovahallahzulugodshammah&#8230;<br>
+                        </a>
+                    </td>
+                    <td style="vertical-align: top;">1.13<br></td>
+                    <td style="vertical-align: top;">Samples,
+                        noise<br>
+                    </td>
+                    <td style="vertical-align: top;">
+                        The title of this track is too long to display
+                        here conveniently and has consequently been
+                        abbreviated. Click <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/Hashemjah.txt"
+                            target="_blank">here</a> to view the full
+                        title.<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">5<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/5.%20The%20Truthteller%20%7EEARLY%20CLIP%7E.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/SpiritTruthSuperCollectionfuturamerlinId5106/5.%20The%20Truthteller%20%7EEARLY%20CLIP%7E.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/truthteller.html" target=
+                            "_blank">The Truthteller ~EARLY CLIP~<br></a>
+                    </td>
+                    <td style="vertical-align: top;">1.07<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </div>
+    <div class="musicbig" id="bonnou">
+        <h2><span style=
+            "font-family: anoeyfuturamerlincommedium,AnoeyFuturamerlincom;">
+            &#57359;</span>: The Spirit Truth ~Internet Demos~
+        </h2>
+        <a href=
+            "https://web.archive.org/web/20131014234456/http://archive.org/download/TheSpiritTruthfuturamerlinId5105/relsrc.tar.bz2"
+            target="_blank">Link to release source files</a><br>
+        <br>
+        Album artwork:<br>
+        &nbsp;<br>
+        <a class="mlefti" href="d/s/music/r/a/bonnou/1.png" target=
+            "_blank"><img alt="" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/bonnou/t1.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><a class="mlefti"
+            href="d/s/music/r/a/bonnou/2.png" target="_blank"><img alt=""
+            class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/bonnou/t2.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><br>
+        The album artwork includes <a href=
+            "https://web.archive.org/web/20131014234456/http://fc05.deviantart.net/fs7/i/2005/258/3/4/Paper_texture_v1_by_bashcorpo.jpg"
+            target="_blank">this image</a>, by the DeviantArt user <a href=
+            "https://web.archive.org/web/20131014234456/http://bashcorpo.deviantart.com/"
+            target="_blank">bashcorpo</a> (Dan Bashie Larsen).<br>
+        Artist credited: Futuramerlin.com<br>
+        Date: 28 August 2013<br>
+        Duration: 12.09<br>
+        Media: Free Lossless Audio Codec<br>
+        Label: <a href="d/s/music/f/label/futuramerlin.html" target=
+            "_blank">Futuramerlin</a><br>
+        Catalogue numbers: Original series: [none]; Revised series:
+        [none]; ID: #5105<br>
+        Description: (none)<br>
+        Comment: The durations shown here are the correct durations,
+        which should be accepted as canonical for this release.<br>
+        <br>
+        Track list:<br>
+        <br>
+        <table border="1" style="text-align: left; width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">#<br></td>
+                    <td style="vertical-align: top;">&#128266;</td>
+                    <td style="vertical-align: top;">Track
+                        name<br>
+                    </td>
+                    <td style="vertical-align: top;">Duration<br></td>
+                    <td style="vertical-align: top;">
+                        Instrumentation<br>
+                    </td>
+                    <td style="vertical-align: top;">Comments<br></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">1<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/TheSpiritTruthfuturamerlinId5105/1.%20The%20Truthteller%20%5Brev.%203-2%5D.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/TheSpiritTruthfuturamerlinId5105/1.%20The%20Truthteller%20%5Brev.%203-2%5D.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/truthteller.html" target=
+                            "_blank">The Truthteller [rev. 3-2]</a><br>
+                    </td>
+                    <td style="vertical-align: top;">9.01<br></td>
+                    <td style="vertical-align: top;">Samples,
+                        synthesizer, vocals<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">2<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/TheSpiritTruthfuturamerlinId5105/2.%20In%20the%20Kingdom%20of%20the%20Undead%20%5BVersion%202,%2010%20July%202013%5D.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/TheSpiritTruthfuturamerlinId5105/2.%20In%20the%20Kingdom%20of%20the%20Undead%20%5BVersion%202,%2010%20July%202013%5D.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/kingdomoftheundead.html"
+                            target="_blank">In the Kingdom of the Undead
+                        [Version 2, 10 July 2013]<br></a>
+                    </td>
+                    <td style="vertical-align: top;">3.08<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </div>
+    <div class="musicbig" id="flautrock">
+        <h2>Flautrock</h2>
+        Album artwork (<a href=
+            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/artsrc.tar.bz2"
+            target="_blank">link to source files</a>):<br>
+        &nbsp;<br>
+        <a class="mlefti" href="d/s/music/r/a/flautrock/1.png" target=
+            "_blank"><img alt="" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/flautrock/t1.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><a class="mlefti"
+            href="d/s/music/r/a/flautrock/2.png" target="_blank"><img alt=
+            "" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/flautrock/t2.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><a class="mlefti"
+            href="d/s/music/r/a/flautrock/3.png" target="_blank"><img alt=
+            "" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/flautrock/t3.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><a class="mlefti"
+            href="d/s/music/r/a/flautrock/4.png" target="_blank"><img alt=
+            "" class="mlefti" src=
+            "/web/20131014234456im_/http://futuramerlin.com/d/s/music/r/a/flautrock/t4.png"
+            style=
+            "border: 0px solid ; width: 150px; height: 150px;"></a><br>
+        Artist credited: Futuramerlin.com<br>
+        Date: 2009 (In all probability, 9 November 2009. All current
+        artwork files, as well as the audio file for the fifth and
+        thirteenth tracks, were modified 9 November 2009 with the
+        exceptions of cdcover.key, Backup of cdcover.key, and
+        cdcover.002.tiff, which were modified 16 November 2009. The
+        audio files for the remaining tracks were last modified 19
+        March 2010; that is probably due to retagging them or some such
+        thing.)<br>
+        Duration: 1.05.45<br>
+        Media: Apple Lossless Audio Codec / M4A.<br>
+        Label: <a href="d/s/music/f/label/futuramerlincom.html" target=
+            "_blank">Futuramerlin.com</a><br>
+        Catalogue numbers: Original series: 3108; Revised series: ?;
+        ID: #5016<br>
+        Description: (none)<br>
+        Comment: In the second artwork image, track three from
+        Syncopated Motion is incorrectly listed in place of track five.
+        In the fourth artwork image, as well as in some other sources,
+        including both MusicBrainz and the discography page from the
+        time, track thirteen is listed as "Sechs Kleine Präludien 6
+        &#8212; BWV 999" (without the colon). However, it is listed
+        with a colon in the second artwork image and in the tag in the
+        audio file; I think the omission of a colon was simply a
+        mistake that got iterated throughout various sources through
+        copying the text using a computer without careful
+        proofreading.<br>
+        <br>
+        Track list (<a href=
+            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/original.tar.bz2"
+            target="_blank">link to original release files</a>):<br>
+        <br>
+        <table border="1" style="text-align: left; width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">#<br></td>
+                    <td style="vertical-align: top;">&#128266;</td>
+                    <td style="vertical-align: top;">Track
+                        name<br>
+                    </td>
+                    <td style="vertical-align: top;">Duration<br></td>
+                    <td style="vertical-align: top;">
+                        Instrumentation<br>
+                    </td>
+                    <td style="vertical-align: top;">Comments<br></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">1<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/flautrock.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/flautrock.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/flautrock.html" target=
+                            "_blank">Flautrock</a><br>
+                    </td>
+                    <td style="vertical-align: top;">5.44<br></td>
+                    <td style="vertical-align: top;">
+                        Synthesizer<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">2<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/syncomotrmx.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/syncomotrmx.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/jump.html" target=
+                            "_blank">Syncopated Motion (Remix)</a>
+                    </td>
+                    <td style="vertical-align: top;">1.41<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">3<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/untitledallegrosemibuffo.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/untitledallegrosemibuffo.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href=
+                            "d/s/music/t/untitledallegrosemibuffo.html"
+                            target="_blank">Untitled &#8212; Allegro
+                        Semibuffo<br></a>
+                    </td>
+                    <td style="vertical-align: top;">1.38<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">4<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/milkywhey.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/milkywhey.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/milkywhey.html" target=
+                            "_blank">Milky Whey</a>
+                    </td>
+                    <td style="vertical-align: top;">1.04<br></td>
+                    <td style="vertical-align: top;">Three milk
+                        cartons<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">5<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/syncomot.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/syncomot.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/jump.html" target=
+                            "_blank">Syncopated Motion</a>
+                    </td>
+                    <td style="vertical-align: top;">1.37<br></td>
+                    <td style="vertical-align: top;">
+                        Synthesizer<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">6<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/pieceforflashingandhandtruckm1.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/pieceforflashingandhandtruckm1.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href=
+                            "d/s/music/t/pieceforflashingandhandtruckm1.html"
+                            target="_blank">Piece for Flashing and
+                        Handtruck: First Movement<br></a>
+                    </td>
+                    <td style="vertical-align: top;">6.09<br></td>
+                    <td style="vertical-align: top;">Flashing,
+                        handtruck<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">7<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/pieceforflashingandhandtruckm2.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/pieceforflashingandhandtruckm2.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href=
+                            "d/s/music/t/pieceforflashingandhandtruckm2.html"
+                            target="_blank">Piece for Flashing and
+                        Handtruck: Second Movement</a><a href=
+                            "d/s/music/t/untitledallegrosemibuffo.html"
+                            target="_blank"></a>
+                    </td>
+                    <td style="vertical-align: top;">2.04<br></td>
+                    <td style="vertical-align: top;">Flashing,
+                        handtruck<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">8<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/pieceforflashingandhandtruckm3.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/pieceforflashingandhandtruckm3.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href=
+                            "d/s/music/t/pieceforflashingandhandtruckm3.html"
+                            target="_blank">Piece for Flashing and
+                        Handtruck: Third Movement</a>
+                    </td>
+                    <td style="vertical-align: top;">7.32<br></td>
+                    <td style="vertical-align: top;">Flashing,
+                        handtruck<br>
+                    </td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">9<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/integral.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/integral.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/integral.html" target=
+                            "_blank">&#8747;</a>
+                    </td>
+                    <td style="vertical-align: top;">6.44<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">10<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/somethingm1.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/somethingm1.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/somethingm1.html" target=
+                            "_blank">Something in Three Movements for Piano
+                        Solo: First Movement &#8212; Mostly Allegro</a>
+                    </td>
+                    <td style="vertical-align: top;">12.50<br></td>
+                    <td style="vertical-align: top;">Piano</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">11<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/somethingm2.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/somethingm2.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/somethingm2.html" target=
+                            "_blank">Something in Three Movements for Piano
+                        Solo: Second Movement &#8212; Maestoso</a>
+                    </td>
+                    <td style="vertical-align: top;">7.59<br></td>
+                    <td style="vertical-align: top;">Piano</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">12<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/somethingm3.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/somethingm3.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/somethingm3.html" target=
+                            "_blank">Something in Three Movements for Piano
+                        Solo: Third Movement &#8212; Mostly Allegro</a>
+                    </td>
+                    <td style="vertical-align: top;">3.52<br></td>
+                    <td style="vertical-align: top;">Piano</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">13<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/sechskleinepraeludien6bwv999.mp3">
+
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/sechskleinepraeludien6bwv999.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/praeludium.html" target=
+                            "_blank">Sechs Kleine Präludien: 6 &#8212; BWV
+                        999</a>
+                    </td>
+                    <td style="vertical-align: top;">1.19<br></td>
+                    <td style="vertical-align: top;">Piano</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">14<br></td>
+                    <td style="vertical-align: top;">
+                        <audio class="audioplayer" preload="none" src=
+                            "http://archive.org/download/FlautrockfuturamerlinId5016/flautrock2.mp3">
+                        </audio>
+                        <a href=
+                            "https://web.archive.org/web/20131014234456/http://archive.org/download/FlautrockfuturamerlinId5016/flautrock2.flac"
+                            target="_blank">Lossless…</a>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <a href="d/s/music/t/jump.html" target=
+                            "_blank">Flautrock<br></a>
+                    </td>
+                    <td style="vertical-align: top;">1.41<br></td>
+                    <td style="vertical-align: top;">Synthesizer</td>
+                    <td style="vertical-align: top;"><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </div>
+</div>
