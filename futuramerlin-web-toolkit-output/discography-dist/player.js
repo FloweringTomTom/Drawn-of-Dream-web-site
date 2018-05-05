@@ -1,8 +1,9 @@
+// Build list of available track row elements
 let oldTrackRows = document.getElementsByTagName('tr');
 let newTrackRows = [];
 newTrackRows[0]=oldTrackRows[0];
 for(let counter=1; counter<oldTrackRows.length; counter++) {
-    //console.log(oldTrackRows[counter].parentElement);
+    //// // console.log(oldTrackRows[counter].parentElement);
     if (oldTrackRows[counter].parentElement.tagName === "THEAD") {
         continue;
     }
@@ -26,17 +27,18 @@ function formatSecondsAsTime(secs, format) {
     return min + ':' + sec;
 }
 
-let currentTrack = 1;
+let currentTrack;
+
+let audioTag = document.createElement('audio');
 
 let audioContainer = document.createElement('div');
-let audioTag = document.createElement('audio');
-// audioTag.setAttribute("controls","controls");
-audioTag.addEventListener('ended', reachedEndOfTrack, false);
 audioContainer.className = "audioContainer";
 audioContainer.appendChild(audioTag);
 
 let audioMainPlayButton = document.createElement('button');
 audioMainPlayButton.className = "audioMainPlayButton";
+audioMainPlayButton.innerHTML = "▶";
+
 let audioTitle = document.createElement('span');
 audioTitle.className = "audioTitle";
 let audioDuration = document.createElement('span');
@@ -53,25 +55,9 @@ let audioVolume = document.createElement('input');
 audioVolume.className = "audioVolume";
 audioScrubber.type = 'range';
 audioVolume.type = 'range';
+audioVolume.style.transform = 'rotate(270deg)';
 let audioPlayNextButton = document.createElement('button');
 audioPlayNextButton.className = "audioPlayNextButton";
-
-audioScrubber.onchange = seekInAudio;
-
-function seekInAudio() {
-    let newVal = Math.floor((audioScrubber.value / 100) * audioTag.duration);
-    if (!isNaN(newVal)) {
-        audioTag.currentTime = newVal;
-    }
-}
-
-audioVolume.onchange = updateVolume;
-
-function updateVolume() {
-    audioTag.volume = audioVolume.value / 100;
-}
-
-audioMainPlayButton.innerHTML = "▶";
 audioPlayNextButton.innerHTML = "⏭";
 
 audioContainer.appendChild(audioWaveform);
@@ -84,25 +70,18 @@ audioContainer.appendChild(audioScrubber);
 audioContainer.appendChild(audioVolume);
 audioContainer.appendChild(audioPlayNextButton);
 
-function togglePlayPause() {
-    if (audioTag.paused) {
-        audioTag.play();
-        syncPlayLabel();
-    } else {
-        audioTag.pause();
-        clearTrackStatuses();
+function seekInAudio() {
+    let newVal = Math.floor((audioScrubber.value / 100) * audioTag.duration);
+    if (!isNaN(newVal)) {
+        audioTag.currentTime = newVal;
     }
 }
+audioScrubber.onchange = seekInAudio;
 
-audioMainPlayButton.onclick = function() {
-    togglePlayPause();
-};
-audioPlayNextButton.onclick = function() {
-    reachedEndOfTrack(true);
-};
-audioVolume.style.transform = 'rotate(270deg)';
-
-document.body.insertBefore(audioContainer, document.body.firstChild);
+function updateVolume() {
+    audioTag.volume = audioVolume.value / 100;
+}
+audioVolume.onchange = updateVolume;
 
 function convertRemToPixels(rem) {
     /* from https://stackoverflow.com/questions/36532307/rem-px-in-javascript */
@@ -142,6 +121,7 @@ audioTag.addEventListener("timeupdate", updateCurrentTime);
 audioTag.addEventListener("durationchange", updateCurrentTime);
 
 function loadTrack(trackNumber) {
+    // // console.log('loadTrack requested for ' + trackNumber);
     currentTrack = trackNumber;
     let trackRowToPlay = trackRows[trackNumber];
     let trackPlayButton = trackRowToPlay.getElementsByTagName('td')[1].getElementsByTagName('button')[0];
@@ -175,7 +155,6 @@ function loadTrack(trackNumber) {
 
         audioWaveform.src = name + '/' + trackNumber + 'w.png'
     }
-    let audioTag = document.getElementsByClassName('audioContainer')[0].getElementsByTagName('audio')[0];
     let childNodesCounter = 0;
     while (audioTag.childNodes.length > 0) {
         let nodes = audioTag.childNodes;
@@ -193,8 +172,7 @@ function loadTrack(trackNumber) {
 function clearTrackStatuses() {
     for (let i = 1; i < trackRows.length; i++) {
         /* skip first row: it is header */
-        let trackRowToClear = trackRows[i];
-        let trackPlayButton = trackRowToClear.getElementsByTagName('td')[1].getElementsByTagName('button')[0];
+        let trackPlayButton = trackRows[i].getElementsByTagName('td')[1].getElementsByTagName('button')[0];
         trackPlayButton.innerHTML = "▶";
         if (trackPlayButton.classList.contains('currentTrack')) {
             trackPlayButton.className = 'playButton currentTrack';
@@ -206,10 +184,9 @@ function clearTrackStatuses() {
     audioMainPlayButton.innerHTML = "▶";
 }
 
-function syncPlayLabel() {
-    trackNumber = currentTrack;
-    let trackRowToPlay = trackRows[trackNumber];
-    let trackPlayButton = trackRowToPlay.getElementsByTagName('td')[1].getElementsByTagName('button')[0];
+function playLabelSetPlaying() {
+    clearTrackStatuses();
+    let trackPlayButton = trackRows[currentTrack].getElementsByTagName('td')[1].getElementsByTagName('button')[0];
     trackPlayButton.innerHTML = "⏸";
     trackPlayButton.className = 'playButton playing currentTrack';
     trackPlayButton.onclick = function() {
@@ -218,68 +195,114 @@ function syncPlayLabel() {
     audioMainPlayButton.innerHTML = "⏸";
 }
 
-function playTrack(trackNumber) {
-    console.log('playiing'+trackNumber);
-    loadTrack(trackNumber);
-    let audioTag = document.getElementsByClassName('audioContainer')[0].getElementsByTagName('audio')[0];
-    audioTag.play();
+function playLabelSetLoading() {
+    // // console.log('Loading label requested');
     clearTrackStatuses();
-    syncPlayLabel(trackNumber);
+    let trackPlayButton = trackRows[currentTrack].getElementsByTagName('td')[1].getElementsByTagName('button')[0];
+    trackPlayButton.innerHTML = "⏳";
+    trackPlayButton.className = 'playButton playing currentTrack';
+    trackPlayButton.onclick = function() {
+        pauseTrackFromTrackButton(this);
+    };
+    audioMainPlayButton.innerHTML = "⏳";
 }
 
-function pauseTrack(trackNumber) {
+function playLabelSetPaused() {
+    clearTrackStatuses();
+    let trackPlayButton = trackRows[currentTrack].getElementsByTagName('td')[1].getElementsByTagName('button')[0];
+    trackPlayButton.innerHTML = "▶";
+    trackPlayButton.className = 'playButton currentTrack';
+    trackPlayButton.onclick = function() {
+        playTrackFromTrackButton(this);
+    };
+    audioMainPlayButton.innerHTML = "▶";
+}
+
+function playTrack(trackNumber) {
+    // console.log('playTrack requested for ' + trackNumber);
     loadTrack(trackNumber);
-    let audioTag = document.getElementsByClassName('audioContainer')[0].getElementsByTagName('audio')[0];
+    playLabelSetLoading();
+    let canPlayEventListenerFunction = function() {
+            audioTag.play();
+            playLabelSetPlaying();
+            audioTag.removeEventListener("canplay", canPlayEventListenerFunction);
+        };
+    audioTag.addEventListener("canplay", canPlayEventListenerFunction);
+}
+
+function pauseTrack() {
+    // console.log('pauseTrack requested');
     audioTag.pause();
     clearTrackStatuses();
-    trackRows[trackNumber].getElementsByTagName('td')[1].getElementsByTagName('button')[0].onclick = function() {
+    playLabelSetPaused();
+    trackRows[currentTrack].getElementsByTagName('td')[1].getElementsByTagName('button')[0].onclick = function() {
         playTrackFromTrackButton(this);
     };
 }
 
 function playTrackFromTrackButton(trackClickedElement) {
+    // console.log('playTrack requested from track button');
     for (let i = 1; i < trackRows.length; i++) {
         /* skip first row: it is header */
         if (trackRows[i].getElementsByTagName('td')[1].getElementsByTagName('button')[0] === trackClickedElement) {
-            playTrack(i);
+            // console.log('playTrack gotten');
+            if(i === currentTrack) {
+                togglePlayPause();
+            }
+            else {
+                playTrack(i);
+            }
         }
     }
     return false;
 }
 
 function pauseTrackFromTrackButton(trackClickedElement) {
-    for (let i = 1; i < trackRows.length; i++) {
-        /* skip first row: it is header */
-        if (trackRows[i].getElementsByTagName('td')[1].getElementsByTagName('button')[0] === trackClickedElement) {
-            pauseTrack(i);
-        }
-    }
+    // console.log('pauseTrack requested from track button');
+    pauseTrack();
     return false;
 }
 
 function reachedEndOfTrack(eventParameter) {
-    currentTrackElement = document.getElementsByClassName('currentTrack')[0];
-    let currentTrack = 0;
-    for (let i = 1; i < trackRows.length; i++) {
-        /* skip first row: it is header */
-        if (trackRows[i].getElementsByTagName('td')[1].getElementsByTagName('button')[0] === currentTrackElement) {
-            currentTrack = i;
-        }
-    }
-    nextTrack = currentTrack + 1;
+    // // console.log('Reached end of track ' + currentTrack);
+    let trackPlayButton = trackRows[currentTrack].getElementsByTagName('td')[1].getElementsByTagName('button')[0];
+    // // console.log(trackPlayButton);
+    let nextTrack = currentTrack + 1;
     numberOfTracks = trackRows.length - 1;
     if (nextTrack > numberOfTracks) {
         nextTrack = 1;
     }
-    currentTrackElement.classList.remove('currentTrack');
+    trackPlayButton.classList.remove('currentTrack');
     audioTag.currentTime = 0;
-    if (currentTrackElement.classList.contains('playing')) {
+    // console.log(trackPlayButton.classList);
+    if (trackPlayButton.classList.contains('playing')) {
+        // console.log('Requesting playing for ' + nextTrack);
         playTrack(nextTrack);
     }
     else {
+        // console.log('Requesting load for ' + nextTrack);
         loadTrack(nextTrack);
     }
 }
+
+audioTag.addEventListener('ended', reachedEndOfTrack, false);
+
+audioPlayNextButton.onclick = function() {
+    reachedEndOfTrack(true);
+};
+
+function togglePlayPause() {
+    // console.log('togglePlayPause requested');
+    if (audioTag.paused) {
+        audioTag.play();
+        playLabelSetPlaying();
+    } else {
+        pauseTrack();
+    }
+}
+audioMainPlayButton.onclick = function() {
+    togglePlayPause();
+};
 
 for (let i = 1; i < trackRows.length; i++) {
     /* skip first row: it is header */
@@ -295,5 +318,7 @@ for (let i = 1; i < trackRows.length; i++) {
     };
     trackAudioCell.insertBefore(trackPlayButton, trackAudioCell.firstChild);
 }
+
+document.body.insertBefore(audioContainer, document.body.firstChild);
 
 loadTrack(1);
