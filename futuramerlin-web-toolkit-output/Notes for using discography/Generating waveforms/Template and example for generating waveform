@@ -1,0 +1,5 @@
+sox '/var/tmp/autoclean/derive/IndustrySapphireIndustryFuturamerlinID10457/1. industry _ sapphire _ industry.flac' -n spectrogram -z 120 -c 'https://archive.org/download/IndustrySapphireIndustryFuturamerlinID10457/1. industry _ sapphire _ industry.flac' -o tmp.png > /dev/null 2>&1
+
+
+
+sox /path/to/my/file.flac -n spectrogram -z 120 -c 'dunno what goes here' -o name-for-the-file.png > /dev/null 2>&1
