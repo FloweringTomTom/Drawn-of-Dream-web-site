@@ -24,6 +24,3 @@ execute permission = 1
 so, read+ write = 4+2 = 6
 read/write/execute = 4+2+1 = 7
 write only = 2
-
-man chmod
-chmod +x file
