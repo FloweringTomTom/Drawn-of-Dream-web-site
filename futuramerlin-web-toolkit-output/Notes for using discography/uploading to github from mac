@@ -1,8 +1,0 @@
- cd Drawn-of-Dream-web-site;egup-single
-
- pwd = path working directory
-
-
-To find help about git, use Konsole, and type "man" for "manual" followed by whatever manual I want to see, like one for git, or one for bash, for for different commands, like man git commit or man git pull
-
-IA doesn't provide manual, so use ia help or ia help upload, etc
