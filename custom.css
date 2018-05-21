@@ -3,3 +3,6 @@ html {background-color: #d8f995;}
 .logo {
   font-size: 3rem;
 }
+h1 {font-size: 2.3rem;}
+
+p, nav ul {font-size: 1.35rem}
