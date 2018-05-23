@@ -33,6 +33,7 @@ html body div.audioContainer img.audioWaveform {height: 4rem;}
 html body div.audioContainer button.audioMainPlayButton {height: 4rem;}
 html body div.audioContainer input.audioScrubber {opacity: .7;}
 html body div.audioContainer input.audioScrubber {margin-bottom: .2rem;}
+html body div.audioContainer input.audioScrubber {margin-bottom: 0;}
 
 html body nav a:last-of-type {bottom: 5rem;
 }

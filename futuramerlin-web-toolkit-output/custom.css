@@ -34,5 +34,5 @@ html body div.audioContainer button.audioMainPlayButton {height: 4rem;}
 html body div.audioContainer input.audioScrubber {opacity: .7;}
 html body div.audioContainer input.audioScrubber {margin-bottom: .2rem;}
 
-html body nav a {bottom: 5rem;
+html body nav a:last-of-type {bottom: 5rem;
 }
