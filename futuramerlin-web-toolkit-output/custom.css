@@ -1,4 +1,4 @@
-html {background-color: #d8f995;}
+html {background-color: #bdff3a;}
 
 .logo {
   font-size: 3rem;
@@ -11,7 +11,7 @@ p, nav ul, ul, body {font-size: 1.35rem}
 
 html body div.audioContainer span.audioCurrentTime {font-size: 1rem;}
 html body div.audioContainer span.audioCurrentTime {top: 0rem;}
-html body div.audioContainer span.audioCurrentTime {border: 0.063rem solid red;}
+html body div.audioContainer span.audioCurrentTime {border: 0.063rem solid #d32a2a;}
 html body div.audioContainer span.audioCurrentTime {padding: 0.25rem;}
 html body div.audioContainer span.audioCurrentTime {opacity: .75;}
 
@@ -22,13 +22,15 @@ html body div.audioContainer button.audioPlayNextButton {height: 4rem;}
 
 html body div.audioContainer span.audioDuration {padding: 0.25rem;}
 html body div.audioContainer span.audioDuration {top: 2rem;}
-html body div.audioContainer span.audioDuration {border: 0.063rem solid red;}
+html body div.audioContainer span.audioDuration {border: 0.063rem solid #d32a2a;}
 html body div.audioContainer span.audioDuration {top: 0rem;}
 html body div.audioContainer span.audioDuration {font-size: 1rem;}
 html body div.audioContainer span.audioDuration {opacity: .75;}
 
+
 html body div.audioContainer {height: 4rem;}
 html body div.audioContainer {bottom: .2rem;}
+.audioContainer {background-color: #d32a2a;}
 
 html body div.audioContainer img.audioWaveform {height: 4rem;}
 
@@ -37,5 +39,5 @@ html body div.audioContainer input.audioScrubber {opacity: .7;}
 html body div.audioContainer input.audioScrubber {bottom: 0rem;}
 html body div.audioContainer input.audioScrubber {margin-bottom: 0rem;}
 
-html body nav a:last-of-type {bottom: 5rem;
+html body nav a:last-of-type {bottom: 4.5rem;
 }
