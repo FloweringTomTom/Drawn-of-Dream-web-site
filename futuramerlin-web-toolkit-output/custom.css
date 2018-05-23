@@ -17,6 +17,8 @@ html body div.audioContainer span.audioCurrentTime {opacity: .75;}
 
 html body div.audioContainer button.audioPlayNextButton {height: 4rem;}
 
+.audioVolume { width: 3rem; right: 4rem; top: calc(4rem / 3); }
+
 
 html body div.audioContainer span.audioDuration {padding: 0.25rem;}
 html body div.audioContainer span.audioDuration {top: 2rem;}
@@ -33,6 +35,7 @@ html body div.audioContainer img.audioWaveform {height: 4rem;}
 html body div.audioContainer button.audioMainPlayButton {height: 4rem;}
 html body div.audioContainer input.audioScrubber {opacity: .7;}
 html body div.audioContainer input.audioScrubber {margin-bottom: .2rem;}
+html body div.audioContainer input.audioScrubber {margin-bottom: 0;}
 
 html body nav a:last-of-type {bottom: 5rem;
 }
