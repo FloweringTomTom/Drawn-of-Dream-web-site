@@ -1,1 +1,1 @@
-rm -rf futuramerlin-web-toolkit; git clone https://github.com/ethus3h/futuramerlin-web-toolkit; cd futuramerlin-web-toolkit; make; sudo make install
+rm -rf futuramerlin-web-toolkit; git clone https://github.com/ethus3h/futuramerlin-web-toolkit; cd futuramerlin-web-toolkit; ./configure --prefix=/usr; make; sudo make install; cd
