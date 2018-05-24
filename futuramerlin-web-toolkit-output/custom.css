@@ -28,6 +28,10 @@ html body div.audioContainer span.audioDuration {font-size: 1rem;}
 html body div.audioContainer span.audioDuration {opacity: .75;}
 
 
+
+.currentTrack {background: rgba(255,255,255,0.5);}
+
+
 html body div.audioContainer {height: 4rem;}
 html body div.audioContainer {bottom: .2rem;}
 .audioContainer {background-color: #d32a2a;}
