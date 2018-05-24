@@ -1,0 +1,53 @@
+html {background-color: #bdff3a;}
+
+.logo {
+  font-size: 3rem;
+}
+h1 {font-size: 2.3rem;}
+
+p, nav ul, ul, body {font-size: 1.35rem}
+
+
+a:visited {color:#d32a2a;}
+
+html body div.audioContainer span.audioCurrentTime {font-size: 1rem;}
+html body div.audioContainer span.audioCurrentTime {top: 0rem;}
+html body div.audioContainer span.audioCurrentTime {border: 0.063rem solid #d32a2a;}
+html body div.audioContainer span.audioCurrentTime {padding: 0.25rem;}
+html body div.audioContainer span.audioCurrentTime {opacity: .75;}
+
+html body div.audioContainer button.audioPlayNextButton {height: 4rem;}
+
+.audioVolume { width: 3rem; right: 4rem; top: calc(4rem / 3); }
+
+
+html body div.audioContainer span.audioDuration {padding: 0.25rem;}
+html body div.audioContainer span.audioDuration {top: 2rem;}
+html body div.audioContainer span.audioDuration {border: 0.063rem solid #d32a2a;}
+html body div.audioContainer span.audioDuration {top: 0rem;}
+html body div.audioContainer span.audioDuration {font-size: 1rem;}
+html body div.audioContainer span.audioDuration {opacity: .75;}
+
+
+
+
+.playButton {background: rgba(255,255,255,0.5);}
+.audioMainPlayButton {background: rgba(255,255,255,0.5);}
+
+
+
+html body div.audioContainer {height: 4rem;}
+html body div.audioContainer {bottom: .2rem;}
+.audioContainer {background-color: #d32a2a;}
+
+.audioWaveform {height: 4rem;}
+.audioWaveform {background: rgba(255,255,255,0.5);}
+
+html body div.audioContainer button.audioMainPlayButton {height: 4rem;}
+html body div.audioContainer input.audioScrubber {opacity: .7;}
+html body div.audioContainer input.audioScrubber {bottom: 0rem;}
+html body div.audioContainer input.audioScrubber {margin-bottom: 0rem;}
+.audioPlayhead {background-image: linear-gradient(#4e6b17,rgba(255,255,255,0));}
+
+html body nav a:last-of-type {bottom: 4.5rem;}
+html body nav a:last-of-type {background: rgba(255,255,255,0.5);}
