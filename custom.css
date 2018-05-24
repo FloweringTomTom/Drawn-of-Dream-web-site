@@ -31,8 +31,8 @@ html body div.audioContainer span.audioDuration {opacity: .75;}
 
 
 
-.playButton {background: rgba(255,255,255,0.5);}
-.audioMainPlayButton {background: rgba(255,255,255,0.5);}
+.playButton {background: #e7fccc;}
+.audioMainPlayButton {background: #e7fccc;}
 
 
 
@@ -41,7 +41,7 @@ html body div.audioContainer {bottom: .2rem;}
 .audioContainer {background-color: #d32a2a;}
 
 .audioWaveform {height: 4rem;}
-.audioWaveform {background: rgba(255,255,255,0.5);}
+
 
 html body div.audioContainer button.audioMainPlayButton {height: 4rem;}
 html body div.audioContainer input.audioScrubber {opacity: .7;}
@@ -50,4 +50,4 @@ html body div.audioContainer input.audioScrubber {margin-bottom: 0rem;}
 .audioPlayhead {background-image: linear-gradient(#4e6b17,rgba(255,255,255,0));}
 
 html body nav a:last-of-type {bottom: 4.5rem;}
-html body nav > a:last-of-type {background: rgba(255,255,255,0.5);}
+html body nav > a:last-of-type {background: #e7fccc;}
