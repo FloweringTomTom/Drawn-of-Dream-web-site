@@ -17,6 +17,7 @@ html body div.audioContainer span.audioCurrentTime {padding: 0.25rem;}
 html body div.audioContainer span.audioCurrentTime {opacity: .75;}
 
 html body div.audioContainer button.audioPlayNextButton {height: 4rem;}
+.audioPlayNextButton {background: #e7fccc;}
 
 .audioVolume { width: 3rem; right: 4rem; top: calc(4rem / 3); }
 
