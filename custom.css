@@ -50,4 +50,4 @@ html body div.audioContainer input.audioScrubber {margin-bottom: 0rem;}
 .audioPlayhead {background-image: linear-gradient(#4e6b17,rgba(255,255,255,0));}
 
 html body nav a:last-of-type {bottom: 4.5rem;}
-html body nav a:last-of-type {background: rgba(255,255,255,0.5);}
+html body nav > a:last-of-type {background: rgba(255,255,255,0.5);}
