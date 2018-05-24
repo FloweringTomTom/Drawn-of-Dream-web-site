@@ -30,6 +30,7 @@ html body div.audioContainer span.audioDuration {opacity: .75;}
 
 
 .currentTrack {background: rgba(255,255,255,0.5);}
+.playButton {background: rgba(255,255,255,0.5);}
 
 
 html body div.audioContainer {height: 4rem;}
