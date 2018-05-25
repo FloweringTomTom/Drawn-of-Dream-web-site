@@ -7,7 +7,7 @@ h1 {font-size: 2.3rem;}
 
 p, nav ul, ul, body {font-size: 1.35rem}
 
-
+a { color: aqua; }
 a:visited {color:#b22020;}
 
 html body div.audioContainer span.audioCurrentTime {font-size: 1rem;}
