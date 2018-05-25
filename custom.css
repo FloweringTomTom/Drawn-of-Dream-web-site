@@ -8,23 +8,23 @@ h1 {font-size: 2.3rem;}
 p, nav ul, ul, body {font-size: 1.35rem}
 
 a { color: #30365b; }
-a:visited {color:#381f4f;}
+a:visited {color:#aa468a;}
 
 html body div.audioContainer span.audioCurrentTime {font-size: 1rem;}
 html body div.audioContainer span.audioCurrentTime {top: 0rem;}
-html body div.audioContainer span.audioCurrentTime {border: 0.063rem solid #381f4f;}
+html body div.audioContainer span.audioCurrentTime {border: 0.063rem solid #aa468a;}
 html body div.audioContainer span.audioCurrentTime {padding: 0.25rem;}
 html body div.audioContainer span.audioCurrentTime {opacity: .75;}
 
 html body div.audioContainer button.audioPlayNextButton {height: 4rem;}
-.audioPlayNextButton {background: #ffffd6;}
+.audioPlayNextButton {background: #e8d9b4;}
 
 .audioVolume { width: 3rem; right: 4rem; top: calc(4rem / 3); }
 
 
 html body div.audioContainer span.audioDuration {padding: 0.25rem;}
 html body div.audioContainer span.audioDuration {top: 2rem;}
-html body div.audioContainer span.audioDuration {border: 0.063rem solid #381f4f;}
+html body div.audioContainer span.audioDuration {border: 0.063rem solid #aa468a;}
 html body div.audioContainer span.audioDuration {top: 0rem;}
 html body div.audioContainer span.audioDuration {font-size: 1rem;}
 html body div.audioContainer span.audioDuration {opacity: .75;}
@@ -32,13 +32,13 @@ html body div.audioContainer span.audioDuration {opacity: .75;}
 
 .audioWaveform {filter: contrast(70%) invert(100%) sepia(100%);}
 
-.playButton {background: #ffffd6;}
-.audioMainPlayButton {background: #ffffd6;}
+.playButton {background: #e8d9b4;}
+.audioMainPlayButton {background: #e8d9b4;}
 
 
 html body div.audioContainer {height: 4rem;}
 html body div.audioContainer {bottom: .2rem;}
-.audioContainer {background-color: #381f4f;}
+.audioContainer {background-color: #aa468a;}
 
 .audioWaveform {height: 4rem;}
 
@@ -50,4 +50,4 @@ html body div.audioContainer input.audioScrubber {margin-bottom: 0rem;}
 .audioPlayhead {background-image: linear-gradient(#ffff26,rgba(255,255,255,0));}
 
 html body nav a:last-of-type {bottom: 4.5rem;}
-html body nav > a:last-of-type {background: #ffffd6;}
+html body nav > a:last-of-type {background: #e8d9b4;}
