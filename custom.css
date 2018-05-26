@@ -30,7 +30,7 @@ a:visited {color:#aa468a;}
 
 .audioScrubber {opacity: .7;  bottom: 0rem; margin-bottom: 0rem;}
 
-.audioPlayhead {background-image: linear-gradient(#ffff26,rgba(255,255,255,0));}
+.audioPlayhead {background-image: linear-gradient(#ff9000,rgba(255,255,255,0));}
 
 html body nav a:last-of-type {bottom: 4.5rem;}
 html body nav > a:last-of-type {background: #e8d9b4;}
