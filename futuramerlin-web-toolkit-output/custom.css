@@ -20,11 +20,9 @@ a:visited {
   color:#aa468a;
 }
 
-a.musicthumb {
+.musicthumb {
   box-sizing: unset;
 }
-
-
 
 .audioCurrentTime {
   font-size: 1rem;
