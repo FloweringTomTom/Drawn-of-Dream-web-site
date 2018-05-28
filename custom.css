@@ -20,6 +20,8 @@ a:visited {
   color:#aa468a;
 }
 
+img.musicthumb:nth-child(2) {box-sizing: inherit;}
+
 .audioCurrentTime {
   font-size: 1rem;
   top: 0rem;
