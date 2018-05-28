@@ -20,7 +20,7 @@ a:visited {
   color:#aa468a;
 }
 
-img.musicthumb:nth-child(2) {box-sizing: inherit;}
+img.musicthumb: {box-sizing: inherit;}
 
 .audioCurrentTime {
   font-size: 1rem;
