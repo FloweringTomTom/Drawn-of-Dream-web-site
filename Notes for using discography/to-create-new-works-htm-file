@@ -1,0 +1,16 @@
+works-custom.htm would contain: <h1>Works</h1>
+<ul>
+<li><a href=...>Name</a></li>
+<li>...
+<li>...
+</ul>
+<h2>Winter Night Gloria
+</h2>
+<ul>
+<li> <a href="welcome-in.htm">Welcome in</a></li>
+<li>...
+</ul>
+http://discography.drawnofdream.com/Music/works/works_custom.htm
+http://discography.drawnofdream.com/Music/works/welcome-in.htm
+<li> <a href="welcome-in/winter-night-gloria.htm">Welcome in</a></li>
+http://discography.drawnofdream.com/Music/works/welcome-in/winter-night-gloria.htm
