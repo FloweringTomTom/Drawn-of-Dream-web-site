@@ -1,0 +1,8 @@
+ 
+To upload flac files or any other type to IA, use the command: ia upload followed by the IA identifier, which is found in the URL for the IA page I am uploading to. So it looks like this:
+
+ia upload <identifier> followed by the file path, which I drag and drop, as though I am dropping the actual file, but because the preferences tell it to, it drops only the path into the Konsole.
+
+Many file paths can be dropped simultaneously after the identifier. So the whole string looks like this:
+
+ia upload <identifier> <file><file> etc ...
