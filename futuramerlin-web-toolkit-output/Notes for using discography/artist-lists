@@ -1,0 +1,22 @@
+To define the artists, put them in like:
+artist,elliot-chandler
+nextArtistType,×
+artist,futuramerlincom
+will show up as "Elliot Chandler × Futuramerlin.com"
+or artist,elliot-chandler
+nextArtistType,, and
+artist,futuramerlincom
+will show up as "Elliot Chandler, and Futuramerlin.com"
+I haven't tested it, but you should be able to hook multiple ones together:
+artist,elliot-chandler
+nextArtistType,and
+artist,futuramerlincom
+nextArtistType,feat.
+artist,whoever
+would come out as "Elliot Chandler and Futuramerlin.com feat. Whoever"
+
+In the list, the ones with special types like "and" will still get the and listed in the table, so it shows up as Artist: Elliot Chandler / Artist: and Futuramerlin.com
+because i'm not sure how better to display those. There's probably a way, but I don't know what it is, lol
+anyway, enjoy!
+(that's not a technical challenge, just a matter of I don't what the ideal way of displaying the info. is)
+Send a message
