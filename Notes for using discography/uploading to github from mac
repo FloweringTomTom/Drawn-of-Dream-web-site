@@ -1,4 +1,5 @@
- cd Drawn-of-Dream-web-site;egup-single
+ First run: cd Drawn-of-Dream-web-site
+ Then run: egup-single
 
  pwd = path working directory
 
