@@ -1,0 +1,13 @@
+ First run: cd Drawn-of-Dream-web-site
+ Then run: egup-single
+
+ pwd = path working directory
+
+
+To find help about git, use Konsole, and type "man" for "manual" followed by whatever manual I want to see, like one for git, or one for bash, for for different commands, like man git commit or man git pull
+
+IA doesn't provide manual, so use ia help or ia help upload, etc
+
+i can imagine a purple waveform with a yellow or orange playhead
+with that green background
+make it look like a hippie car

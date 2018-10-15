@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+mv ../../built/Music/works/works-custom.htm ../../built/Music/works/index.htm

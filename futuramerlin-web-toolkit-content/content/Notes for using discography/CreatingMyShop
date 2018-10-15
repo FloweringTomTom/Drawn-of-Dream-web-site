@@ -1,0 +1,52 @@
+/* PayPal Shop with Apps Script */
+
+/* Written by Amit Agarwal - ctrlq.org */
+
+
+PAYPAL = [
+  ["product-001", "useful-websites-book.pdf"],
+  ["product-002", "linux-training-course.mp4"],
+  ["product-003", "steve-audio-book.mp3"],
+  ["product-004", "presentation-template.ppt"]
+];
+
+function PayPal() {
+  ScriptApp.newTrigger("myShop").timeBased().everyMinutes(5).create();
+}
+
+function myShop() {
+
+  var file, size, files, threads;
+
+  for (var p in PAYPAL) {
+
+    threads = GmailApp.search("is:unread from:paypal " + PAYPAL[p][0]);
+
+    if (threads.length > 0) {
+
+      files = DriveApp.searchFiles('title contains "' + PAYPAL[p][1] + '"');
+
+      if (files.hasNext()) {
+
+        file = files.next();
+        size = file.getSize()/(1024*1024);
+
+        for (var i=0; i<threads.length; i++) {
+
+          var buyer   = threads[i].getMessages()[0].getReplyTo();
+          var subject = "Thank you for your purchase";
+          var body    = "Please download the file using the link below.\n\n";
+
+          if (size > 20) {
+            file.addViewer(buyer);
+            GmailApp.sendEmail(buyer, subject, body + file.getUrl());
+          } else {
+            GmailApp.sendEmail(buyer, subject, body, {attachments: file.getBlob()});
+          }
+
+          threads[i].markRead().moveToArchive();
+        }
+      }
+    }
+  }
+}
