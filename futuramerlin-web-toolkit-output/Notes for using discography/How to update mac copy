@@ -1,1 +1,0 @@
-cd ~/Drawn-of-Dream-web-site; git pull; sudo rsync --delete -av --checksum --progress futuramerlin-web-toolkit-output/ /Applications/MAMP/htdocs
