@@ -11,3 +11,5 @@ IA doesn't provide manual, so use ia help or ia help upload, etc
 i can imagine a purple waveform with a yellow or orange playhead
 with that green background
 make it look like a hippie car
+
+pushd ~; sudo chmod -R 777 Dr*; cd Dr*; egup-single; popd
